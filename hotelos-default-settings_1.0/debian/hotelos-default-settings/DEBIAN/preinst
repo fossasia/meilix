@@ -1,0 +1,107 @@
+#!/bin/sh
+
+set -e
+
+APP_DIR="/etc/apparmor.d"
+APP_PROFILE="usr.bin.firefox"
+APP_CONFFILE="$APP_DIR/$APP_PROFILE"
+APP_DISABLE="$APP_DIR/disable/$APP_PROFILE"
+MOZ_PKG_NAME=firefox
+MOZ_ADDONDIR=/usr/lib/firefox-addons
+MOZ_LIBDIR=/usr/lib/firefox
+
+# Prepare to move a conffile without triggering a dpkg question
+prepare_mv_conffile() {
+    local PKGNAME="$1"
+    local CONFFILE="$2"
+
+    [ -e "$CONFFILE" ] || return 0
+
+    local md5sum="$(md5sum $CONFFILE | sed -e 's/ .*//')"
+    local old_md5sum="$(dpkg-query -W -f='${Conffiles}' $PKGNAME | \
+            sed -n -e "\' $CONFFILE ' { s/ obsolete$//; s/.* //; p }")"
+	#'
+    if [ "$md5sum" = "$old_md5sum" ]; then
+        mv -f "$CONFFILE" "$CONFFILE.dpkg-remove"
+    fi
+}
+
+prepare_rm_conffile() {
+    local PACKAGE="$1"
+    local CONFFILE="$2"
+
+    [ -e "$CONFFILE" ] || return 0
+
+    local md5sum="$(md5sum $CONFFILE | sed -e 's/ .*//')"
+    local old_md5sum="$(dpkg-query -W -f='${Conffiles}' $PACKAGE | \
+        sed -n -e "\' $CONFFILE ' { s/ obsolete$//; s/.* //; p }")"
+    if [ "$md5sum" != "$old_md5sum" ]; then
+        echo "Obsolete conffile $CONFFILE has been modified by you."
+        echo "Saving as $CONFFILE.dpkg-bak ..."
+        mv -f "$CONFFILE" "$CONFFILE.dpkg-backup"
+    else
+        echo "Moving obsolete conffile $CONFFILE out of the way..."
+        mv -f "$CONFFILE" "$CONFFILE.dpkg-remove"
+    fi
+}
+
+disable_profile() {
+    # Create a symlink to the yet-to-be-unpacked profile
+    if [ ! -e "$APP_CONFFILE" ]; then
+        mkdir -p `dirname $APP_DISABLE` 2>/dev/null || true
+        ln -sf $APP_CONFFILE $APP_DISABLE
+    fi
+}
+
+if [ "$1" = "install" ] || [ "$1" = "upgrade" ] ; then
+    # Unconditionally disable AppArmor profile for Ubuntu 9.04 and under, since
+    # it requires abstractions found only in 9.10 and higher.
+    major=`lsb_release -r | awk '{print $2}' | cut -d '.' -f 1`
+    version=`lsb_release -r | awk '{print $2}'`
+    if [ "$major" -lt 10 ] && [ "$version" != "9.10" ]; then
+        disable_profile
+    else
+        if [ "$1" = "install" ]; then
+            # Disable AppArmor profile on install, unless the last profile they
+            # modified is enabled.
+            base=`echo $APP_PROFILE | cut -d '-' -f 1`
+            last_modified=`ls -rt $APP_DIR/$base* 2>/dev/null | grep -v '\.dpkg' | tail -n1`
+            if [ -s "$last_modified" ]; then
+                if [ -e "$APP_DIR/disable/`basename $last_modified`" ]; then
+                    disable_profile
+                fi
+            else
+	        # Fresh install and no other firefox profiles exist, so disable.
+                disable_profile
+            fi
+        elif [ "$1" = "upgrade" ]; then
+            # Disable AppArmor on upgrade from earlier than when we first shipped
+            # the profile if the user does not already have a profile defined.
+            if dpkg --compare-versions "$2" lt "3.7~a1~hg20091203" ; then
+                disable_profile
+            fi
+        fi
+    fi
+
+    prepare_rm_conffile "${MOZ_PKG_NAME}" "/etc/${MOZ_PKG_NAME}/profile/bookmarks.html"
+    prepare_rm_conffile "${MOZ_PKG_NAME}" "/etc/${MOZ_PKG_NAME}/profile/localstore.rdf"
+    prepare_rm_conffile "${MOZ_PKG_NAME}" "/etc/${MOZ_PKG_NAME}/profile/mimeTypes.rdf"
+    prepare_rm_conffile "${MOZ_PKG_NAME}" "/etc/${MOZ_PKG_NAME}/profile/prefs.js"
+    prepare_rm_conffile "${MOZ_PKG_NAME}" "/etc/${MOZ_PKG_NAME}/profile/chrome/userChrome-example.css"
+    prepare_rm_conffile "${MOZ_PKG_NAME}" "/etc/${MOZ_PKG_NAME}/profile/chrome/userContent-example.css"
+
+    prepare_mv_conffile "${MOZ_PKG_NAME}" "/etc/${MOZ_PKG_NAME}/pref/firefox.js"
+
+    # ${LIBDIR}/distribution was a symlink in 11.10
+    if [ -h ${MOZ_LIBDIR}/distribution ] ; then
+        rm -f ${MOZ_LIBDIR}/distribution
+    fi
+
+    # This used to be a symlink
+    if [ -h ${MOZ_LIBDIR}/distribution/searchplugins ]; then
+        rm -f ${MOZ_LIBDIR}/distribution/searchplugins
+    fi
+fi
+
+
+

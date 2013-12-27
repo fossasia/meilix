@@ -1,0 +1,10 @@
+Package: plymouth-meilix-logo
+Version: 1.0-1
+Architecture: all
+Maintainer: meilix <vanhonit@gmail.com>
+Installed-Size: 85
+Depends: plymouth, plymouth-label
+Section: x11
+Priority: extra
+Homepage: http://mbm.vn
+Description: Plymouth theme meilix.

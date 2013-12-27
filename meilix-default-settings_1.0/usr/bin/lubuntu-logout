@@ -1,0 +1,2 @@
+#!/bin/sh
+lxsession-logout --banner "/usr/share/meilix/images/meilix-logo.png" --side=top

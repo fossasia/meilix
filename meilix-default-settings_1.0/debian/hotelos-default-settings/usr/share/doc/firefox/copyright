@@ -1,0 +1,738 @@
+This package was debianized by Eric Dorland <eric@debian.org> on
+Thu, 05 Jun 2003 01:01:22 -0400
+
+It was downloaded from http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/
+
+The source tarball is an aggregate of several different works in which the
+main one, developed by the Mozilla Project, is firefox.
+
+Other works include gzip, bzip2, sqlite, libjpeg, libpng, cairo, and others.
+Please see the sections following the copyright statements for firefox for
+these.
+
+=== firefox
+
+Overall, the firefox project is licensed under the terms of the Mozilla
+Public License version 1.1 or, at your option, under the terms of the GNU
+eneral Public License version 2 or subsequent, or the terms of the GNU
+Lesser General Public License version 2.1 or subsequent.
+
+On Debian systems, the complete text of the GNU General Public
+License can be found in the file `/usr/share/common-licenses/GPL' ;
+the complete text of the GNU Lesser General Public License can be
+found in the file `/usr/share/common-licenses/LGPL'.
+
+The complete text of the Mozilla Public License can be found in the MPL file
+in the same directory as this file.
+
+Some files may still contain licensing notices claiming licensing under
+other combinations of NPL, MPL, GPL and LGPL. They are files that were missed
+by the upstream relicensing script, but all the permissions required for
+relicensing were indeed provided.
+
+The file db/mork/src/morkQuickSort.cpp is licensed under the following terms:
+
+  Copyright (c) 1992, 1993
+   The Regents of the University of California.  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+  1. Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+  3. Neither the name of the University nor the names of its contributors
+     may be used to endorse or promote products derived from this software
+     without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+  OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  SUCH DAMAGE.
+
+The embedding/qa/mozembed/public/nsIQABrowserUIGlue.idl file and the files
+under the embedding/tests directory are licensed under the following terms:
+
+  Copyright (c) 2002 Netscape Communications Corporation and
+  other contributors
+
+  Permission is hereby granted, free of charge, to any person obtaining a
+  copy of this Mozilla sample software and associated documentation files
+  (the "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to permit
+  persons to whom the Software is furnished to do so, subject to the
+  following conditions:
+
+  The above copyright notice and this permission notice shall be included
+  in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+  THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+  DEALINGS IN THE SOFTWARE.
+
+The modules/plugin/base/public/npruntime.h file is licensed under the
+following terms:
+
+  Copyright (c) 2004, Apple Computer, Inc. and The Mozilla Foundation.
+  All rights reserved.
+ 
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are
+  met:
+ 
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the names of Apple Computer, Inc. ("Apple") or The Mozilla
+  Foundation ("Mozilla") nor the names of their contributors may be used
+  to endorse or promote products derived from this software without
+  specific prior written permission.
+ 
+  THIS SOFTWARE IS PROVIDED BY APPLE, MOZILLA AND THEIR CONTRIBUTORS "AS
+  IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+  TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL APPLE, MOZILLA OR
+  THEIR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+  TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The toolkit/mozapps/update/src/updater/bspatch.cpp and
+toolkit/mozapps/update/src/updater/bspatch.h files are licensed under the
+following terms:
+
+  Copyright 2003,2004 Colin Percival
+  All rights reserved
+ 
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted providing that the following conditions
+  are met:
+  1. Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+ 
+  THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+  OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+  STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+  IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+Some but not all the files in netwerk/dns/src/ are licensed under the
+following terms:
+
+  Copyright (c) 2001,2002 Japan Network Information Center.
+  All rights reserved.
+ 
+  By using this file, you agree to the terms and conditions set forth bellow.
+ 
+                       LICENSE TERMS AND CONDITIONS
+ 
+  The following License Terms and Conditions apply, unless a different
+  license is obtained from Japan Network Information Center ("JPNIC"),
+  a Japanese association, Kokusai-Kougyou-Kanda Bldg 6F, 2-3-4 Uchi-Kanda,
+  Chiyoda-ku, Tokyo 101-0047, Japan.
+ 
+  1. Use, Modification and Redistribution (including distribution of any
+     modified or derived work) in source and/or binary forms is permitted
+     under this License Terms and Conditions.
+ 
+  2. Redistribution of source code must retain the copyright notices as they
+     appear in each source code file, this License Terms and Conditions.
+ 
+  3. Redistribution in binary form must reproduce the Copyright Notice,
+     this License Terms and Conditions, in the documentation and/or other
+     materials provided with the distribution.  For the purposes of binary
+     distribution the "Copyright Notice" refers to the following language:
+     "Copyright (c) 2000-2002 Japan Network Information Center.  All rights reserved."
+ 
+  4. The name of JPNIC may not be used to endorse or promote products
+     derived from this Software without specific prior written approval of
+     JPNIC.
+ 
+  5. Disclaimer/Limitation of Liability: THIS SOFTWARE IS PROVIDED BY JPNIC
+     "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+     LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+     PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL JPNIC BE LIABLE
+     FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+     CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+     SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+     BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+     WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+     OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+     ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+Some files in plugin/oji/JEP/ are licensed under the following terms:
+
+  Copyright (c) 2004, Steven Michaud, All Rights Reserved
+
+  Permission is hereby granted, free of charge, to any person obtaining
+  a copy of this software and associated documentation files (the
+  "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to
+  the following conditions:
+
+  The above copyright notice and this permission notice shall be
+  included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+The extensions/auth/gssapi.h file is licensed under the following terms:
+
+  Copyright 1993 by OpenVision Technologies, Inc.
+ 
+  Permission to use, copy, modify, distribute, and sell this software
+  and its documentation for any purpose is hereby granted without fee,
+  provided that the above copyright notice appears in all copies and
+  that both that copyright notice and this permission notice appear in
+  supporting documentation, and that the name of OpenVision not be used
+  in advertising or publicity pertaining to distribution of the software
+  without specific, written prior permission. OpenVision makes no
+  representations about the suitability of this software for any
+  purpose.  It is provided "as is" without express or implied warranty.
+ 
+  OPENVISION DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+  INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+  EVENT SHALL OPENVISION BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+  CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF
+  USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+  OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THIS SOFTWARE.
+
+The gfx/src/xlib/xregion.h and gfx/src/gtk/xregion.h are licensed under the
+following terms:
+
+  Copyright 1987 by Digital Equipment Corporation, Maynard, Massachusetts,
+  and the Massachusetts Institute of Technology, Cambridge, Massachusetts.
+
+                          All Rights Reserved
+
+  Permission to use, copy, modify, and distribute this software and its
+  documentation for any purpose and without fee is hereby granted,
+  provided that the above copyright notice appear in all copies and that
+  both that copyright notice and this permission notice appear in
+  supporting documentation, and that the names of Digital or MIT not be
+  used in advertising or publicity pertaining to distribution of the
+  software without specific, written prior permission.
+
+  DIGITAL DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING
+  ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL
+  DIGITAL BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR
+  ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+  WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+  ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+  SOFTWARE.
+
+=== sqlite
+
+The db/sqlite3 directory contains a copy of sqlite with the following
+licensing terms:
+
+  The author disclaims copyright to this source code.  In place of
+  a legal notice, here is a blessing:
+
+     May you do good and not evil.
+     May you find forgiveness for yourself and forgive others.
+     May you share freely, never taking more than you give.
+
+=== dbm
+
+The dbm directory, except some files added by the mozilla project, is
+licensed under the following terms:
+
+  Copyright (c) 1991, 1993, 1994
+  The Regents of the University of California.  All rights reserved.
+ 
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+  1. Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+  3. All advertising materials mentioning features or use of this software
+     must display the following acknowledgement:
+  This product includes software developed by the University of
+  California, Berkeley and its contributors.
+  4. Neither the name of the University nor the names of its contributors
+     may be used to endorse or promote products derived from this software
+     without specific prior written permission.
+ 
+  THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+  OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  SUCH DAMAGE.
+ 
+=== myspell
+
+The extensions/spellcheck/myspell directory is licensed under the following
+terms:
+
+  Copyright 2002 Kevin B. Hendricks, Stratford, Ontario, Canada
+  And Contributors.  All rights reserved.
+ 
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+ 
+  1. Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+ 
+  2. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+ 
+  3. All modifications to the source code must be clearly marked as
+     such.  Binary redistributions based on modified source code
+     must be clearly marked as modified versions in the documentation
+     and/or other materials provided with the distribution.
+ 
+  THIS SOFTWARE IS PROVIDED BY KEVIN B. HENDRICKS AND CONTRIBUTORS 
+  ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL 
+  KEVIN B. HENDRICKS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, 
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  SUCH DAMAGE.
+
+=== boehm
+
+The gc/boehm directory, except the files listed under the xulrunner section,
+is licensed under the following terms:
+
+  Copyright 1988, 1989 Hans-J. Boehm, Alan J. Demers
+  Copyright (c) 1991-1996 by Xerox Corporation.  All rights reserved.
+  Copyright (c) 1996-1998 by Silicon Graphics.  All rights reserved.
+
+  THIS MATERIAL IS PROVIDED AS IS, WITH ABSOLUTELY NO WARRANTY EXPRESSED
+  OR IMPLIED.  ANY USE IS AT YOUR OWN RISK.
+
+  Permission is hereby granted to use or copy this program
+  for any purpose,  provided the above notices are retained on all copies.
+  Permission to modify the code and to distribute modified code is granted,
+  provided the above notices are retained, and a notice that the code was
+  modified is included with the above copyright notice.
+
+=== cairo
+
+The gfx/cairo/cairo directory is licensed under the following terms:
+
+  Copyright (c) 2003 University of Southern California
+  Copyright (c) 1999 Tom Tromey
+  Copyright (c) 2002, 2003 University of Southern California
+  Copyright (c) 2004 Calum Robinson
+  Copyright (c) 2004 David Reveman
+  Copyright (c) 2000, 2002, 2004 Keith Packard
+  Copyright (c) 2004, 2005 Red Hat, Inc
+
+  Cairo is free software and is available to be redistributed and/or
+  modified under the terms of either the GNU Lesser General Public
+  License (LGPL) version 2.1 or the Mozilla Public License (MPL) version
+  1.1.
+
+=== libpixman
+
+The gfx/cairo/libpixman directory is licensed under the following terms:
+(from gfx/cairo/libpixman/COPYING)
+
+  libpixregion
+  
+  Copyright 1987, 1998  The Open Group
+  
+  Permission to use, copy, modify, distribute, and sell this software and its
+  documentation for any purpose is hereby granted without fee, provided that
+  the above copyright notice appear in all copies and that both that
+  copyright notice and this permission notice appear in supporting
+  documentation.
+  
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+  OPEN GROUP BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+  AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  
+  Except as contained in this notice, the name of The Open Group shall not be
+  used in advertising or otherwise to promote the sale, use or other dealings
+  in this Software without prior written authorization from The Open Group.
+  
+  
+  Copyright 1987 by Digital Equipment Corporation, Maynard, Massachusetts.
+  
+                          All Rights Reserved
+  
+  Permission to use, copy, modify, and distribute this software and its 
+  documentation for any purpose and without fee is hereby granted, 
+  provided that the above copyright notice appear in all copies and that
+  both that copyright notice and this permission notice appear in 
+  supporting documentation, and that the name of Digital not be
+  used in advertising or publicity pertaining to distribution of the
+  software without specific, written prior permission.  
+  
+  DIGITAL DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING
+  ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL
+  DIGITAL BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR
+  ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+  WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+  ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+  SOFTWARE.
+  
+  ----------------------------------------------------------------------
+  libic
+  
+  Copyright © 2001 Keith Packard
+  
+  Permission to use, copy, modify, distribute, and sell this software and its
+  documentation for any purpose is hereby granted without fee, provided that
+  the above copyright notice appear in all copies and that both that
+  copyright notice and this permission notice appear in supporting
+  documentation, and that the name of Keith Packard not be used in
+  advertising or publicity pertaining to distribution of the software without
+  specific, written prior permission.  Keith Packard makes no
+  representations about the suitability of this software for any purpose.  It
+  is provided "as is" without express or implied warranty.
+  
+  KEITH PACKARD DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+  INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+  EVENT SHALL KEITH PACKARD BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+  CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+  DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THIS SOFTWARE.
+  
+  ----------------------------------------------------------------------
+  slim
+  
+  slim is Copyright © 2003 Richard Henderson
+  
+  Permission to use, copy, modify, distribute, and sell this software
+  and its documentation for any purpose is hereby granted without fee,
+  provided that the above copyright notice appear in all copies and that
+  both that copyright notice and this permission notice appear in
+  supporting documentation, and that the name of Richard Henderson not be
+  used in advertising or publicity pertaining to distribution of the
+  software without specific, written prior permission.  Richard Henderson
+  makes no representations about the suitability of this software for
+  any purpose.  It is provided "as is" without express or implied
+  warranty.
+  
+  RICHARD HENDERSON DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+  INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+  EVENT SHALL RICHARD HENDERSON BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+  CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF
+  USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+  OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THIS SOFTWARE.
+
+=== libjpeg
+
+The jpeg directory, except the files under the xulrunner section, are licensed
+under the following terms:
+
+  The authors make NO WARRANTY or representation, either express or implied,
+  with respect to this software, its quality, accuracy, merchantability, or
+  fitness for a particular purpose.  This software is provided "AS IS", and you,
+  its user, assume the entire risk as to its quality and accuracy.
+
+  This software is copyright (C) 1991-1998, Thomas G. Lane.
+  All Rights Reserved except as specified below.
+
+  Permission is hereby granted to use, copy, modify, and distribute this
+  software (or portions thereof) for any purpose, without fee, subject to these
+  conditions:
+  (1) If any part of the source code for this software is distributed, then this
+  README file must be included, with this copyright and no-warranty notice
+  unaltered; and any additions, deletions, or changes to the original files
+  must be clearly indicated in accompanying documentation.
+  (2) If only executable code is distributed, then the accompanying
+  documentation must state that "this software is based in part on the work of
+  the Independent JPEG Group".
+  (3) Permission for use of this software is granted only if the user accepts
+  full responsibility for any undesirable consequences; the authors accept
+  NO LIABILITY for damages of any kind.
+
+  These conditions apply to any software derived from or based on the IJG code,
+  not just to the unmodified library.  If you use our work, you ought to
+  acknowledge us.
+
+  Permission is NOT granted for the use of any IJG author's name or company name
+  in advertising or publicity relating to this software or products derived from
+  it.  This software may be referred to only as "the Independent JPEG Group's
+  software".
+
+  We specifically permit and encourage the use of this software as the basis of
+  commercial products, provided that all warranty or liability claims are
+  assumed by the product vendor.
+
+=== bzip2
+
+The modules/libbz2/src directory is licensed under the following terms:
+(from modules/libbz2/src/LICENSE)
+
+  This program, "bzip2", the associated library "libbzip2", and all
+  documentation, are copyright (C) 1996-2005 Julian R Seward.  All
+  rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+  
+  1. Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+  
+  2. The origin of this software must not be misrepresented; you must 
+     not claim that you wrote the original software.  If you use this 
+     software in a product, an acknowledgment in the product 
+     documentation would be appreciated but is not required.
+  
+  3. Altered source versions must be plainly marked as such, and must
+     not be misrepresented as being the original software.
+  
+  4. The name of the author may not be used to endorse or promote 
+     products derived from this software without specific prior written 
+     permission.
+  
+  THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS
+  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  
+  Julian Seward, Cambridge, UK.
+  jseward@acm.org
+  bzip2/libbzip2 version 1.0.3 of 15 February 2005
+
+=== libpng
+
+The directory modules/libimg/png is licensed under the following terms:
+(from modules/libimg/png/LICENSE)
+
+  This copy of the libpng notices is provided for your convenience.  In case of
+  any discrepancy between this copy and the notices in the file png.h that is
+  included in the libpng distribution, the latter shall prevail.
+  
+  COPYRIGHT NOTICE, DISCLAIMER, and LICENSE:
+  
+  If you modify libpng you may insert additional notices immediately following
+  this sentence.
+  
+  libpng version 1.2.6, September 12, 2004, is
+  Copyright (c) 2004 Glenn Randers-Pehrson, and is
+  distributed according to the same disclaimer and license as libpng-1.2.5
+  with the following individual added to the list of Contributing Authors
+  
+     Cosmin Truta
+  
+  libpng versions 1.0.7, July 1, 2000, through 1.2.5 - October 3, 2002, are
+  Copyright (c) 2000-2002 Glenn Randers-Pehrson, and are
+  distributed according to the same disclaimer and license as libpng-1.0.6
+  with the following individuals added to the list of Contributing Authors
+  
+     Simon-Pierre Cadieux
+     Eric S. Raymond
+     Gilles Vollant
+  
+  and with the following additions to the disclaimer:
+  
+     There is no warranty against interference with your enjoyment of the
+     library or against infringement.  There is no warranty that our
+     efforts or the library will fulfill any of your particular purposes
+     or needs.  This library is provided with all faults, and the entire
+     risk of satisfactory quality, performance, accuracy, and effort is with
+     the user.
+  
+  libpng versions 0.97, January 1998, through 1.0.6, March 20, 2000, are
+  Copyright (c) 1998, 1999 Glenn Randers-Pehrson, and are
+  distributed according to the same disclaimer and license as libpng-0.96,
+  with the following individuals added to the list of Contributing Authors:
+  
+     Tom Lane
+     Glenn Randers-Pehrson
+     Willem van Schaik
+  
+  libpng versions 0.89, June 1996, through 0.96, May 1997, are
+  Copyright (c) 1996, 1997 Andreas Dilger
+  Distributed according to the same disclaimer and license as libpng-0.88,
+  with the following individuals added to the list of Contributing Authors:
+  
+     John Bowler
+     Kevin Bracey
+     Sam Bushell
+     Magnus Holmgren
+     Greg Roelofs
+     Tom Tanner
+  
+  libpng versions 0.5, May 1995, through 0.88, January 1996, are
+  Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.
+  
+  For the purposes of this copyright and license, "Contributing Authors"
+  is defined as the following set of individuals:
+  
+     Andreas Dilger
+     Dave Martindale
+     Guy Eric Schalnat
+     Paul Schmidt
+     Tim Wegner
+  
+  The PNG Reference Library is supplied "AS IS".  The Contributing Authors
+  and Group 42, Inc. disclaim all warranties, expressed or implied,
+  including, without limitation, the warranties of merchantability and of
+  fitness for any purpose.  The Contributing Authors and Group 42, Inc.
+  assume no liability for direct, indirect, incidental, special, exemplary,
+  or consequential damages, which may result from the use of the PNG
+  Reference Library, even if advised of the possibility of such damage.
+  
+  Permission is hereby granted to use, copy, modify, and distribute this
+  source code, or portions hereof, for any purpose, without fee, subject
+  to the following restrictions:
+  
+  1. The origin of this source code must not be misrepresented.
+  
+  2. Altered versions must be plainly marked as such and must not
+     be misrepresented as being the original source.
+  
+  3. This Copyright notice may not be removed or altered from any
+     source or altered source distribution.
+  
+  The Contributing Authors and Group 42, Inc. specifically permit, without
+  fee, and encourage the use of this source code as a component to
+  supporting the PNG file format in commercial products.  If you use this
+  source code in a product, acknowledgment is not required but would be
+  appreciated.
+  
+  
+  A "png_get_copyright" function is available, for convenient use in "about"
+  boxes and the like:
+  
+     printf("%s",png_get_copyright(NULL));
+  
+  Also, the PNG logo (in PNG format, of course) is supplied in the
+  files "pngbar.png" and "pngbar.jpg (88x31) and "pngnow.png" (98x31).
+  
+  Libpng is OSI Certified Open Source Software.  OSI Certified Open Source is a
+  certification mark of the Open Source Initiative.
+  
+  Glenn Randers-Pehrson
+  glennrp@users.sourceforge.net
+  September 12, 2004
+
+=== zlib
+
+The directories modules/zlib/src and security/nss/cmd/zlib are licensed under
+the following terms:
+
+ (C) 1995-2004 Jean-loup Gailly and Mark Adler
+
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+
+  Jean-loup Gailly        Mark Adler
+  jloup@gzip.org          madler@alumni.caltech.edu
+
+  If you use the zlib library in a product, we would appreciate *not*
+  receiving lengthy legal documents to sign. The sources are provided
+  for free but without warranty of any kind.  The library has been
+  entirely written by Jean-loup Gailly and Mark Adler; it does not
+  include third-party code.
+  
+  If you redistribute modified sources, we would appreciate that you include
+  in the file ChangeLog history information documenting your changes. Please
+  read the FAQ for more information on the distribution of modified source
+  versions.
+  
+=== expat
+
+The directory parser/expat is licensed under the following terms:
+(from parser/expat/COPYING)
+
+  Copyright (c) 1998, 1999, 2000 Thai Open Source Software Center Ltd
+                                 and Clark Cooper
+  Copyright (c) 2001, 2002 Expat maintainers.
+  
+  Permission is hereby granted, free of charge, to any person obtaining
+  a copy of this software and associated documentation files (the
+  "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to
+  the following conditions:
+  
+  The above copyright notice and this permission notice shall be included
+  in all copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

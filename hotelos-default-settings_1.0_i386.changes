@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Mon, 18 Nov 2012 17:25:32 +0000
+Source: hotelos-default-settings
+Binary: hotelos-default-settings
+Architecture: source all
+Version: 1.0
+Distribution: precise
+Urgency: low
+Maintainer: Thanh Nguyen <thanhnguyen@mbm.vn>
+Changed-By: Thanh Nguyen <thanhnguyen@mbm.vn>
+Description: 
+ hotelos-default-settings - default settings for hotelos
+Changes: 
+ hotelos-default-settings (1.0) precise; urgency=low
+ .
+   * Initial release. (Closes: #XXXXXX)
+Checksums-Sha1: 
+ bb492bfef02c1a473062f89769cbcc3d49abe16d 811 hotelos-default-settings_1.0.dsc
+ fd8598d87ff4ce1cc05ec7e1e09bc90b9138bc82 61337790 hotelos-default-settings_1.0.tar.gz
+ dd1c40b9d33c454b52a8732df519b6e3328b76eb 61030148 hotelos-default-settings_1.0_all.deb
+Checksums-Sha256: 
+ e2c512dc673e75521934b56df0ad5e28b36ac580c42517479f9455e9fe8b7679 811 hotelos-default-settings_1.0.dsc
+ f859f54c34f457aaa363447622309cb18253164f6f53f00c57df583ebb103075 61337790 hotelos-default-settings_1.0.tar.gz
+ de521dc3d9a2eaddb5fb7e8f99ca5e372cf33395614afd6a02a91f82ceb85561 61030148 hotelos-default-settings_1.0_all.deb
+Files: 
+ d3a689231a00034db62b86f339837e41 811 x11 optional hotelos-default-settings_1.0.dsc
+ 92655eac3fdaced8062de6bd54e1817b 61337790 x11 optional hotelos-default-settings_1.0.tar.gz
+ 6ab92c4624761a835e8a582a7793e13a 61030148 x11 optional hotelos-default-settings_1.0_all.deb

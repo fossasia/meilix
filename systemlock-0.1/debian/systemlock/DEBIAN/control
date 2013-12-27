@@ -1,0 +1,9 @@
+Package: systemlock
+Version: 0.1-1
+Architecture: all
+Maintainer: x-mario <vanhonit@gmail.com>
+Installed-Size: 59
+Section: x11
+Priority: extra
+Homepage: http://mbm.vn
+Description: Interface for ofris.

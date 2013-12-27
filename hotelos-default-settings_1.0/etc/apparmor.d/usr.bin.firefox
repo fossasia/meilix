@@ -1,0 +1,156 @@
+# vim:syntax=apparmor
+# Author: Jamie Strandboge <jamie@canonical.com>
+
+# Declare an apparmor variable to help with overrides
+@{MOZ_LIBDIR}=/usr/lib/firefox
+
+#include <tunables/global>
+
+# We want to confine the binaries that match:
+#  /usr/lib/firefox/firefox
+#  /usr/lib/firefox/firefox
+# but not:
+#  /usr/lib/firefox/firefox.sh
+/usr/lib/firefox/firefox{,*[^s][^h]} {
+  #include <abstractions/audio>
+  #include <abstractions/cups-client>
+  #include <abstractions/dbus-session>
+  #include <abstractions/gnome>
+  #include <abstractions/nameservice>
+  #include <abstractions/p11-kit>
+
+  # Addons
+  #include <abstractions/ubuntu-browsers.d/firefox>
+
+  # for networking
+  network inet stream,
+  network inet6 stream,
+  @{PROC}/[0-9]*/net/if_inet6 r,
+  @{PROC}/[0-9]*/net/ipv6_route r,
+  @{PROC}/[0-9]*/net/dev r,
+  @{PROC}/[0-9]*/net/wireless r,
+
+  # should maybe be in abstractions
+  /etc/ r,
+  /etc/mime.types r,
+  /etc/mailcap r,
+  /etc/xdg/*buntu/applications/defaults.list    r, # for all derivatives
+  /usr/share/xubuntu/applications/defaults.list r,
+  owner @{HOME}/.local/share/applications/defaults.list r,
+  owner @{HOME}/.local/share/applications/mimeapps.list r,
+  owner @{HOME}/.local/share/applications/mimeinfo.cache r,
+  owner /tmp/** m,
+  owner /var/tmp/** m,
+  /tmp/.X[0-9]*-lock r,
+
+  /etc/timezone r,
+  /etc/wildmidi/wildmidi.cfg r,
+
+  # firefox specific
+  /etc/firefox*/ r,
+  /etc/firefox*/** r,
+  /etc/xul-ext/** r,
+  /etc/xulrunner-2.0*/ r,
+  /etc/xulrunner-2.0*/** r,
+  /etc/gre.d/ r,
+  /etc/gre.d/* r,
+
+  # noisy
+  deny @{MOZ_LIBDIR}/** w,
+  deny /usr/lib/firefox-addons/** w,
+  deny /usr/lib/xulrunner-addons/** w,
+  deny /usr/lib/xulrunner-*/components/*.tmp w,
+  deny /.suspended r,
+  deny /boot/initrd.img* r,
+  deny /boot/vmlinuz* r,
+  deny /var/cache/fontconfig/ w,
+  deny @{HOME}/.local/share/recently-used.xbel r,
+
+  # TODO: investigate
+  deny /usr/bin/gconftool-2 x,
+
+  # These are needed when a new user starts firefox and firefox.sh is used
+  @{MOZ_LIBDIR}/** ixr,
+  /usr/bin/basename ixr,
+  /usr/bin/dirname ixr,
+  /usr/bin/pwd ixr,
+  /sbin/killall5 ixr,
+  /bin/which ixr,
+  /usr/bin/tr ixr,
+  @{PROC}/ r,
+  @{PROC}/[0-9]*/cmdline r,
+  @{PROC}/[0-9]*/mountinfo r,
+  @{PROC}/[0-9]*/stat r,
+  owner @{PROC}/[0-9]*/task/[0-9]*/stat r,
+  @{PROC}/[0-9]*/status r,
+  @{PROC}/filesystems r,
+  owner @{HOME}/.thumbnails/*/*.png r,
+
+  /etc/mtab r,
+  /etc/fstab r,
+
+  # Needed for the crash reporter
+  owner @{PROC}/[0-9]*/environ r,
+  owner @{PROC}/[0-9]*/auxv r,
+  /etc/lsb-release r,
+  /usr/bin/expr ix,
+  /sys/devices/system/cpu/ r,
+  /sys/devices/system/cpu/** r,
+
+  # about:memory
+  owner @{PROC}/[0-9]*/statm r,
+  owner @{PROC}/[0-9]*/smaps r,
+
+  # Needed for container to work in xul builds
+  /usr/lib/xulrunner-*/plugin-container ixr,
+
+  # allow access to documentation and other files the user may want to look
+  # at in /usr and /opt
+  /usr/ r,
+  /usr/** r,
+  /opt/ r,
+  /opt/** r,
+
+  # so browsing directories works
+  / r,
+  /**/ r,
+
+  # Default profile allows downloads to ~/Downloads and uploads from ~/Public
+  owner @{HOME}/ r,
+  owner @{HOME}/Public/ r,
+  owner @{HOME}/Public/* r,
+  owner @{HOME}/Downloads/ r,
+  owner @{HOME}/Downloads/* rw,
+
+  # per-user firefox configuration
+  owner @{HOME}/.{firefox,mozilla}/ rw,
+  owner @{HOME}/.{firefox,mozilla}/** rw,
+  owner @{HOME}/.{firefox,mozilla}/**/*.{db,parentlock,sqlite}* k,
+  owner @{HOME}/.{firefox,mozilla}/plugins/** rm,
+  owner @{HOME}/.{firefox,mozilla}/**/plugins/** rm,
+  owner @{HOME}/.config/ibus/bus/ w,
+  owner @{HOME}/.gnome2/firefox*-bin-* rw,
+
+  #
+  # Extensions
+  # /usr/share/.../extensions/... is already covered by '/usr/** r', above.
+  # Allow 'x' for downloaded extensions, but inherit policy for safety
+  owner @{HOME}/.mozilla/**/extensions/** mixr,
+
+  deny @{MOZ_LIBDIR}/update.test w,
+  deny /usr/lib/mozilla/extensions/**/ w,
+  deny /usr/lib/xulrunner-addons/extensions/**/ w,
+  deny /usr/share/mozilla/extensions/**/ w,
+  deny /usr/share/mozilla/ w,
+
+  # Miscellaneous (to be abstracted)
+  # Ideally these would use a child profile. They are all ELF executables
+  # so running with 'Ux', while not ideal, is ok because we will at least
+  # benefit from glibc's secure execute.
+  /usr/bin/mkfifo Uxr,  # investigate
+  /bin/ps Uxr,
+  /bin/uname Uxr,
+
+  # Site-specific additions and overrides. See local/README for details.
+  #include <local/usr.bin.firefox>
+}

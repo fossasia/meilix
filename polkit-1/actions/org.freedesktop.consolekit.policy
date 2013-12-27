@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+ "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+
+<!--
+Policy definitions for ConsoleKit
+-->
+
+<policyconfig>
+
+  <action id="org.freedesktop.consolekit.system.stop">
+    <description>Stop the system</description>
+    <message>System policy prevents stopping the system</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.consolekit.system.stop-multiple-users">
+    <description>Stop the system when multiple users are logged in</description>
+    <message>System policy prevents stopping the system when other users are logged in</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.consolekit.system.restart">
+    <description>Restart the system</description>
+    <message>System policy prevents restarting the system</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.consolekit.system.restart-multiple-users">
+    <description>Restart the system when multiple users are logged in</description>
+    <message>System policy prevents restarting the system when other users are logged in</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+</policyconfig>

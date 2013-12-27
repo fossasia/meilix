@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Thu, 28 Mar 2013 16:04:48 +0700
+Source: plymouth-meilix-text
+Binary: plymouth-meilix-text
+Architecture: source all
+Version: 1.0-1
+Distribution: unstable
+Urgency: low
+Maintainer: meilix <vanhonit@gmail.com>
+Changed-By: Meilix <vanhonit@gmail.com>
+Description: 
+ plymouth-meilix-text - Plymouth theme meilix.
+Changes: 
+ plymouth-meilix-text (1.0-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1: 
+ 09d8295cfc6c28e67005e515ce982cf84503c359 902 plymouth-meilix-text_1.0-1.dsc
+ 3a4aeed97d8f0e98c4c96f6092fb101049f76520 2932 plymouth-meilix-text_1.0.orig.tar.gz
+ bca4923725be67529f6e76baeded27e534aa1b58 2499 plymouth-meilix-text_1.0-1.debian.tar.gz
+ e6703df9cf76e5fc84c91956537e60a3caaae8cd 2886 plymouth-meilix-text_1.0-1_all.deb
+Checksums-Sha256: 
+ 4ba3339547ae833b037763be94f71279d5b25692b2b69a22477bd7ea59843f6d 902 plymouth-meilix-text_1.0-1.dsc
+ 4afa834c8b3ba49e3e6415ebe2b582f21ca5488b997a5419121e06181f7bbd13 2932 plymouth-meilix-text_1.0.orig.tar.gz
+ 24f2e814c13e36495693c6464f936c4bddb8c9c90a9535469c267b88a88766d3 2499 plymouth-meilix-text_1.0-1.debian.tar.gz
+ f015885e62a07dfb228ccb78498fb44b551caf24ae6e7c0024c675f37a69d111 2886 plymouth-meilix-text_1.0-1_all.deb
+Files: 
+ e7606b6f4dfab536a1abffa9d73d3fce 902 x11 extra plymouth-meilix-text_1.0-1.dsc
+ 3d7e3527b419975acf830cd726c9de00 2932 x11 extra plymouth-meilix-text_1.0.orig.tar.gz
+ 178c2758dda81a75e825fdec4398786f 2499 x11 extra plymouth-meilix-text_1.0-1.debian.tar.gz
+ 74b69a43d8e7dfbca60b0c51228f7e25 2886 x11 extra plymouth-meilix-text_1.0-1_all.deb

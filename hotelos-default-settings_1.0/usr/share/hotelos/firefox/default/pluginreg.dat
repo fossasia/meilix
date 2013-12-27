@@ -1,0 +1,42 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version:0.15:$
+Arch:x86-gcc3:$
+
+[PLUGINS]
+libflashplayer.so:$
+/usr/lib/flashplugin-installer/libflashplayer.so:$
+:$
+1357872887000:0:1:$
+Shockwave Flash 11.2 r202:$
+Shockwave Flash:$
+2
+0:application/x-shockwave-flash:Shockwave Flash:swf:$
+1:application/futuresplash:FutureSplash Player:spl:$
+librhythmbox-itms-detection-plugin.so:$
+/usr/lib/mozilla/plugins/librhythmbox-itms-detection-plugin.so:$
+:$
+1354216814000:0:5:$
+This plug-in detects the presence of iTunes when opening iTunes Store URLs in a web page with Firefox.:$
+iTunes Application Detector:$
+1
+0:application/itunes-plugin:::$
+libnpgoogletalk.so:$
+/opt/google/talkplugin/libnpgoogletalk.so:$
+:$
+1351528348000:0:5:$
+Version: 3.2.4.0:$
+Google Talk Plugin:$
+1
+0:application/googletalk:Google Talk Plugin:googletalk:$
+libnpgtpo3dautoplugin.so:$
+/opt/google/talkplugin/libnpgtpo3dautoplugin.so:$
+:$
+1351528348000:0:5:$
+Google Talk Plugin Video Accelerator version:0.1.44.16:$
+Google Talk Plugin Video Accelerator:$
+1
+0:application/vnd.gtpo3d.auto:O3D MIME::$
+
+[INVALID]

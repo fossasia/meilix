@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Skype
+Comment=Skype Internet Telephony
+Exec=skype %U
+Icon=skype.png
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Network;Application;
+MimeType=x-scheme-handler/skype;
+X-KDE-Protocols=skype

@@ -1,0 +1,14 @@
+The GNU Lesser General Public License is a Free Software license. Like any Free Software license, it grants to you the four following freedoms:
+
+   1. The freedom to run the program for any purpose.
+   2. The freedom to study how the program works and adapt it to your needs.
+   3. The freedom to redistribute copies so you can help your neighbor.
+   4. The freedom to improve the program and release your improvements to the public, so that the whole community benefits.
+
+You may exercise the freedoms specified here provided that you comply with the express conditions of this license. The LGPL is intended for software libraries, rather than executable programs. The principal conditions are:
+
+    * You must conspicuously and appropriately publish on each copy distributed an appropriate copyright notice and disclaimer of warranty and keep intact all the notices that refer to this License and to the absence of any warranty; and give any other recipients of the Program a copy of the GNU Lesser General Public License along with the Program. Any translation of the GNU Lesser General Public License must be accompanied by the GNU Lesser General Public License.
+    * If you modify your copy or copies of the library or any portion of it, you may distribute the resulting library provided you do so under the GNU Lesser General Public License. However, programs that link to the library may be licensed under terms of your choice, so long as the library itself can be changed. Any translation of the GNU Lesser General Public License must be accompanied by the GNU Lesser General Public License.
+    * If you copy or distribute the program, you must accompany it with the complete corresponding machine-readable source code or with a written offer, valid for at least three years, to furnish the complete corresponding machine-readable source code.
+
+Any of the above conditions can be waived if you get permission from the copyright holder.

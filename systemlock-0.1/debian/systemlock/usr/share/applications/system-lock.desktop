@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=System Lock
+Comment=Freeze system
+Icon=/usr/bin/lock-icon.png
+Exec=/usr/bin/system-lock.py
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel

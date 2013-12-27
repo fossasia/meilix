@@ -1,0 +1,62 @@
+#!/bin/sh
+
+set -e
+
+MOZ_PKG_NAME=firefox
+
+abort_mv_conffile() {
+    local CONFFILE="$1"
+
+    if [ -e "$CONFFILE.dpkg-remove" ]; then
+        echo "Reinstalling $CONFFILE that was moved away"
+        mv "$CONFFILE.dpkg-remove" "$CONFFILE"
+    fi
+}
+
+abort_rm_conffile() {
+    local CONFFILE="$1"
+
+    if [ -e "$CONFFILE.dpkg-remove" ]; then
+        echo "Reinstalling $CONFFILE that was moved away"
+        mv "$CONFFILE.dpkg-remove" "$CONFFILE"
+    fi
+    if [ -e "$CONFFILE.dpkg-backup" ]; then
+        echo "Reinstalling $CONFFILE that was backupped"
+        mv "$CONFFILE.dpkg-backup" "$CONFFILE"
+    fi
+}
+
+purge_conffile() {
+    local CONFFILE="$1"
+
+    rm -f "$CONFFILE.dpkg-bak" "$CONFFILE.dpkg-remove" "$CONFFILE.dpkg-backup" || true
+}
+
+if [ "$1" = "purge" ]; then
+    APP_PROFILE="usr.bin.firefox"
+    rm -f /etc/apparmor.d/force-complain/$APP_PROFILE || true
+    rm -f /etc/apparmor.d/disable/$APP_PROFILE || true
+    rm -f /etc/apparmor.d/local/$APP_PROFILE || true
+    rm -f "/etc/apparmor.d/abstractions/ubuntu-browsers.d/firefox" || true
+    rmdir /etc/apparmor.d/local 2>/dev/null || true
+
+    purge_conffile "/etc/${MOZ_PKG_NAME}/profile/bookmarks.html"
+    purge_conffile "/etc/${MOZ_PKG_NAME}/profile/localstore.rdf"
+    purge_conffile "/etc/${MOZ_PKG_NAME}/profile/mimeTypes.rdf"
+    purge_conffile "/etc/${MOZ_PKG_NAME}/profile/prefs.js"
+    purge_conffile "/etc/${MOZ_PKG_NAME}/profile/chrome/userChrome-example.css"
+    purge_conffile "/etc/${MOZ_PKG_NAME}/profile/chrome/userContent-example.css"
+fi
+
+if [ "$1" = "abort-install" -o "$1" = "abort-upgrade" ] ; then
+    abort_rm_conffile "/etc/${MOZ_PKG_NAME}/profile/bookmarks.html"
+    abort_rm_conffile "/etc/${MOZ_PKG_NAME}/profile/localstore.rdf"
+    abort_rm_conffile "/etc/${MOZ_PKG_NAME}/profile/mimeTypes.rdf"
+    abort_rm_conffile "/etc/${MOZ_PKG_NAME}/profile/prefs.js"
+    abort_rm_conffile "/etc/${MOZ_PKG_NAME}/profile/chrome/userChrome-example.css"
+    abort_rm_conffile "/etc/${MOZ_PKG_NAME}/profile/chrome/userContent-example.css"
+
+    abort_mv_conffile "/etc/${MOZ_PKG_NAME}/pref/firefox.js"
+fi
+
+

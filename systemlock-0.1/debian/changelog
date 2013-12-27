@@ -1,0 +1,5 @@
+systemlock (0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- x-mario <vanhonit@gmail.com>  Mon, 24 Dec 2012 14:43:26 +0700
