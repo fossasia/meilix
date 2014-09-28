@@ -1,0 +1,23 @@
+0fPREREQUISITES FOR INSTALLING UBUNTU07                                           09F207
+
+You must have at least 44 megabytes of RAM to use this Ubuntu installer.
+
+You should have space on your hard disk to create a new disk partition
+of at least 5 gigabytes to install a standard Ubuntu desktop system or
+at least 500 megabytes for a minimal server installation. You'll need
+more disk space to install additional packages, depending on what you
+wish to do with your new Ubuntu system.
+
+See the Installation Guide or the FAQ for more information; both
+documents are available at the Ubuntu web site, 0fhttp://www.ubuntu.com/07
+
+Thank you for choosing Ubuntu!
+
+
+
+
+
+
+
+
+Press F1control and F then 1 for the help index, or ENTER to 

@@ -1,0 +1,23 @@
+0fSPECIAL BOOT PARAMETERS - OVERVIEW07                                            09F507
+
+On a few systems, you may need to specify a parameter at the 0fboot:07
+prompt in order to boot the system. For example, Linux may not be able
+to autodetect your hardware, and you may need to explicitly specify
+its location or type for it to be recognized.
+
+For more information about what boot parameters you can use, press:
+
+ <09F607> -- boot parameters for special machines
+ <09F707> -- boot parameters for various disk controllers
+ <09F807> -- boot parameters understood by the install system
+
+Note that to specify a parameter for a particular kernel module, use the form
+module.param=value, for example: libata.atapi_enabled=1
+
+
+
+
+
+
+
+Press F1control and F then 1 for the help index, or ENTER to 

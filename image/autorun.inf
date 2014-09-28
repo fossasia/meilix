@@ -1,0 +1,9 @@
+[autorun]
+open=wubi.exe
+icon=wubi.exe,0
+label=Install Lubuntu
+
+[Content]
+MusicFiles=false
+PictureFiles=false
+VideoFiles=false

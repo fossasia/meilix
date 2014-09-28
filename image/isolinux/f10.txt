@@ -1,0 +1,23 @@
+0fCOPYRIGHTS AND WARRANTIES07                                                    09F1007
+
+Ubuntu is Copyright (C) 2004-2010 Canonical Ltd., and incorporates the work
+of many other original authors and contributors.
+
+The Ubuntu system is freely redistributable. After installation, the
+exact distribution terms for each package are described in the
+corresponding file /usr/share/doc/0bpackagename07/copyright.
+
+Ubuntu comes with 0fABSOLUTELY NO WARRANTY07, to the extent
+permitted by applicable law.
+
+This installation system is based on the Debian installer. See
+http://www.debian.org/ for more details and information on the Debian
+project.
+
+
+
+
+
+
+
+Press F1control and F then 1 for the help index, or ENTER to 

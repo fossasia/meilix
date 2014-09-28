@@ -1,0 +1,23 @@
+0fSPECIAL BOOT PARAMETERS - VARIOUS DISK DRIVES07                                 09F707
+
+You can use the following boot parameters at the 0fboot:07 prompt, 
+in combination with the boot method (see <09F307>).
+0f
+HARDWARE                     PARAMETER TO SPECIFY07
+Adaptec 151x, 152x           0faha152x.aha152x=0biobase07[0f,0birq07[0f,0bscsi-id07[0f,0breconnect07]]]
+Adaptec 1542                 0faha1542.aha1542=0biobase07[0f,0bbuson0f,0bbusoff07[0f,0bdmaspeed07]]
+Adaptec 274x, 284x           0faic7xxx.aic7xxx=no_reset07    (enabled if non-zero)
+BusLogic SCSI Hosts          0fBusLogic.BusLogic=0biobase07
+Certain DELL machines        0faic7xxx.aic7xxx=no_probe07
+
+This list is incomplete, see the kernel's kernel-parameters.txt file
+for more.
+
+
+
+
+
+For example:
+  boot: install aic7xxx.aic7xxx=no_probe
+
+Press F1control and F then 1 for the help index, or ENTER to 

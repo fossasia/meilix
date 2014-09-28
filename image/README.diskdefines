@@ -1,0 +1,9 @@
+#define DISKNAME  Lubuntu 12.10 "Quantal Quetzal" - Release i386
+#define TYPE  binary
+#define TYPEbinary  1
+#define ARCH  i386
+#define ARCHi386  1
+#define DISKNUM  1
+#define DISKNUM1  1
+#define TOTALNUM  0
+#define TOTALNUM0  1

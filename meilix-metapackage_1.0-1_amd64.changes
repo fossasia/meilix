@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 28 Mar 2013 16:04:48 +0700
+Source: meilix-metapackage
+Binary: meilix-metapackage
+Architecture: source all
+Version: 1.0-1
+Distribution: unstable
+Urgency: low
+Maintainer: meilix <vanhonit@gmail.com>
+Changed-By: Meilix <vanhonit@gmail.com>
+Description: 
+ meilix-metapackage - default applications for meilix
+Changes: 
+ meilix-metapackage (1.0-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1: 
+ af4eac4a6d6577802054c098718f49bb220369fa 579 meilix-metapackage_1.0-1.dsc
+ ca2e873c4b3368f8c9bb0fde00c4f6240454ff21 2015 meilix-metapackage_1.0-1.tar.gz
+ 7fddac47b60cf415235ae3157dc92de3075e8d42 2018 meilix-metapackage_1.0-1_all.deb
+Checksums-Sha256: 
+ 64ca1c013567f351fef925a27fdfe38eba0b887177d551299f58dab5e7ab50e5 579 meilix-metapackage_1.0-1.dsc
+ 792da24ca96ba5d889556a50198559c4565f5e31d65c4daf0d17484dbb19263d 2015 meilix-metapackage_1.0-1.tar.gz
+ 9e6ac69a4b08fda2daad4f5eb258c87c80f0567eff4f9d89ddb2b691e1bada6a 2018 meilix-metapackage_1.0-1_all.deb
+Files: 
+ 629982be968dd37e7b16bf55d22f9ea3 579 x11 extra meilix-metapackage_1.0-1.dsc
+ ebe91741b055288dcb8df2630b28dddc 2015 x11 extra meilix-metapackage_1.0-1.tar.gz
+ 24a9c7550cf606d5fe2fcda14b07ca30 2018 x11 extra meilix-metapackage_1.0-1_all.deb

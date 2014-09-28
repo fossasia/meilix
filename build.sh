@@ -11,13 +11,13 @@ set -eu				# Be strict
 # Arch to build ISO for, i386 or amd64
 arch=${1:-i386}
 # Ubuntu mirror to use
-mirror=${2:-"http://192.168.1.200:3142/free.nchc.org.tw/ubuntu/"}
+mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Set of GNOME language packs to install.
 #   Use '\*' for all langs, 'en' for English.
 # Install language with the most popcon
 gnomelanguage=${3:-'{en}'}	#
 # Release name, used by debootstrap.  Examples: lucid, maverick, natty.
-release=${4:-quantal}
+release=${4:-trusty}
 
 # Necessary data files
 datafiles="image-${arch}.tar.lzma sources.list"
@@ -45,11 +45,12 @@ sudo cp -vr /etc/resolvconf chroot/etc/resolvconf
 
 # Copy the source.list to enable universe / multiverse in the chroot, and eventually additional repos.
 sudo cp -v sources.list chroot/etc/apt/sources.list
-sudo cp -v meilix-default-settings_1.0_all.deb chroot
-sudo cp -v systemlock_0.1-1_all.deb chroot
-sudo cp -v plymouth-meilix-logo_1.0-1_all.deb chroot
-sudo cp -v plymouth-meilix-text_1.0-1_all.deb chroot
-sudo cp -v skype-ubuntu_4.1.0.20-1_i386.deb chroot
+sudo cp -v meilix-default-settings_*_all.deb chroot
+sudo cp -v systemlock_*_all.deb chroot
+sudo cp -v plymouth-meilix-logo_*_all.deb chroot
+sudo cp -v plymouth-meilix-text_*_all.deb chroot
+sudo cp -v meilix-metapackage_*_all.deb chroot
+sudo cp -v skype-ubuntu_*_i386.deb chroot
 # Work *inside* the chroot
 sudo chroot chroot <<EOF
 # Mount needed three pseudo-filesystems
@@ -82,6 +83,8 @@ apt-get -q update
 apt-get -q -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
+#
+dpkg -i meilix-metapackage*.deb
 # Install base packages
 apt-get -q -y --purge install --no-install-recommends \
   lxsession lightdm lightdm-gtk-greeter lxterminal gvfs-backends seahorse \
@@ -175,7 +178,7 @@ EOF
 echo $0: Preparing image...
 
 [ -d image ] && sudo /bin/rm -r image
-tar xvf image-${arch}.tar
+tar xf image-${arch}.tar.lzma
 
 # Copy the kernel from the chroot into the image for the LiveCD
 sudo cp chroot/boot/vmlinuz-3.*.**-**-generic image/casper/vmlinuz

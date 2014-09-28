@@ -1,0 +1,43 @@
+About the Smart Boot Manager image
+----------------------------------
+
+  The file `sbm.bin' that is available in this directory may be useful
+  to you if you are not able to directly boot the first CD because your
+  BIOS may be too old and may not support ISOLINUX.
+
+  Then, instead of booting on the CD directly, you create a Smart Boot
+  Manager floppy image by using the sbm.bin disk image. You can create this
+  floppy with rawrite (under DOS) or with dd (under Linux). Now you can
+  boot on this floppy disk and it will detect your CDROM and let you boot
+  on it bypassing any BIOS limitation.
+
+What is SBM ?
+
+  Smart Boot Manager or briefly SmartBtmgr (SBM), is an OS independent
+  Boot Manager - a program that is loaded by the bios before any
+  operating system and allows you to choose which operating system to
+  boot.
+
+  SBM is included in Debian in two ways, the package bmconf allows us to
+  install and configure an old version of SBM and sbm wich is the latest
+  version of SBM with an installer.
+
+What's the use of SBM on the CD then ?
+
+  SBM includes an IDE driver that allows us to boot the cds even on
+  machines with a BIOS that wouldn't support booting from CD, provided our
+  CDROM is an IDE one, that is, so you can make a SBM floppy and boot from
+  it and then tell it to boot from your CDROM.
+
+  Also, there are some cases where the BIOS would allow booting from the CD
+  but isolinux fails to boot from there, in this case you can either boot
+  using a CD other than the first, as the others don't use isolinux, or you
+  can make a SBM floppy and boot from this floppy and then tell SBM to boot
+  your CDROM.
+
+How do you make a SBM floppy ?
+
+  If you have SBM installed on a box you can run sbminst. Otherwise you can
+  put the sbm.bin floppy image that we provide with our cds onto a floppy
+  just like you would do with a rescue image.
+

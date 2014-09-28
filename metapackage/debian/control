@@ -1,0 +1,14 @@
+Source: meilix-metapackage
+Section: x11
+Priority: extra
+Maintainer: meilix <vanhonit@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+Homepage: http://mbm.vn
+
+Package: meilix-metapackage
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+# Add package with a ,
+Description: default applications for meilix
+ Default application for Meilix.

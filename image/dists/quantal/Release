@@ -1,0 +1,48 @@
+Origin: Ubuntu
+Label: Ubuntu
+Suite: quantal
+Version: 12.10
+Codename: quantal
+Date: Wed, 17 Oct 2012 15:52:53 UTC
+Architectures: i386
+Components: main restricted universe multiverse
+Description: Ubuntu Quantal 12.10
+MD5Sum:
+ a1d38891892124c12c3b254a92adaf41      102 restricted/binary-i386/Release
+ 756c909fd6b0fc0a6b26a2610246b6ce      946 restricted/binary-i386/Packages.gz
+ 82d0612221a44f70ffb2c048e43b3054     1581 restricted/binary-i386/Packages
+ db55db6c763fdd79d24dc3356c88200a      100 universe/binary-i386/Release
+ 91a3b2f108174ae27650cde0391e63ef     3136 universe/binary-i386/Packages.gz
+ be4bbe2f16906ae80ef91596e63fda29     9128 universe/binary-i386/Packages
+ 8389744e511c8ec6438688d3cca62106      102 multiverse/binary-i386/Release
+ 1e7e5f6565abe002b1832100e9a41fca      569 multiverse/binary-i386/Packages.gz
+ be753c429e63dfbbd3abf1dde98346fa      851 multiverse/binary-i386/Packages
+ 5c5dba10f1df686ee0e88f8e77f5888e       96 main/binary-i386/Release
+ 4be5e9f6e951496213d7fa3f9f844301     7904 main/binary-i386/Packages.gz
+ 74d339d67c09b2143d29948d75add99e    25416 main/binary-i386/Packages
+SHA1:
+ 31fb7b4fa0cb3274477f39db5211ae8e5ec1cf13      102 restricted/binary-i386/Release
+ 5a15a275debb481056bf006108f0a8b2e695b086      946 restricted/binary-i386/Packages.gz
+ 24b1551a0dd69aa565c3f26bfe7abbfc5f5d4311     1581 restricted/binary-i386/Packages
+ 135c3b2ffb15ff71f19209ff4c5d651fe12a794d      100 universe/binary-i386/Release
+ 8310dc041ee74540e2770cf13a09df8dbbe2dc54     3136 universe/binary-i386/Packages.gz
+ b704aea64d13ed28ed9894f4eee43e1d74fe4d3f     9128 universe/binary-i386/Packages
+ 711d557bf2b7f2268b5c17d89a21f242b9e42edc      102 multiverse/binary-i386/Release
+ ceb865ed881155455984f1f6e42ba811e98c2e77      569 multiverse/binary-i386/Packages.gz
+ 55931c52ab9e8fd9b0e854c1856cec434b1e7103      851 multiverse/binary-i386/Packages
+ a27eea98931fc792e33d06b37c60ee476c0e5aab       96 main/binary-i386/Release
+ ec02591390fecb6c0592ac2278b6cb88bff1463b     7904 main/binary-i386/Packages.gz
+ ae93992198c46148d57ccc8f76f1127e57ef3236    25416 main/binary-i386/Packages
+SHA256:
+ 0e27fbcab53cb4b064be78ae7de0da11769cf4be046bcdd644dcad1133dd9c9d      102 restricted/binary-i386/Release
+ 66b3c502095f17e3b302a150d027b2d6845155698a4691447b736f3408b5d2e8      946 restricted/binary-i386/Packages.gz
+ 5b368dd84cb6d7fce9a2da058dda700c8414451ebdaf4ec6cdf3580f7b3eed4f     1581 restricted/binary-i386/Packages
+ 6ddca0fa043190f410a3ffdd53f8c938222ecbf4c7df9eb1727dd50fe47403ea      100 universe/binary-i386/Release
+ 12db89d448d8edc9ce64058b32942bd1908c2344a118394a5722a99d03119cc5     3136 universe/binary-i386/Packages.gz
+ 753e19476a46670da74253d77f6af62ea89341aad029b1f434e0dc29fbdea166     9128 universe/binary-i386/Packages
+ d26cde8b2eebbddc7ad2703018e0b358da2d490545471cb6b37b4f248d93484d      102 multiverse/binary-i386/Release
+ ce9f6819d17d5c41c106f95ddc77595d270cb3426d430fdca908277bfb7985af      569 multiverse/binary-i386/Packages.gz
+ 952708fba6b4d2c093bc624392221f479b4b88cc5919219bcddbbb3192f23645      851 multiverse/binary-i386/Packages
+ 1734af43ccb7f43c21ec280f4c61c8a8d30f4958f782468b79958e8de995e57a       96 main/binary-i386/Release
+ f84ff99102cf7169b8807e39e717226b2fee6a14775b466402ccf1702ed08aba     7904 main/binary-i386/Packages.gz
+ 677054814d506f36464f10a486c975f8881e4e1da4e3ad1bd63b6b6588b0b27e    25416 main/binary-i386/Packages

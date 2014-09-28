@@ -1,0 +1,23 @@
+0fBOOT METHODS07                                                                  09F307
+
+0fAvailable boot methods:07
+
+0finstall07
+  Start the installation -- this is the default option.
+0fexpert07
+  Start the installation in expert mode, for maximum control.
+0fcli07, 0fcli-expert07
+  Minimal command-line system install.
+0fmemtest07
+  Perform a memory test.
+
+To use one of these boot methods, type it at the prompt, optionally
+followed by any boot parameters. For example:
+  boot: install acpi=off
+
+If unsure, you should use the default boot method, with no special
+parameters, by simply pressing enter at the boot prompt.
+
+Except in expert mode, non-critical kernel boot messages are suppressed.
+
+Press F1control and F then 1 for the help index, or ENTER to 

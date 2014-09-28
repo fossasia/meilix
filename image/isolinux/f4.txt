@@ -1,0 +1,23 @@
+0fRESCUE MODE07                                                                   09F407
+
+0fUse one of these boot methods to rescue an existing install:07
+
+0frescue07
+  Boot into rescue mode.
+
+
+
+
+
+
+
+To use one of these boot methods, type it at the prompt, optionally
+followed by any boot parameters. For example:
+  boot: rescue acpi=off
+
+
+
+
+
+
+Press F1control and F then 1 for the help index, or ENTER to 

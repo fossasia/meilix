@@ -1,0 +1,5 @@
+# Only install the standard system and language packs.
+tasksel	tasksel/first	multiselect
+d-i	pkgsel/language-pack-patterns	string
+# No language support packages.
+d-i	pkgsel/install-language-support	boolean false
