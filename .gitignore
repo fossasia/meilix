@@ -1,0 +1,5 @@
+chroot/
+*.iso
+*.md5
+image/casper/filesystem.squash*
+image/casper/vm*
