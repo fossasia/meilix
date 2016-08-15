@@ -1,6 +1,6 @@
 Meilix
 ========
-beautiful Linux OS for Hotels and Public Spaces with Ofris System lock
+beautiful [lubuntu](http://lubuntu.net) based Linux OS for Hotels and Public Spaces with a system lock
 * based on lubuntu
 * light weight
 * fast
