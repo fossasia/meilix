@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Fri, 16 Dec 2016 21:22:51 +0530
+Source: meilix-imclient
+Binary: meilix-imclient
+Architecture: source all
+Version: 1.0
+Distribution: unstable
+Urgency: low
+Maintainer: Abishek <abishekvashok@gmail.com>
+Changed-By: Abishek <abishekvashok@gmail.com>
+Description: 
+ meilix-imclient - Adds pidgin as an imclient for the community distro,
+Changes: 
+ meilix-imclient (1.0) unstable; urgency=low
+ .
+   * First version
+Checksums-Sha1: 
+ 88b18bd598b722f06827ab07cfffa82facecb48e 555 meilix-imclient_1.0.dsc
+ c38b53ff2ce8680f47a5e7de7e025c790cf15212 1863 meilix-imclient_1.0.tar.gz
+ 5933799d41d9829a7ea26caf32e26e30384f4505 2108 meilix-imclient_1.0_all.deb
+Checksums-Sha256: 
+ 76ba12f05d0f0829457a1fbaf449828535f272439bd1063b5a043279162b6d3d 555 meilix-imclient_1.0.dsc
+ 98026e27c56e8f5ac15dd6fdedf39b685eb3105872dff8631860e972932d129a 1863 meilix-imclient_1.0.tar.gz
+ 500500cc76484ef147f84c3c106b2e18fa548a90d29b53a13e238063e5f6d21f 2108 meilix-imclient_1.0_all.deb
+Files: 
+ 0f8dde3084f42dedcffc9794980f924e 555 misc optional meilix-imclient_1.0.dsc
+ fd09e08cca45110b437b47ce936b0801 1863 misc optional meilix-imclient_1.0.tar.gz
+ a466d7b3e1899c116d94cd30eaae148a 2108 misc optional meilix-imclient_1.0_all.deb

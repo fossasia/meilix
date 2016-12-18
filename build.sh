@@ -51,6 +51,7 @@ sudo cp -v plymouth-meilix-logo_*_all.deb chroot
 sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v skype-ubuntu_*_i386.deb chroot
+sudo cp -v meilix-imclient_*_all.deb chroot
 # Work *inside* the chroot
 sudo chroot chroot <<EOF
 # Mount needed three pseudo-filesystems
@@ -137,6 +138,9 @@ apt-get -q -y autoclean
 apt-get -q -y --purge install gdm
 apt-get -q -y --purge remove gdm
 
+# Install imclient
+dpkg -i meilix-imclient_*_all.deb
+
 #Google custom ad
 apt-get -q -y --purge install mygoad
 #Install East Asia font
@@ -160,6 +164,7 @@ rm -rf /tmp/*
 #rm /etc/resolv.conf
 rm meilix-default-settings_1.0_all.deb 
 rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb skype-ubuntu_4.1.0.20-1_i386.deb
+rm meilix-imclient_*_all.deb
 
 # Reverting earlier initctl override. JM 2012-0604
 rm /sbin/initctl
