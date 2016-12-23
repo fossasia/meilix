@@ -1,19 +1,15 @@
 language: python
-python:
-  - "2.6"
-  - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  # does not have headers provided, please ask https://launchpad.net/~pypy/+archive/ppa
-  # maintainers to fix their pypy-dev package.
-  - "pypy"
+sudo: required
+python: "3.4"
+
 # command to install dependencies
-install:
-  - pip install .
-  - pip install -r requirements.txt
+# We don't have any dependencies yet!
+#install:
+#  - pip install -r requirements.txt
+
 # command to run tests
-script: nosetests
+script:
+  - bash ./build.sh
 
 notifications:
   slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
