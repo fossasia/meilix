@@ -6,11 +6,5 @@
 #
 # For information about PPA please refer to:
 # http://askubuntu.com/questions/4983/what-are-ppas-and-how-do-i-use-them
-deb http:// precise-security main restricted universe multiverse 
-deb http:// main restricted universe multiverse 
-deb http:// precise-proposed main restricted universe multiverse 
-deb http:// precise-backports main restricted universe multiverse 
-deb-src http:// precise-security main restricted universe multiverse 
-deb-src http:// precise-updates main restricted universe multiverse 
-deb-src http:// precise-proposed main restricted universe multiverse 
-deb-src http:// precise-backports main restricted universe multiverse
+deb http:meilixsources.gq/sources/binary
+deb-src http:meilixsources.gq/sources/sources
