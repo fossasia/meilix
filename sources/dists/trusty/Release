@@ -1,0 +1,20 @@
+Origin: FOSSASIA
+Label: FOSSASIA Meilix
+Suite: stable
+Codename: trusty
+Date: Mon, 26 Dec 2016 06:37:04 UTC
+Architectures: i386
+Components: main
+Description: Debian ARM packages for Meilix Project
+MD5Sum:
+ 68370cb626e394313f8227ed2bb245bb 4357 main/binary-i386/Packages
+ 7d7794f929bbebee8ab474bb7c4b0110 1795 main/binary-i386/Packages.gz
+ 1fb9fa22802cd7c82672598810ecc295 143 main/binary-i386/Release
+SHA1:
+ 80ea1e7508dd13ea4f97af4957a94e3a7a6c3d6e 4357 main/binary-i386/Packages
+ 0f694eea85654d81f2098834ca34ff73fe327551 1795 main/binary-i386/Packages.gz
+ 89d6739c0aa50d2c32f79280f4c269a91288dc26 143 main/binary-i386/Release
+SHA256:
+ 30da200941c8a7272686bf9a2e7a6d4d0445198f4b1b77664c515979a36521f3 4357 main/binary-i386/Packages
+ a6eec61ab1a08e63356ddc7b8672be7dbcc69ad1f31b77ce8d0e9ed801d6d1c5 1795 main/binary-i386/Packages.gz
+ 80dd93aad37ae3e7618dd2f3fcd2e32bcabe3d10095751827da77d06940ac301 143 main/binary-i386/Release
