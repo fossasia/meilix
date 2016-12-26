@@ -6,5 +6,4 @@
 #
 # For information about PPA please refer to:
 # http://askubuntu.com/questions/4983/what-are-ppas-and-how-do-i-use-them
-deb http:meilixsources.gq/sources/binary
-deb-src http:meilixsources.gq/sources/sources
+deb https://raw.githubusercontent.com/fossasia/meilix/master/sources main
