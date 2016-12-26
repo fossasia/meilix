@@ -27,4 +27,4 @@ Features:
 **Note: Remember to replace nameOfYourMeta-package with the name of the meta-package**
 
 ##Communication
-Chat: [Pocket Science Slack Channel](http://fossasia.slack.com/messages/pocketscience/) | [Get an Invite](http://fossasia-slack.herokuapp.com/)
+Chat: [Pocket Science Slack Channel](http://fossasia.slack.com/messages/linux/) | [Get an Invite](http://fossasia-slack.herokuapp.com/)
