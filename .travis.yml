@@ -1,6 +1,5 @@
-language: python
+language: generic
 sudo: required
-python: "3.4"
 
 # command to install dependencies
 # We don't have any dependencies yet!
@@ -9,7 +8,6 @@ python: "3.4"
 
 # command to run tests
 script:
-  - bash ./build.sh
-
+  - ./build.sh
 notifications:
   slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
