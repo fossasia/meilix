@@ -17,7 +17,7 @@ mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Install language with the most popcon
 gnomelanguage=${3:-'{en}'}	#
 # Release name, used by debootstrap.  Examples: lucid, maverick, natty.
-release=${4:-trusty}
+release=${4:-xenial}
 
 # Necessary data files
 datafiles="image-${arch}.tar.lzma sources.list"
@@ -52,13 +52,14 @@ sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v skype-ubuntu_*_i386.deb chroot
 sudo cp -v meilix-imclient_*_all.deb chroot
+
+# Mount needed pseudo-filesystems
+sudo mount --rbind /sys chroot/sys
+sudo mount --rbind /dev chroot/dev
+sudo mount -t proc none chroot/proc
+
 # Work *inside* the chroot
 sudo chroot chroot <<EOF
-# Mount needed three pseudo-filesystems
-mount -t proc none /proc
-mount -t sysfs none /sys
-mount -t devpts none /dev/pts
-
 # Set up several useful shell variables
 export CASPER_GENERATE_UUID=1
 export HOME=/root
@@ -84,8 +85,9 @@ apt-get -q update
 apt-get -q -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
-#
 dpkg -i meilix-metapackage*.deb
+apt-get install -f
+
 # Install base packages
 apt-get -q -y --purge install --no-install-recommends \
   lxsession lightdm lightdm-gtk-greeter lxterminal gvfs-backends seahorse \
@@ -95,6 +97,7 @@ apt-get -q -y --purge install --no-install-recommends \
  
 # Plymouth theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
+apt-get install -f
 
 # Power manager for laptop
 apt-get -q -y --purge install xfce4-power-manager
@@ -140,6 +143,7 @@ apt-get -q -y --purge remove gdm
 
 # Install imclient
 dpkg -i meilix-imclient_*_all.deb
+apt-get install -f
 
 #Google custom ad
 apt-get -q -y --purge install mygoad
@@ -156,6 +160,7 @@ apt-get -q -y --purge install im-switch
 #apt-get download hotelos-default-settings
 dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb 
 dpkg -i --force-overwrite systemlock_0.1-1_all.deb
+apt-get install -f
 apt-get -q -y remove dconf-tools
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
@@ -170,24 +175,25 @@ rm meilix-imclient_*_all.deb
 rm /sbin/initctl
 dpkg-divert --rename --remove /sbin/initctl
 
-# Unmount pseudo-filesystems within chroot
-umount -lf /proc
-umount -lf /sys
-umount -lf /dev/pts
 exit
-
 EOF
 
 ###############################################################
 # Continue work outside the chroot, preparing image
+
+# Unmount pseudo-filesystems
+sudo umount -lfr chroot/proc
+sudo umount -lfr chroot/sys
+sudo umount -lfr chroot/dev
+
 echo $0: Preparing image...
 
 [ -d image ] && sudo /bin/rm -r image
 tar xf image-${arch}.tar.lzma
 
 # Copy the kernel from the chroot into the image for the LiveCD
-sudo cp chroot/boot/vmlinuz-3.**.**-**-generic image/casper/vmlinuz
-sudo cp chroot/boot/initrd.img-3.**.**-**-generic image/casper/initrd.lz
+sudo cp chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
+sudo cp chroot/boot/initrd.img-**-generic image/casper/initrd.lz
 
 # Extract initrd and update uuid configuration
 7z e image/casper/initrd.lz && \
