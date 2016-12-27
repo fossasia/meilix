@@ -1,13 +1,11 @@
+# This provides us with GCC binary support so we can run bash
 language: generic
+
 sudo: required
 
-# command to install dependencies
-# We don't have any dependencies yet!
-#install:
-#  - pip install -r requirements.txt
-
-# command to run tests
 script:
   - ./build.sh
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./scripts/aptRepoUpdater.sh; fi'
+
 notifications:
   slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
