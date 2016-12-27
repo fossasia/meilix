@@ -1,0 +1,7 @@
+Origin: FOSSASIA
+Label: FOSSASIA Meilix
+Suite: stable
+Codename: trusty
+Architectures: i386
+Components: main
+Description: ARM packages for Meilix Project

@@ -6,4 +6,4 @@
 #
 # For information about PPA please refer to:
 # http://askubuntu.com/questions/4983/what-are-ppas-and-how-do-i-use-them
-deb https://raw.githubusercontent.com/fossasia/meilix/master/sources main
+deb https://fosssia.github.io/meilix/ main
