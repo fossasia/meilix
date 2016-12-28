@@ -19,8 +19,8 @@ Features:
 - Create a metapackage and place it in the root directory of the project
 - Add it to the build.sh file
 - Install `reprepro` if you don't have it run: `sudo apt-get install reprepro`
-- cd into the sources directory:`cd sources`
-- Run the following command for the meta-package you create (Run it once for each meta-package): `reprepro includedeb trusty ../nameOfYourMeta-package.deb`
+- Make sure you are on the meilix repository.
+- Run the following command for each meta-package you create: `reprepro includedeb trusty ./nameOfYourMeta-package.deb`
 
 **Note: Remember to replace nameOfYourMeta-package with the name of the meta-package**
 
