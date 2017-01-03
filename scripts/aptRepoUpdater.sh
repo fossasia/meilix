@@ -5,25 +5,26 @@ echo "Starting aptRepoUpdater authored by Abishek V Ashok with love for FOSSASIA
 echo "..."
 
 # Create the new directory to work in, these will get cleaned by Travis so no worries
-mkdir work
-cd work
+mkdir working_root
+cd working_root
 
 # Adding configurations for git
-git config --global user.email "travis@travis-ci.org"
+git config --global user.email "no-reply@travis-ci.org"
 git config --global user.name "apt-bot"
 
 # Clone the git repository of meilix project (the gh-pages branch only)
 git clone -b gh-pages --single-branch https://apt-bot:$APT_SOURCE_UPDATER@github.com/fossasia/meilix.git
+cd meilix
 
 # Switching branch
 git checkout gh-pages
 
 # Copy the contents from the four folders and force replace them with the current
-cp -rf ../conf ./meilix/
-cp -rf ../db ./meilix/
-cp -rf ../dists ./meilix/
-cp -rf ../incoming ./meilix/
-cp -rf ../pool ./meilix/
+cp -rf ../../conf ./
+cp -rf ../../db ./
+cp -rf ../../dists ./
+cp -rf ../../incoming ./
+cp -rf ../../pool ./
 
 # Adding everything
 git add .
@@ -37,6 +38,6 @@ if [ "$?" = 0 ]; then
   git pull --rebase origin-pages gh-pages
   git push --quiet --set-upstream origin-pages gh-pages
   echo "Commit has been made, Happy coding :)"
-else
+else # NO Changes fallback...
   echo "No changes detected.... Not commiting... Happy coding :)"
 fi
