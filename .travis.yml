@@ -8,7 +8,8 @@ script:
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./scripts/aptRepoUpdater.sh; fi'
 
 before_deploy:
-  - cat *.iso > /home/travis/meilix-xenial-i386.iso
+  - export image_name="`echo *.iso`"
+  - cat *.iso > "/home/travis/${image_name}"
 
 notifications:
   slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
@@ -18,6 +19,7 @@ deploy:
     skip_cleanup: true
     api_key:
       secure: "DUU7N5NveS/uIft0XPmcsFMcuI9o16oojtb8WarJt7fed4Ob2yX8PA1DLY85+KDIOjaHISG54ipPV0lLrz/Fpxp0U2k2ixxHRLbqpVJRGyv/W52f37ymXXkcswkD21jtg6X3CZgLZLSyMEmLMZAwjWzv4h1tbG2rzUN7corlqYb5H8NcH5fqA8coMErwhrqbTtc7NygnNxG636jaI5mg1QYUiF/Kigt+FrTNZOi9oSts6/tBTioGhWtk5RaK4Sb5Gz7OS788xiApGc9jojuZtn42ll/fSgy0FixQoVwtcybv+5hY/264QchIPuhVFvktFiNnrAf1iqSLRjBhklT4gtSWh7gEhwmWOzCT2O08E78pe1t9zQYrUcl9ZklWeZZbRhs71zdFezw53xpkpayhc6lHNmwpl6wJRfJqG2U8aHsDnxl/oCx9wUlJA8u0xTHoRNEU6b2a+gdMCS9hBmsTW/2ee+EL5vasSsV7En/13uerNYW1+r/NJi902pFZBRDlSfpjO+qIRR9GvSmVrhI0txRulf9Vqxm5PjiwIlzGQY6cg4EkXd8sKUIoUBh0BtG/gvDtJyhFfl4nRMgZOZ58bb9mVyjw2nIlLecZdDDORHMU90x0JedwVYy75r85weH2aBHH3cSk/Uuz1a1ESQJ9LT8GuA/M4ld3j9v9HaluQmI="
-    file: /home/travis/meilix-xenial-i386.iso
+    file_glob: true # http://stackoverflow.com/a/28579635/1320237
+    file: "/home/travis/${image_name}"
     on:
       branch: master
