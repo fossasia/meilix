@@ -21,7 +21,7 @@ Features:
 - Make sure you are on the meilix repository.
 - Run the following command for each meta-package you create: `reprepro includedeb trusty ./nameOfYourMeta-package.deb`
 
-**Note: Remember to replace nameOfYourMeta-package with the name of the meta-package**
+***Note: Remember to replace nameOfYourMeta-package with the name of the meta-package**
 
 ##Communication
 Chat: [Slack Channel](http://fossasia.slack.com/messages/linux/) | [Get an Invite](http://fossasia-slack.herokuapp.com/)
