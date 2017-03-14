@@ -18,7 +18,7 @@ deploy:
   - provider: releases
     skip_cleanup: true
     api_key:
-      627301fd23568624540b108995c9610a1f772205
+      secure: "iAdapQ5HkJ/biSE1oC434nKt/XqAVLpWRRKZw3GJSPS4nCcF+yiN5GwgRbZKPM+MDa84PK6GR7tfEuyNOfy7eBIiDiPvD8NiqPv7dBOZ0qurdAGsLXuUZJECkiP9ceFgZDQi+2uy5mG//oW5f5ICIpcfUOH4lOyaV2L2SRqyuhWaGKvWdqgv7J/q+o5zqBLIsjLW8tCrk1J+hYAvtCFhEZFoBdtm0eMU8W6NraMQgHpiwtPH6DPjG+dc6IEE9XxObeKEPYkuqf9cEVnBpHnfEAEHExRYhX9/jgmvVsz3H95AGwG+fubDnhNSh65Z5HdqdMiww51E8B/M/dJ9q5g22URIjGPw3co/ESewrl1zsJOE0n6ECSgirN/XmqTzcb7bbAgcylOo+KDrUXQDuYJ6uXOGkPUP3O/5qtJLyvXE+9Yto2+QQubhmwmirzLDvZc91VCJGzNuBQboRK4t4gNBdHjCc6w4mjHGSobR6dyxPnuNh3l7vpIi+5PeQ9KVkg5+jlXleCdh09i5Tz7UMd8xlyZiUbj2fsKYabqvucKqjHpx2VKa2C/efQWILgakuohDmqb4PjI6qo/rqoWZcdIXAJxaHjW9+6ahNjBZux6fUPMzGgZNE6e2R+TLWSS/P5nFuBedPN/V+UbqVvd2DHuGCD8BhGI1F2pPQQc8C8yjP4g="
     file_glob: true # http://stackoverflow.com/a/28579635/1320237
     file: "/home/travis/${image_name}"
     on:
