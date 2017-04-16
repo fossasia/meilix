@@ -46,6 +46,23 @@ MD5sum: 24a9c7550cf606d5fe2fcda14b07ca30
 Description: default applications for meilix
  Default application for Meilix.
 
+Package: meilix-metapackages
+Version: 1.0
+Architecture: all
+Maintainer: Tarun Kumar <meets2tarun@gmail.com>
+Installed-Size: 9
+Depends: vlc, lximage-qt, krita
+Replaces: nomacs, smplayer
+Multi-Arch: foreign
+Priority: extra
+Section: misc
+Filename: pool/main/m/meilix-metapackages/meilix-metapackages_1.0_all.deb
+Size: 2132
+SHA256: ff0e07dcdd71c23b9d835dc30151e4532798ecd3618c84b57e14f6c1a960bc2a
+SHA1: a90377c796c0342f381b3cbe02fb53e3b95c9069
+MD5sum: 45964e26f80b7947e87601963f7c9290
+Description: commmon packages like image viewer, video player, digital painting.
+
 Package: plymouth-meilix-logo
 Source: meilix-artwork
 Version: 1.0-1
