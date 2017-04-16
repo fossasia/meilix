@@ -16,7 +16,7 @@ Features:
 
 ### Creating a metapackage
 Creating a metapackage is really easy, we will make use of [equivs](http://apt.ubuntu.com/p/equivs) to make our metapackage.
-- First, install equivs.
+- First, install equivs: `sudo apt-get install equivs`
 - Now run equivs: `equivs-control ns-control`
 - It will create a file called ns-control, open this file with your text editor.
 - Modify the file to your needs modifying the needy information.
@@ -26,7 +26,7 @@ Creating a metapackage is really easy, we will make use of [equivs](http://apt.u
 ### Adding a Metapackage to meilix
 - Create a metapackage and place it in the root directory of the project
 - Add it to the build.sh file
-- Install `reprepro` if you don't have it run: `sudo apt-get install reprepro`
+- Install `reprepro` if you don't have it, run: `sudo apt-get install reprepro`
 - Make sure you are on the meilix repository.
 - Run the following command for each meta-package you create: `reprepro includedeb trusty ./nameOfYourMeta-package.deb`
 
