@@ -24,7 +24,7 @@ datafiles="image-${arch}.tar.lzma sources.list"
 # Necessary development tool packages to be installed on build host
 devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools"
 
-# Make sure we have the data files we needo
+# Make sure we have the data files we need
 for i in $datafiles
 do
   if [ ! -f $i ]; then
