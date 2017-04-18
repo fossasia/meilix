@@ -52,6 +52,8 @@ sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v skype-ubuntu_*_i386.deb chroot
 sudo cp -v meilix-imclient_*_all.deb chroot
+sudo cp -v meilix-metapackages_*_all.deb
+sudo cp -v meilix-metapackages-2_*_all.deb
 
 # Mount needed pseudo-filesystems
 sudo mount --rbind /sys chroot/sys
@@ -85,6 +87,7 @@ apt-get -q update
 apt-get -q -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
+# Install meilix-metapackage
 dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
@@ -146,7 +149,11 @@ dpkg -i meilix-imclient_*_all.deb
 apt-get install -f
 
 # Install meilix-metapackage
-dpkg -i meilix-metapackages_1.0_all.deb
+dpkg -i meilix-metapackages_*_all.deb
+apt-get install -f
+
+# Install meilix-metapackages-2
+dpkg -i meilix-metapackages-2_*_all.deb
 apt-get install -f
 
 #Google custom ad
