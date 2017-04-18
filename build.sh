@@ -149,15 +149,14 @@ dpkg -i meilix-imclient_*_all.deb
 apt-get install -f
 
 # Install meilix-metapackage
-<<<<<<< HEAD
 dpkg -i meilix-metapackages_*_all.deb
 apt-get install -f
 
 # Install meilix-metapackages-2
 dpkg -i meilix-metapackages-2_*_all.deb
-=======
+
+# Install meilix-metapackages
 dpkg -i meilix-metapackages_1.0_all.deb
->>>>>>> d410d54efe26b331122d3d9e1bc4ea62b2b2b04d
 apt-get install -f
 
 #Google custom ad
