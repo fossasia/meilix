@@ -2,19 +2,19 @@ Origin: FOSSASIA
 Label: FOSSASIA Meilix
 Suite: stable
 Codename: trusty
-Date: Tue, 27 Dec 2016 15:31:39 UTC
+Date: Sun, 16 Apr 2017 19:06:37 UTC
 Architectures: i386
 Components: main
 Description: ARM packages for Meilix Project
 MD5Sum:
- 04d9b8cce24ef2cc34091a3b7df1b73c 3010 main/binary-i386/Packages
- b45a67d77d944d1f83cf7387cd0e0d82 1140 main/binary-i386/Packages.gz
+ c0b7cfb2bc4d32d0857c05c0b0af43aa 3573 main/binary-i386/Packages
+ 9dad584eeb7db601471f68ce58b8e948 1373 main/binary-i386/Packages.gz
  9719b241579503de83c5b9316736b1e1 136 main/binary-i386/Release
 SHA1:
- 2a6254d76cf9d860c0d221cbe32bc7c5ea0d2a12 3010 main/binary-i386/Packages
- a4eb417e825c12f20b21e54d19c1366d4035b547 1140 main/binary-i386/Packages.gz
+ cd8ba540f66cc252437b7e8f544ea25c011d2bc4 3573 main/binary-i386/Packages
+ 9e31207e624fa5c31b18c548580ae8d61e9349b7 1373 main/binary-i386/Packages.gz
  30935eb4c4c6c8897e90a26d36111f632013a975 136 main/binary-i386/Release
 SHA256:
- 3a721ae6925da93b0c9350612d9869657f2405228e5ba8171a4fe1a565665f3d 3010 main/binary-i386/Packages
- 87b04ac40edaaa6cadadba7ebd5575d53d87864d1d6b57dcf1189f44188979fc 1140 main/binary-i386/Packages.gz
+ f41ad0b04cdbddaac3700965b31f3a1be357f660bbd01f0ba41bccfd2b41fad8 3573 main/binary-i386/Packages
+ bff9fc54ff6ec2484b8ada8da0f351eb580c81014c97e85f46f00bf57c1c0d75 1373 main/binary-i386/Packages.gz
  88d00aa8b1ee8192a43b353e44b2d9819f835d9185b4df28c85b92806072b69d 136 main/binary-i386/Release
