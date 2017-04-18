@@ -137,12 +137,16 @@ apt-get -q -y --purge install --no-install-recommends libreoffice-gtk libreoffic
 #Clean system before install gdm
 apt-get -q -y autoremove 
 apt-get -q -y autoclean
-# Install GDM to fix ubiquity issue
+# Install GDM to fix ubiquity-frontend-gtkity issue
 apt-get -q -y --purge install gdm
 apt-get -q -y --purge remove gdm
 
 # Install imclient
 dpkg -i meilix-imclient_*_all.deb
+apt-get install -f
+
+# Install meilix-metapackage
+dpkg -i meilix-metapackages_1.0_all.deb
 apt-get install -f
 
 #Google custom ad
