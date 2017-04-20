@@ -63,6 +63,22 @@ SHA1: a90377c796c0342f381b3cbe02fb53e3b95c9069
 MD5sum: 45964e26f80b7947e87601963f7c9290
 Description: commmon packages like image viewer, video player, digital painting.
 
+Package: meilix-metapackages-2
+Version: 1.0
+Architecture: all
+Maintainer: Tarun Kumar <meets2tarun@gmail.com>
+Installed-Size: 9
+Depends: nemo, gparted, cheese, thunderbird, gnome-terminal, gnome-calculator
+Multi-Arch: foreign
+Priority: extra
+Section: misc
+Filename: pool/main/m/meilix-metapackages-2/meilix-metapackages-2_1.0_all.deb
+Size: 2152
+SHA256: 83b24d23c46f4a336f4ccc9d26523627d1a52554ccae585fc42c1fe47a36813d
+SHA1: 780627261d295792651014b0532fe27591f7b96c
+MD5sum: 0659770f0380f19fbe5a0c85ff2db5ea
+Description: this metapackage include file manager nemo, gparted , cheese foe webcam, thunderbird formail, a terminal, and a calculator
+
 Package: plymouth-meilix-logo
 Source: meilix-artwork
 Version: 1.0-1
