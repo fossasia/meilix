@@ -155,10 +155,6 @@ apt-get install -f
 # Install meilix-metapackages-2
 dpkg -i meilix-metapackages-2_*_all.deb
 
-# Install meilix-metapackages
-dpkg -i meilix-metapackages_1.0_all.deb
-apt-get install -f
-
 #Google custom ad
 apt-get -q -y --purge install mygoad
 #Install East Asia font
