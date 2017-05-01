@@ -30,18 +30,11 @@ Creating a metapackage is really easy, we will make use of [equivs](http://apt.u
 - Changes will be made in the ns-control file which was created earlier.
 - Change the name of the ns-control file to control.
 - There are several lines of which required one are mention below:
--Source and package is the name of the metapackage that we want to give.
+- Source and package is the name of the metapackage that we want to give.
 - Depends line consists of the packages that we want the metapackage should consistes of.
 - Description line consists a short description of the metapackages.
-- There are lots of other line which also matters depending upon the need of the metapackage. Go through [here](https://www.debian.org/doc/manuals/maint-guide/dreq.<!DOCTYPE html> for more info.
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+- There are lots of other line which also matters depending upon the need of the metapackage. Go through [here](https://www.debian.org/doc/manuals/maint-guide/dreq) for more info.
 
-</body>
-</html>)
 
 ### Adding a Metapackage to meilix
 - Create a metapackage and place it in the root directory of the project
