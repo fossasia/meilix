@@ -14,6 +14,9 @@ Features:
 - After cloning open build.sh to change. Read comment in build.sh to understand how to change.
 (Note: Please not change anything at # Install core packages and do not delete any in hotelos folder).
 
+### What is a metapackage ?
+Metapackages are a link to existing package or packages. So they are essentially a script that installs other packages.They keep the packages as dependencies.
+
 ### Creating a metapackage
 Creating a metapackage is really easy, we will make use of [equivs](http://apt.ubuntu.com/p/equivs) to make our metapackage.
 - First, install equivs: `sudo apt-get install equivs`
@@ -22,6 +25,23 @@ Creating a metapackage is really easy, we will make use of [equivs](http://apt.u
 - Modify the file to your needs modifying the needy information.
 - Then run: `equivs-build ns-control` to build your metapackage, thats all simple and easy.
 - To add it to meilix follow adding a metapackage to meilix section.
+
+### List of basic items included while creating a metapackage
+- Changes will be made in the ns-control file which was created earlier.
+- Change the name of the ns-control file to control.
+- There are several lines of which required one are mention below:
+-Source and package is the name of the metapackage that we want to give.
+- Depends line consists of the packages that we want the metapackage should consistes of.
+- Description line consists a short description of the metapackages.
+- There are lots of other line which also matters depending upon the need of the metapackage. Go through [here](https://www.debian.org/doc/manuals/maint-guide/dreq.<!DOCTYPE html> for more info.
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>)
 
 ### Adding a Metapackage to meilix
 - Create a metapackage and place it in the root directory of the project
