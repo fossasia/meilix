@@ -1012,7 +1012,7 @@
   // opened on start up.  This policy only works if the 'RestoreOnStartup'
   // policy is set to 'RestoreOnStartupIsURLs'.
 
-  "RestoreOnStartupURLs": ["http://www.google.com/cse?cx=partner-pub-6065445074637525:8941524350"],
+  "RestoreOnStartupURLs": ["http://susper.com/"],
 
   // Enable Safe Browsing
   //-------------------------------------------------------------------------
