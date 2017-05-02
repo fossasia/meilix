@@ -14,9 +14,6 @@ Features:
 - After cloning open build.sh to change. Read comment in build.sh to understand how to change.
 (Note: Please not change anything at # Install core packages and do not delete any in hotelos folder).
 
-### What is a metapackage ?
-Metapackages are a link to existing package or packages. So they are essentially a script that installs other packages.They keep the packages as dependencies.
-
 ### Creating a metapackage
 Creating a metapackage is really easy, we will make use of [equivs](http://apt.ubuntu.com/p/equivs) to make our metapackage.
 - First, install equivs: `sudo apt-get install equivs`
@@ -35,7 +32,6 @@ Creating a metapackage is really easy, we will make use of [equivs](http://apt.u
 - Description line consists a short description of the metapackages.
 - There are lots of other line which also matters depending upon the need of the metapackage. Go through [here](https://www.debian.org/doc/manuals/maint-guide/dreq) for more info.
 
-
 ### Adding a Metapackage to meilix
 - Create a metapackage and place it in the root directory of the project
 - Add it to the build.sh file like `sudo cp -v nameOfYourMeta-package.deb chroot` in the 'copy source.list' line and `dpkg -i nameOfYourMeta-package.deb` lastly `apt-get install -f`.
@@ -45,6 +41,16 @@ Creating a metapackage is really easy, we will make use of [equivs](http://apt.u
 - Run the following command for each meta-package you create: `reprepro includedeb trusty ./nameOfYourMeta-package.deb`
 
 ***Note: Remember to replace nameOfYourMeta-package with the name of the meta-package**
+
+### Personalizing it
+Updating the OS/metapackage to the latest version
+- For this, we need to update sources.list file to the version we desire.
+
+Customize the Browser
+- For this, we need to edit chrome.json file found under meilix-default-settings. You can chnage homepage URL, default search-engine,etc. If you want to change some setting which is selected by default, then remove the comment and change its value from "1" to "0" or from "false" to "true" or vice-versa, depending upon the requirement.
+
+Know your OS
+- Metapackage and distro information can be found in dists directory.
 
 ## Communication
 Chat: [Slack Channel](http://fossasia.slack.com/messages/linux/) | [Get an Invite](http://fossasia-slack.herokuapp.com/)
