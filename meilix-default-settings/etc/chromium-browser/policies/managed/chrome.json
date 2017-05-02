@@ -359,8 +359,7 @@
   // set when the 'DefaultSearchProviderEnabled' policy is enabled and will only
   // be respected if this is the case.
 
-  "DefaultSearchProviderSearchURL": "http://www.google.com/cse?cx=partner-pub-6065445074637525:8941524350&q={searchTerms}",
-
+  "DefaultSearchProviderSearchURL": "http://susper.com/search?query=%s"
   // Default search provider suggest URL
   //-------------------------------------------------------------------------
   // Specifies the URL of the search engine used to provide search suggestions.
@@ -684,7 +683,7 @@
   // allow the user to choose his home page on his own if HomepageIsNewTabPage
   // is not set too.
 
-  "HomepageLocation": "http://2017.fossasia.org/",
+  "HomepageLocation": "http://susper.com/",
 
   // Allow images on these sites
   //-------------------------------------------------------------------------
