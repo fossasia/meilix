@@ -538,7 +538,7 @@
   // can not be added, removed or modified. Existing bookmarks are still
   // available.
 
-  //"EditBookmarksEnabled": false,
+  "EditBookmarksEnabled": false,
 
   // Include non-standard port in Kerberos SPN
   //-------------------------------------------------------------------------
