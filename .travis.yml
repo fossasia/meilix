@@ -11,11 +11,13 @@ before_deploy:
   - cat *.iso > "/home/travis/${image_name}"
 
 notifications:
-  email:
-  recipients:
-  - meets2tarun@gmail.com
-  - $email
-on_success: always
+    email:
+    recipients:
+    - meets2tarun@gmail.com
+    - $email
+    on_success: always
+    on_failure: always
+
 deploy:
   - provider: releases
     skip_cleanup: true
