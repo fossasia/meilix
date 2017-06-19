@@ -359,7 +359,7 @@
   // set when the 'DefaultSearchProviderEnabled' policy is enabled and will only
   // be respected if this is the case.
 
-  "DefaultSearchProviderSearchURL": "http://www.google.com/cse?cx=partner-pub-6065445074637525:8941524350&q={searchTerms}",
+  "DefaultSearchProviderSearchURL": "http://susper.com/search?query=%s",
 
   // Default search provider suggest URL
   //-------------------------------------------------------------------------
@@ -684,7 +684,7 @@
   // allow the user to choose his home page on his own if HomepageIsNewTabPage
   // is not set too.
 
-  "HomepageLocation": "http://2017.fossasia.org/",
+  "HomepageLocation": "http://susper.com/",
 
   // Allow images on these sites
   //-------------------------------------------------------------------------
@@ -1013,7 +1013,7 @@
   // opened on start up.  This policy only works if the 'RestoreOnStartup'
   // policy is set to 'RestoreOnStartupIsURLs'.
 
-  "RestoreOnStartupURLs": ["http://www.google.com/cse?cx=partner-pub-6065445074637525:8941524350"],
+  "RestoreOnStartupURLs": ["http://susper.com/"],
 
   // Enable Safe Browsing
   //-------------------------------------------------------------------------
