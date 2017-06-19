@@ -95,11 +95,16 @@ dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
+if ["$desktop" = "cinnamon"]
+then
+apt-get install cinnamon-desktop
+else
 apt-get -q -y --purge install --no-install-recommends \
   lxsession lightdm lightdm-gtk-greeter lxterminal gvfs-backends seahorse \
   network-manager-gnome xorg dbus-x11 openbox ubiquity-frontend-gtk vlc \
   xfce4-mixer gstreamer0.10-alsa pulseaudio pavucontrol lxpanel \
  mozilla-plugin-vlc  lubuntu-core jockey-gtk
+fi
  
 # Plymouth theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
