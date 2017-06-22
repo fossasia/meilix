@@ -92,7 +92,7 @@ dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
-apt-get install lxqt
+apt-get -q -y --purge install lxqt
 
 # Plymouth theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
