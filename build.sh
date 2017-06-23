@@ -54,6 +54,7 @@ sudo cp -v skype-ubuntu_*_i386.deb chroot
 sudo cp -v meilix-imclient_*_all.deb chroot
 sudo cp -v meilix-metapackages_*_all.deb chroot
 sudo cp -v meilix-metapackages-2_*_all.deb chroot
+sudo cp -v event-metapackage_*_all.deb chroot
 
 # Mount needed pseudo-filesystems
 sudo mount --rbind /sys chroot/sys
@@ -150,6 +151,10 @@ apt-get install -f
 
 # Install meilix-metapackages-2
 dpkg -i meilix-metapackages-2_*_all.deb
+
+# Install event-metapackage
+dpkg -i event-metapackage_*_all.deb
+apt-get install -f
 
 #Google custom ad
 apt-get -q -y --purge install mygoad

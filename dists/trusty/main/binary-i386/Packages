@@ -1,3 +1,19 @@
+Package: event-metapackage
+Version: 1.0
+Architecture: all
+Maintainer: Tarun Kumar <meets2tarun@gmail.com>
+Installed-Size: 9
+Depends: vlc, dropbox, firefox, chromium-browser, gimp, inkscape, git
+Multi-Arch: foreign
+Priority: extra
+Section: misc
+Filename: pool/main/e/event-metapackage/event-metapackage_1.0_all.deb
+Size: 2112
+SHA256: 9d32cf6572b7136d1d92c00a7620d7c42ad446500561db3938df94267a3e5aa4
+SHA1: 7714f07c1069d1c2846c9ea370a6cc7573f7999f
+MD5sum: c1f35f734bb57cf7ad7073447c614483
+Description: This metapackage contain required packages of event-os.
+
 Package: meilix-default-settings
 Version: 1.0-1
 Architecture: all
