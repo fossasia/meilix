@@ -11,11 +11,7 @@ before_deploy:
   - cat *.iso > "/home/travis/${image_name}"
 
 notifications:
-    email:
-    recipients:
-    - meets2tarun@gmail.com
-    on_success: always
-    on_failure: always
+  slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
 
 deploy:
   - provider: releases
