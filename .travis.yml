@@ -6,7 +6,7 @@ sudo: required
 jobs:
   include:
     - script: ./build.sh
-    - script: ./scripts/aptRepoUpdater.sh
+    - script: sudo ./scripts/aptRepoUpdater.sh
     - stage: GitHub Release
       script: echo "Deploying to GitHub releases ..."
 
