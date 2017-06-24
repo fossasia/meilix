@@ -6,7 +6,7 @@ sudo: required
 jobs:
   include:
     - script: ./build.sh
-    - script: sudo ./scripts/aptRepoUpdater.sh
+    - script: 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./scripts/aptRepoUpdater.sh; fi'
     - stage: GitHub Release
       script: echo "Deploying to GitHub releases ..."
 
