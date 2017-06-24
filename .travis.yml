@@ -5,6 +5,7 @@ sudo: required
 
 script:
   - ./build.sh
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./scripts/aptRepoUpdater.sh; fi'
 
 before_deploy:
   - export image_name="`echo *.iso`"

@@ -7,7 +7,7 @@ Priority: extra
 Standards-Version: 3.9.2
 
 Package: event-metapackage
-# Version: <enter version here; defaults to 1.0>
+# Version: 1.0
 Maintainer: Tarun Kumar <meets2tarun@gmail.com>
 # Pre-Depends: <comma-separated list of packages>
 Depends: vlc, dropbox, firefox, chromium-browser, gimp, inkscape, git
