@@ -51,9 +51,6 @@ sudo cp -v plymouth-meilix-logo_*_all.deb chroot
 sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v skype-ubuntu_*_i386.deb chroot
-sudo cp -v meilix-imclient_*_all.deb chroot
-sudo cp -v meilix-metapackages_*_all.deb chroot
-sudo cp -v meilix-metapackages-2_*_all.deb chroot
 sudo cp -v event-metapackage_*_all.deb chroot
 
 # Mount needed pseudo-filesystems
@@ -94,6 +91,9 @@ apt-get install -f
 
 # Install base packages
 apt-get -q -y --purge install lxqt
+
+# Install Window Manager
+apt-get -q -y --purge install openbox
 
 # Plymouth theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
@@ -140,17 +140,6 @@ apt-get -q -y autoclean
 # Install GDM to fix ubiquity-frontend-gtkity issue
 apt-get -q -y --purge install gdm
 apt-get -q -y --purge remove gdm
-
-# Install imclient
-dpkg -i meilix-imclient_*_all.deb
-apt-get install -f
-
-# Install meilix-metapackage
-dpkg -i meilix-metapackages_*_all.deb
-apt-get install -f
-
-# Install meilix-metapackages-2
-dpkg -i meilix-metapackages-2_*_all.deb
 
 # Install event-metapackage
 dpkg -i event-metapackage_*_all.deb
