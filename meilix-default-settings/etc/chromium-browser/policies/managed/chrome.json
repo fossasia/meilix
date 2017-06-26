@@ -359,7 +359,7 @@
   // set when the 'DefaultSearchProviderEnabled' policy is enabled and will only
   // be respected if this is the case.
 
-   "DefaultSearchProviderSearchURL": "http://www.google.com/cse?cx=partner-pub-6065445074637525:8941524350&q={searchTerms}",
+  "DefaultSearchProviderSearchURL": "http://susper.com/search?query=%s",
 
   // Default search provider suggest URL
   //-------------------------------------------------------------------------
@@ -671,7 +671,7 @@
   // will allow the user to choose whether the new tab page is his home page on
   // his own.
 
-  "HomepageIsNewTabPage": false,
+  "HomepageIsNewTabPage": true,
 
   // Configure the home page URL
   //-------------------------------------------------------------------------
@@ -684,7 +684,7 @@
   // allow the user to choose his home page on his own if HomepageIsNewTabPage
   // is not set too.
 
-  "HomepageLocation": "http://www.google.com/cse/home?cx=partner-pub-6065445074637525:8941524350",
+  "HomepageLocation": "http://susper.com/",
 
   // Allow images on these sites
   //-------------------------------------------------------------------------
@@ -1003,7 +1003,7 @@
   // starts Google Chrome.  If you enable this setting, users cannot change or
   // override it in Google Chrome.  Disabling this setting is equvalent to
   // leaving it not configured. The user will still be able to change it in
-  // Google Chrome.	
+  // Google Chrome. 
   "RestoreOnStartup": 4,
 
   // URLs to open on startup
@@ -1013,7 +1013,7 @@
   // opened on start up.  This policy only works if the 'RestoreOnStartup'
   // policy is set to 'RestoreOnStartupIsURLs'.
 
-  "RestoreOnStartupURLs": ["http://www.google.com/cse?cx=partner-pub-6065445074637525:8941524350"],
+  "RestoreOnStartupURLs": ["http://susper.com/"],
 
   // Enable Safe Browsing
   //-------------------------------------------------------------------------
