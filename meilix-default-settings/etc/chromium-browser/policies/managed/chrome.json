@@ -684,7 +684,7 @@
   // allow the user to choose his home page on his own if HomepageIsNewTabPage
   // is not set too.
 
-  "HomepageLocation": "http://www.google.com/cse/home?cx=partner-pub-6065445074637525:8941524350",
+  "HomepageLocation": "http://www.susper.com",
 
   // Allow images on these sites
   //-------------------------------------------------------------------------
