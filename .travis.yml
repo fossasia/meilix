@@ -5,14 +5,8 @@ language: generic
 sudo: required
 
 script:
-  - sudo ./build1.sh
-
-notifications:
-email:
-recipients:
-  - xeon.harsh@gmail.com
-  - $email
-
+  - ./build1.sh
+  
 before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
@@ -30,4 +24,4 @@ deploy:
     file: "/home/travis/${image_name}"
     on:
       tags: true
-branch: master
+      branch: master
