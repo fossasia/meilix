@@ -1,0 +1,51 @@
+#packages required to edit
+sudo apt install squashfs-tools genisoimage
+#downloading the ISO to edit
+wget -q https://github.com/fossasia/meilix/releases/download/untagged-c9f68d2fa6b3d1cdbd99/meilix-zesty-20170611-i386.iso
+#exit on any error
+set -e
+
+mkdir mnt
+#Mount the ISO 
+sudo mount -o loop meilix-zesty-20170611-i386.iso mnt/
+#Extract .iso contents into dir 'extract-cd' 
+mkdir extract-cd
+sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
+#Extract the SquashFS filesystem 
+sudo unsquashfs mnt/casper/filesystem.squashfs
+sudo mv squashfs-root edit
+#prepare chroot
+sudo mount -o bind /run/ edit/run
+sudo cp /etc/hosts edit/etc/
+sudo mount --bind /dev/ edit/dev
+
+sudo chroot edit <<EOF
+#delete temporary files 
+rm -rf /tmp/* ~/.bash_history
+exit
+EOF
+sudo umount edit/dev
+#repacking
+sudo chmod +w extract-cd/casper/filesystem.manifest
+sudo su <<HERE
+chroot edit dpkg-query -W --showformat='${Package} ${Version}\n' > extract-cd/casper/filesystem.manifest <<EOF
+exit
+EOF
+HERE
+sudo cp extract-cd/casper/filesystem.manifest extract-cd/casper/filesystem.manifest-desktop
+sudo sed -i '/ubiquity/d' extract-cd/casper/filesystem.manifest-desktop
+sudo sed -i '/casper/d' extract-cd/casper/filesystem.manifest-desktop
+#sudo rm extract-cd/casper/filesystem.squashfs
+sudo mksquashfs edit extract-cd/casper/filesystem.squashfs -noappend
+echo ">>> Recomputing MD5 sums"
+( cd extract-cd/ && find . -type f -not -name md5sum.txt -not -path '*/isolinux/*' -print0 | xargs -0 -- md5sum > md5sum.txt )
+
+cd extract-cd 	
+
+mkisofs \
+    -V "Custom Meilix" \
+    -r -cache-inodes -J -l \
+    -b isolinux/isolinux.bin \
+    -c isolinux/boot.cat \
+    -no-emul-boot -boot-load-size 4 -boot-info-table \
+	-o ../meilix-i386-custom.iso .
