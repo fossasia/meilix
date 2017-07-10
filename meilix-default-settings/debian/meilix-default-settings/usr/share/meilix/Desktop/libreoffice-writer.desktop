@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Icon=libreoffice-writer
+Type=Application
+Categories=Office;WordProcessor;
+Exec=libreoffice --writer %U
+MimeType=application/vnd.oasis.opendocument.text;application/vnd.oasis.opendocument.text-template;application/vnd.oasis.opendocument.text-web;application/vnd.oasis.opendocument.text-master;application/vnd.sun.xml.writer;application/vnd.sun.xml.writer.template;application/vnd.sun.xml.writer.global;application/msword;application/vnd.ms-word;application/x-doc;application/x-hwp;application/rtf;text/rtf;application/vnd.wordperfect;application/wordperfect;application/vnd.lotus-wordpro;application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/vnd.ms-word.document.macroenabled.12;application/vnd.openxmlformats-officedocument.wordprocessingml.template;application/vnd.ms-word.template.macroenabled.12;application/vnd.ms-works;application/vnd.stardivision.writer-global;application/x-extension-txt;application/x-t602;text/plain;
+Name=LibreOffice Writer
+GenericName=Word Processor
+GenericName[zu]=Word Processor
+Comment=Create and edit text and graphics in letters, reports, documents and Web pages by using Writer.
+Comment[zu]=Yenza futhi ulungise umbhalo nemidwebo esezinhlamvini zamagama, emibikweni, emafayelini nasemakhasini eWebhu ngokusebenzisa i-Writer.
+InitialPreference=5
+X-Ayatana-Desktop-Shortcuts=X-New
+[X-New Shortcut Group]
+Name=New Document
+Name[zu]=New Document
+Exec=libreoffice --writer %U
+TargetEnvironment=Unity

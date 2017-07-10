@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="16"
+   height="16"
+   id="svg3580">
+  <defs
+     id="defs3582">
+    <linearGradient
+       id="linearGradient2490-182-124">
+      <stop
+         id="stop2788"
+         style="stop-color:#1f4b6a;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop2790"
+         style="stop-color:#4083c2;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="11.169285"
+       y1="16"
+       x2="11.169285"
+       y2="-0.096741892"
+       id="linearGradient3574"
+       xlink:href="#linearGradient2490-182-124"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient3242-187-536">
+      <stop
+         id="stop2778"
+         style="stop-color:#8badea;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop2780"
+         style="stop-color:#6396cd;stop-opacity:1"
+         offset="0.26238" />
+      <stop
+         id="stop2782"
+         style="stop-color:#3b7caf;stop-opacity:1"
+         offset="0.66093999" />
+      <stop
+         id="stop2784"
+         style="stop-color:#194c70;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <radialGradient
+       cx="12.011247"
+       cy="13.194963"
+       r="19.99999"
+       fx="12.011247"
+       fy="13.194963"
+       id="radialGradient4516"
+       xlink:href="#linearGradient3242-187-536"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1670072e-8,0.6462002,-0.9321321,0,15.876374,-3.8828059)" />
+    <linearGradient
+       id="linearGradient3308-4-6-931-761-6">
+      <stop
+         id="stop2919-1"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop2921-0"
+         style="stop-color:#ffffff;stop-opacity:0"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="23.99999"
+       y1="4.999989"
+       x2="23.99999"
+       y2="43"
+       id="linearGradient4513"
+       xlink:href="#linearGradient3308-4-6-931-761-6"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3513515,0,0,0.3513515,-0.4324325,-0.4324409)" />
+  </defs>
+  <g
+     id="layer1">
+    <rect
+       width="15.000066"
+       height="15.000334"
+       rx="2"
+       ry="2"
+       x="0.5"
+       y="0.49966621"
+       id="rect5505-3"
+       style="fill:url(#radialGradient4516);fill-opacity:1;stroke:url(#linearGradient3574);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       width="13"
+       height="13.000011"
+       rx="1"
+       ry="1"
+       x="1.5"
+       y="1.4999889"
+       id="rect6741"
+       style="opacity:0.4;fill:none;stroke:url(#linearGradient4513);stroke-width:0.99999988;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       width="9.999999"
+       height="2"
+       x="3.0000002"
+       y="10.999999"
+       id="rect6327"
+       style="opacity:0.4;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="M 12,5 C 11,4.7024176 10.48425,4.7425246 10.28154,5 C 10.078831,5.2574754 9.999997,5.5065358 10,6 L 12.005938,6.0073095 L 12.005938,7.9999482 L 9.9967575,7.9999482 L 9.9967575,12.999999 L 8.009243,12.999999 L 8.009243,7.9999482 L 5.999999,7.9999482 L 5.999999,6.0073095 L 8.009243,6.0073095 L 8.009243,5.5063979 C 8.0092421,4.5563573 8.2751388,4.1875708 8.8069354,3.7125364 C 9.7620558,2.8726114 10.674231,3 12,3.1178695 L 12,5 z"
+       id="text6275"
+       style="font-size:44.03812027px;font-style:normal;font-weight:normal;line-height:125%;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans" />
+  </g>
+</svg>

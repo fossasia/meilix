@@ -2,7 +2,7 @@ Package: meilix-default-settings
 Version: 1.0
 Architecture: all
 Maintainer: meilix <vanhonit@gmail.com>
-Installed-Size: 9
+Installed-Size: 99649
 Section: x11
 Priority: extra
 Homepage: http://mbm.vn

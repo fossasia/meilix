@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name= Computer
+Exec=pcmanfm
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=computer
+Categories=GNOME;GTK;Accessories;
+StartupNotify=true
+Actions=NewWindow;
