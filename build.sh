@@ -56,9 +56,9 @@ sudo cp -v meilix-metapackages_*_all.deb chroot
 sudo cp -v meilix-metapackages-2_*_all.deb chroot
 
 # Mount needed pseudo-filesystems
-sudo mount --rbind /sys chroot/sys
-sudo mount --rbind /dev chroot/dev
-sudo mount -t proc none chroot/proc
+sudo mount -t sysfs sys chroot/sys
+sudo mount -t proc proc chroot/proc
+sudo mount -o bind /dev chroot/dev
 
 # Work *inside* the chroot
 sudo chroot chroot <<EOF
@@ -192,9 +192,9 @@ EOF
 # Continue work outside the chroot, preparing image
 
 # Unmount pseudo-filesystems
-sudo umount -lfr chroot/proc
-sudo umount -lfr chroot/sys
-sudo umount -lfr chroot/dev
+sudo umount -l chroot/proc
+sudo umount -l chroot/sys
+sudo umount -l chroot/dev
 
 echo $0: Preparing image...
 
