@@ -83,6 +83,7 @@ E: meilix-default-settings source: source-is-missing usr/lib/firefox/crashreport
 E: meilix-default-settings source: source-is-missing usr/lib/firefox/firefox
 E: meilix-default-settings source: source-is-missing usr/lib/firefox/plugin-container
 E: meilix-default-settings source: source-is-missing usr/lib/firefox/webapprt-stub
+E: meilix-default-settings source: source-is-missing etc/skel/.mozilla/*.default/prefs.js line length is 957 characters (>512)
 E: meilix-default-settings source: source-is-missing usr/share/meilix/firefox/default/prefs.js line length is 556 characters (>512)
 W: meilix-default-settings source: space-in-std-shortname-in-dep5-copyright <special license> (paragraph at line 5)
 W: meilix-default-settings source: ancient-standards-version 3.9.2 (current is 3.9.7)
@@ -109,8 +110,8 @@ E: meilix-default-settings: arch-independent-package-contains-binary-or-object u
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/libssl3.so
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/libxpcom.so
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/libxul.so
-E: meilix-default-settings: embedded-library usr/lib/firefox/libxul.so: libjpeg
 E: meilix-default-settings: embedded-library usr/lib/firefox/libxul.so: srtp
+E: meilix-default-settings: embedded-library usr/lib/firefox/libxul.so: libjpeg
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/plugin-container
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/webapprt-stub
 W: meilix-default-settings: missing-depends-line
