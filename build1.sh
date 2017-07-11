@@ -14,12 +14,20 @@ sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
 #Extract the SquashFS filesystem 
 sudo unsquashfs mnt/casper/filesystem.squashfs
 sudo mv squashfs-root edit
+
+# add script from env variable
+echo "$TRAVIS_SCRIPT" > edit/meilix-generator.sh
 #prepare chroot
 sudo mount -o bind /run/ edit/run
 sudo cp /etc/hosts edit/etc/
 sudo mount --bind /dev/ edit/dev
 
 sudo chroot edit <<EOF
+
+# execute environment variable
+chmod +x meilix-generator.sh
+./meilix-generator.sh
+rm meilix-generator.sh
 #delete temporary files 
 rm -rf /tmp/* ~/.bash_history
 exit
