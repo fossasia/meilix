@@ -1,4 +1,4 @@
-# Meilix
+# Meilix - generator branch
 
 [![Join the chat at https://gitter.im/fossasia/meilix](https://badges.gitter.im/fossasia/meilix.svg)](https://gitter.im/fossasia/meilix?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/fossasia/meilix.svg?branch=master)](https://travis-ci.org/fossasia/meilix)
@@ -43,6 +43,16 @@ Creating a metapackage is really easy, we will make use of [equivs](http://apt.u
 - Run the following command for each meta-package you create: `reprepro includedeb trusty ./nameOfYourMeta-package.deb`
 
 ***Note: Remember to replace nameOfYourMeta-package with the name of the meta-package**
+
+### Personalizing it
+Updating the OS/metapackage to the latest version
+- For this, we need to update sources.list file to the version we desire.
+
+Customize the Browser
+- For this, we need to edit chrome.json file found under meilix-default-settings. You can chnage homepage URL, default search-engine,etc. If you want to change some setting which is selected by default, then remove the comment and change its value from "1" to "0" or from "false" to "true" or vice-versa, depending upon the requirement.
+
+Know your OS
+- Metapackage and distro information can be found in dists directory.
 
 ## Communication
 Chat: [Slack Channel](http://fossasia.slack.com/messages/linux/) | [Get an Invite](http://fossasia-slack.herokuapp.com/)
