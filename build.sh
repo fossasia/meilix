@@ -24,9 +24,6 @@ datafiles="image-${arch}.tar.lzma sources.list"
 # Necessary development tool packages to be installed on build host
 devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools"
 
-url_wallpaper="https://meilix-generator.herokuapp.com/uploads/wallpaper" # url heroku wallpaper
-wget $url_wallpaper -P meilix-default-settings/usr/share/meilix/images
-
 # Make sure we have the data files we need
 for i in $datafiles
 do
@@ -187,6 +184,9 @@ rm meilix-imclient_*_all.deb
 # Reverting earlier initctl override. JM 2012-0604
 rm /sbin/initctl
 dpkg-divert --rename --remove /sbin/initctl
+
+#clean history
+rm -rf /tmp/* ~/.bash_history
 
 exit
 EOF
