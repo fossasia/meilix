@@ -185,6 +185,9 @@ rm meilix-imclient_*_all.deb
 rm /sbin/initctl
 dpkg-divert --rename --remove /sbin/initctl
 
+#clean history
+rm -rf /tmp/* ~/.bash_history
+
 exit
 EOF
 
