@@ -3,16 +3,19 @@ language: generic
 
 sudo: required
 
-script:
-  - ./build.sh
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./scripts/aptRepoUpdater.sh; fi'
+jobs:
+  include:
+    - script: ./build.sh
+    - script: 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./scripts/aptRepoUpdater.sh; fi'
+    - stage: GitHub Release
+      script: echo "Deploying to GitHub releases ..."
 
-before_deploy:
-  - export image_name="`echo *.iso`"
-  - cat *.iso > "/home/travis/${image_name}"
+      before_deploy:
+            - export image_name="`echo *.iso`"
+            - cat *.iso > "/home/travis/${image_name}"
 
-notifications:
-  slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
+      notifications:
+        slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
 
 deploy:
   - provider: releases
@@ -23,4 +26,3 @@ deploy:
     file: "/home/travis/${image_name}"
     on:
       branch: master
-
