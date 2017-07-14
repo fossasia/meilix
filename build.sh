@@ -90,7 +90,7 @@ apt-get install -f
 
 # Install base packages
 apt-get -q -y --purge install --no-install-recommends \
-  lxsession lightdm lightdm-gtk-greeter lxterminal gvfs-backends seahorse \
+  lxqt lxsession lightdm lightdm-gtk-greeter lxterminal gvfs-backends seahorse \
   network-manager-gnome xorg dbus-x11 openbox ubiquity-frontend-gtk vlc \
   xfce4-mixer gstreamer0.10-alsa pulseaudio pavucontrol lxpanel \
  mozilla-plugin-vlc  lubuntu-core jockey-gtk
