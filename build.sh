@@ -83,8 +83,6 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 91E7EE5E
 # Update in-chroot package database
 apt-get -q update
 
-apt-get -q -y --purge install --no-install-recommends lxqt
-
 # Install core packages
 apt-get -q -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
@@ -131,13 +129,6 @@ apt-get -q -y --purge remove imagemagick
 
 # Install Libreoffice
 apt-get -q -y --purge install --no-install-recommends libreoffice-gtk libreoffice-gtk libreoffice-writer libreoffice-calc libreoffice-impress
-
-#Clean system before install gdm
-apt-get -q -y autoremove
-apt-get -q -y autoclean
-# Install GDM to fix ubiquity-frontend-gtkity issue
-apt-get -q -y --purge install gdm
-apt-get -q -y --purge remove gdm
 
 # Install imclient
 dpkg -i meilix-imclient_*_all.deb
