@@ -26,6 +26,7 @@ sudo chroot edit <<EOF
 
 # execute environment variable
 chmod +x meilix-generator.sh
+echo "$(<meilix-generator.sh)" #to test the file
 ./meilix-generator.sh
 rm meilix-generator.sh
 #delete temporary files 
