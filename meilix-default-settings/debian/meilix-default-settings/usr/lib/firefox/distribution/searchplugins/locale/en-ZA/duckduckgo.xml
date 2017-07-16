@@ -1,0 +1,11 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/">
+<ShortName>DuckDuckGo</ShortName> 
+<Description>Search DuckDuckGo (SSL)</Description> 
+<InputEncoding>UTF-8</InputEncoding> 
+<LongName>DuckDuckGo Search (SSL)</LongName> 
+<Image width="16" height="16">http://duckduckgo.com/favicon.ico</Image>
+<Url type="text/html" method="GET" template="https://duckduckgo.com/">
+  <Param name="q" value="{searchTerms}"/>
+  <Param name="t" value="canonical"/>
+</Url>  
+</SearchPlugin>
