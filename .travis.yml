@@ -7,12 +7,6 @@ sudo: required
 script:
   - ./build.sh
 
-notifications:
-email:
-recipients:
-  - xeon.harsh@gmail.com
-  - $email
-
 before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
@@ -30,7 +24,9 @@ deploy:
     file: "/home/travis/${image_name}"
     on:
       tags: true
-    script:
-        - ./mail-curl.sh
+    
+after_deploy:
+  - curl --request POST   --url https://api.sendgrid.com/v3/mail/send   --header 'authorization: Bearer ${mail_key}'   --header 'content-type: application/json'  --data '{"personalizations":[{"to":[{"email":"${email}"}],"subject":"Your ISO is Ready"}],"from":{"email":"xeon.harsh@gmail.com","name":"Meilix Generator"},"reply_to":{"email":"xeon.harsh@gmail.com","name":"Meilix Generator"},"subject":"Your ISO is ready","content":[{"type":"text/html","value":"<html><p>Hi,<br>Your ISO is ready <br><br>Thank You,<br>Meilix Generator Team</p></html>"}]}'
+
 branch: master
 
