@@ -10,6 +10,8 @@ script:
 before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
+  - export email
+  - export mail_key
   
 on_success: always
 
@@ -26,7 +28,7 @@ deploy:
       tags: true
     
 after_deploy:
-  - ./mail-curl.sh
+  - ./mail.py
 
 branch: master
 
