@@ -36,8 +36,6 @@ done
 # Make sure we have the tools we need installed
 sudo apt-get -q install $devtools -y --no-install-recommends
 
-sudo apt-get -q -y --purge install --no-install-recommends lxqt
-
 # Create and populate the chroot using debootstrap
 [ -d chroot ] && sudo rm -R chroot/
 # Debootstrap outputs a lot of 'Information' lines, which can be ignored
@@ -82,6 +80,8 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 91E7EE5E
 
 # Update in-chroot package database
 apt-get -q update
+
+apt-get -q -y --purge install --no-install-recommends lxqt
 
 # Install core packages
 apt-get -q -y --purge install ubuntu-standard casper lupin-casper \
