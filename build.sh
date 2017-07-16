@@ -94,11 +94,7 @@ dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
-apt-get -q -y --purge install --no-install-recommends \
-  lxsession lightdm lightdm-gtk-greeter lxterminal gvfs-backends seahorse \
-  network-manager-gnome xorg dbus-x11 openbox ubiquity-frontend-gtk vlc \
-  xfce4-mixer gstreamer0.10-alsa pulseaudio pavucontrol lxpanel \
- mozilla-plugin-vlc  lubuntu-core jockey-gtk
+apt-get install -q -y xorg sddm lxqt
 
 # Plymouth theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
