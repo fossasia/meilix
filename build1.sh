@@ -16,7 +16,7 @@ sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
 sudo unsquashfs mnt/casper/filesystem.squashfs
 sudo mv squashfs-root edit
 
-export "$TRAVIS_SCRIPT"
+export $TRAVIS_SCRIPT
 sudo su <<HERE
 echo "$TRAVIS_SCRIPT" > edit/meilix-generator.sh
 exit
