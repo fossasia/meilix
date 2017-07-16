@@ -17,10 +17,9 @@ sudo unsquashfs mnt/casper/filesystem.squashfs
 sudo mv squashfs-root edit
 
 export $TRAVIS_SCRIPT
-sudo su <<HERE
+sudo su <<EOF
 echo "$TRAVIS_SCRIPT" > edit/meilix-generator.sh
-exit
-HERE
+EOF
 
 #prepare chroot
 sudo mount -o bind /run/ edit/run
@@ -30,6 +29,7 @@ sudo mount --bind /dev/ edit/dev
 sudo chroot edit <<EOF
 
 # execute environment variable
+ls # to test the files if any new file is added
 chmod +x meilix-generator.sh
 echo "$(<meilix-generator.sh)" #to test the file
 ./meilix-generator.sh
