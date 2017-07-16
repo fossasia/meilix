@@ -1,0 +1,14 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/">
+<ShortName>eBay.co.uk</ShortName>
+<Description>eBay - Online auctions UK</Description>
+<InputEncoding>ISO-8859-1</InputEncoding>
+<Image width="16" height="16" type="image/x-icon">data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABFUlEQVQ4jdWTvUoDQRSFvxUfQMFSyBvYpLGSSWFpncY6lsLWFiupBBtLBRsfQcQ2a782PoCkSrONlUGy5LPYn6wbu4DghcOcYs65595hIpVNamsj9V8ajOeFzgsFLmo+LxTXcWJVX8WyppIgKSVPkQQ/F0u3gSFwBfTqdoPoBYDnxRFcDgA4Z4cbPtazqblZptBgxJ2BtGydv+vbkyahSUGC0zxT7VeZ0DguBXFsRs9AKtzq/amOKA2sTAylzMDKoIM6wfXhcWmcBKd51ukeWq8Qx6V0MmFAuppxdx/OIgB6e/32+SoTUGfdHTxy0CRodtF6jZpW2R2qs/alQNrgYTytR8Cf1Rh08VuNGkECJCtd5L//TN/BEWxoE8dlIQAAAABJRU5ErkJggg==</Image>
+<Url type="application/x-suggestions+json" method="GET" template="http://anywhere.ebay.com/services/suggest/">
+   <Param name="s" value="3"/>
+   <Param name="q" value="{searchTerms}"/>
+</Url>
+<Url type="text/html" method="GET" template="http://rover.ebay.com/rover/1/710-47297-17704-2/4">
+   <Param name="mpre" value="http://shop.ebay.co.uk/?_nkw={searchTerms}"/>
+</Url>
+<SearchForm>http://search.ebay.co.uk/</SearchForm>
+</SearchPlugin>
