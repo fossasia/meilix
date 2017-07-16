@@ -1,0 +1,26 @@
+### Commented entries have reasonable defaults.
+### Uncomment to edit them.
+Source: meilix-metapackages
+Section: misc
+Priority: extra
+# Homepage: <enter URL here; no default>
+Standards-Version: 3.9.2
+
+Package: meilix-metapackages
+# Version: 1.0
+Maintainer: Tarun Kumar <meets2tarun@gmail.com>
+Depends: vlc, lximage-qt, krita
+# Pre-Depends: <comma-separated list of packages>
+# Recommends: <comma-separated list of packages>
+# Suggests: <comma-separated list of packages>
+# Provides: <comma-separated list of packages>
+Replaces: smplayer, nomacs
+Architecture: all
+# Multi-Arch: <one of: foreign|same|allowed>
+# Copyright: <copyright file; defaults to GPL2>
+# Changelog: <changelog file; defaults to a generic changelog>
+# Readme: <README.Debian file; defaults to a generic one>
+# Extra-Files: <comma-separated list of additional files for the doc directory>
+# Files: <pair of space-separated paths; First is file to include, second is destination>
+#  <more pairs, if there's more than one file to include. Notice the starting space>
+Description: commmon packages like image viewer, video player, digital painting.

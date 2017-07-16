@@ -17,7 +17,7 @@ mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Install language with the most popcon
 gnomelanguage=${3:-'{en}'}	#
 # Release name, used by debootstrap.  Examples: lucid, maverick, natty.
-release=${4:-xenial}
+release=${4:-zesty}
 
 # Necessary data files
 datafiles="image-${arch}.tar.lzma sources.list"
@@ -52,11 +52,13 @@ sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v skype-ubuntu_*_i386.deb chroot
 sudo cp -v meilix-imclient_*_all.deb chroot
+sudo cp -v meilix-metapackages_*_all.deb chroot
+sudo cp -v meilix-metapackages-2_*_all.deb chroot
 
 # Mount needed pseudo-filesystems
-sudo mount --rbind /sys chroot/sys
-sudo mount --rbind /dev chroot/dev
-sudo mount -t proc none chroot/proc
+sudo mount -t sysfs sys chroot/sys
+sudo mount -t proc proc chroot/proc
+sudo mount -o bind /dev chroot/dev
 
 # Work *inside* the chroot
 sudo chroot chroot <<EOF
@@ -87,6 +89,7 @@ apt-get -q -y --purge install --no-install-recommends lxqt
 apt-get -q -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
+# Install meilix-metapackage
 dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
@@ -133,9 +136,23 @@ apt-get -q -y --purge remove imagemagick
 # Install Libreoffice
 apt-get -q -y --purge install --no-install-recommends libreoffice-gtk libreoffice-gtk libreoffice-writer libreoffice-calc libreoffice-impress
 
+#Clean system before install gdm
+apt-get -q -y autoremove
+apt-get -q -y autoclean
+# Install GDM to fix ubiquity-frontend-gtkity issue
+apt-get -q -y --purge install gdm
+apt-get -q -y --purge remove gdm
+
 # Install imclient
 dpkg -i meilix-imclient_*_all.deb
 apt-get install -f
+
+# Install meilix-metapackage
+dpkg -i meilix-metapackages_*_all.deb
+apt-get install -f
+
+# Install meilix-metapackages-2
+dpkg -i meilix-metapackages-2_*_all.deb
 
 #Google custom ad
 apt-get -q -y --purge install mygoad
@@ -167,6 +184,9 @@ rm meilix-imclient_*_all.deb
 rm /sbin/initctl
 dpkg-divert --rename --remove /sbin/initctl
 
+#clean history
+rm -rf /tmp/* ~/.bash_history
+
 exit
 EOF
 
@@ -174,9 +194,9 @@ EOF
 # Continue work outside the chroot, preparing image
 
 # Unmount pseudo-filesystems
-sudo umount -lfr chroot/proc
-sudo umount -lfr chroot/sys
-sudo umount -lfr chroot/dev
+sudo umount -l chroot/proc
+sudo umount -l chroot/sys
+sudo umount -l chroot/dev
 
 echo $0: Preparing image...
 
