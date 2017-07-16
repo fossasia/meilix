@@ -21,4 +21,4 @@ deploy:
     file_glob: true # http://stackoverflow.com/a/28579635/1320237
     file: "/home/travis/${image_name}"
     on:
-      branch: master
+      all_branches: true
