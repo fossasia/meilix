@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #packages required to edit
 sudo apt install squashfs-tools genisoimage
 #downloading the ISO to edit
@@ -15,6 +16,7 @@ sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
 sudo unsquashfs mnt/casper/filesystem.squashfs
 sudo mv squashfs-root edit
 
+export "$TRAVIS_SCRIPT"
 sudo su <<HERE
 echo "$TRAVIS_SCRIPT" > edit/meilix-generator.sh
 exit
