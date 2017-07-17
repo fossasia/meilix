@@ -7,12 +7,6 @@ sudo: required
 script:
   - ./build.sh
 
-notifications:
-email:
-recipients:
-  - xeon.harsh@gmail.com
-  - $email
-
 before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
@@ -30,4 +24,10 @@ deploy:
     file: "/home/travis/${image_name}"
     on:
       tags: true
+
+    
+after_deploy:
+  - ./mail.py
+
 branch: master
+

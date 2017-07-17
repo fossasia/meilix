@@ -26,7 +26,9 @@ devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools"
 
 url_wallpaper="https://meilix-generator.herokuapp.com/uploads/wallpaper" # url heroku wallpaper
 wget $url_wallpaper -P meilix-default-settings/usr/share/meilix/images
+
 ./browser.sh #to set default webpage
+
 # Make sure we have the data files we need
 for i in $datafiles
 do
@@ -59,9 +61,9 @@ sudo cp -v meilix-metapackages_*_all.deb chroot
 sudo cp -v meilix-metapackages-2_*_all.deb chroot
 
 # Mount needed pseudo-filesystems
-sudo mount --rbind /sys chroot/sys
-sudo mount --rbind /dev chroot/dev
-sudo mount -t proc none chroot/proc
+sudo mount -t sysfs sys chroot/sys
+sudo mount -t proc proc chroot/proc
+sudo mount -o bind /dev chroot/dev
 
 # Work *inside* the chroot
 sudo chroot chroot <<EOF
@@ -188,6 +190,9 @@ rm meilix-imclient_*_all.deb
 rm /sbin/initctl
 dpkg-divert --rename --remove /sbin/initctl
 
+#clean history
+rm -rf /tmp/* ~/.bash_history
+
 exit
 EOF
 
@@ -195,9 +200,9 @@ EOF
 # Continue work outside the chroot, preparing image
 
 # Unmount pseudo-filesystems
-sudo umount -lfr chroot/proc
-sudo umount -lfr chroot/sys
-sudo umount -lfr chroot/dev
+sudo umount -l chroot/proc
+sudo umount -l chroot/sys
+sudo umount -l chroot/dev
 
 echo $0: Preparing image...
 
