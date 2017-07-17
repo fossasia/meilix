@@ -15,14 +15,14 @@ Changes:
  .
    * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
 Checksums-Sha1:
- e03d4fc379ac6c363124b22c8ecfc559cdde0ec8 618 meilix-default-settings_1.0.dsc
- 43bd1609132ea145ffb42e3d2ba3e099d19ad6e2 24045444 meilix-default-settings_1.0.tar.xz
- 8be041c88315335550079a88ed189cec38811595 36078596 meilix-default-settings_1.0_all.deb
+ 44442ba71900fc3b045fed2e616a546d0ef90f7c 618 meilix-default-settings_1.0.dsc
+ 547cfa8a2aed76c8d350f568ccb9cb74db9445d6 24043236 meilix-default-settings_1.0.tar.xz
+ 625c2fa51ae22b60235d366aa47168d51f14fd86 36077246 meilix-default-settings_1.0_all.deb
 Checksums-Sha256:
- 5e13283631a4d158c40c6d11448faa94bf6118650053cc79488f03c42a103e7f 618 meilix-default-settings_1.0.dsc
- 7f885577807bf2ab1645fb80476c5115929b1f5da90f992b1cf1e670c5f0e771 24045444 meilix-default-settings_1.0.tar.xz
- 2e86daf55b62270ad813acd32a18411f3620043705307c874545ab3b9df0ede1 36078596 meilix-default-settings_1.0_all.deb
+ 50dfe6dade9f1da15c0c1ab37f3d2daaa46ca5d76a3181b01e47be8896124ba2 618 meilix-default-settings_1.0.dsc
+ 375f7b489ef689796edcc44ab5a81ba0cae79650b3cb93e5358ab7b08d84b74e 24043236 meilix-default-settings_1.0.tar.xz
+ 12cab58b405469e430224ea0d5435ffbd0402777cc54e68c598cad709e6d1504 36077246 meilix-default-settings_1.0_all.deb
 Files:
- df2d865487d4acb3bf21868860c746d9 618 x11 extra meilix-default-settings_1.0.dsc
- 3a1ed30a0074d756298b468c25cb7e9f 24045444 x11 extra meilix-default-settings_1.0.tar.xz
- f4d574d9ef6be033924f3a35962afd73 36078596 x11 extra meilix-default-settings_1.0_all.deb
+ b388fe6d6465c73e1c185a42f32849d6 618 x11 extra meilix-default-settings_1.0.dsc
+ a1aa1df9b9bb36dd4cf94b8083b5bbe2 24043236 x11 extra meilix-default-settings_1.0.tar.xz
+ 4f806910c75d6c481b4c9db418415b4b 36077246 x11 extra meilix-default-settings_1.0_all.deb
