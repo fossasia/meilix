@@ -110,8 +110,8 @@ E: meilix-default-settings: arch-independent-package-contains-binary-or-object u
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/libssl3.so
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/libxpcom.so
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/libxul.so
-E: meilix-default-settings: embedded-library usr/lib/firefox/libxul.so: libjpeg
 E: meilix-default-settings: embedded-library usr/lib/firefox/libxul.so: srtp
+E: meilix-default-settings: embedded-library usr/lib/firefox/libxul.so: libjpeg
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/plugin-container
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/webapprt-stub
 W: meilix-default-settings: missing-depends-line
@@ -2314,4 +2314,5 @@ W: meilix-default-settings: desktop-command-not-in-package usr/share/application
 W: meilix-default-settings: desktop-entry-invalid-category Accessories usr/share/applications/trash.desktop
 W: meilix-default-settings: desktop-entry-lacks-main-category usr/share/applications/trash.desktop
 W: meilix-default-settings: script-not-executable usr/lib/firefox/firefox.sh
+W: meilix-default-settings: script-not-executable usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 Finished running lintian.

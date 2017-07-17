@@ -145,6 +145,7 @@ apt-get -q -y --purge install im-switch
 #Hotel OS default settings
 #apt-get download hotelos-default-settings
 dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
+update-initramfs -u
 dpkg -i --force-overwrite systemlock_0.1-1_all.deb
 apt-get install -f
 apt-get -q -y remove dconf-tools
