@@ -1,7 +1,7 @@
 #!/bin/bash
 # lxgames-build.sh -- creates an LXgames LiveCD ISO, based on lubuntu-build.sh
 # Author: Team
-# Based heavily on HOWTO information by 
+# Based heavily on HOWTO information by
 #   Julien Lavergne <gilir@ubuntu.com>
 # Version: 20110303
 
@@ -52,13 +52,11 @@ sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v skype-ubuntu_*_i386.deb chroot
 sudo cp -v meilix-imclient_*_all.deb chroot
-sudo cp -v meilix-metapackages_*_all.deb chroot
-sudo cp -v meilix-metapackages-2_*_all.deb chroot
 
 # Mount needed pseudo-filesystems
-sudo mount -t sysfs sys chroot/sys
-sudo mount -t proc proc chroot/proc
-sudo mount -o bind /dev chroot/dev
+sudo mount --rbind /sys chroot/sys
+sudo mount --rbind /dev chroot/dev
+sudo mount -t proc none chroot/proc
 
 # Work *inside* the chroot
 sudo chroot chroot <<EOF
@@ -87,17 +85,12 @@ apt-get -q update
 apt-get -q -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
-# Install meilix-metapackage
 dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
-apt-get -q -y --purge install --no-install-recommends \
-  lxsession lightdm lightdm-gtk-greeter lxterminal gvfs-backends seahorse \
-  network-manager-gnome xorg dbus-x11 openbox ubiquity-frontend-gtk vlc \
-  xfce4-mixer gstreamer0.10-alsa pulseaudio pavucontrol lxpanel \
- mozilla-plugin-vlc  lubuntu-core jockey-gtk
- 
+apt-get install -q -y xorg sddm lxqt
+
 # Plymouth theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 apt-get install -f
@@ -109,15 +102,15 @@ apt-get -q -y --purge install xfce4-power-manager
 
 # Archive Manager
 apt-get -q -y --purge install file-roller unrar
- 
-# lubuntu-restricted-extras 
-apt-get -q -y --purge install lubuntu-restricted-extras 
+
+# lubuntu-restricted-extras
+apt-get -q -y --purge install lubuntu-restricted-extras
 
 # Install specific packages
 apt-get -q -y -o Dpkg::Options::="--force-overwrite" --purge install chromium-browser
 
 #rm -rf /etc/chromium-browser
-mv /etc/chromium-browser_ /etc/chromium-browser 
+mv /etc/chromium-browser_ /etc/chromium-browser
 
 # Install lxrandr to change monitor settings
 apt-get -q -y --purge install lxrandr
@@ -127,9 +120,6 @@ apt-get -q -y --purge install flashplugin-installer google-talkplugin pidgin gal
   gpicview evince libqtwebkit4
 dpkg -i -y --purge install skype-ubuntu_4.1.0.20-1_i386.deb
 
-#Install Games
-apt-get -q -y --purge install --no-install-recommends pingus supertux nikwi tuxpaint gnome-games
-
 # Install graphic
 apt-get -q -y --purge install gimp inkscape
 apt-get -q -y --purge remove imagemagick
@@ -137,23 +127,9 @@ apt-get -q -y --purge remove imagemagick
 # Install Libreoffice
 apt-get -q -y --purge install --no-install-recommends libreoffice-gtk libreoffice-gtk libreoffice-writer libreoffice-calc libreoffice-impress
 
-#Clean system before install gdm
-apt-get -q -y autoremove 
-apt-get -q -y autoclean
-# Install GDM to fix ubiquity-frontend-gtkity issue
-apt-get -q -y --purge install gdm
-apt-get -q -y --purge remove gdm
-
 # Install imclient
 dpkg -i meilix-imclient_*_all.deb
 apt-get install -f
-
-# Install meilix-metapackage
-dpkg -i meilix-metapackages_*_all.deb
-apt-get install -f
-
-# Install meilix-metapackages-2
-dpkg -i meilix-metapackages-2_*_all.deb
 
 #Google custom ad
 apt-get -q -y --purge install mygoad
@@ -168,7 +144,8 @@ apt-get -q -y --purge install ibus-unikey ibus-anthy ibus-pinyin ibus-m17n
 apt-get -q -y --purge install im-switch
 #Hotel OS default settings
 #apt-get download hotelos-default-settings
-dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb 
+dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
+update-initramfs -u
 dpkg -i --force-overwrite systemlock_0.1-1_all.deb
 apt-get install -f
 apt-get -q -y remove dconf-tools
@@ -177,16 +154,13 @@ perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/li
 apt-get clean
 rm -rf /tmp/*
 #rm /etc/resolv.conf
-rm meilix-default-settings_1.0_all.deb 
+rm meilix-default-settings_1.0_all.deb
 rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb skype-ubuntu_4.1.0.20-1_i386.deb
 rm meilix-imclient_*_all.deb
 
 # Reverting earlier initctl override. JM 2012-0604
 rm /sbin/initctl
 dpkg-divert --rename --remove /sbin/initctl
-
-#clean history
-rm -rf /tmp/* ~/.bash_history
 
 exit
 EOF
@@ -195,9 +169,9 @@ EOF
 # Continue work outside the chroot, preparing image
 
 # Unmount pseudo-filesystems
-sudo umount -l chroot/proc
-sudo umount -l chroot/sys
-sudo umount -l chroot/dev
+sudo umount -lfr chroot/proc
+sudo umount -lfr chroot/sys
+sudo umount -lfr chroot/dev
 
 echo $0: Preparing image...
 
@@ -236,14 +210,14 @@ sudo cp -v /tmp/manifest.$$ image/casper/filesystem.manifest
 sudo cp -v image/casper/filesystem.manifest image/casper/filesystem.manifest-desktop
 rm /tmp/manifest.$$
 
-# Remove packages from filesystem.manifest-desktop 
+# Remove packages from filesystem.manifest-desktop
 #  (language and extra for more hardware support)
-REMOVE='gparted ubiquity ubiquity-frontend-gtk casper live-initramfs user-setup discover1 
- xresprobe libdebian-installer4 pptp-linux ndiswrapper-utils-1.9 
+REMOVE='gparted ubiquity ubiquity-frontend-gtk casper live-initramfs user-setup discover1
+ xresprobe libdebian-installer4 pptp-linux ndiswrapper-utils-1.9
  ndisgtk linux-wlan-ng libatm1 setserial b43-fwcutter uterm
- linux-headers-generic indicator-session indicator-application 
+ linux-headers-generic indicator-session indicator-application
  language-pack-*'
-for i in $REMOVE 
+for i in $REMOVE
 do
     sudo sed -i "/${i}/d" image/casper/filesystem.manifest-desktop
 done
@@ -253,7 +227,7 @@ echo "$0: Starting mksquashfs at $(date -u) ..."
 sudo mksquashfs chroot image/casper/filesystem.squashfs -noappend -no-progress
 echo "$0: Finished mksquashfs at $(date -u )"
 
-# Generate md5sum.txt checksum file 
+# Generate md5sum.txt checksum file
 cd image && sudo find . -type f -print0 |xargs -0 sudo md5sum |grep -v "\./md5sum.txt" >md5sum.txt
 
 # Generate a small temporary ISO so we get an updated boot.cat

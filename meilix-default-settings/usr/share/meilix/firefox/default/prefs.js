@@ -22,7 +22,7 @@ user_pref("browser.newtabpage.storageVersion", 1);
 user_pref("browser.pagethumbnails.storage_version", 2);
 user_pref("browser.places.smartBookmarksVersion", 4);
 user_pref("browser.rights.3.shown", true);
-user_pref("browser.startup.homepage", "http://www.google.com/cse/home?cx=partner-pub-6065445074637525:8941524350");
+user_pref("browser.startup.homepage", "http://www.susper.com");
 user_pref("browser.startup.homepage_override.buildID", "20130107224806");
 user_pref("browser.startup.homepage_override.mstone", "18.0");
 user_pref("distribution.canonical.bookmarksProcessed", true);

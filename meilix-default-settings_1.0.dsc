@@ -1,19 +1,17 @@
-Format: 1.0
+Format: 3.0 (native)
 Source: meilix-default-settings
 Binary: meilix-default-settings
 Architecture: all
 Version: 1.0
-Maintainer: Hon Nguyen <vanhonit@gmail.com>
-Homepage: https://launchpad.net/~lubuntu-desktop
-Standards-Version: 3.8.3
-Vcs-Browser: http://bazaar.launchpad.net/~lubuntu-desktop/+junk/lubuntu-default-settings/files
-Vcs-Bzr: lp:~lubuntu-desktop/+junk/lubuntu-default-settings
-Build-Depends: debhelper (>= 7.0.50~), intltool
-Package-List: 
- meilix-default-settings deb x11 optional
-Checksums-Sha1: 
- 3ac9c47616107c6bca26960b22bb55c11db62949 123088915 meilix-default-settings_1.0.tar.gz
-Checksums-Sha256: 
- e37ed61edcbdcadb76504e14f179fcb160cc9210fec5e04652a172c2a5f5b8a3 123088915 meilix-default-settings_1.0.tar.gz
-Files: 
- 1250050a96ab1b0044a9502e3fa52f58 123088915 meilix-default-settings_1.0.tar.gz
+Maintainer: meilix <vanhonit@gmail.com>
+Homepage: http://mbm.vn
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 8.0.0)
+Package-List:
+ meilix-default-settings deb x11 extra arch=all
+Checksums-Sha1:
+ 50bf3db953a8fde75db53c154214a10b24f1d05a 24044128 meilix-default-settings_1.0.tar.xz
+Checksums-Sha256:
+ 0553a46f2c7b6842b2677409f0cd0392ba139a13c17a06a015fc7e079af31a95 24044128 meilix-default-settings_1.0.tar.xz
+Files:
+ ff7555942e8552d41e1d3b5626965f28 24044128 meilix-default-settings_1.0.tar.xz

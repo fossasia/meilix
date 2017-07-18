@@ -1,0 +1,101 @@
+#!/bin/sh
+
+PREREQ=""
+DESCRIPTION="Setting up automatic login..."
+
+prereqs()
+{
+       echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+. /scripts/casper-functions
+
+log_begin_msg "$DESCRIPTION"
+
+GDMCustomFile=/root/etc/gdm3/custom.conf
+
+if [ -f $GDMCustomFile ]; then
+    # Configure GDM autologin
+    sed -i -r \
+        -e "s/^#[ ]*AutomaticLoginEnable =.*\$/AutomaticLoginEnable=true/" \
+        -e "s/^#[ ]*AutomaticLogin =.*\$/AutomaticLogin=$USERNAME/" \
+	-e "s/^#[ ]*TimedLoginEnable =.*\$/TimedLoginEnable=false/" \
+        $GDMCustomFile
+fi
+
+if [ -f /root/etc/kde4/kdm/kdmrc ]; then
+    # Configure KDM autologin
+    sed -i -r \
+        -e "s/^#?AutoLoginEnable=.*\$/AutoLoginEnable=true/" \
+        -e "s/^#?AutoLoginUser=.*\$/AutoLoginUser=$USERNAME/" \
+        -e "s/^#?AutoReLogin=.*\$/AutoReLogin=true/" \
+        /root/etc/kde4/kdm/kdmrc
+fi
+
+if [ -f /root/etc/lxdm/lxdm.conf ]; then
+    # Configure LXDM autologin with LXDE session
+   sed -i -r \
+        -e "s/^# autologin=dgod/autologin=$USERNAME/" \
+        -e "s/^# session/session/" \
+        -e "s/startlxde/startlubuntu/" \
+        /root/etc/lxdm/lxdm.conf
+fi
+
+if [ -f /root/etc/xdg/lubuntu/lxdm/lxdm.conf ]; then
+    # Configure LXDM autologin with Lubuntu session
+   sed -i -r \
+        -e "s/^# autologin=dgod/autologin=$USERNAME/" \
+        -e "s/^# session/session/" \
+        -e "s/startlxde/startlubuntu/" \
+        /root/etc/xdg/lubuntu/lxdm/lxdm.conf
+fi
+
+if [ -d /root/etc/lightdm ]; then
+    # Configure LightDM autologin
+    LightDMCustomFile=/root/etc/lightdm/lightdm.conf
+    AutologinParameters="allow-guest=false\n\
+autologin-guest=false\n\
+autologin-user=$USERNAME\n\
+autologin-user-timeout=0"
+
+    # Prevent from updating if parameters already present (persistent usb key)
+    if ! `grep -qs '^autologin-user' $LightDMCustomFile` ; then
+        if ! `grep -qs '\[SeatDefaults\]' $LightDMCustomFile` ; then
+            echo '[SeatDefaults]' >> $LightDMCustomFile
+        fi
+        sed -i "s/\[SeatDefaults\]/\[SeatDefaults\]\n$AutologinParameters/" $LightDMCustomFile
+    fi
+
+    # LightDM on kubuntu-active wants to start ubuntu.desktop, workaround here for now jriddell 2012-03-15
+    if [ -e /root/usr/share/xsessions/plasma-active.desktop ]; then
+        cp /root/usr/share/xsessions/plasma-active.desktop /root/usr/share/xsessions/ubuntu.desktop
+    fi
+fi
+
+if [ -f /root/usr/bin/sddm ]; then
+    sddm_session=lxqt.desktop
+    if [ -f /root/usr/share/xsessions/Lubuntu.desktop ]; then
+        sddm_session=Lubuntu.desktop
+    fi
+    if [ -f /root/usr/share/xsessions/QLubuntu.desktop ]; then
+        sddm_session=QLubuntu.desktop
+    fi
+    cat >>/root/etc/sddm.conf <<EOF
+[Users]
+MinimumUid=999
+
+[Autologin]
+User=$USERNAME
+Session=$sddm_session
+EOF
+fi
+
+log_end_msg
