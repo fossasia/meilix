@@ -61,7 +61,7 @@ exit
 HERE
 cd extract-cd 	
 
-mkisofs \
+sudo mkisofs \
     -V "Custom Meilix" \
     -r -cache-inodes -J -l \
     -b isolinux/isolinux.bin \
