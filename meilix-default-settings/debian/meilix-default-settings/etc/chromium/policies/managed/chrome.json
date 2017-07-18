@@ -140,7 +140,7 @@
   // users cannot change or override it in Google Chrome.  If this setting is
   // left not set the user can decide to use this function or not.
 
-  //"BookmarkBarEnabled": true,
+  "BookmarkBarEnabled": false,
 
   // Clear site data on browser shutdown
   //-------------------------------------------------------------------------
@@ -222,7 +222,7 @@
   // Chrome will allow the user to control whether it is the default browser and
   // whether user notifications should be shown when it isn't.
 
-  //"DefaultBrowserSettingEnabled": true,
+  "DefaultBrowserSettingEnabled": true,
 
   // Default cookies setting
   //-------------------------------------------------------------------------
@@ -349,7 +349,7 @@
   // set, the host name specified by the search URL will be used.  This policy
   // is only considered if the 'DefaultSearchProviderEnabled' policy is enabled.
 
- "DefaultSearchProviderName": "Google",
+ "DefaultSearchProviderName": "Susper",
 
   // Default search provider search URL
   //-------------------------------------------------------------------------
@@ -359,7 +359,7 @@
   // set when the 'DefaultSearchProviderEnabled' policy is enabled and will only
   // be respected if this is the case.
 
-   "DefaultSearchProviderSearchURL": "http://www.google.com/cse?cx=partner-pub-6065445074637525:8941524350&q={searchTerms}",
+  "DefaultSearchProviderSearchURL": "http://susper.com/search?query=%s",
 
   // Default search provider suggest URL
   //-------------------------------------------------------------------------
@@ -538,7 +538,7 @@
   // can not be added, removed or modified. Existing bookmarks are still
   // available.
 
-  //"EditBookmarksEnabled": false,
+  "EditBookmarksEnabled": false,
 
   // Include non-standard port in Kerberos SPN
   //-------------------------------------------------------------------------
@@ -671,7 +671,7 @@
   // will allow the user to choose whether the new tab page is his home page on
   // his own.
 
-  "HomepageIsNewTabPage": false,
+  "HomepageIsNewTabPage": true,
 
   // Configure the home page URL
   //-------------------------------------------------------------------------
@@ -684,7 +684,7 @@
   // allow the user to choose his home page on his own if HomepageIsNewTabPage
   // is not set too.
 
-  "HomepageLocation": "http://www.google.com/cse/home?cx=partner-pub-6065445074637525:8941524350",
+  "HomepageLocation": "http://susper.com/",
 
   // Allow images on these sites
   //-------------------------------------------------------------------------
@@ -713,7 +713,7 @@
   // If disabled, no bookmarks are imported.  If it is not set, the user may be
   // asked whether to import, or importing may happen automatically.
 
-  //"ImportBookmarks": true,
+  "ImportBookmarks": false,
 
   // Import browsing history from default browser on first run
   //-------------------------------------------------------------------------
@@ -1003,8 +1003,8 @@
   // starts Google Chrome.  If you enable this setting, users cannot change or
   // override it in Google Chrome.  Disabling this setting is equvalent to
   // leaving it not configured. The user will still be able to change it in
-  // Google Chrome.	
-  "RestoreOnStartup": 4,
+  // Google Chrome. 
+  "RestoreOnStartup": 1,
 
   // URLs to open on startup
   //-------------------------------------------------------------------------
@@ -1013,7 +1013,7 @@
   // opened on start up.  This policy only works if the 'RestoreOnStartup'
   // policy is set to 'RestoreOnStartupIsURLs'.
 
-  "RestoreOnStartupURLs": ["http://www.google.com/cse?cx=partner-pub-6065445074637525:8941524350"],
+  "RestoreOnStartupURLs": ["http://susper.com/"],
 
   // Enable Safe Browsing
   //-------------------------------------------------------------------------

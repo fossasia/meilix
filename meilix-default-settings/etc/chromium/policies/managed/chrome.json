@@ -140,7 +140,7 @@
   // users cannot change or override it in Google Chrome.  If this setting is
   // left not set the user can decide to use this function or not.
 
-  //"BookmarkBarEnabled": true,
+  "BookmarkBarEnabled": false,
 
   // Clear site data on browser shutdown
   //-------------------------------------------------------------------------
@@ -222,7 +222,7 @@
   // Chrome will allow the user to control whether it is the default browser and
   // whether user notifications should be shown when it isn't.
 
-  //"DefaultBrowserSettingEnabled": true,
+  "DefaultBrowserSettingEnabled": true,
 
   // Default cookies setting
   //-------------------------------------------------------------------------
@@ -349,7 +349,7 @@
   // set, the host name specified by the search URL will be used.  This policy
   // is only considered if the 'DefaultSearchProviderEnabled' policy is enabled.
 
- "DefaultSearchProviderName": "Google",
+ "DefaultSearchProviderName": "Susper",
 
   // Default search provider search URL
   //-------------------------------------------------------------------------
@@ -538,7 +538,7 @@
   // can not be added, removed or modified. Existing bookmarks are still
   // available.
 
-  //"EditBookmarksEnabled": false,
+  "EditBookmarksEnabled": false,
 
   // Include non-standard port in Kerberos SPN
   //-------------------------------------------------------------------------
@@ -713,7 +713,7 @@
   // If disabled, no bookmarks are imported.  If it is not set, the user may be
   // asked whether to import, or importing may happen automatically.
 
-  //"ImportBookmarks": true,
+  "ImportBookmarks": false,
 
   // Import browsing history from default browser on first run
   //-------------------------------------------------------------------------
@@ -1004,7 +1004,7 @@
   // override it in Google Chrome.  Disabling this setting is equvalent to
   // leaving it not configured. The user will still be able to change it in
   // Google Chrome. 
-  "RestoreOnStartup": 4,
+  "RestoreOnStartup": 1,
 
   // URLs to open on startup
   //-------------------------------------------------------------------------

@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 28 Mar 2013 16:04:48 +0700
+Source: meilix-default-settings
+Binary: meilix-default-settings
+Architecture: source all
+Version: 1.0
+Distribution: unstable
+Urgency: low
+Maintainer: meilix <vanhonit@gmail.com>
+Changed-By: Meilix <vanhonit@gmail.com>
+Description:
+ meilix-default-settings - default settings for meilix
+Changes:
+ meilix-default-settings (1.0) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ e31317b0076c07fec5eb7ad2032ff46442ad996e 618 meilix-default-settings_1.0.dsc
+ 452eebfa1a8c92a7aa7c8c44f133f3155ba0d757 24043568 meilix-default-settings_1.0.tar.xz
+ 9db71eaa532edfe6c6e9cbe3c4dd9a55886dc5c1 36076596 meilix-default-settings_1.0_all.deb
+Checksums-Sha256:
+ fdd96e0faf1b5bc9082cffa1968b493f019211d40af6e5bacaf37b749a38d9cf 618 meilix-default-settings_1.0.dsc
+ b83de0aebb3ef447edd7cec0c32c3b07701437a9d0053aee519194932e3b5f0d 24043568 meilix-default-settings_1.0.tar.xz
+ cbfafb81ed1469aa9b85eb531c60948e54aaeced3d1eeb75ecc35912983ea2bd 36076596 meilix-default-settings_1.0_all.deb
+Files:
+ 62ffbca2bf9633ddcad4e73b23d2b48e 618 x11 extra meilix-default-settings_1.0.dsc
+ 593b6b0c14dd12a89486e04542e8a855 24043568 x11 extra meilix-default-settings_1.0.tar.xz
+ c5806aa05248a03071a3c75eae2f8b14 36076596 x11 extra meilix-default-settings_1.0_all.deb
