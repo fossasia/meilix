@@ -5,7 +5,7 @@ language: generic
 sudo: required
 
 script:
-  - ./build.sh
+  - ./build1.sh
 
 before_deploy:
   - export image_name="`echo *.iso`"
