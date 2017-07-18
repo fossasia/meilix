@@ -13,7 +13,7 @@ sudo mount -o loop meilix-zesty-20170611-i386.iso mnt/
 mkdir extract-cd
 sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
 #Extract the SquashFS filesystem 
-sudo unsquashfs mnt/casper/filesystem.squashfs -no-progress
+sudo unsquashfs -n mnt/casper/filesystem.squashfs
 sudo mv squashfs-root edit
 
 #test value of env variable
