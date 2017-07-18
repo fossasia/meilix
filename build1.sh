@@ -55,8 +55,10 @@ sudo sed -i '/casper/d' extract-cd/casper/filesystem.manifest-desktop
 #sudo rm extract-cd/casper/filesystem.squashfs
 sudo mksquashfs edit extract-cd/casper/filesystem.squashfs -noappend
 echo ">>> Recomputing MD5 sums"
+sudo su <<HERE
 ( cd extract-cd/ && find . -type f -not -name md5sum.txt -not -path '*/isolinux/*' -print0 | xargs -0 -- md5sum > md5sum.txt )
-
+exit
+HERE
 cd extract-cd 	
 
 mkisofs \
