@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #packages required to edit
-sudo apt install squashfs-tools genisoimage
+sudo apt-get install -qq squashfs-tools genisoimage
 #downloading the ISO to edit
 wget -q https://github.com/fossasia/meilix/releases/download/untagged-c9f68d2fa6b3d1cdbd99/meilix-zesty-20170611-i386.iso
 #exit on any error
