@@ -12,6 +12,8 @@ script:
 
 before_deploy:
   - ls
+  - find . -type d -not -name '*iso' -print0 | xargs -0 rm --
+  - ls
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
   
