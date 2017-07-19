@@ -2,8 +2,11 @@
 dist: trusty
 language: generic
 
-sudo: required
+git:
+  depth: 1
 
+sudo: required
+  
 script:
   - ./build1.sh
 
