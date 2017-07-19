@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg3572" xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs id="defs3574">
+  <linearGradient id="linearGradient3555" y2="1.1045" xlink:href="#SVGID_1_" gradientUnits="userSpaceOnUse" x2="18.031" y1="51.791" x1="46"/>
+  <linearGradient id="SVGID_1_" y2="-.54010" gradientUnits="userSpaceOnUse" x2="6.1704" y1="48.541" x1="41.83">
+   <stop id="stop248" stop-color="#9b9b9b" offset="0"/>
+   <stop id="stop250" stop-color="#ececec" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3543" y2="34.986" xlink:href="#SVGID_1_" gradientUnits="userSpaceOnUse" x2="14.241" y1="51.673" x1="21.951"/>
+  <linearGradient id="linearGradient3516" y2="-6.0576" xlink:href="#linearGradient3510" gradientUnits="userSpaceOnUse" x2="10.194" y1="33.34" x1="43"/>
+  <linearGradient id="linearGradient3553" y2="31.367" xlink:href="#linearGradient3510" gradientUnits="userSpaceOnUse" x2="30.892" gradientTransform="matrix(.97727 0 0 .96970 .54545 .56060)" y1="2" x1="2"/>
+  <linearGradient id="linearGradient3510">
+   <stop id="stop3512" stop-color="#fff" offset="0"/>
+   <stop id="stop3514" stop-color="#fff" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3570" y2="46" xlink:href="#linearGradient3510" gradientUnits="userSpaceOnUse" x2="12.285" y1="38" x1="11"/>
+ </defs>
+ <g id="layer1">
+  <path id="rect2704" opacity=".3" style="enable-background:accumulate;" marker-end="none" d="m4 0c-2.216-7.4015e-17 -4 1.784-4 4v29c2.4869e-14 2.216 1.784 4 4 4h11.5c-0.61 0.531-1.068 1.227-1.281 2.031h-1.219c-2.165 0-3.9688 1.804-3.9688 3.969v1c0 2.165 1.8038 3.969 3.9688 3.969h5 12 5c2.165 0 3.969-1.804 3.969-3.969v-1c0-2.165-1.804-3.969-3.969-3.969h-1.219c-0.213-0.804-0.671-1.5-1.281-2.031h11.5c2.216 0 4-1.784 4-4v-29c0-2.216-1.784-4-4-4h-40zm0 2h40c1.108 0 2 0.892 2 2v29c0 1.108-0.892 2-2 2h-40c-1.108 0-2-0.892-2-2v-29c0-1.108 0.892-2 2-2z" fill-rule="nonzero" marker-start="none" marker-mid="none" fill="#000"/>
+  <path id="path3541" style="enable-background:accumulate;" marker-end="none" d="m4 2c-1.108 0-2 0.892-2 2v29c0 1.108 0.892 2 2 2h40c1.108 0 2-0.892 2-2v-29c0-1.108-0.892-2-2-2h-40zm3 4h34c0.554 0 1 0.446 1 1v23c0 0.554-0.446 1-1 1h-34c-0.554 0-1-0.446-1-1v-23c0-0.554 0.446-1 1-1z" fill-rule="nonzero" marker-start="none" marker-mid="none" fill="url(#linearGradient3555)"/>
+  <path id="rect3478" style="enable-background:accumulate;" marker-end="none" d="m18 38c-1.108 0-2 0.892-2 2v1h-3c-1.108 0-2 0.892-2 2v1c0 1.108 0.892 2 2 2h5 12 5c1.108 0 2-0.892 2-2v-1c0-1.108-0.892-2-2-2h-3v-1c0-1.108-0.892-2-2-2h-12z" fill-rule="nonzero" marker-start="none" marker-mid="none" fill="url(#linearGradient3543)"/>
+  <rect id="rect3508" opacity=".4" stroke-linejoin="miter" style="enable-background:accumulate;" stroke-dasharray="none" marker-end="none" marker-start="none" stroke-dashoffset="0" rx="1.4474" ry="1.4474" marker-mid="none" height="26" width="37" stroke="url(#linearGradient3516)" stroke-linecap="butt" stroke-miterlimit="4" y="5.5" x="5.5" stroke-width="1" fill="none"/>
+  <rect id="rect3545" opacity=".4" stroke-linejoin="miter" style="enable-background:accumulate;" stroke-dasharray="none" marker-end="none" marker-start="none" stroke-dashoffset="0" rx="1.5228" ry="1.5228" marker-mid="none" height="32" width="43" stroke="url(#linearGradient3553)" stroke-linecap="butt" stroke-miterlimit="4" y="2.5" x="2.5" stroke-width="1" fill="none"/>
+  <path id="path3568" opacity=".4" stroke-linejoin="miter" style="enable-background:accumulate;" marker-end="none" d="m18 38.5c-0.834 0-1.5 0.666-1.5 1.5v1c-0.006 0.274-0.226 0.494-0.5 0.5h-3c-0.834 0-1.5 0.666-1.5 1.5v1c0 0.834 0.666 1.5 1.5 1.5h5 12 5c0.834 0 1.5-0.666 1.5-1.5v-1c0-0.834-0.666-1.5-1.5-1.5h-3c-0.274-0.006-0.494-0.226-0.5-0.5v-1c0-0.834-0.666-1.5-1.5-1.5h-12z" marker-start="none" stroke-dashoffset="0" marker-mid="none" stroke="url(#linearGradient3570)" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1" fill="none"/>
+  <rect id="rect3599" opacity=".3" stroke-linejoin="miter" style="enable-background:accumulate;" stroke-dasharray="none" marker-end="none" marker-start="none" stroke-dashoffset="0" rx=".50791" ry=".50791" marker-mid="none" height="24" width="35" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" y="6.5" x="6.5" stroke-width="1" fill="none"/>
+ </g>
+</svg>

@@ -1,0 +1,15 @@
+Apparmor Profile
+----------------
+If your system uses AppArmor, please note that the shipped profile is disabled
+by default. The profile can be enabled by performing:
+
+$ sudo aa-enforce /etc/apparmor.d/usr.bin.firefox
+
+The profile can be disabled by performing:
+$ sudo aparmor_parser -R /etc/apparmor.d/usr.bin.firefox
+$ sudo ln -s /etc/apparmor.d/usr.bin.firefox /etc/apparmor.d/disable/usr.bin.firefox
+
+This profile should work without modification for most plugins available in
+Ubuntu, but may require adjusting for your environment. Please see
+https://wiki.ubuntu.com/DebuggingApparmor before filing a bug against this
+software.

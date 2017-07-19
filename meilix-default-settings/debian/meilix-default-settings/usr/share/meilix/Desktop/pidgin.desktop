@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Pidgin Internet Messenger
+GenericName=Internet Messenger
+Comment=Chat over IM.  Supports AIM, Google Talk, Jabber/XMPP, MSN, Yahoo and more
+Exec=pidgin
+Icon=pidgin
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Network;InstantMessaging;
+X-Ubuntu-Gettext-Domain=pidgin
