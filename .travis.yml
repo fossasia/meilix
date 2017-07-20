@@ -9,10 +9,11 @@ sudo: required
   
 script:
   - ./build1.sh
-
+  
 before_deploy:
   - ls
-  - sudo find . -type d -not -name '*iso' -print0 | xargs -0 rm --
+  - ls extract-cd/
+  - sudo rm meilix-zesty-20170611-i386.iso
   - ls
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
@@ -25,7 +26,7 @@ deploy:
     overwrite: true
     tag_name: $TRAVIS_TAG
     api_key:
-      secure: "tVVKOMh0dZCrHkAfoqIYJYleJwTwXptumugYVcGi/WDaeFi9o1ROTKVdLXUO2CcAUgWUphWjnckF4uVdKBcCB87Af0hgQBXdpDJ4VSb2FFjjY3Lf5dpR1FTYR6Tqsn821mYM17wtwmO1tlg8zFqd1yysr36wZ0EqzFwBtV2FA0jNfxGtFyyJRZnDcCQqwREc2iIENSt8tE787HbwPaWGBEkpC8zYwNYkQXPgFvTi+Z/6Tnobz7gnk9wQFuzFDymr6sDTQF+2ycfGnJnXDOZjqC5haDZbXop6dR/ru6hwO6U4khQIFHEPMZEEHnocB1gOOSiM9Z/yztmY18X4jzx8gZAMIrdKwYlZzEeVAbnlX0WXfjOFmcKIvaMtdNZg9QJil3ePPq/80uNo4TGUy+04ll6jBqqMf4BTs/dxohLyksxN79iuAplRtEl96ZQG+0VI1B0OE3WjwtcuvcuTW7oZ1sOULY4UsNmIdPpJZqIrQpN4AevRJ6DV844uvJ63Sbdzyu0EjMTp+h+2dWiQnnW4aP0mbYsBGWTj0vM2CD/fHtM9W6oVNqLsF7pEe9fg7d2hYJS7Zkuwco33WHqy4JGvLl9uyzSsy0cueJgwg5DYJ8zWDzhlCbKtEk1kG+eKVj+C5rG4shOMK4zf+0iVn5BCNB5d3OgLpAGJwFx1uqqTMrc="
+      secure: "KsbMe/CzvYmGvWoflBRjfiw8urvAZhNE/oL51HceeIeAeQ+Kr0jM/BRV+kG0c6scKwePknr02A7XqBwAEmUAYWNGd0TiRo5lIQxCONpPsYXwEtHSuA2+0pRuVN4qG+6sgYHvlNO7UbWgVu/aAapufTpIkUctHWHQRJUDN8+hUrfeRm4CjeA7Tz4y1KYzRNY4SrwQyEVLwxoTZ/DOuSjj3m40jrwOsBnql/SSYe6D8N2r0tv5Acs/qmClEUhQW26OB4tRRRgS9jXU2gni2ZEYV0h6D5aKehW6gWlZpK5Rdn5QEY2py+Mar29wF2nxAojD+chLgzxx3zjB5Dm6ERpzEznjffMEpBxlEEMO3uniOJjokn0k2IVsoZTvM9rCbBfFuD7+Ihv5nhZYM7Mc5iKZE1Tx6XW2ZX9LW7ebjP+jNmqLuBHUu3oAVeD9ZscdmHVnNFr1TNE+ZVAvSDfA73AaT+sT3TNF5SwYPyAH7uk8lHfUhS+rIAmX8efrSIUoaVSwy1Wzop6c2YbYGJq4RxqEEkCiE0aB6ldgXAA95uUcYzTkKL/i1myJK/DLpu+qV3AXhxVIpYqekhTEZmLMpCnXXEzPwsAe1CfEy4h0VV2ax51u+cAOhLcKZBRzDAJOd7dqAA6GpV24OOfP3VKqRxCWfYPtsLPoei6h9QWvWrYuC80="    
     file_glob: true # http://stackoverflow.com/a/28579635/1320237
     file: "/home/travis/${image_name}"
     on:

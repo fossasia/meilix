@@ -6,7 +6,7 @@ import datetime
 conn = http.client.HTTPSConnection("api.sendgrid.com")
 
 date = datetime.datetime.now().strftime('%Y%m%d')
-url = "https://github.com/xeon-zolt/meilix/releases/download/"+os.environ["TRAVIS_TAG"]+"/meilix-zesty-"+date+"-i386.iso"
+url = "https://github.com/xeon-zolt/meilix/releases/download/"+os.environ["TRAVIS_TAG"]+"/meilix-i386-custom.iso"
 
 print (os.environ["email"])
 payload = "{\"personalizations\":[{\"to\":[{\"email\":\"" + os.environ["email"] + "\"}],\"subject\":\"Your ISO is Ready\"}],\"from\":{\"email\":\"xeon.harsh@gmail.com\",\"name\":\"Meilix Generator\"},\"reply_to\":{\"email\":\"xeon.harsh@gmail.com\",\"name\":\"Meilix Generator\"},\"subject\":\"Your ISO is ready\",\"content\":[{\"type\":\"text/html\",\"value\":\"<html><p>Hi,<br>Your ISO is ready<br>URL : "+url+"<br><br>Thank You,<br>Meilix Generator Team</p></html>\"}]}"
