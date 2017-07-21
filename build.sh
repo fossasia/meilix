@@ -147,6 +147,9 @@ nautilus --quit
 # Install git
 apt-get -q -y install git
 
+#install icons for pcmanfm
+apt-get -q -y install oxygen-icon-theme
+
 #Google custom ad
 apt-get -q -y --purge install mygoad
 #Install East Asia font
