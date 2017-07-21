@@ -2,13 +2,14 @@
 #packages required to edit
 sudo apt-get install -qq squashfs-tools genisoimage
 #downloading the ISO to edit
-wget -q https://github.com/fossasia/meilix/releases/download/untagged-c9f68d2fa6b3d1cdbd99/meilix-zesty-20170611-i386.iso
+wget -q https://github.com/fossasia/meilix/releases/download/untagged-ef2fd636a53f4d0268cb/meilix-zesty-20170721-i386.iso
+mv *.iso meilix-original.iso
 #exit on any error
 set -e
 
 mkdir mnt
 #Mount the ISO 
-sudo mount -o loop meilix-zesty-20170611-i386.iso mnt/
+sudo mount -o loop meilix-original.iso mnt/
 #Extract .iso contents into dir 'extract-cd' 
 mkdir extract-cd
 sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
