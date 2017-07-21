@@ -131,6 +131,22 @@ apt-get -q -y --purge install --no-install-recommends libreoffice-gtk libreoffic
 dpkg -i meilix-imclient_*_all.deb
 apt-get install -f
 
+# Install Google-Chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+apt-get update
+apt-get install google-chrome-stable
+
+#Install vlc
+apt-get -q -y vlc
+
+#Instal dropbox
+apt-get -q -y install nautilus-dropbox
+nautilus --quit
+
+# Install git
+apt-get -q -y install git
+
 #Google custom ad
 apt-get -q -y --purge install mygoad
 #Install East Asia font
