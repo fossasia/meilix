@@ -359,7 +359,7 @@
   // set when the 'DefaultSearchProviderEnabled' policy is enabled and will only
   // be respected if this is the case.
 
-  "DefaultSearchProviderSearchURL": "http://susper.com/search?query=%s",
+  "DefaultSearchProviderSearchURL": "http://susper.com/search?query={searchTerms}",
 
   // Default search provider suggest URL
   //-------------------------------------------------------------------------
@@ -671,7 +671,7 @@
   // will allow the user to choose whether the new tab page is his home page on
   // his own.
 
-  "HomepageIsNewTabPage": true,
+  "HomepageIsNewTabPage": false,
 
   // Configure the home page URL
   //-------------------------------------------------------------------------
@@ -1113,3 +1113,7 @@
   //"URLWhitelist": ["example.com", "https://ssl.server.com", "hosting.com/bad_path", "http://server:8080/path", ".exact.hostname.com"]
 
 }
+
+
+
+
