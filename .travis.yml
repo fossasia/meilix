@@ -9,12 +9,9 @@ sudo: required
   
 script:
   - ./build1.sh
-  
+ 
 before_deploy:
-  - ls
-  - ls extract-cd/
-  - sudo rm meilix-zesty-20170611-i386.iso
-  - ls
+  - sudo rm meilix-original.iso
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
   
