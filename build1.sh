@@ -38,6 +38,9 @@ chmod +x meilix-generator.sh
 echo "$(<meilix-generator.sh)" #to test the file
 ./meilix-generator.sh
 rm meilix-generator.sh
+
+#change host name
+hostname ${TRAVIS_TAG}
 #delete temporary files 
 rm -rf /tmp/* ~/.bash_history
 exit
