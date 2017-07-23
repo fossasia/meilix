@@ -10,8 +10,8 @@ Build-Depends: debhelper (>= 8.0.0)
 Package-List:
  meilix-default-settings deb x11 extra arch=all
 Checksums-Sha1:
- 17ae8b8655ff135c6705bc8a0d6de92fd14e580d 24043796 meilix-default-settings_1.0.tar.xz
+ b630d5af2778f6cd6e975a10268ebe16508097d0 23920348 meilix-default-settings_1.0.tar.xz
 Checksums-Sha256:
- 7dba5763f2fc3fe09014c511b53123593076502a54462aace6032a0d6acb32df 24043796 meilix-default-settings_1.0.tar.xz
+ b3e8c5912a1f8a6ea0bcd670a820e71045cff385d54bc2e5c44d277d34c8b17f 23920348 meilix-default-settings_1.0.tar.xz
 Files:
- 21a5b5e72c0fdb226bd1ed515d08399e 24043796 meilix-default-settings_1.0.tar.xz
+ eca7cd43124945eafd5373956cb51aee 23920348 meilix-default-settings_1.0.tar.xz

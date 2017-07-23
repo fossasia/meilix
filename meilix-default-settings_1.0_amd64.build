@@ -2314,4 +2314,5 @@ W: meilix-default-settings: desktop-command-not-in-package usr/share/application
 W: meilix-default-settings: desktop-entry-invalid-category Accessories usr/share/applications/trash.desktop
 W: meilix-default-settings: desktop-entry-lacks-main-category usr/share/applications/trash.desktop
 W: meilix-default-settings: script-not-executable usr/lib/firefox/firefox.sh
+W: meilix-default-settings: script-not-executable usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 Finished running lintian.

@@ -4831,6 +4831,7 @@ a4c2e13ead409bacd90f298a49d4ed7e  usr/share/icons/Meilix/symbolic/places/folder-
 d62c422c4f035f769201260b65441089  usr/share/icons/Meilix/symbolic/places/folder-downloads-symbolic.svg
 46c77632a5a20b9311cb0b87100e0cbf  usr/share/icons/Meilix/symbolic/places/folder-music-symbolic.svg
 3d93ba422c610441805ed586c7d4bcd5  usr/share/icons/Meilix/symbolic/places/folder-videos-symbolic.svg
+b6479bf29e47092cee96c42ab3478b75  usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 6dbce48893452331ccc1f1f9107cf426  usr/share/lintian/overrides/firefox
 129a72386420d8641c1090aabdb9ae85  usr/share/lubuntu/openbox/rc.xml
 3c97225bcb16ba388279d02f511d511f  usr/share/lxpanel/images/start-button.png
@@ -4901,6 +4902,5 @@ e35183af7756dacd4f658d393f18bb08  usr/share/meilix/firefox/default/startupCache/
 41fe5471fbf094a43a7669155430aea4  usr/share/meilix/firefox/default/webappsstore.sqlite
 8db619e6760996d12eee1bc0f9928f61  usr/share/meilix/firefox/profiles.ini
 ec660654fd2f2d6f0468e68082c69bec  usr/share/meilix/images/meilix-logo.png
-ab4258bf7240dd56aaaadb42d56324bb  usr/share/meilix/images/xp_default_wallpaper.jpg
 15dd34052942a559fabeaa042a85c102  usr/share/meilix/runfirsttime.sh
 9282c5a68c0d75509485eae95a20b71e  usr/share/polkit-1/actions/org.freedesktop.NetworkManager.policy
