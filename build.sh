@@ -147,6 +147,9 @@ nautilus --quit
 # Install git
 apt-get -q -y install git
 
+# Install text-editor
+apt-get -q -y install gedit
+
 #Google custom ad
 apt-get -q -y --purge install mygoad
 #Install East Asia font
