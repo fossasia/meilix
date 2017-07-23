@@ -144,11 +144,14 @@ apt-get -q -y vlc
 apt-get -q -y install nautilus-dropbox
 nautilus --quit
 
-# Install git
+#Install git
 apt-get -q -y install git
 
 #install icons for pcmanfm
 apt-get -q -y install oxygen-icon-theme
+
+#Install text editor
+apt-get -q -y install gedit
 
 #Google custom ad
 apt-get -q -y --purge install mygoad
