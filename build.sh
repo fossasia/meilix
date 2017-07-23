@@ -142,6 +142,10 @@ apt-get -q -y --purge install language-pack-gnome-en
 apt-get -q -y --purge install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
 apt-get -q -y --purge install ibus-unikey ibus-anthy ibus-pinyin ibus-m17n
 apt-get -q -y --purge install im-switch
+
+#Debuilding the metapackages
+./script.sh
+
 #Hotel OS default settings
 #apt-get download hotelos-default-settings
 dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
