@@ -30,7 +30,7 @@ sudo cp /etc/hosts edit/etc/
 sudo mount --bind /dev/ edit/dev
 
 #moving the script to chroot
-mv set-wallpaper.sh edit/set-wallpaper.sh
+sudo mv set-wallpaper.sh edit/set-wallpaper.sh
 
 sudo chroot edit <<EOF
 
