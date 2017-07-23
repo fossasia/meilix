@@ -38,7 +38,7 @@ sudo apt-get -q install $devtools -y --no-install-recommends
 
 #Debuilding the metapackages
 chmod +x script.sh
-./script.sh
+sudo ./script.sh
 
 # Create and populate the chroot using debootstrap
 [ -d chroot ] && sudo rm -R chroot/
