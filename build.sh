@@ -36,6 +36,10 @@ done
 # Make sure we have the tools we need installed
 sudo apt-get -q install $devtools -y --no-install-recommends
 
+#Debuilding the metapackages
+chmod +x script.sh
+./script.sh
+
 # Create and populate the chroot using debootstrap
 [ -d chroot ] && sudo rm -R chroot/
 # Debootstrap outputs a lot of 'Information' lines, which can be ignored
@@ -142,9 +146,6 @@ apt-get -q -y --purge install language-pack-gnome-en
 apt-get -q -y --purge install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
 apt-get -q -y --purge install ibus-unikey ibus-anthy ibus-pinyin ibus-m17n
 apt-get -q -y --purge install im-switch
-
-#Debuilding the metapackages
-./script.sh
 
 #Hotel OS default settings
 #apt-get download hotelos-default-settings
