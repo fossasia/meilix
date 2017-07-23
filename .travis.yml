@@ -22,4 +22,3 @@ deploy:
     file: "/home/travis/${image_name}"
     on:
       all_branches: true
-

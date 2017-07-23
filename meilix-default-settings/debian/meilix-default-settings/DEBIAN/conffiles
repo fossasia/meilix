@@ -4,6 +4,7 @@
 /etc/chromium/default
 /etc/chromium/policies/managed/chrome.json
 /etc/sddm.conf
+/etc/skel/.config/lxqt/panel.conf
 /etc/skel/.config/vlc/vlc-qt-interface.conf
 /etc/skel/.config/vlc/vlcrc
 /etc/skel/.mozilla/*.default/prefs.js
@@ -11,6 +12,11 @@
 /etc/skel/.mozilla/firefox/Crash Reports/InstallTime20130107224806
 /etc/skel/.mozilla/profiles.ini
 /etc/xdg/lubuntu/lightdm/lightdm-gtk-greeter.conf
+/etc/xdg/lxqt/globalkeyshortcuts.conf
+/etc/xdg/lxqt/lxqt.conf
+/etc/xdg/lxqt/panel.conf
+/etc/xdg/lxqt/session.conf
+/etc/xdg/lxqt/windowmanagers.conf
 /etc/xdg/lxsession/Lubuntu-Netbook/autostart
 /etc/xdg/lxsession/Lubuntu-Netbook/desktop.conf
 /etc/xdg/lxsession/Lubuntu/autostart

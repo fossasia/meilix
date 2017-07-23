@@ -4902,6 +4902,5 @@ e35183af7756dacd4f658d393f18bb08  usr/share/meilix/firefox/default/startupCache/
 41fe5471fbf094a43a7669155430aea4  usr/share/meilix/firefox/default/webappsstore.sqlite
 8db619e6760996d12eee1bc0f9928f61  usr/share/meilix/firefox/profiles.ini
 ec660654fd2f2d6f0468e68082c69bec  usr/share/meilix/images/meilix-logo.png
-ab4258bf7240dd56aaaadb42d56324bb  usr/share/meilix/images/xp_default_wallpaper.jpg
 15dd34052942a559fabeaa042a85c102  usr/share/meilix/runfirsttime.sh
 9282c5a68c0d75509485eae95a20b71e  usr/share/polkit-1/actions/org.freedesktop.NetworkManager.policy
