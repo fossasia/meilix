@@ -1,3 +1,4 @@
+/etc/X11/xorg.conf
 /etc/apport/blacklist.d/firefox
 /etc/apport/native-origins.d/firefox
 /etc/apt/.sources.list.d
