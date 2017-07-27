@@ -131,6 +131,9 @@ apt-get -q -y --purge install --no-install-recommends libreoffice-gtk libreoffic
 dpkg -i meilix-imclient_*_all.deb
 apt-get install -f
 
+#screen-dimming turns off always
+echo -ne "\033[9;0]" >> /etc/issue
+
 #Google custom ad
 apt-get -q -y --purge install mygoad
 #Install East Asia font
