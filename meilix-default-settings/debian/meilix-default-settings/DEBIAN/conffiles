@@ -4,6 +4,7 @@
 /etc/chromium/default
 /etc/chromium/policies/managed/chrome.json
 /etc/sddm.conf
+/etc/skel/.config/lxqt/panel.conf
 /etc/skel/.config/vlc/vlc-qt-interface.conf
 /etc/skel/.config/vlc/vlcrc
 /etc/skel/.mozilla/*.default/prefs.js

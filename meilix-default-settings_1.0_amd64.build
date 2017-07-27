@@ -110,8 +110,8 @@ E: meilix-default-settings: arch-independent-package-contains-binary-or-object u
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/libssl3.so
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/libxpcom.so
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/libxul.so
-E: meilix-default-settings: embedded-library usr/lib/firefox/libxul.so: libjpeg
 E: meilix-default-settings: embedded-library usr/lib/firefox/libxul.so: srtp
+E: meilix-default-settings: embedded-library usr/lib/firefox/libxul.so: libjpeg
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/plugin-container
 E: meilix-default-settings: arch-independent-package-contains-binary-or-object usr/lib/firefox/webapprt-stub
 W: meilix-default-settings: missing-depends-line
