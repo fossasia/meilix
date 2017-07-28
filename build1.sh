@@ -22,7 +22,10 @@ echo $TRAVIS_SCRIPT
 
 sudo su <<EOF
 echo "$TRAVIS_SCRIPT" > edit/meilix-generator.sh
+mv browser.sh edit/browser.sh
 EOF
+
+#moving browser script to edit
 
 #prepare chroot
 sudo mount -o bind /run/ edit/run
@@ -36,9 +39,12 @@ sudo chroot edit <<EOF
 
 # execute environment variable
 ls # to test the files if any new file is added
-chmod +x meilix-generator.sh
+chmod +x meilix-generator.sh browser.sh
 echo "$(<meilix-generator.sh)" #to test the file
 ./meilix-generator.sh
+rm meilix-generator.sh
+./browser.sh
+rm browser.sh
 
 chmod +x set-wallpaper.sh && ./set-wallpaper.sh
 #delete temporary files 
