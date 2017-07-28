@@ -138,7 +138,7 @@ apt-get update
 apt-get install google-chrome-stable
 
 #Install vlc
-apt-get -q -y vlc
+apt-get -q -y install vlc
 
 #Instal dropbox
 apt-get -q -y install nautilus-dropbox
