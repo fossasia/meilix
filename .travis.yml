@@ -31,5 +31,6 @@ deploy:
       tags: true
     
 after_deploy:
+  - echo $TRAVIS_TEST_RESULT > log.txt
   - ./mail.py
 
