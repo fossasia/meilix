@@ -8,10 +8,10 @@ git:
 sudo: required
   
 script:
-  - ./build1.sh
+  - ./build1.sh |& tee log.txt
  
 before_deploy:
-  - sudo rm meilix-original.iso
+  - sudo rm meilix-original.iso 
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
   
@@ -31,6 +31,4 @@ deploy:
       tags: true
     
 after_deploy:
-  - echo $TRAVIS_TEST_RESULT > log.txt
   - ./mail.py
-
