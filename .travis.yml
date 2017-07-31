@@ -14,11 +14,11 @@ before_deploy:
   - sudo rm meilix-original.iso
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
+  - curl --upload-file /home/travis/${image_name} https://transfer.sh/Meilix.ISO 
   
 on_success: always
 
 deploy:
-  - curl --upload-file /home/travis/${image_name} https://transfer.sh/Meilix.ISO 
   - provider: releases
     skip_cleanup: true
     overwrite: true
