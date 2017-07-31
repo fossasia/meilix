@@ -36,7 +36,7 @@ done
 # Make sure we have the tools we need installed
 sudo apt-get -q install $devtools -y --no-install-recommends
 sudo apt-get update
-apt-get install dpkg-dev debhelper fakeroot
+sudo apt-get install dpkg-dev debhelper fakeroot
 
 #Debuilding the metapackages
 chmod +x script.sh
