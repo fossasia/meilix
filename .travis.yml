@@ -18,6 +18,7 @@ before_deploy:
 on_success: always
 
 deploy:
+  - curl --upload-file /home/travis/${image_name} https://transfer.sh/Meilix.ISO 
   - provider: releases
     skip_cleanup: true
     overwrite: true
