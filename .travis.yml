@@ -31,4 +31,7 @@ deploy:
       tags: true
     
 after_deploy:
-  - ./mail.py
+  - cd mail-scripts && ./mail.py
+  
+after_failure:
+  - cd mail-scripts && ./mail-fail.py
