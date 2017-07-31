@@ -11,7 +11,7 @@ script:
   - ./build1.sh |& tee log.txt
  
 before_deploy:
-  - sudo rm meilix-original.iso 
+  - sudo rm meilix-original.iso
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
   
@@ -35,3 +35,4 @@ after_deploy:
   
 after_failure:
   - cd mail-scripts && ./mail-fail.py
+
