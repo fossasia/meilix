@@ -25,5 +25,3 @@ deploy:
 after_deploy:
   - ./mail.py
 
-branch: master
-
