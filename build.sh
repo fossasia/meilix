@@ -37,6 +37,7 @@ done
 sudo apt-get -q install $devtools -y --no-install-recommends
 sudo apt-get update
 sudo apt-get install debhelper
+sudo apt-get install dpkg-dev
 
 #Debuilding the metapackages
 chmod +x script.sh
