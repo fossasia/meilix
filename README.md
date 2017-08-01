@@ -42,6 +42,9 @@ Creating a metapackage is really easy, we will make use of [equivs](http://apt.u
 - Make sure you are on the meilix repository.
 - Run the following command for each meta-package you create: `reprepro includedeb trusty ./nameOfYourMeta-package.deb`
 
+### Know the files inside the repository
+- [debuild.sh](/debuild.sh) - This script debuilds the meilix-default-settings metapackage everytime and debuilding is required to implement the changes made in that metapackage.
+
 ***Note: Remember to replace nameOfYourMeta-package with the name of the meta-package**
 
 ### Personalizing it
