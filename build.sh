@@ -35,6 +35,12 @@ done
 
 # Make sure we have the tools we need installed
 sudo apt-get -q install $devtools -y --no-install-recommends
+sudo apt-get update
+sudo apt-get install dpkg-dev debhelper fakeroot
+
+#Debuilding the metapackages
+chmod +x debuild.sh
+sudo ./debuild.sh
 
 # Create and populate the chroot using debootstrap
 [ -d chroot ] && sudo rm -R chroot/
@@ -164,6 +170,7 @@ apt-get -q -y --purge install language-pack-gnome-en
 apt-get -q -y --purge install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
 apt-get -q -y --purge install ibus-unikey ibus-anthy ibus-pinyin ibus-m17n
 apt-get -q -y --purge install im-switch
+
 #Hotel OS default settings
 #apt-get download hotelos-default-settings
 dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
