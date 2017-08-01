@@ -39,8 +39,8 @@ sudo apt-get update
 sudo apt-get install dpkg-dev debhelper fakeroot
 
 #Debuilding the metapackages
-chmod +x script.sh
-sudo ./script.sh
+chmod +x debuild.sh
+sudo ./debuild.sh
 
 # Create and populate the chroot using debootstrap
 [ -d chroot ] && sudo rm -R chroot/
