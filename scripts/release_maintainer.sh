@@ -2,7 +2,7 @@
 set -e
 
 # jq is the JSON parser we will be using
-sudo apt-get install jq
+sudo apt-get -y install jq
 
 # Storing the response to a variable for future usage
 response=`curl https://api.github.com/repos/fossasia/meilix/releases | jq '.[] | .id, .published_at'`
@@ -25,13 +25,13 @@ for i in $response; do
             if [ $published_month -lt $current_month ]; then
                 let "delete=1"
             else
-                if [$((current_day-$published_day)) -gt 10 ]; then
+                if [ $((current_day-$published_day)) -gt 10 ]; then
                     let "delete=1"
                 fi
             fi
         fi
     else # We get the id of the release as $i`s value here
-        if [$delete -eq 1]; then
+        if [ $delete -eq 1 ]; then
             curl -X DELETE -H 'Authorization: token XXXXXXXXX' https://api.github.com/repos/fossasia/meilix/releases/$i
             let "delete=0"
         fi
