@@ -35,6 +35,12 @@ done
 
 # Make sure we have the tools we need installed
 sudo apt-get -q install $devtools -y --no-install-recommends
+sudo apt-get update
+sudo apt-get install dpkg-dev debhelper fakeroot
+
+#Debuilding the metapackages
+chmod +x debuild.sh
+sudo ./debuild.sh
 
 # Create and populate the chroot using debootstrap
 [ -d chroot ] && sudo rm -R chroot/
@@ -134,6 +140,28 @@ apt-get install -f
 #screen-dimming turns off always
 echo -ne "\033[9;0]" >> /etc/issue
 
+# Install Google-Chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+apt-get update
+apt-get install google-chrome-stable
+
+#Install vlc
+apt-get -q -y install vlc
+
+#Instal dropbox
+apt-get -q -y install nautilus-dropbox
+nautilus --quit
+
+#Install git
+apt-get -q -y install git
+
+#install icons for pcmanfm
+apt-get -q -y install oxygen-icon-theme
+
+#Install text editor
+apt-get -q -y install gedit
+
 #Google custom ad
 apt-get -q -y --purge install mygoad
 #Install East Asia font
@@ -145,6 +173,7 @@ apt-get -q -y --purge install language-pack-gnome-en
 apt-get -q -y --purge install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
 apt-get -q -y --purge install ibus-unikey ibus-anthy ibus-pinyin ibus-m17n
 apt-get -q -y --purge install im-switch
+
 #Hotel OS default settings
 #apt-get download hotelos-default-settings
 dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
