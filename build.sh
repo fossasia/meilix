@@ -1,9 +1,8 @@
 #!/bin/bash
-# lxgames-build.sh -- creates an LXgames LiveCD ISO, based on lubuntu-build.sh
+# build.sh -- creates an Meilix LiveCD ISO
 # Author: Team
-# Based heavily on HOWTO information by
-#   Julien Lavergne <gilir@ubuntu.com>
-# Version: 20110303
+# Based on HOWTO information by Julien Lavergne <gilir@ubuntu.com>
+# Version: 2017
 
 set -eu				# Be strict
 
@@ -22,7 +21,7 @@ release=${4:-zesty}
 # Necessary data files
 datafiles="image-${arch}.tar.lzma sources.list"
 # Necessary development tool packages to be installed on build host
-devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools"
+devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools devscripts"
 
 # Make sure we have the data files we need
 for i in $datafiles
@@ -141,7 +140,7 @@ apt-get install -f
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 apt-get update
-apt-get install google-chrome-stable
+apt-get -q -y install google-chrome-stable
 
 #Install vlc
 apt-get -q -y install vlc
