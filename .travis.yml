@@ -21,6 +21,8 @@ on_success: always
 deploy:
   - provider: script
     script: curl --upload-file /home/travis/${image_name} https://transfer.sh/Meilix.ISO
+    on:
+    branch: upload-test
     
 after_deploy:
   - ./mail.py
