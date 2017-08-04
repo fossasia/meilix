@@ -21,7 +21,7 @@ release=${4:-zesty}
 # Necessary data files
 datafiles="image-${arch}.tar.lzma sources.list"
 # Necessary development tool packages to be installed on build host
-devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools devscripts"
+devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools"
 
 # Make sure we have the data files we need
 for i in $datafiles
@@ -34,14 +34,18 @@ done
 
 # Make sure we have the tools we need installed
 sudo apt-get -q install $devtools -y --no-install-recommends
-sudo apt-get update
-sudo apt-get install dpkg-dev debhelper fakeroot
+sudo apt-get -q update
+sudo apt-get -q install dpkg-dev debhelper fakeroot 
+sudo apt-get -q install devscripts
 
 #Debuilding the metapackages
+echo Section Debuilding the metapackages
 chmod +x debuild.sh
 sudo ./debuild.sh
+echo Section end Metapackages debuild
 
 # Create and populate the chroot using debootstrap
+echo Section Chroot
 [ -d chroot ] && sudo rm -R chroot/
 # Debootstrap outputs a lot of 'Information' lines, which can be ignored
 sudo debootstrap --arch=${arch} ${release} chroot ${mirror} # 2>&1 |grep -v "^I: "
@@ -94,7 +98,7 @@ dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
-apt-get install -q -y xorg sddm lxqt
+apt-get -q -y install xorg sddm lxqt
 
 # Plymouth theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
@@ -170,7 +174,7 @@ apt-get -q -y --purge install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
 apt-get -q -y --purge install ibus-unikey ibus-anthy ibus-pinyin ibus-m17n
 apt-get -q -y --purge install im-switch
 
-#Hotel OS default settings
+#Meilix default settings
 #apt-get download hotelos-default-settings
 dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
 update-initramfs -u
@@ -179,7 +183,7 @@ apt-get install -f
 apt-get -q -y remove dconf-tools
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
-apt-get clean
+apt-get -q clean
 rm -rf /tmp/*
 #rm /etc/resolv.conf
 rm meilix-default-settings_1.0_all.deb
@@ -192,7 +196,7 @@ dpkg-divert --rename --remove /sbin/initctl
 
 exit
 EOF
-
+echo Section chroot finished
 ###############################################################
 # Continue work outside the chroot, preparing image
 
