@@ -121,6 +121,11 @@ apt-get -q -y -o Dpkg::Options::="--force-overwrite" --purge install chromium-br
 #rm -rf /etc/chromium-browser
 mv /etc/chromium-browser_ /etc/chromium-browser
 
+#set the screen-saver and power-management off
+xset -dpms
+xset s noblank
+xset s off
+
 # Install lxrandr to change monitor settings
 apt-get -q -y --purge install lxrandr
 
@@ -164,11 +169,14 @@ apt-get -q -y install gedit
 
 #Google custom ad
 apt-get -q -y --purge install mygoad
+
 #Install East Asia font
 apt-get -q -y --purge install ttf-arphic-uming ttf-wqy-zenhei ttf-sazanami-mincho ttf-sazanami-gothic ttf-unfonts-core
+
 # Install languages packs
 apt-get -q -y --purge install language-pack-zh-hans language-pack-ja
 apt-get -q -y --purge install language-pack-gnome-en
+
 # Install ibus
 apt-get -q -y --purge install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
 apt-get -q -y --purge install ibus-unikey ibus-anthy ibus-pinyin ibus-m17n
@@ -181,10 +189,12 @@ update-initramfs -u
 dpkg -i --force-overwrite systemlock_0.1-1_all.deb
 apt-get install -f
 apt-get -q -y remove dconf-tools
+
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
 apt-get -q clean
 rm -rf /tmp/*
+
 #rm /etc/resolv.conf
 rm meilix-default-settings_1.0_all.deb
 rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb skype-ubuntu_4.1.0.20-1_i386.deb
