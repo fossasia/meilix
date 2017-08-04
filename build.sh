@@ -21,7 +21,7 @@ release=${4:-zesty}
 # Necessary data files
 datafiles="image-${arch}.tar.lzma sources.list"
 # Necessary development tool packages to be installed on build host
-devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools devscripts"
+devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools"
 
 # Make sure we have the data files we need
 for i in $datafiles
@@ -35,13 +35,17 @@ done
 # Make sure we have the tools we need installed
 sudo apt-get -q install $devtools -y --no-install-recommends
 sudo apt-get update
-sudo apt-get install dpkg-dev debhelper fakeroot
+sudo apt-get install dpkg-dev debhelper fakeroot 
+sudo apt-get install devscripts
 
 #Debuilding the metapackages
+echo Section Debuilding the metapackages
 chmod +x debuild.sh
 sudo ./debuild.sh
+echo Section end Metapackages debuild
 
 # Create and populate the chroot using debootstrap
+echo Section Chroot
 [ -d chroot ] && sudo rm -R chroot/
 # Debootstrap outputs a lot of 'Information' lines, which can be ignored
 sudo debootstrap --arch=${arch} ${release} chroot ${mirror} # 2>&1 |grep -v "^I: "
@@ -192,7 +196,7 @@ dpkg-divert --rename --remove /sbin/initctl
 
 exit
 EOF
-
+echo Section chroot finished
 ###############################################################
 # Continue work outside the chroot, preparing image
 
