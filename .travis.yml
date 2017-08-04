@@ -1,6 +1,7 @@
 # This provides us with GCC binary support so we can run bash
 dist: trusty
-language: generic
+language: generic<number> commit message`
+
 
 git:
   depth: 1
@@ -8,7 +9,7 @@ git:
 sudo: required
   
 script:
-  - ./build1.sh
+  - ./build1.sh |& tee log.txt
  
 before_deploy:
   - sudo rm meilix-original.iso
@@ -25,5 +26,7 @@ deploy:
     branch: upload-test
     
 after_deploy:
-  - ./mail.py
-
+  - cd mail-scripts && ./mail.py
+  
+after_failure:
+  - cd mail-scripts && ./mail-fail.py
