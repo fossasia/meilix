@@ -20,28 +20,40 @@ sudo mv squashfs-root edit
 #test value of env variable
 echo $TRAVIS_SCRIPT
 
-export $TRAVIS_SCRIPT
 sudo su <<EOF
 echo "$TRAVIS_SCRIPT" > edit/meilix-generator.sh
+mv browser.sh edit/browser.sh
 EOF
+
+#moving browser script to edit
 
 #prepare chroot
 sudo mount -o bind /run/ edit/run
 sudo cp /etc/hosts edit/etc/
 sudo mount --bind /dev/ edit/dev
 
+#moving the script to chroot
+sudo mv set-wallpaper.sh edit/set-wallpaper.sh
+
 sudo chroot edit <<EOF
 
 # execute environment variable
 ls # to test the files if any new file is added
-chmod +x meilix-generator.sh
+chmod +x meilix-generator.sh browser.sh
 echo "$(<meilix-generator.sh)" #to test the file
 ./meilix-generator.sh
 rm meilix-generator.sh
 
 #change host name
 hostname ${TRAVIS_TAG}
+
+./browser.sh
+rm browser.sh
+
+chmod +x set-wallpaper.sh && ./set-wallpaper.sh
+
 #delete temporary files 
+rm meilix-generator.sh
 rm -rf /tmp/* ~/.bash_history
 exit
 EOF
