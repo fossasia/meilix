@@ -43,10 +43,15 @@ chmod +x meilix-generator.sh browser.sh
 echo "$(<meilix-generator.sh)" #to test the file
 ./meilix-generator.sh
 rm meilix-generator.sh
+
+#change host name
+hostname ${TRAVIS_TAG}
+
 ./browser.sh
 rm browser.sh
 
 chmod +x set-wallpaper.sh && ./set-wallpaper.sh
+
 #delete temporary files 
 rm meilix-generator.sh
 rm -rf /tmp/* ~/.bash_history
