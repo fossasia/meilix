@@ -139,6 +139,7 @@ apt-get install -f
 
 #screen-dimming turns off always
 echo -ne "\033[9;0]" >> /etc/issue
+setterm -blank 0 >> /etc/issue
 
 # Install Google-Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
