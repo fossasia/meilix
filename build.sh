@@ -35,7 +35,7 @@ done
 # Make sure we have the tools we need installed
 sudo apt-get -q install $devtools -y --no-install-recommends
 sudo apt-get -q update
-sudo apt-get -q install dpkg-dev debhelper fakeroot 
+sudo apt-get -q install dpkg-dev debhelper fakeroot
 sudo apt-get -q install devscripts
 
 #Debuilding the metapackages
@@ -161,6 +161,9 @@ apt-get -q -y install oxygen-icon-theme
 
 #Install text editor
 apt-get -q -y install gedit
+
+#remove lxqt-powermanagement
+apt-get -q -y purge lxqt-powermanagement
 
 #Google custom ad
 apt-get -q -y --purge install mygoad
