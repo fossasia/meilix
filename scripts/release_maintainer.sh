@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 set -e
+echo "This is a script to delete obsolete meilix iso builds by Abishek V Ashok"
+echo "You have to add an authorization token to make it functional."
 
 # jq is the JSON parser we will be using
 sudo apt-get -y install jq
