@@ -10,6 +10,9 @@ before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
 
+after_deploy:
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./scripts/releases_maintainer.sh; fi'
+
 notifications:
   slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
 
