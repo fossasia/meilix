@@ -370,7 +370,7 @@
         <command>x-terminal-emulator</command>
       </action>
     </keybind>
-    <!-- Launch a filemanager on Ctrl + Alt + D-->
+    <!-- Launch a filemanager on Ctrl + Alt + D
     <keybind key="C-A-D">
       <action name="Execute">
         <startupnotify>
@@ -380,6 +380,7 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
+    -->
     <!-- Lock the screen on Ctrl + Alt + l-->
     <keybind key="C-A-l">
       <action name="Execute">
