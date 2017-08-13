@@ -168,6 +168,7 @@ apt-get -q -y install gedit
 
 #remove lxqt-powermanagement
 apt-get -q -y purge lxqt-powermanagement
+apt-get -q -y purge lxqt-powermanagement-l10n
 
 #Google custom ad
 apt-get -q -y --purge install mygoad
