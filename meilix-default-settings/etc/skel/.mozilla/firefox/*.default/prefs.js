@@ -38,7 +38,6 @@ user_pref("browser.search.countryCode", "IN");
 user_pref("browser.search.region", "IN");
 user_pref("browser.selfsupport.enabled", false);
 user_pref("browser.sessionstore.upgradeBackup.latestBuildID", "20170616092053");
-user_pref("browser.startup.homepage", "http://susper.com/");
 user_pref("browser.startup.homepage_override.buildID", "20170616092053");
 user_pref("browser.startup.homepage_override.mstone", "54.0");
 user_pref("browser.tabs.remote.autostart.2", true);
