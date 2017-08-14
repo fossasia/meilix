@@ -3,7 +3,7 @@
 [![Join the chat at https://gitter.im/fossasia/meilix](https://badges.gitter.im/fossasia/meilix.svg)](https://gitter.im/fossasia/meilix?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/fossasia/meilix.svg?branch=master)](https://travis-ci.org/fossasia/meilix)
 
-Beautiful [LXQt] (http://lubuntu.net) based Linux OS for Hotels and Public Event Kiosks with a system lock.
+Beautiful LXQt (http://lubuntu.net) based Linux OS for Hotels and Public Event Kiosks with a system lock.
 Features:
 * Based on lxqt and ubuntu
 * Light weight
