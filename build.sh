@@ -141,12 +141,6 @@ apt-get install -f
 echo -ne "\033[9;0]" >> /etc/issue
 setterm -blank 0 >> /etc/issue
 
-# Install Google-Chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-apt-get update
-apt-get -q -y install google-chrome-stable
-
 #Install vlc
 apt-get -q -y install vlc
 
