@@ -104,8 +104,6 @@ apt-get -q -y install xorg sddm lxqt
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 apt-get install -f
 
-# Power manager for laptop
-apt-get -q -y --purge install xfce4-power-manager
 # Fix chromium install problem
  mv /etc/chromium-browser/ /etc/chromium-browser_
 
@@ -125,8 +123,7 @@ mv /etc/chromium-browser_ /etc/chromium-browser
 apt-get -q -y --purge install lxrandr
 
 # Install Internet packages
-apt-get -q -y --purge install flashplugin-installer google-talkplugin pidgin galculator \
-  gpicview evince libqtwebkit4
+apt-get -q -y --purge install flashplugin-installer google-talkplugin pidgin qpdfview libqtwebkit4
 dpkg -i -y --purge install skype-ubuntu_4.1.0.20-1_i386.deb
 
 # Install graphic
@@ -144,12 +141,6 @@ apt-get install -f
 echo -ne "\033[9;0]" >> /etc/issue
 setterm -blank 0 >> /etc/issue
 
-# Install Google-Chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-apt-get update
-apt-get -q -y install google-chrome-stable
-
 #Install vlc
 apt-get -q -y install vlc
 
@@ -157,14 +148,11 @@ apt-get -q -y install vlc
 apt-get -q -y install nautilus-dropbox
 nautilus --quit
 
-#Install git
-apt-get -q -y install git
-
-#install icons for pcmanfm
+#to be used as a fallback icon theme
 apt-get -q -y install oxygen-icon-theme
 
 #Install text editor
-apt-get -q -y install gedit
+apt-get -q -y install kate
 
 #remove lxqt-powermanagement
 apt-get -q -y purge lxqt-powermanagement
