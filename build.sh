@@ -123,7 +123,7 @@ mv /etc/chromium-browser_ /etc/chromium-browser
 apt-get -q -y --purge install lxrandr
 
 # Install Internet packages
-apt-get -q -y --purge install flashplugin-installer google-talkplugin pidgin evince libqtwebkit4
+apt-get -q -y --purge install flashplugin-installer google-talkplugin pidgin qpdfview libqtwebkit4
 dpkg -i -y --purge install skype-ubuntu_4.1.0.20-1_i386.deb
 
 # Install graphic
