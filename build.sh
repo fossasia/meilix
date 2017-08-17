@@ -148,10 +148,7 @@ apt-get -q -y install vlc
 apt-get -q -y install nautilus-dropbox
 nautilus --quit
 
-#Install git
-apt-get -q -y install git
-
-#install icons for pcmanfm
+#to be used as a fallback icon theme
 apt-get -q -y install oxygen-icon-theme
 
 #Install text editor
