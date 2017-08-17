@@ -104,8 +104,6 @@ apt-get -q -y install xorg sddm lxqt
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 apt-get install -f
 
-# Power manager for laptop
-apt-get -q -y --purge install xfce4-power-manager
 # Fix chromium install problem
  mv /etc/chromium-browser/ /etc/chromium-browser_
 
