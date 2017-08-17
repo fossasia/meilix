@@ -155,7 +155,7 @@ apt-get -q -y install git
 apt-get -q -y install oxygen-icon-theme
 
 #Install text editor
-apt-get -q -y install gedit
+apt-get -q -y install kate
 
 #remove lxqt-powermanagement
 apt-get -q -y purge lxqt-powermanagement
