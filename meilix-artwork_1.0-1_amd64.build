@@ -1,0 +1,105 @@
+ dpkg-buildpackage -rfakeroot -d -us -uc
+dpkg-buildpackage: info: source package meilix-artwork
+dpkg-buildpackage: info: source version 1.0-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Meilix <mb@mariobehling.de>
+ dpkg-source --before-build meilix-artwork
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean 
+dh: Compatibility levels before 9 are deprecated (level 8 in use)
+   dh_testdir
+   dh_auto_clean
+dh_auto_clean: Compatibility levels before 9 are deprecated (level 8 in use)
+   dh_clean
+dh_clean: Compatibility levels before 9 are deprecated (level 8 in use)
+ dpkg-source -b meilix-artwork
+dpkg-source: warning: native package version may not have a revision
+dpkg-source: info: using source format '3.0 (native)'
+dpkg-source: info: building meilix-artwork in meilix-artwork_1.0-1.tar.xz
+dpkg-source: info: building meilix-artwork in meilix-artwork_1.0-1.dsc
+ debian/rules build
+dh build 
+dh: Compatibility levels before 9 are deprecated (level 8 in use)
+   dh_testdir
+   dh_update_autotools_config
+   dh_auto_configure
+dh_auto_configure: Compatibility levels before 9 are deprecated (level 8 in use)
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/home/xeon/Documents/GSOC/meilix/meilix-artwork'
+# Skip, just use dh_install.
+make[1]: Leaving directory '/home/xeon/Documents/GSOC/meilix/meilix-artwork'
+   dh_auto_test
+dh_auto_test: Compatibility levels before 9 are deprecated (level 8 in use)
+ fakeroot debian/rules binary
+dh binary 
+dh: Compatibility levels before 9 are deprecated (level 8 in use)
+   dh_testroot
+   dh_prep
+   dh_auto_install
+dh_auto_install: Compatibility levels before 9 are deprecated (level 8 in use)
+	make -j1 install DESTDIR=/home/xeon/Documents/GSOC/meilix/meilix-artwork/debian/tmp AM_UPDATE_INFO_DIR=no
+make[1]: Entering directory '/home/xeon/Documents/GSOC/meilix/meilix-artwork'
+mkdir -pv /home/xeon/Documents/GSOC/meilix/meilix-artwork/debian/tmp
+mkdir: created directory '/home/xeon/Documents/GSOC/meilix/meilix-artwork/debian/tmp'
+cp -a usr /home/xeon/Documents/GSOC/meilix/meilix-artwork/debian/tmp/.
+# po generation
+for i in ; do \
+	make -C /home/xeon/Documents/GSOC/meilix/meilix-artwork/debian/tmp/$i; \
+	rm -rf /home/xeon/Documents/GSOC/meilix/meilix-artwork/debian/tmp/$i; \
+done
+# remove some remaining files
+find /home/xeon/Documents/GSOC/meilix/meilix-artwork/debian/tmp -type f -iname "*.in" | xargs rm -f
+make[1]: Leaving directory '/home/xeon/Documents/GSOC/meilix/meilix-artwork'
+   debian/rules override_dh_install
+make[1]: Entering directory '/home/xeon/Documents/GSOC/meilix/meilix-artwork'
+dh_install --fail-missing
+dh_install: Compatibility levels before 9 are deprecated (level 8 in use)
+#/usr/bin/make DESTDIR=/home/xeon/Documents/GSOC/meilix/meilix-artwork/debian/plymouth-meilix-logo
+make[1]: Leaving directory '/home/xeon/Documents/GSOC/meilix/meilix-artwork'
+   dh_installdocs
+dh_installdocs: Compatibility levels before 9 are deprecated (level 8 in use)
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_installdeb
+dh_installdeb: Compatibility levels before 9 are deprecated (level 8 in use)
+   dh_gencontrol
+dpkg-gencontrol: warning: Depends field of package plymouth-meilix-logo: unknown substitution variable ${shlibs:Depends}
+dpkg-gencontrol: warning: Depends field of package plymouth-meilix-text: unknown substitution variable ${shlibs:Depends}
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'plymouth-meilix-logo' in '../plymouth-meilix-logo_1.0-1_all.deb'.
+dpkg-deb: building package 'plymouth-meilix-text' in '../plymouth-meilix-text_1.0-1_all.deb'.
+ dpkg-genchanges  >../meilix-artwork_1.0-1_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build meilix-artwork
+dpkg-buildpackage: info: full upload; Debian-native package (full source is included)
+Now running lintian...
+E: meilix-artwork changes: bad-distribution-in-changes-file unstable
+W: meilix-artwork source: native-package-with-dash-version
+W: meilix-artwork source: package-uses-deprecated-debhelper-compat-version 8
+W: meilix-artwork source: maintainer-script-lacks-debhelper-token debian/plymouth-melix-logo.postinst
+W: meilix-artwork source: maintainer-script-lacks-debhelper-token debian/plymouth-melix-logo.postrm
+W: meilix-artwork source: maintainer-script-lacks-debhelper-token debian/plymouth-melix-text.postinst
+W: meilix-artwork source: maintainer-script-lacks-debhelper-token debian/plymouth-melix-text.postrm
+W: meilix-artwork source: space-in-std-shortname-in-dep5-copyright <special license> (paragraph at line 5)
+W: meilix-artwork source: ancient-standards-version 3.9.2 (current is 3.9.8)
+W: plymouth-meilix-text: wrong-bug-number-in-closes l3:#nnnn
+W: plymouth-meilix-text: new-package-should-close-itp-bug
+E: plymouth-meilix-text: changelog-is-dh_make-template
+E: plymouth-meilix-text: helper-templates-in-copyright
+W: plymouth-meilix-text: copyright-has-url-from-dh_make-boilerplate
+E: plymouth-meilix-text: copyright-contains-dh_make-todo-boilerplate
+E: plymouth-meilix-text: extended-description-is-empty
+W: plymouth-meilix-logo: wrong-bug-number-in-closes l3:#nnnn
+W: plymouth-meilix-logo: new-package-should-close-itp-bug
+E: plymouth-meilix-logo: changelog-is-dh_make-template
+E: plymouth-meilix-logo: helper-templates-in-copyright
+W: plymouth-meilix-logo: copyright-has-url-from-dh_make-boilerplate
+E: plymouth-meilix-logo: copyright-contains-dh_make-todo-boilerplate
+E: plymouth-meilix-logo: extended-description-is-empty
+Finished running lintian.

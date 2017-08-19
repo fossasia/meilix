@@ -1,3 +1,4 @@
+dh_update_autotools_config
 dh_auto_configure
 dh_auto_build
 dh_auto_test
@@ -7,9 +8,9 @@ override_dh_install dh_install
 dh_install
 dh_installdocs
 dh_installchangelogs
-dh_pysupport
 dh_perl
 dh_link
+dh_strip_nondeterminism
 dh_compress
 dh_fixperms
 dh_installdeb

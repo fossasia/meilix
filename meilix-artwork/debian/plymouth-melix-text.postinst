@@ -19,8 +19,8 @@
 case "$1" in
     configure)
 	update-alternatives \
-		--install /lib/plymouth/themes/text.plymouth text.plymouth \
-		/lib/plymouth/themes/meilix-text/meilix-text.plymouth 150
+		--install /usr/share/plymouth/themes/text.plymouth text.plymouth \
+		/usr/share/plymouth/themes/meilix-text/meilix-text.plymouth 150
 
 	if which update-initramfs >/dev/null 2>&1
 	then
