@@ -1,0 +1,125 @@
+#!/bin/bash
+sudo chroot chroot <<EOF
+# Set up several useful shell variables
+export CASPER_GENERATE_UUID=1
+export HOME=/root
+export TTY=unknown
+export TERM=vt100
+export DEBIAN_FRONTEND=noninteractive
+export LANG=C
+export LIVE_BOOT_SCRIPTS="casper lupin-casper"
+
+#  To allow a few apps using upstart to install correctly. JM 2011-02-21
+dpkg-divert --local --rename --add /sbin/initctl
+ln -s /bin/true /sbin/initctl
+
+# Add key for third party repo
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E1098513
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1EBD81D9
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 91E7EE5E
+
+# Update in-chroot package database
+apt-get -q update
+
+# Install core packages
+apt-get -q -y --purge install ubuntu-standard casper lupin-casper \
+  laptop-detect os-prober linux-generic
+
+dpkg -i meilix-metapackage*.deb
+apt-get install -f
+
+# Install base packages
+apt-get -q -y install xorg sddm lxqt
+
+# Plymouth theme
+dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
+apt-get install -f
+
+# Fix chromium install problem
+ mv /etc/chromium-browser/ /etc/chromium-browser_
+
+# Archive Manager
+apt-get -q -y --purge install file-roller unrar
+
+# lubuntu-restricted-extras
+apt-get -q -y --purge install lubuntu-restricted-extras
+
+# Install specific packages
+apt-get -q -y -o Dpkg::Options::="--force-overwrite" --purge install chromium-browser
+
+#rm -rf /etc/chromium-browser
+mv /etc/chromium-browser_ /etc/chromium-browser
+
+# Install lxrandr to change monitor settings
+apt-get -q -y --purge install lxrandr
+
+# Install Internet packages
+apt-get -q -y --purge install flashplugin-installer google-talkplugin pidgin qpdfview libqtwebkit4
+dpkg -i -y --purge install skype-ubuntu_4.1.0.20-1_i386.deb
+
+# Install graphic
+apt-get -q -y --purge install gimp inkscape
+apt-get -q -y --purge remove imagemagick
+
+# Install Libreoffice
+apt-get -q -y --purge install --no-install-recommends libreoffice-gtk libreoffice-gtk libreoffice-writer libreoffice-calc libreoffice-impress
+
+# Install imclient
+dpkg -i meilix-imclient_*_all.deb
+apt-get install -f
+
+#screen-dimming turns off always
+echo -ne "\033[9;0]" >> /etc/issue
+setterm -blank 0 >> /etc/issue
+
+#Install vlc
+apt-get -q -y install vlc
+
+#Instal dropbox
+apt-get -q -y install nautilus-dropbox
+nautilus --quit
+
+#to be used as a fallback icon theme
+apt-get -q -y install oxygen-icon-theme
+
+#Install text editor
+apt-get -q -y install kate
+
+#remove lxqt-powermanagement
+apt-get -q -y purge lxqt-powermanagement
+apt-get -q -y purge lxqt-powermanagement-l10n
+
+#Google custom ad
+apt-get -q -y --purge install mygoad
+#Install East Asia font
+apt-get -q -y --purge install ttf-arphic-uming ttf-wqy-zenhei ttf-sazanami-mincho ttf-sazanami-gothic ttf-unfonts-core
+# Install languages packs
+apt-get -q -y --purge install language-pack-zh-hans language-pack-ja
+apt-get -q -y --purge install language-pack-gnome-en
+# Install ibus
+apt-get -q -y --purge install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
+apt-get -q -y --purge install ibus-unikey ibus-anthy ibus-pinyin ibus-m17n
+apt-get -q -y --purge install im-switch
+
+#Meilix default settings
+#apt-get download hotelos-default-settings
+dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
+update-initramfs -u
+dpkg -i --force-overwrite systemlock_0.1-1_all.deb
+apt-get install -f
+apt-get -q -y remove dconf-tools
+# Clean up the chroot before
+perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
+apt-get -q clean
+rm -rf /tmp/*
+#rm /etc/resolv.conf
+rm meilix-default-settings_1.0_all.deb
+rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb skype-ubuntu_4.1.0.20-1_i386.deb
+rm meilix-imclient_*_all.deb
+
+# Reverting earlier initctl override. JM 2012-0604
+rm /sbin/initctl
+dpkg-divert --rename --remove /sbin/initctl
+
+exit
+EOF
