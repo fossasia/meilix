@@ -33,10 +33,10 @@ do
 done
 
 # Make sure we have the tools we need installed
-sudo apt-get -q install $devtools -y --no-install-recommends
-sudo apt-get -q update
-sudo apt-get -q install dpkg-dev debhelper fakeroot
-sudo apt-get -q install devscripts
+sudo apt-get -qq install $devtools -y --no-install-recommends
+sudo apt-get -qq update
+sudo apt-get -qq install dpkg-dev debhelper fakeroot
+sudo apt-get -qq install devscripts
 
 #Debuilding the metapackages
 echo Section Debuilding the metapackages
