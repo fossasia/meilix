@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Meilix boot
+Description=A theme that features a blue blinds animated background.
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/meilix-plymouth-theme
+ScriptFile=/usr/share/plymouth/themes/meilix-plymouth-theme/meilix-plymouth-theme.script

@@ -3,7 +3,7 @@ Source: meilix-artwork
 Version: 1.0-1
 Architecture: all
 Maintainer: Mario Behling <mb@mariobehling.de>
-Installed-Size: 83
+Installed-Size: 106
 Depends: plymouth, plymouth-label
 Section: x11
 Priority: extra

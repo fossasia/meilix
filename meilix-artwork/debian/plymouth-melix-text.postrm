@@ -30,7 +30,7 @@
 case "$1" in
     remove)
 	update-alternatives \
-		--remove text.plymouth /lib/plymouth/themes/meilix-text/meilix-text.plymouth
+		--remove text.plymouth /usr/share/plymouth/themes/meilix-text/meilix-text.plymouth
 
 	if which update-initramfs >/dev/null 2>&1
 	then
