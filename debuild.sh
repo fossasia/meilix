@@ -5,4 +5,4 @@ debuild -uc -us                                                 #debuild the mei
 cd ..
 #buildind plymouth
 cd meilix-artwork                                      #cd into the metapackage directory
-debuild -uc -us                                                 #debuild the plymouth
+echo y | debuild -uc -us                                                 #debuild the plymouth
