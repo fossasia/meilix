@@ -61,10 +61,14 @@ sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v skype-ubuntu_*_i386.deb chroot
 sudo cp -v meilix-imclient_*_all.deb chroot
 
+# Debug: show us what files are around in chroot
+ls -a chroot
+
 # Mount needed pseudo-filesystems
 sudo mount --rbind /sys chroot/sys
 sudo mount --rbind /dev chroot/dev
 sudo mount -t proc none chroot/proc
+
 
 # Work *inside* the chroot
 ./chroot.sh
