@@ -10,7 +10,7 @@ for f in wallpaper; do
     case $type in  
         PNG)  newext=png ;; 
         JPEG) newext=jpg ;; 
-        *)    echo "??? what is this: $f"; continue ;; 
+        *)    echo "Unknown image format: $f"; continue ;; 
     esac
     mv "$f" "${f%.*}.$newext"
 done
