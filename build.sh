@@ -40,7 +40,7 @@ sudo apt-get -qq install devscripts
 
 #Debuilding the metapackages
 echo Section Debuilding the metapackages
-sudo ./debuild.sh
+./debuild.sh
 echo Section end Metapackages debuild
 
 # Create and populate the chroot using debootstrap
