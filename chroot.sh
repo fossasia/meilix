@@ -122,6 +122,7 @@ apt-get -qq clean
 rm -rf /tmp/*
 #rm /etc/resolv.conf
 rm meilix-default-settings_1.0_all.deb
+rm meilix-metapackage_1.0-1_all.deb
 rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb skype-ubuntu_4.1.0.20-1_i386.deb
 rm meilix-imclient_*_all.deb
 
