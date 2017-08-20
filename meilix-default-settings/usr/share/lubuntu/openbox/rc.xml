@@ -30,11 +30,11 @@
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
        the top left corner -->
-    <monitor>Mouse</monitor>
+    <monitor>Primary</monitor>
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is, 'Primary' - only on the primary monitor -->
-    <primaryMonitor>Mouse</primaryMonitor>
+    <primaryMonitor>1</primaryMonitor>
     <!-- The monitor where Openbox should place popup dialogs such as the
        focus cycling popup, or the desktop switch popup.  It can be an index
        from 1, specifying a particular monitor.  Or it can be one of the
@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Lubuntu-default</name>
+    <name>Shiki-Nouveau-Wisedust</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -57,8 +57,8 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Ubuntu Medium</name>
-      <size>11</size>
+      <name>sans</name>
+      <size>8</size>
       <!-- font size in points -->
       <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -66,8 +66,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Ubuntu Medium</name>
-      <size>11</size>
+      <name>sans</name>
+      <size>8</size>
       <!-- font size in points -->
       <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -75,8 +75,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Ubuntu</name>
-      <size>11</size>
+      <name>sans</name>
+      <size>9</size>
       <!-- font size in points -->
       <weight>normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -84,8 +84,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Ubuntu</name>
-      <size>11</size>
+      <name>sans</name>
+      <size>9</size>
       <!-- font size in points -->
       <weight>normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -93,8 +93,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Ubuntu Medium</name>
-      <size>11</size>
+      <name>sans</name>
+      <size>9</size>
       <!-- font size in points -->
       <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -102,8 +102,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Ubuntu Medium</name>
-      <size>11</size>
+      <name>sans</name>
+      <size>9</size>
       <!-- font size in points -->
       <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -120,7 +120,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>1</number>
+    <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
       <!-- set names up here if you want to, like this:
@@ -264,16 +264,9 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-    <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
-    <keybind key="A-Print">
-      <action name="Execute">
-        <command>scrot -u -b</command>
-      </action>
-    </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
-        <dialog>icons</dialog>
         <finalactions>
           <action name="Focus"/>
           <action name="Raise"/>
@@ -322,141 +315,110 @@
         <direction>down</direction>
       </action>
     </keybind>
-    <!-- Keybindings for running applications on Home + E -->
-    <keybind key="W-e">
+    <!-- Keybindings for running applications -->
+        <keybind key="W-s">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>PCManFM</name>
+          <name>synapse</name>
         </startupnotify>
-        <command>pcmanfm</command>
+        <command>synapse</command>
       </action>
     </keybind>
-    <!-- Keybindings for running Run menu from Lxpanel on Home + R-->
-    <keybind key="W-r">
-      <action name="Execute">
-        <command>lxpanelctl run</command>
-      </action>
-    </keybind>
-    <keybind key="A-F2">
-      <action name="Execute">
-        <command>lxpanelctl run</command>
-      </action>
-    </keybind>
-    <!-- Keybindings for running Menu from Lxpanel -->
-    <keybind key="A-F1">
-      <action name="Execute">
-        <command>lxpanelctl menu</command>
-      </action>
-    </keybind>
-    <keybind key="C-Escape">
-      <action name="Execute">
-        <command>lxpanelctl menu</command>
-      </action>
-    </keybind>
-    <!-- Keybindings to toggle fullscreen -->
-    <keybind key="F11">
-      <action name="ToggleFullscreen"/>
-    </keybind>
-    <!-- Launch task manager on Ctrl + Alt + Del-->
-    <keybind key="C-A-Delete">
-      <action name="Execute">
-        <command>lxtask</command>
-      </action>
-    </keybind>
-    <!-- Launch a terminal on Ctrl + Alt + T-->
-    <keybind key="C-A-T">
-      <action name="Execute">
-        <command>x-terminal-emulator</command>
-      </action>
-    </keybind>
-    <!-- Launch a filemanager on Ctrl + Alt + D
-    <keybind key="C-A-D">
+    <keybind key="W-t">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>PCManFM</name>
+          <name>lxterminal</name>
         </startupnotify>
-        <command>pcmanfm</command>
+        <command>lxterminal</command>
       </action>
     </keybind>
-    -->
-    <!-- Lock the screen on Ctrl + Alt + l-->
-    <keybind key="C-A-l">
+    <keybind key="W-f">
       <action name="Execute">
-        <command>xscreensaver-command -lock</command>
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>thunar</name>
+        </startupnotify>
+        <command>thunar</command>
       </action>
     </keybind>
-    <!-- Keybinding for Volume management -->
-    <keybind key="XF86AudioRaiseVolume">
+        <keybind key="W-p">
       <action name="Execute">
-        <command>amixer -q sset Master 3%+ unmute</command>
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>pamac-manager</name>
+        </startupnotify>
+        <command>pamac-manager</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioLowerVolume">
+     <keybind key="W-u">
       <action name="Execute">
-        <command>amixer -q sset Master 3%- unmute</command>
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>pamac-updater</name>
+        </startupnotify>
+        <command>pamac-updater</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioMute">
+    <keybind key="W-m">
       <action name="Execute">
-        <command>amixer -q sset Master toggle</command>
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>dmenu</name>
+        </startupnotify>
+        <command>dmenu_run -fn -misc-fixed-*-*-*-*-20-200-*-*-*-*-*-*  -i -b -nf 'gray' -sb 'dark green' -nb 'black'</command>
       </action>
     </keybind>
-    <!-- Keybinding for terminal button-->
-    <keybind key="XF86WWW">
+    <keybind key="W-x">
       <action name="Execute">
-        <command>x-terminal-emulator</command>
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>oblogout</name>
+        </startupnotify>
+        <command>oblogout</command>
       </action>
     </keybind>
-    <keybind key="XF86Terminal">
-      <action name="Execute">
-        <command>x-terminal-emulator</command>
-      </action>
-    </keybind>
-    <!-- Keybinding for calculator button-->
-    <keybind key="XF86Calculator">
-      <action name="Execute">
-        <command>galculator</command>
-      </action>
-    </keybind>
-    <!-- Keybinding for computer button-->
-    <keybind key="XF86MyComputer">
-      <action name="Execute">
-        <command>pcmanfm</command>
-      </action>
-    </keybind>
-    <!-- Keybindings for Multimedia Keys and LCD Backlight (alternative when not using gnome-power-manager or xfce4-volumed) -->
-    <keybind key="C-F7">
-      <action name="Execute">
-        <command>sleep 2;xset dpms force off</command>
-      </action>
-    </keybind>
-    <keybind key="C-F10">
-      <action name="Execute">
-        <command>xbacklight -dec 10</command>
-      </action>
-    </keybind>
-    <keybind key="C-F11">
-      <action name="Execute">
-        <command>xbacklight -inc 10</command>
-      </action>
-    </keybind>
-    <!-- Launch scrot when Print is pressed -->
     <keybind key="Print">
       <action name="Execute">
-        <command>scrot</command>
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>gnome-screenshot</name>
+        </startupnotify>
+        <command>gnome-screenshot</command>
       </action>
     </keybind>
-    <!-- Launch logout when push on the shutdown button -->
-    <keybind key="XF86PowerOff">
+<keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>lubuntu-logout</command>
+        <command>xbacklight +10</command>
       </action>
     </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute"> 
+        <command>xbacklight -10</command>
+      </action>
+    </keybind>
+<!-- Where installing pulse-audio instead, change 'amixer set' to 'amixer -D pulse set' -->
+<keybind key="XF86AudioRaiseVolume">
+     <action name="Execute"> 
+       <command>amixer set Master 10%+</command>
+     </action>
+  </keybind>
+<!-- Where installing pulse-audio instead, change 'amixer set' to 'amixer -D pulse set' -->
+   <keybind key="XF86AudioLowerVolume">
+     <action name="Execute">
+       <command>amixer set Master 10%-</command>
+     </action>
+   </keybind>
+<!-- Where installing pulse-audio instead, nothing needs to be changed -->
+   <keybind key="XF86AudioMute">
+     <action name="Execute"> 
+       <command>amixer set Master toggle</command>
+     </action>
+  </keybind>
   </keyboard>
   <mouse>
-    <dragThreshold>8</dragThreshold>
+    <dragThreshold>1</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
     <doubleClickTime>200</doubleClickTime>
     <!-- in milliseconds (1000 = 1 second) -->
@@ -475,7 +437,7 @@
       <mousebind button="A-Left" action="Click">
         <action name="Unshade"/>
       </mousebind>
-      <mousebind button="A-Left" action="Drag">
+      <mousebind button="S-Left" action="Drag">
         <action name="Move"/>
       </mousebind>
       <mousebind button="A-Right" action="Press">
@@ -789,34 +751,20 @@
       </mousebind>
     </context>
   </mouse>
-  <menu>
-    <!-- You can specify more than one menu file in here and they are all loaded,
-       just don't make menu ids clash or, well, it'll be kind of pointless -->
-    <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
-    <file>/usr/share/lubuntu/openbox/menu.xml</file>
-    <file>menu.xml</file>
-    <hideDelay>200</hideDelay>
-    <!-- if a press-release lasts longer than this setting (in milliseconds), the
-       menu is hidden again -->
-    <middle>no</middle>
-    <!-- center submenus vertically about the parent entry -->
-    <submenuShowDelay>100</submenuShowDelay>
-    <!-- time to delay before showing a submenu after hovering over the parent
+  <menu><!-- You can specify more than one menu file in here and they are all loaded,
+       just don't make menu ids clash or, well, it'll be kind of pointless --><!-- default menu file (or custom one in $HOME/.config/openbox/) --><file>menu.xml</file><hideDelay>200</hideDelay><!-- if a press-release lasts longer than this setting (in milliseconds), the
+       menu is hidden again --><middle>no</middle><!-- center submenus vertically about the parent entry --><submenuShowDelay>100</submenuShowDelay><!-- time to delay before showing a submenu after hovering over the parent
        entry.
        if this is a negative value, then the delay is infinite and the
-       submenu will not be shown until it is clicked on -->
-    <submenuHideDelay>400</submenuHideDelay>
-    <!-- time to delay before hiding a submenu when selecting another
-       entry in parent menu
+       submenu will not be shown until it is clicked on --><submenuHideDelay>400</submenuHideDelay><!-- time to delay before hiding a submenu when selecting another
+       entry in parent menu -->
        if this is a negative value, then the delay is infinite and the
-       submenu will not be hidden until a different submenu is opened -->
-    <applicationIcons>yes</applicationIcons>
-    <!-- controls if icons appear in the client-list-(combined-)menu -->
-    <manageDesktops>yes</manageDesktops>
-    <!-- show the manage desktops section in the client-list-(combined-)menu -->
-    <showIcons>yes</showIcons>
-    <!-- show icons on the menu -->
-  </menu>
+       submenu will not be hidden until a different submenu is opened --&gt;
+  <applicationIcons>yes</applicationIcons>
+  <!-- controls if icons appear in the client-list-(combined-)menu -->
+  <manageDesktops>yes</manageDesktops>
+  <!-- show the manage desktops section in the client-list-(combined-)menu -->
+</menu>
   <applications>
     <!--
   # this is an example with comments through out. use these to make your
@@ -899,11 +847,6 @@
 
   # end of the example
 -->
-    <!-- Option to maximize all normal window when launched-->
-    <!--
-    <application type="normal">
-      <maximized>true</maximized>
-    </application>
-    -->
   </applications>
 </openbox_config>
+
