@@ -33,8 +33,10 @@ apt-get -qq -y install xorg sddm lxqt
 
 # Plymouth theme
 echo Set custom Plymouth theme 
+apt-get -qq -y install plymouth-label # dependency of our theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 apt-get install -f
+ls /usr/share/plymouth/themes # show us which themes we have
 # sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
 update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
 update-initramfs -u # update initram
