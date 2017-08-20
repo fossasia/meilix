@@ -34,6 +34,7 @@ apt-get -qq -y install xorg sddm lxqt
 # Plymouth theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 apt-get install -f
+sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
 
 # Fix chromium install problem
  mv /etc/chromium-browser/ /etc/chromium-browser_
