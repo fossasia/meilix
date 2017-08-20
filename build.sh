@@ -35,7 +35,7 @@ done
 # Make sure we have the tools we need installed
 sudo apt-get -qq install $devtools -y --no-install-recommends
 sudo apt-get -qq update
-sudo apt-get -qq install dpkg-dev debhelper fakeroot
+sudo apt-get -qq install dpkg-dev debhelper fakeroot libfile-fcntllock-perl
 sudo apt-get -qq install devscripts
 
 #Debuilding the metapackages
