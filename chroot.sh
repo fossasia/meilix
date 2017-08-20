@@ -9,7 +9,7 @@ export DEBIAN_FRONTEND=noninteractive
 export LANG=C
 export LIVE_BOOT_SCRIPTS="casper lupin-casper"
 
-#  To allow a few apps using upstart to install correctly. JM 2011-02-21
+# To allow a few apps using upstart to install correctly. JM 2011-02-21
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
@@ -25,19 +25,19 @@ apt-get -qq update
 apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
+# Install meilix metapackage
 dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
 apt-get -qq -y install xorg sddm lxqt
 
-# Plymouth theme
-echo Set custom Plymouth theme 
-apt-get -qq -y install plymouth-label # dependency of our theme
+# Plymouth theme 
+apt-get -qq -y install plymouth-label #dependency of our theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 apt-get install -f
 ls /usr/share/plymouth/themes # show us which themes we have
-# sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
+#sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
 update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
 update-initramfs -u # update initram
 
