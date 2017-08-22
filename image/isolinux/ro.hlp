@@ -1,12 +1,12 @@
-F1Bine ați venit în Ubuntu!Acesta este un sistem live pentru Ubuntu
-12.10. A fost creat la 20121017.1.
+F1Bine ați venit în Meilix!Acesta este un sistem live pentru Meilix
+17.08. A fost creat la 20121017.1.
 
 Index al programelor de ajutor
 
 CHEIE  SUBIECT
 
 <F1F1>   Acestă pagină, indexul programelor de ajutor.
-<F2F2>   Cerințe esențiale pentru a rula Ubuntu.
+<F2F2>   Cerințe esențiale pentru a rula Meilix.
 <F3F3>   Metode de inițializare pentru modalități speciale de utilizare a acestui
 sistem.
 <F4F4>   Metode adiționale de inițializare; recuperarea unui sistem deteriorat.
@@ -18,32 +18,32 @@ sistem.
 <F10F10>  Drepturi de autor și garanții.
 
 Apăsați tastele de la F2 la F10 pentru detalii, sau tasta Escape pentru a
-ieși din sistemul de ajutor.F2CERINȚE OBLIGATORII PENTRU A INSTALA UBUNTUTrebuie să aveți cel puțin 384 MB de memorie RAM pentru a folosi acest
-sistem Ubuntu „live”.
+ieși din sistemul de ajutor.F2CERINȚE OBLIGATORII PENTRU A INSTALA MeilixTrebuie să aveți cel puțin 384 MB de memorie RAM pentru a folosi acest
+sistem Meilix „live”.
 
 Sistemul „live” nu necesită spațiu pe discul dumneavoastră. În orice caz,
 partițiile swap de Linux existente pe disc vor fi folosite dacă sunt
 disponibile.
 
 Pentru mai multe informații, consultați lista întrebărilor frecvente
-(„FAQ”); documentul este disponibil pe site-ul Ubuntu,
-http://www.ubuntu.com/
+(„FAQ”); documentul este disponibil pe site-ul Meilix,
+http://www.meilix.fossasia.org/
 
-Mulțumiri pentru că ați ales Ubuntu!
+Mulțumiri pentru că ați ales Meilix!
 
 Apăsați F1 pentru indexul programului de ajutor, sau Escape pentru a ieși
 din programul de ajutor.F3METODE DE INIȚIALIZARE A SISTEMULUIMetode disponibile de inițializare a sistemului:
 
-Încercați Ubuntu fără nu a aduce nicio schimbare calculatorului
+Încercați Meilix fără nu a aduce nicio schimbare calculatorului
 dumneavoastră.
   Pornire sistem „live”. Dacă doriți, îl puteți instala mai târziu folosind
   pictograma „Instalare” de pe suprafața de lucru.
-Instalare Ubuntu
+Instalare Meilix
   Pornire instalare.
 Testare memorie
   Executare test memorie.
 
-(„Ubuntu” poate fi înlocuit de alte nume de sisteme de operare asemănătoare.
+(„Meilix” poate fi înlocuit de alte nume de sisteme de operare asemănătoare.
 Acest text de ajutor este general.)
 
 Pentru a folosi una din aceste metode de inițializare, selectați-o din meniu
@@ -134,7 +134,7 @@ unor mașini bazate pe Via)              pci=noacpi
 Folosirea unei console Braille          brltty=driver,dispozitib,texttable
 
 Apăsați F1 pentru indexul programului de ajutor, sau Escape pentru a ieși
-din programul de ajutor.F9OBȚINERE AJUTORNu vă panicați dacă nu puteți porni Ubuntu! Echipa Ubuntu este gata să vă
+din programul de ajutor.F9OBȚINERE AJUTORNu vă panicați dacă nu puteți porni Meilix! Echipa Meilix este gata să vă
 ajute! Suntem interesați în mod special să aflăm despre problemele de
 pornire a sistemului pentru că, în general, ele nu apar numai la o singură
 persoană. Fie am aflat deja despre problema dumneavoastră particulară și vă
@@ -144,19 +144,19 @@ utilizator care va avea aceeași problemă va putea profita de experiența
 dumneavoastră!
 
 Pentru mai multe informații, consultați lista întrebărilor frecvente
-(„FAQ”); documentul este disponibil pe site-ul Ubuntu,
-http://www.ubuntu.com/
+(„FAQ”); documentul este disponibil pe site-ul Meilix,
+http://www.meilix.fossasia.org/
 
 Apăsați F1 pentru indexul programului de ajutor, sau Escape pentru a ieși
-din programul de ajutor.F10DREPTURI DE AUTOR ȘI GARANȚIIDrepturile de autor asupra Ubuntu: (C) 2004-2010 Canonical Ltd. Sistemul
+din programul de ajutor.F10DREPTURI DE AUTOR ȘI GARANȚIIDrepturile de autor asupra Meilix: (C) 2004-2017 FOSSAsia Ltd. Sistemul
 încorporează și munca multor alți autori sau persoane care au contribuit la
 realizarea lui.
 
-Sistemul Ubuntu se poate redistribui în mod liber. După pornirea sistemului,
+Sistemul Meilix se poate redistribui în mod liber. După pornirea sistemului,
 termenii exacți de distribuție pentru fiecare pachet sunt descriși în
 fișierele corespunzătoare din /usr/share/doc/nume pachet/copyright.
 
-Ubuntu vine ABSOLUT FĂRĂ NICIO GARANȚIE, în măsura în care este permis de
+Meilix vine ABSOLUT FĂRĂ NICIO GARANȚIE, în măsura în care este permis de
 legile în vigoare.
 
 Acest sistem este bazat pe sistemul Debian. Consultați

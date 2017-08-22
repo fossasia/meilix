@@ -1,6 +1,6 @@
-                  0fWelcome to Ubuntu!07                                          09F107
+                  0fWelcome to Meilix!07                                          09F107
 
-This is an installation system for Ubuntu 12.10.
+This is an installation system for Meilix 17.08.
 It was built on 20121017.1.
 
 0fHELP INDEX07
@@ -8,7 +8,7 @@ It was built on 20121017.1.
 0fKEY    TOPIC07
 
 <09F107>   This page, the help index.
-<09F207>   Prerequisites for installing Ubuntu.
+<09F207>   Prerequisites for installing Meilix.
 <09F307>   Boot methods for special ways of using this system.
 <09F407>   Additional boot methods; rescue mode.
 <09F507>   Special boot parameters, overview.

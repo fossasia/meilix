@@ -101,8 +101,8 @@ sudo cp chroot/boot/initrd.img-**-generic image/casper/initrd.lz
   rm -R initrd_FILES/
 
 # Fix old version and date info in .hlp files
-newversion="12.10"		# Should be derived from releasename $4 FIXME
-for oldversion in 10.04 10.10 11.04 11.10 12.04
+newversion=$(date -u +%y.%m) 		# Should be derived from releasename $4 FIXME
+for oldversion in 17.08
 do
   sed -i -e "s/${oldversion}/${newversion}/g" image/isolinux/*.hlp image/isolinux/f1.txt
 done
