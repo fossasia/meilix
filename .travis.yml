@@ -1,6 +1,25 @@
 # This provides us with GCC binary support so we can run bash
 language: generic
 
+# Try to supply the packages from Travis so that when we run build.sh we won't
+# be required to download them again.
+include:
+  - os: linux
+    addons:
+      apt:
+        sources:
+          - ubuntu-toolchain-r-test
+        packages:
+          - debootstrap
+          - genisoimage
+          - p7zip-full
+          - squashfs-tools
+          - ubuntu-dev-tools
+          - dpkg-dev
+          - debhelper
+          - fakeroot
+          - devscripts
+
 sudo: required
 
 script:
