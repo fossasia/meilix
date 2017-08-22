@@ -41,7 +41,8 @@ ls /usr/share/plymouth/themes # show us which themes we have
 ls /usr/share/plymouth/themes/meilix-logo/
 #sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
 update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
-update-initramfs -u # update initram
+#update-initramfs -u # update initram
+update-initramfs -c -k all
 
 # Fix chromium install problem
  mv /etc/chromium-browser/ /etc/chromium-browser_
