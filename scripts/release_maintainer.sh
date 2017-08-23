@@ -34,7 +34,7 @@ for i in $response; do
         fi
     else # We get the id of the release as $i`s value here
         if [ $delete -eq 1 ]; then
-            curl -X DELETE -H 'Authorization: token XXXXXXXXX' https://api.github.com/repos/fossasia/meilix/releases/$i
+            curl -X DELETE -H 'Authorization: token $delete_build' https://api.github.com/repos/fossasia/meilix/releases/$i
             let "delete=0"
         fi
     fi
