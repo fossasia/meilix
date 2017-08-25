@@ -43,7 +43,9 @@ ls /usr/share/plymouth/themes/meilix-logo/
 update-alternatives --verbose --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-plymouth-theme.plymouth 100
 update-alternatives --skip-auto --config default.plymouth
 #update-initramfs -u # update initram
-update-initramfs -c -k all
+update-initramfs -c -k all -b /Casper/
+
+find --name "initrd.lz"
 
 # Fix chromium install problem
  mv /etc/chromium-browser/ /etc/chromium-browser_
