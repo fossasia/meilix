@@ -46,7 +46,7 @@ update-initramfs -u -b /image/casper/ # update initram
 #update-initramfs -c -k all -b /Casper/
 
 
-find --name "initrd.lz"
+find -name "initrd.lz"
 
 # Fix chromium install problem
  mv /etc/chromium-browser/ /etc/chromium-browser_
