@@ -42,7 +42,7 @@ ls /usr/share/plymouth/themes/meilix-logo/
 #sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
 update-alternatives --verbose --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-plymouth-theme.plymouth 100
 update-alternatives --skip-auto --config default.plymouth
-update-initramfs -u -b /image/casper/ # update initram
+update-initramfs -u -b /image/casper # update initram
 #update-initramfs -c -k all -b /Casper/
 
 
