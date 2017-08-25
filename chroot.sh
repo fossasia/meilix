@@ -36,17 +36,12 @@ apt-get -qq -y install xorg sddm lxqt
 apt-get -qq -y install plymouth-label #dependency of our theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 apt-get install -f
-ls /usr/share/plymouth/themes # show us which themes we have
-# show us the plymouth meilix-logo folder
-ls /usr/share/plymouth/themes/meilix-logo/
 #sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
 update-alternatives --verbose --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-plymouth-theme.plymouth 100
 update-alternatives --skip-auto --config default.plymouth
 update-initramfs -u -b /image/casper # update initram
 #update-initramfs -c -k all -b /Casper/
-
-
-find -name "initrd.lz"
+ls /
 
 # Fix chromium install problem
  mv /etc/chromium-browser/ /etc/chromium-browser_
