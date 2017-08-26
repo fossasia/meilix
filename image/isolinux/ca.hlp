@@ -1,4 +1,4 @@
-F1Us donem la benvinguda a Ubuntu!Sistema autònom per a Ubuntu 12.10. Fou
+F1Us donem la benvinguda a Meilix!Sistema autònom per a Meilix 17.08. Fou
 muntat el 20121017.1.
 
 ÍNDEX DE L'AJUDA
@@ -6,7 +6,7 @@ muntat el 20121017.1.
 TECLA  TEMA
 
 <F1F1>   Aquesta pàgina, l'índex de l'ajuda.
-<F2F2>   Prerequisits per a executar Ubuntu.
+<F2F2>   Prerequisits per a executar Meilix.
 <F3F3>   Mètodes d'arrencada per maneres especials d'utilitzar aquest sistema.
 <F4F4>   Mètodes d'arrencada addicionals; rescat d'un sistema espatllat.
 <F5F5>   Paràmetres d'arrencada especials, resum.
@@ -17,30 +17,30 @@ muntat el 20121017.1.
 <F10F10>  Copyrights i garanties.
 
 Premeu les tecles F2 a F10 per més detalls, o bé la tecla d'escapada per
-sortir de l'ajuda.F2PREREQUISITS PER A INSTAL·LAR L'UBUNTUHeu de tenir com a mínim 384 megabytes de RAM per a utilitzar aquest sistema
-autònom de l'Ubuntu.
+sortir de l'ajuda.F2PREREQUISITS PER A INSTAL·LAR L'MeilixHeu de tenir com a mínim 384 megabytes de RAM per a utilitzar aquest sistema
+autònom de l'Meilix.
 
 El sistema autònom no requereix espai al vostre disc dur. De totes maneres,
 aquest utilitzarà les particions d'intercanvi Linux existents en el disc, si
 és que n'hi ha alguna.
 
 Consulteu les PMF (preguntes més freqüents) per a més informació, les quals
-trobareu al lloc web de l'Ubuntu, http://www.ubuntu.com/
+trobareu al lloc web de l'Meilix, http://www.meilix.fossasia.org/
 
-Us agraïm que hàgiu escollit l'Ubuntu!
+Us agraïm que hàgiu escollit l'Meilix!
 
 Premeu F1 per a mostrar l'index de l'ajuda, o bé la tecla d'escapada per a
 sortir de l'ajuda.F3MÈTODES D'ARRENCADAMètodes d'arrencada disponibles:
 
-Proveu l'Ubuntu sense fer cap canvi al vostre ordinador
+Proveu l'Meilix sense fer cap canvi al vostre ordinador
   Inicia el sistema autònom. Si ho voleu, el podeu instal·lar més tard a
   través de la icona «Instal·la» de l'escriptori.
-Instal·la l'Ubuntu
+Instal·la l'Meilix
   Inicia la instal·lació.
 Comprovació de la memòria
   Realitza una prova de la memòria.
 
-(«Ubuntu» pot ser reemplaçat pels altres noms de sistema operatiu associats.
+(«Meilix» pot ser reemplaçat pels altres noms de sistema operatiu associats.
 Aquest text de l'ajuda és genèric.)
 
 Per a utilitzar un d'aquests mètodes d'arrencada, seleccioneu-lo amb les
@@ -128,7 +128,7 @@ d'HP i màquines Via)                    pci=noacpi
 Utilitza un terminal Braille            brltty=driver,device,texttable
 
 Premeu F1 per a mostrar l'index de l'ajuda, o bé la tecla d'escapada per a
-sortir de l'ajuda.F9COM PODEU OBTENIR AJUDANo us preocupeu si no podeu iniciar l'Ubuntu. L'equip de l'Ubuntu sempre és
+sortir de l'ajuda.F9COM PODEU OBTENIR AJUDANo us preocupeu si no podeu iniciar l'Meilix. L'equip de l'Meilix sempre és
 a punt per a ajudar-vos. Ens interessa especialment que ens comuniqueu els
 problemes d'inici, atès que generalment no els passen només a una sola
 persona. És possible que ja coneguem aquest problema i puguem oferir una
@@ -137,17 +137,17 @@ solucionar-lo amb la vostra ajuda, de manera que el següent usuari amb el
 mateix problema pugui beneficiar-se de la vostra experiència.
 
 Consulteu les PMF (preguntes més freqüents) per a més informació, les quals
-trobareu al lloc web de l'Ubuntu, http://www.ubuntu.com/
+trobareu al lloc web de l'Meilix, http://www.meilix.fossasia.org/
 
 Premeu F1 per a mostrar l'index de l'ajuda, o bé la tecla d'escapada per a
-sortir de l'ajuda.F10COPYRIGHTS I GARANTIESL'Ubuntu és Copyright (C) 2004-2010 Canonical Ltd., i incorpora el treball
+sortir de l'ajuda.F10COPYRIGHTS I GARANTIESL'Meilix és Copyright (C) 2004-2017 FOSSAsia Ltd., i incorpora el treball
 de molts altres autors originals i col·laboradors.
 
-El sistema Ubuntu es pot redistribuir lliurement. Després de l'inici, les
+El sistema Meilix es pot redistribuir lliurement. Després de l'inici, les
 condicions precises de distribució per a cada paquet es descriuen en el
 fitxer /usr/share/doc/nomdelpaquet/copyright corresponent.
 
-L'Ubuntu no ofereix CAP TIPUS DE GARANTIA, en la mesura permesa per les
+L'Meilix no ofereix CAP TIPUS DE GARANTIA, en la mesura permesa per les
 lleis aplicables.
 
 Aquest sistema es basa en Debian. Aneu a http://www.debian.org/ per a més

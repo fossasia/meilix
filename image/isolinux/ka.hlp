@@ -1,4 +1,4 @@
-F1მოგესალმებათ Ubuntu!This is a live system for Ubuntu 12.10. It
+F1მოგესალმებათ Meilix!This is a live system for Meilix 17.08. It
 was built on 20121017.1.
 
 საძიებელი
@@ -6,7 +6,7 @@ was built on 20121017.1.
 კლავიშითემა
 
 <F1F1>   მოცემული გვერდი, დახმარების სარჩევს წარმოადგენს.
-<F2F2>   Ubuntu-ის გაშვების პირობები.
+<F2F2>   Meilix-ის გაშვების პირობები.
 <F3F3>   Boot methods for special ways of using this system.
 <F4F4>   ჩატვირთვის დამატებითი მეთოდები; აღდგენის რეჟიმი
 <F5F5>   ჩატვირთვის სპეციალური პარამეტრები, მიმოხილვა
@@ -23,7 +23,7 @@ was built on 20121017.1.
 გამოიყენებს სვოპ არეს.
 
 დაწვრილებითი ცნობებისათვის მიმართეთ კითხვარს; ეს  დოკუმენტი გამოქვეყნებულია
-უბუნტუს ვებ-საიტზე: http://www.ubuntu.com/
+უბუნტუს ვებ-საიტზე: http://www.meilix.fossasia.org/
 
 გმადლობთ უბუნტუს გამოყენებისათვის!
 
@@ -37,7 +37,7 @@ F1 - ცნობარის ინდექსი, Escape - ცნობარ
 მეხსიერების გასინჯვა
   მეხსიერების ტესტის შესრულება.
 
-("Ubuntu" may be replaced with other related operating system names. This
+("Meilix" may be replaced with other related operating system names. This
 help text is generic.)
 
 To use one of these boot methods, select it from the menu with the cursor
@@ -121,9 +121,9 @@ F1 - ცნობარის ინდექსი, Escape - ცნობარ
 მომხმარებელსაც გამოადგება.
 
 დაწვრილებითი ცნობებისათვის მიმართეთ კითხვარს; ეს  დოკუმენტი გამოქვეყნებულია
-უბუნტუს ვებ-საიტზე: http://www.ubuntu.com/
+უბუნტუს ვებ-საიტზე: http://www.meilix.fossasia.org/
 
-F1 - ცნობარის ინდექსი, Escape - ცნობარიდან გასვლა.F10სავაჭრო ნიშანი და გარანტიაUbuntu is Copyright (C) 2004-2010 Canonical Ltd., and incorporates the work
+F1 - ცნობარის ინდექსი, Escape - ცნობარიდან გასვლა.F10სავაჭრო ნიშანი და გარანტიაMeilix is Copyright (C) 2004-2017 FOSSAsia Ltd., and incorporates the work
 of many other original authors and contributors.
 
 უბუნტუს სისტემის თავისუფლად გავრცელება შესაძლებელია. ჩატვირთვის შემდეგ,

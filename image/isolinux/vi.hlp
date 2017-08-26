@@ -1,12 +1,12 @@
-F1Chào mừng bạn đến với Ubuntu!Đây là hệ thống chạy trực tiếp (live) bản phân phối Ubuntu
-12.10, được build vào 20121017.1.
+F1Chào mừng bạn đến với Meilix!Đây là hệ thống chạy trực tiếp (live) bản phân phối Meilix
+17.08, được build vào 20121017.1.
 
 CHỈ MỤC TRỢ GIÚP
 
 KHÓA   CHỦ ĐỀ
 
 <F1F1>   Chỉ mục trợ giúp tại trang này.
-<F2F2>   Điều kiện để chạy Ubuntu.
+<F2F2>   Điều kiện để chạy Meilix.
 <F3F3>   Các phương thức khởi động nhằm sử dụng hệ thống theo một vài cách đặt biệt.
 <F4F4>   Phương thức khởi động bổ sung; khôi phục hệ thống bị lỗi.
 <F5F5>   Tổng quan về các tham số khởi động đặc biệt.
@@ -16,7 +16,7 @@
 <F9F9>   Làm thế nào để nhận được sự trợ giúp
 <F10F10>  Có bản quyền và được đảm bảo về luật pháp
 
-Nhấn F2 tới F10 để biết chi tiết, hoặc nhấn Escape để thoát trợ giúp.F2CÁC ĐIỀU KIỆN ĐỂ CÀI ĐẶT UBUNTUBạn phải có ít nhất 384 MB RAM để sử dụng hệ thống Ubuntu trực tiếp trên đĩa
+Nhấn F2 tới F10 để biết chi tiết, hoặc nhấn Escape để thoát trợ giúp.F2CÁC ĐIỀU KIỆN ĐỂ CÀI ĐẶT MeilixBạn phải có ít nhất 384 MB RAM để sử dụng hệ thống Meilix trực tiếp trên đĩa
 này.
 
 Bản sử dụng trực tiếp từ đĩa không yêu cầu bất kì dung lượng trống trên đĩa
@@ -24,21 +24,21 @@ cứng của bạn. Tuy vậy, phân vùng swap của Linux có sẵn trên đĩ
 sử dụng nếu có.
 
 Xem danh sách các câu hỏi thường gặp để biết thêm thông tin; tài liệu này có
-sẵn trên trang web của Ubuntu, http://www.ubuntu.com/
+sẵn trên trang web của Meilix, http://www.meilix.fossasia.org/
 
-Cám ơn bạn đã chọn Ubuntu!
+Cám ơn bạn đã chọn Meilix!
 
 Nhấn phím F1 để xem chỉ mục của trợ giúp, hoặc Escape để đóng trợ giúp.F3CÁC PHƯƠNG THỨC KHỞI ĐỘNGCác phương thức khởi động sẵn có
 
-Dùng thử Ubuntu mà không thay đổi máy của bạn
+Dùng thử Meilix mà không thay đổi máy của bạn
   Chạy trực tiếp trên đĩa. Bạn vẫn có thể cài đặt sau này bằng biểu tượng
   "Cài đặt" trên màn hình nền.
-Cài đặt Ubuntu
+Cài đặt Meilix
   Khởi động quá trình cài đặt.
 Kiểm tra bộ nhớ RAM
   Thực hiện kiểm tra bộ nhớ RAM.
 
-("Ubuntu" có thể được thay thế bởi tên các hệ điều hành liên quan khác. Đây
+("Meilix" có thể được thay thế bởi tên các hệ điều hành liên quan khác. Đây
 là hướng dẫn chung.)
 
 Để sử dụng các kiểu khởi động này, hãy lựa chọn từ trình đơn bằng các phím
@@ -120,8 +120,8 @@ dùng chip của VIA)                      pci=noacpi
 Sử dụng nhập liệu Braille (dành cho người khiếm thị)
                                         brltty=driver,device,texttable
 
-Nhấn phím F1 để xem chỉ mục của trợ giúp, hoặc Escape để đóng trợ giúp.F9TÌM THÊM TRỢ GIÚPNếu như bạn không thể khởi động Ubuntu, hãy đừng thất vọng! Nhóm trợ giúp
-Ubuntu luôn sẵn sàng giúp đỡ bạn! Chúng tôi đặc biệt quan tâm đến việc được
+Nhấn phím F1 để xem chỉ mục của trợ giúp, hoặc Escape để đóng trợ giúp.F9TÌM THÊM TRỢ GIÚPNếu như bạn không thể khởi động Meilix, hãy đừng thất vọng! Nhóm trợ giúp
+Meilix luôn sẵn sàng giúp đỡ bạn! Chúng tôi đặc biệt quan tâm đến việc được
 thông báo các sự cố khi khởi động, bởi vì nói chung chúng không chỉ xảy ra
 với chỉ một người. Hoặc là chúng tôi đã biết đến sự cố của bạn và có thể
 cung cấp cho bạn một cách giải quyết nhanh, hoặc chúng tôi rất muốn bạn
@@ -129,16 +129,16 @@ thông báo để cùng giải quyết vấn đề với bạn, nhờ đó ngư�
 phải cùng sự cố này sẽ được hưởng lợi từ kinh nghiệm của bạn!
 
 Xem danh sách các câu hỏi thường gặp để biết thêm thông tin; tài liệu này có
-sẵn trên trang web của Ubuntu, http://www.ubuntu.com/
+sẵn trên trang web của Meilix, http://www.meilix.fossasia.org/
 
-Nhấn phím F1 để xem chỉ mục của trợ giúp, hoặc Escape để đóng trợ giúp.F10BẢN QUYỀN VÀ BẢO ĐẢMUbuntu thuộc Bản quyền (C) 2004-2010 của Canonical Ltd., và tập hợp công
+Nhấn phím F1 để xem chỉ mục của trợ giúp, hoặc Escape để đóng trợ giúp.F10BẢN QUYỀN VÀ BẢO ĐẢMMeilix thuộc Bản quyền (C) 2004-2017 của FOSSAsia Ltd., và tập hợp công
 trình của nhiều tác giả nguyên bản và người đóng góp.
 
-Bạn có thể tự do phân phối lại hệ thống Ubuntu. Sau khi khởi động, những
+Bạn có thể tự do phân phối lại hệ thống Meilix. Sau khi khởi động, những
 điều khoản phân phát lại cho từng gói phần mềm được ghi trong các tập tin
 tương ứng nằm trong /usr/share/doc/TênGói/copyright.
 
-Ubuntu KHÔNG ĐI KÈM VỚI BẤT KÌ BẢO ĐẢM NÀO trong giới hạn cho phép của
+Meilix KHÔNG ĐI KÈM VỚI BẤT KÌ BẢO ĐẢM NÀO trong giới hạn cho phép của
 luật pháp hiện hành.
 
 Hệ thống này được dựa trên Debian. Xem thêm http://www.debian.org/ để biết
