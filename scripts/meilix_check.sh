@@ -25,3 +25,9 @@ cat /usr/share/applications/defaults.list | grep video
 
 [ -f ~/*.deb ] && echo "deb package should not be in home folder" || echo "ok."
 [ -f /*.deb ] && echo "deb package should not be in root" || echo "ok."
+
+# Plymouth themes
+ls /usr/share/plymouth/themes # show us which themes we have
+# show us the plymouth meilix-logo folder
+ls /usr/share/plymouth/themes/meilix-logo/
+ls -l |grep .plymouth
