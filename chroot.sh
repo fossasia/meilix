@@ -79,7 +79,7 @@ apt-get -qq -y --purge install lxrandr
 
 # Install Internet packages
 apt-get -qq -y --purge install flashplugin-installer google-talkplugin pidgin qpdfview libqtwebkit4
-dpkg -i -y --purge install skype-ubuntu_4.1.0.20-1_i386.deb
+dpkg -i skype-ubuntu_4.1.0.20-1_i386.deb
 
 # Install graphic
 apt-get -qq -y --purge install gimp inkscape
