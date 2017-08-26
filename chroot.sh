@@ -36,20 +36,28 @@ apt-get -qq -y install xorg sddm lxqt
 apt-get -qq -y install plymouth-label #dependency of our theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 apt-get install -f
+
+ls /usr/share/plymouth/themes # show us which themes we have
+# show us the plymouth meilix-logo folder
+ls /usr/share/plymouth/themes/meilix-logo/
 update-alternatives --verbose --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
 update-alternatives --verbose --install /usr/share/plymouth/themes/text.plymouth text.plymouth /usr/share/plymouth/themes/meilix-text/meilix-text.plymouth 99
+update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 100
+update-alternatives --verbose --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-plymouth-theme.plymouth 100
+
+update-alternatives --list text.plymouth
+update-alternatives --list default.plymouth
 
 update-alternatives --auto text.plymouth
 update-alternatives --auto default.plymouth
 
 #update-alternatives --skip-auto --config default.plymouth
 update-initramfs -u # update initram
-update-initramfs -u -b /image/casper # update initram
+#update-initramfs -u -b /image/casper # update initram
+update-initramfs -c -k all
 #update-initramfs -c -k all -b /image/casper
 ls /
-update-alternatives --list text.plymouth
-# show all
-ls /usr/share/plymouth/themes/
+
 
 # Fix chromium install problem
  mv /etc/chromium-browser/ /etc/chromium-browser_
