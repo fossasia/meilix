@@ -4,7 +4,7 @@ echo "This is a script to delete obsolete meilix iso builds by Abishek V Ashok"
 echo "You have to add an authorization token to make it functional."
 
 # jq is the JSON parser we will be using
-sudo apt-get -y install jq
+sudo apt-get -qq -y install jq
 
 # Storing the response to a variable for future usage
 response=`curl https://api.github.com/repos/fossasia/meilix/releases | jq '.[] | .id, .published_at'`
