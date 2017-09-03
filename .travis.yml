@@ -23,7 +23,7 @@ deploy:
   - provider: script
     script: curl --upload-file /home/travis/${image_name} https://transfer.sh/Meilix.ISO
     on:
-    branch: upload-test
+    branch: generator
     
 after_deploy:
   - cd mail-scripts && ./mail.py
