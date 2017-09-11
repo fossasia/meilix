@@ -41,6 +41,8 @@ sudo apt-get -qq update
 sudo apt-get -qq install dpkg-dev debhelper fakeroot
 sudo apt-get -qq install devscripts
 
+#Adding Mew to the Meilix
+./mew.sh
 #Debuilding the metapackages
 echo Section Debuilding the metapackages
 ./debuild.sh
