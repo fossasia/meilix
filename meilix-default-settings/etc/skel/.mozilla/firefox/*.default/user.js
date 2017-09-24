@@ -1,1 +1,1 @@
-user_pref("browser.startup.homepage", "http://susper.com/");
+user_pref("browser.startup.homepage", "https://susper.com/");
