@@ -4,11 +4,11 @@
 [![Build Status](https://travis-ci.org/fossasia/meilix.svg?branch=master)](https://travis-ci.org/fossasia/meilix)
 
 Beautiful Linux OS for Hotels and Public Event Kiosks
-* We use lxqt as the standard Desktop Environment
+* lxqt as the standard Desktop Environment
 * based on ubuntu/debian architecture
-* Light weight, Fast
-* Reasonable preconfigured settings for the use case
-* system lock.
+* Philosophy: light weight, fast, customized
+* reasonable preconfigured settings for the use case
+* system lock
 
 ## Customizing Distribution
 
