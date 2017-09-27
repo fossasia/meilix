@@ -3,18 +3,17 @@
 [![Join the chat at https://gitter.im/fossasia/meilix](https://badges.gitter.im/fossasia/meilix.svg)](https://gitter.im/fossasia/meilix?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/fossasia/meilix.svg?branch=master)](https://travis-ci.org/fossasia/meilix)
 
-Beautiful LXQt (http://lubuntu.net) based Linux OS for Hotels and Public Event Kiosks with a system lock.
+Beautiful Linux OS for Hotels and Public Event Kiosks with a system lock.
 Features:
-* Based on lxqt and ubuntu
+* We use lxqt as the standard Desktop Environment
+* based on a ubuntu/debian architecture
 * Light weight
 * Fast
-* Contains neccessary packages
-* PPA synced with github
+* Reasonable pre-settings
 
 ## Customizing Distribution
 
-- After cloning open build.sh to change. Read comment in build.sh to understand how to change.
-(Note: Please not change anything at # Install core packages and do not delete any in hotelos folder).
+- After cloning use build.sh to build an ISO. 
 
 ### Creating a metapackage
 Creating a metapackage is really easy, we will make use of [equivs](http://apt.ubuntu.com/p/equivs) to make our metapackage.
@@ -44,8 +43,8 @@ Creating a metapackage is really easy, we will make use of [equivs](http://apt.u
 
 ### Know the files inside the repository
 - [debuild.sh](/debuild.sh) - This script debuilds the meilix-default-settings metapackage everytime and debuilding is required to implement the changes made in that metapackage.
-
-***Note: Remember to replace nameOfYourMeta-package with the name of the meta-package**
+- chroot.sh
+- mew.sh
 
 ### Personalizing it
 Updating the OS/metapackage to the latest version
