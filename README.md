@@ -10,9 +10,11 @@ Beautiful Linux OS for Hotels and Public Event Kiosks
 * reasonable preconfigured settings for the use case
 * system lock
 
-## Customizing Distribution
+## Starting Development
 
+- Fork the repository
 - After cloning use build.sh to build an ISO. 
+- Sent pull requests to the FOSSASIA repository
 
 ### Creating a metapackage
 Creating a metapackage is really easy, we will make use of [equivs](http://apt.ubuntu.com/p/equivs) to make our metapackage.
