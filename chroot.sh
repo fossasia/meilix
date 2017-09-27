@@ -79,6 +79,8 @@ apt-get -qq -y --purge install lxrandr
 
 # Install Internet packages
 apt-get -qq -y --purge install flashplugin-installer google-talkplugin pidgin qpdfview libqtwebkit4
+
+# Install local Skype 32Bit package
 dpkg -i skype-ubuntu_4.1.0.20-1_i386.deb
 
 # Install graphic
@@ -88,7 +90,7 @@ apt-get -qq -y --purge remove imagemagick
 # Install Libreoffice
 apt-get -qq -y --purge install --no-install-recommends libreoffice-gtk libreoffice-gtk libreoffice-writer libreoffice-calc libreoffice-impress
 
-# Install imclient
+# Install Instand Messanger
 dpkg -i meilix-imclient_*_all.deb
 apt-get install -f
 
@@ -103,13 +105,13 @@ apt-get -qq -y install vlc
 apt-get -qq -y install nautilus-dropbox
 nautilus --quit
 
-#to be used as a fallback icon theme
+# Oxygen to be used as a fallback icon theme
 apt-get -qq -y install oxygen-icon-theme
 
-#Install text editor
+# Install text editor
 apt-get -qq -y install kate
 
-#remove lxqt-powermanagement
+# Remove lxqt-powermanagement
 apt-get -qq -y purge lxqt-powermanagement
 apt-get -qq -y purge lxqt-powermanagement-l10n
 
@@ -125,13 +127,13 @@ apt-get -qq -y --purge install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
 apt-get -qq -y --purge install ibus-unikey ibus-anthy ibus-pinyin ibus-m17n
 apt-get -qq -y --purge install im-switch
 
-#Meilix default settings
-#apt-get download hotelos-default-settings
+# Meilix default settings
 dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
 update-initramfs -u
 dpkg -i --force-overwrite systemlock_0.1-1_all.deb
 apt-get install -f
 apt-get -qq -y remove dconf-tools
+
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
 apt-get -qq clean
