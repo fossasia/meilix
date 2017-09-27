@@ -42,9 +42,11 @@ sudo apt-get -qq install dpkg-dev debhelper fakeroot
 sudo apt-get -qq install devscripts
 
 #Adding Mew to the Meilix
-./mew.sh
+chmod +x ./scripts/mew.sh
+./scripts/mew.sh
 # Debuilding the metapackages
-./debuild.sh
+chmod +x ./scripts/debuild.sh
+./scripts/debuild.sh
 
 # Section end Metapackages debuild 
 # Create and populate the chroot using debootstrap
@@ -74,7 +76,8 @@ sudo mount --rbind /dev chroot/dev
 sudo mount -t proc none chroot/proc
 
 # Work *inside* the chroot
-./chroot.sh
+chmod +x ./scripts/chroot.sh
+./scripts/chroot.sh
 # Section chroot finished
 ###############################################################
 # Continue work outside the chroot, preparing image

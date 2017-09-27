@@ -23,6 +23,7 @@ include:
 sudo: required
 
 script:
+  - chmod +x ./build.sh
   - ./build.sh
 
 before_deploy:
