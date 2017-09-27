@@ -14,7 +14,7 @@ mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Set of GNOME language packs to install.
 #   Use '\*' for all langs, 'en' for English.
 # Install language with the most popcon
-gnomelanguage=${3:-'{en}'}	#
+gnomelanguage=${3:-'{en}'}	
 # Release name, used by debootstrap.  Examples: lucid, maverick, natty.
 release=${4:-zesty}
 
@@ -36,18 +36,17 @@ do
 done
 
 # Make sure we have the tools we need installed
-sudo apt-get -qq install $devtools -y --no-install-recommends
 sudo apt-get -qq update
+sudo apt-get -qq install $devtools -y --no-install-recommends
 sudo apt-get -qq install dpkg-dev debhelper fakeroot
 sudo apt-get -qq install devscripts
 
 #Adding Mew to the Meilix
 ./mew.sh
-#Debuilding the metapackages
-echo Section Debuilding the metapackages
+# Debuilding the metapackages
 ./debuild.sh
-echo Section end Metapackages debuild
 
+# Section end Metapackages debuild 
 # Create and populate the chroot using debootstrap
 echo Section Chroot
 [ -d chroot ] && sudo rm -R chroot/
@@ -74,10 +73,9 @@ sudo mount --rbind /sys chroot/sys
 sudo mount --rbind /dev chroot/dev
 sudo mount -t proc none chroot/proc
 
-
 # Work *inside* the chroot
 ./chroot.sh
-echo Section chroot finished
+# Section chroot finished
 ###############################################################
 # Continue work outside the chroot, preparing image
 
