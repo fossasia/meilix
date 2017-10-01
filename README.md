@@ -30,6 +30,7 @@ Beautiful Linux OS for Hotels and Public Event Kiosks
 - Now as soon as you push the required changes in your branch of forked repo, Travis will make a Github Release.
 - Now you can use qemu or any virtual-machine to test your changes.
 - Remember before making a PR, make sure all your changes work, issue should get close and _revert back the Travis API key to that of FOSSASIA_ since that key will be responsible for building the ISO.
+- Squash your commits if there are more than one.
 
 ### Creating a metapackage
 Creating a metapackage is really easy, we will make use of [equivs](http://apt.ubuntu.com/p/equivs) to make our metapackage.
