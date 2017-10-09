@@ -1,21 +1,10 @@
 #!/usr/bin/env bash
 #wallpaper downloading
 set -e
+#fix this with help of base64 after testing
 url_wallpaper="https://meilix-generator.herokuapp.com/uploads/wallpaper" # url heroku wallpaper 
 wget -N --quiet $url_wallpaper
-
-#renaming wallpaper according to extension png or jpg 
-for f in wallpaper; do 
-    type=$( file "$f" | grep -oP '\w+(?= image data)' )
-    case $type in  
-        PNG)  newext=png ;; 
-        JPEG) newext=jpg ;; 
-        *)    echo "Unknown image format: $f"; continue ;; 
-    esac
-    mv "$f" "${f%.*}.$newext"
-done
-
-#setting wallpaper
-wall=$(ls wallpaper.*)
-pcmanfm-qt --set-wallpaper ${wall} --wallpaper-mode=scaled
-
+#converting wallpaper according to theme
+convert wallpaper wallpaper.jpg
+#changing theme wallpaper
+mv /usr/share/lxqt/themes/meilix/wallpaper.jpg
