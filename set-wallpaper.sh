@@ -5,6 +5,6 @@ set -e
 url_wallpaper="https://meilix-generator.herokuapp.com/uploads/wallpaper" # url heroku wallpaper 
 wget -N --quiet $url_wallpaper
 #converting wallpaper according to theme
-convert wallpaper wallpaper.jpg
+convert wallpaper wallpaper.png
 #changing theme wallpaper
-mv /usr/share/lxqt/themes/meilix/wallpaper.jpg
+mv /usr/share/lxqt/themes/meilix/wallpaper.png
