@@ -41,9 +41,13 @@ sudo apt-get -qq install $devtools -y --no-install-recommends
 sudo apt-get -qq install dpkg-dev debhelper fakeroot
 sudo apt-get -qq install devscripts
 
-#Adding Mew to the Meilix
+# Adding Mew to the Meilix
 chmod +x ./scripts/mew.sh
 ./scripts/mew.sh
+
+# adding Susi 
+./adding-susi.sh
+
 # Debuilding the metapackages
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
