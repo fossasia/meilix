@@ -134,6 +134,9 @@ dpkg -i --force-overwrite systemlock_0.1-1_all.deb
 apt-get install -f
 apt-get -qq -y remove dconf-tools
 
+# Installing SUSI Desktop package
+dpkg -i SUSI-desktop.deb
+
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
 apt-get -qq clean
