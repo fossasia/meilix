@@ -25,4 +25,21 @@ mv susi_firefoxbot/src/susi-firefox.xpi meilix-default-settings/usr/lib/mozilla-
 
 # adding susi to chromium by adding the extension to the Meilix default settings 
 
-# add susi package
+# building susi package
+
+SIZE=`du -s SUSI-Desktop/sysroot | sed s'/\s\+.*//'`+8
+sed s"/SIZE/${SIZE}/" -i SUSI-Desktop/DEBIAN/control
+
+pushd SUSI-Desktop
+
+pushd sysroot/
+tar czf ../data.tar.gz *
+popd
+
+pushd DEBIAN/
+tar czf ../control.tar.gz *
+popd
+
+echo 2.0 > debian-binary
+ar r ../SUSI-desktop.deb debian-binary control.tar.gz data.tar.gz
+popd
