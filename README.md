@@ -19,7 +19,7 @@ Beautiful Linux OS for Hotels and Public Event Kiosks
 
 - Fork the repository
 - After cloning use build.sh to build an ISO.
-- Sent pull requests to the FOSSASIA repository.
+- Sent pull requests to the FOSSASIA repository https://github.com/fossasia/meilix/.
 
 ## Building Locally
 - You need to run `./build.sh` in your terminal to get an iso locally in your system.
@@ -28,7 +28,7 @@ Beautiful Linux OS for Hotels and Public Event Kiosks
 - After forking the repo make required changes.
 - Change the [.travis.yml](/.travis.yml) API key by following the [article](https://blog.fossasia.org/setting-environment-variables-up-in-travis-and-heroku-for-meilix-and-meilix-generator/)
 - Now as soon as you push the required changes in your branch of forked repo, Travis will make a Github Release.
-- Now you can use qemu or any virtual-machine to test your changes.
+- with the build ISO file you can use qemu, virtualbox or any virtual-machine to test your changes.
 - Remember before making a PR, make sure all your changes work, issue should get close and _revert back the Travis API key to that of FOSSASIA_ since that key will be responsible for building the ISO.
 - Squash your commits if there are more than one.
 
