@@ -46,6 +46,7 @@ chmod +x ./scripts/mew.sh
 ./scripts/mew.sh
 
 # Adding Susi 
+chmod +x ./scripts/adding-susi.sh
 ./scripts/adding-susi.sh
 
 # Debuilding the metapackages
