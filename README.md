@@ -17,8 +17,9 @@ Beautiful Linux OS for Hotels, Libraries and Public Event Kiosks
 
 # Starting Development
 
-- Fork the repository
+- Fork the Fossasia Github repository
 - After cloning use build.sh to build an ISO.
+- Claim an open issue at https://github.com/fossasia/meilix/issues
 - Sent pull requests to the FOSSASIA repository https://github.com/fossasia/meilix/.
 
 ## Building Locally
