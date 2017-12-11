@@ -45,8 +45,8 @@ sudo apt-get -qq install devscripts
 chmod +x ./scripts/mew.sh
 ./scripts/mew.sh
 
-# adding Susi 
-./adding-susi.sh
+# Adding Susi 
+./scripts/adding-susi.sh
 
 # Debuilding the metapackages
 chmod +x ./scripts/debuild.sh
