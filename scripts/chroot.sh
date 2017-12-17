@@ -32,6 +32,9 @@ apt-get install -f
 # Install base packages
 apt-get -qq -y install xorg sddm lxqt
 
+# Install ubiquity
+apt-get -qq -y install ubiquity ubiquity-casper ubiquity-slideshow-ubuntu ubiquity-frontend-kde
+
 # Plymouth theme 
 apt-get -qq -y install plymouth-label #dependency of our theme
 dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb

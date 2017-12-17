@@ -74,6 +74,7 @@ sudo cp -v meilix-imclient_*_all.deb chroot
 #SUSI deb builded by adding susi script
 sudo cp -v SUSI-desktop.deb chroot
 
+
 # Debug: show us what files are around in chroot
 ls -a chroot
 
@@ -88,6 +89,9 @@ chmod +x ./scripts/chroot.sh
 # Section chroot finished
 ###############################################################
 # Continue work outside the chroot, preparing image
+
+# ubiquity-slideshow slides, replace the installed ones
+sudo cp -vr ubiquity-slideshow chroot/usr/share/
 
 # Unmount pseudo-filesystems
 sudo umount -lfr chroot/proc
