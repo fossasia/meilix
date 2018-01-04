@@ -14,7 +14,7 @@
 #
 # author - Piyuah Raj aka 0x48piraj (piyushraj.4680@gmail.com)
 
-# Installing Skype 64bit
+# Installing Skype 64bit without leaving the residue files.
 
 TEMP_DEB="$(mktemp)" &&
 wget -O "$TEMP_DEB" 'https://go.skype.com/skypeforlinux-64.deb' &&
