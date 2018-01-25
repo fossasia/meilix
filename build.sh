@@ -23,8 +23,8 @@ datafiles="image-${arch}.tar.lzma sources.list"
 # Necessary development tool packages to be installed on build host
 devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools"
 
-url_wallpaper="https://meilix-generator.herokuapp.com/uploads/wallpaper" # url heroku wallpaper
-wget $url_wallpaper -P meilix-default-settings/usr/lxqt/themes/meilix/
+#url_wallpaper="https://meilix-generator.herokuapp.com/uploads/wallpaper" # url heroku wallpaper
+#wget $url_wallpaper -P meilix-default-settings/usr/lxqt/themes/meilix/
 
 # Make sure we have the data files we need
 for i in $datafiles
@@ -42,8 +42,9 @@ sudo apt-get -qq install dpkg-dev debhelper fakeroot
 sudo apt-get -qq install devscripts
 
 # Adding Mew to the Meilix
-chmod +x ./scripts/mew.sh
-./scripts/mew.sh
+# chmod +x ./scripts/mew.sh
+#./scripts/mew.sh
+# create package of mew and use the package only instead of creating package here
 
 # Adding Susi 
 chmod +x ./scripts/adding-susi.sh
