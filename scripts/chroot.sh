@@ -20,7 +20,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 91E7EE5E
 
 if [ ${arch} == 'x86_64' ];   # 64-bit
 then
-  sudo dpkg --add-architecture i386 
+  dpkg --add-architecture i386 
 fi
 
 # Update in-chroot package database
