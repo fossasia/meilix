@@ -18,6 +18,11 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E1098513
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1EBD81D9
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 91E7EE5E
 
+if [ ${arch} == 'x86_64' ];   # 64-bit
+then
+  sudo dpkg --add-architecture i386 
+fi
+
 # Update in-chroot package database
 apt-get -qq update
 
