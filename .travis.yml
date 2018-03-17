@@ -1,6 +1,6 @@
 # This provides us with GCC binary support so we can run bash
 dist: trusty
-language: generic<number> commit message`
+language: generic
 
 
 git:
@@ -16,17 +16,16 @@ before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
   - curl --upload-file /home/travis/${image_name} https://transfer.sh/Meilix.ISO 
-  
-on_success: always
 
 deploy:
-  - provider: script
-    script: curl --upload-file /home/travis/${image_name} https://transfer.sh/Meilix.ISO
-    on:
-    branch: upload-test
+   provider: script
+   script: curl --upload-file /home/travis/${image_name} https://transfer.sh/Meilix.ISO
+   on:
+         branch: generator
     
 after_deploy:
   - cd mail-scripts && ./mail.py
   
 after_failure:
   - cd mail-scripts && ./mail-fail.py
+
