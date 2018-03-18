@@ -41,6 +41,7 @@ sudo apt-get -qq update
 sudo apt-get -qq install $devtools -y --no-install-recommends
 sudo apt-get -qq install dpkg-dev debhelper fakeroot
 sudo apt-get -qq install devscripts
+sudo apt-get -qq install tree # for debugging
 
 # Adding Mew to the Meilix
 # chmod +x ./scripts/mew.sh
