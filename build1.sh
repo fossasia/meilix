@@ -2,7 +2,9 @@
 #packages required to edit
 sudo apt-get install -qq squashfs-tools genisoimage
 #downloading the ISO to edit
-wget -q https://github.com/fossasia/meilix/releases/download/untagged-47926c1ccbcdf691120b/meilix-zesty-20180104-i386.iso
+
+wget -q https://github.com/fossasia/meilix/releases/download/untagged-ec090eade53280435857/meilix-xenial-20180202-i386.iso
+
 mv *.iso meilix-original.iso
 #exit on any error
 set -e
