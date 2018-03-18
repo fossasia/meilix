@@ -55,6 +55,8 @@ chmod +x ./scripts/adding-susi.sh
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
+# For debugging, just look what files are there
+tree -a
 # Section end Metapackages debuild 
 # Create and populate the chroot using debootstrap
 echo Section Chroot
