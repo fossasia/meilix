@@ -19,7 +19,6 @@ include:
           - debhelper
           - fakeroot
           - devscripts
-          - wget
 
 sudo: required
 

@@ -13,6 +13,9 @@ export LIVE_BOOT_SCRIPTS="casper lupin-casper"
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
+# Installing wget
+apt-get install wget
+
 # Add key for third party repo
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E1098513
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1EBD81D9
