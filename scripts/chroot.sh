@@ -14,7 +14,7 @@ dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
 # Installing wget
-apt-get install wget
+apt-get install wget apt-transport-https
 
 # Add key for third party repo
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E1098513
