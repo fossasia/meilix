@@ -134,10 +134,8 @@ do
 done
 
 # Create filesystem manifests
-sudo chroot chroot dpkg-query -W --showformat='${Package} ${Version}\n' >/tmp/manifest.$$
-sudo cp -v /tmp/manifest.$$ image/casper/filesystem.manifest
+sudo chroot chroot dpkg-query -W --showformat='${Package} ${Version}\n' > image/casper/filesystem.manifest
 sudo cp -v image/casper/filesystem.manifest image/casper/filesystem.manifest-desktop
-rm /tmp/manifest.$$
 
 # Remove packages from filesystem.manifest-desktop
 #  (language and extra for more hardware support)
@@ -145,7 +143,7 @@ REMOVE='gparted ubiquity ubiquity-frontend-gtk casper live-initramfs user-setup 
  xresprobe libdebian-installer4 pptp-linux ndiswrapper-utils-1.9
  ndisgtk linux-wlan-ng libatm1 setserial b43-fwcutter uterm
  linux-headers-generic indicator-session indicator-application
- language-pack-*'
+ language-pack-*' 
 for i in $REMOVE
 do
     sudo sed -i "/${i}/d" image/casper/filesystem.manifest-desktop
