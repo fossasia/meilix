@@ -2,7 +2,6 @@
 dist: trusty
 language: generic
 
-
 git:
   depth: 1
 
