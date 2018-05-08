@@ -14,16 +14,13 @@ before_deploy:
   - sudo rm meilix-original.iso
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
+  - curl -F "file=/home/travis/${image_name}" https://file.io/meilix.iso
 
 deploy:
-  provider: releases
-  skip_cleanup: true
-  api_key:
-    secure: "Bzwk661qPFSBm14n3cOpaTR8ELei7Fw9lvKOGHlKyU/VpR3YB2qqF8eIsEmgzB4vpi6v6tpcZv/dpseSFn9NG4un75s5cZ1//yFp0KGaRGDcMM2W4+j3RTmHPrvp46X2z3lXGvwY+kfDTmv5px6+SuDpVDMKUgnk+wp7JvGG3FNItUK9WfF6MTwGCp4A/KIxLtKCCWxQhL3g8Gp8vNWBTXU6ZLrF/PtQyz8yZv3N01b86TfpM7DHYnZD4cCxam4YPyCzlOqE30kKYz9RkXSJCFepcBAni8kGkuGs5j34qf4IEck7E9/qWF2OOTtCa7mwxCnpIPl5uVhrMi+6XRMuRIr8P3+fuTGCrAhEeY1zdVX1wqrw0AgQNCfz288GLVZdbc4iV6MiZAPIwc4nNuP4WJBMCC1WUEsNK6a5GsVPNG1KP5Q2mVIQE1KJj9/Wv0LWglKnG2DA1hQd5Xu/hIUiMkzO0+8aYM0eM54AkHKCR9Drv90kTwcGhFYc7fQWVa4YXXVDzdfaOGn0EUR6ePN7Vg0KRKkDbHQ2yg4rZJsYg1tkRxd1XgGb1HCaeXZA7KVcwXIQXf4bkp/lRDholc81yYViCG5oR5wm1xdFIJVj7dP8Z55aPh081KbHVhUzXoTvEWnS9fOot0fG7DgPBDcVLpeMdmKLjid4no7lbyPB2qw=" 
-  file_glob: true # http://stackoverflow.com/a/28579635/1320237
-  file: "/home/travis/${image_name}"
-  on:
-    branch: generator
+   provider: script
+   script: curl -F "file=/home/travis/${image_name}" https://file.io/meilix.iso
+   on:
+         branch: generator
     
 after_deploy:
   - cd mail-scripts && ./mail.py
