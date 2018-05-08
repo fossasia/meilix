@@ -17,7 +17,7 @@ before_deploy:
 
 deploy:
    provider: script
-   script: curl -F "file=@/home/travis/${image_name}" https://file.io
+   script: curl -F "file=@/home/travis/${image_name}" https://file.io/meilix.iso
    on:
          branch: generator
     
