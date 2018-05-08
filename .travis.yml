@@ -14,11 +14,11 @@ before_deploy:
   - sudo rm meilix-original.iso
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
-  - curl -F "file=/home/travis/${image_name}" https://file.io/meilix.iso
+  - curl -F "file=@/home/travis/${image_name}" https://file.io
 
 deploy:
    provider: script
-   script: curl -F "file=/home/travis/${image_name}" https://file.io/meilix.iso
+   script: curl -F "file=@/home/travis/${image_name}" https://file.io
    on:
          branch: generator
     
