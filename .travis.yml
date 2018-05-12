@@ -12,7 +12,7 @@ script:
   - ./build1.sh |& tee log.txt
  
 before_deploy:
-  - sudo rm meilix-original.iso
+  - sudo rm -f meilix-original.iso
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
   - curl --upload-file /home/travis/${image_name} https://transfer.sh/Meilix.ISO 
