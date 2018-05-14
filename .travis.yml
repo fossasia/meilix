@@ -2,7 +2,6 @@
 dist: trusty
 language: generic
 
-
 git:
   depth: 1
 
@@ -15,11 +14,10 @@ before_deploy:
   - sudo rm -f meilix-original.iso
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
-  - curl --upload-file /home/travis/${image_name} https://transfer.sh/Meilix.ISO 
 
 deploy:
    provider: script
-   script: curl --upload-file /home/travis/${image_name} https://transfer.sh/Meilix.ISO
+   script: curl -F --upload-file "file=@/home/travis/${image_name}" https://file.io
    on:
          branch: generator
     
@@ -28,4 +26,3 @@ after_deploy:
   
 after_failure:
   - cd mail-scripts && ./mail-fail.py
-
