@@ -31,7 +31,7 @@ before_deploy:
   - cat *.iso > "/home/travis/${image_name}"
 
 after_deploy:
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./scripts/releases_maintainer.sh; fi'
+
 
 notifications:
   slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
@@ -45,3 +45,10 @@ deploy:
     file: "/home/travis/${image_name}"
     on:
       all_branches: true
+
+after_deploy:
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./scripts/releases_maintainer.sh; fi'
+  - cd mail-scripts && ./mail.py
+  
+after_failure:
+  - cd mail-scripts && ./mail-fail.py
