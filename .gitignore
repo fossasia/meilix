@@ -3,3 +3,4 @@ chroot/
 *.md5
 image/casper/filesystem.squash*
 image/casper/vm*
+.DS_Store
