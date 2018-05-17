@@ -24,7 +24,7 @@ sudo: required
 
 script:
   - chmod +x ./build.sh
-  - ./build.sh
+  - ./build.sh |& tee log.txt
 
 before_deploy:
   - export image_name="`echo *.iso`"
