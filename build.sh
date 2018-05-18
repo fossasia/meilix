@@ -56,7 +56,8 @@ chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
 # For debugging, just look what files are there
-tree -f
+#tree -f
+
 # Section end Metapackages debuild 
 # Create and populate the chroot using debootstrap
 echo Section Chroot
