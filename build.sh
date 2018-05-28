@@ -47,10 +47,6 @@ sudo apt-get -qq install tree # for debugging
 #./scripts/mew.sh
 # create package of mew and use the package only instead of creating package here
 
-# Adding Susi 
-chmod +x ./scripts/adding-susi.sh
-./scripts/adding-susi.sh
-
 # Debuilding the metapackages
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
@@ -76,9 +72,6 @@ sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v skype-ubuntu_*_i386.deb chroot
 sudo cp -v meilix-imclient_*_all.deb chroot
-#SUSI deb builded by adding susi script
-sudo cp -v SUSI-desktop.deb chroot
-
 
 # Debug: show us what files are around in chroot
 ls -a chroot
