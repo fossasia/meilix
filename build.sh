@@ -75,7 +75,6 @@ sudo cp -v plymouth-meilix-logo_*_all.deb chroot
 sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v skype-ubuntu_*_i386.deb chroot
-sudo cp -v meilix-imclient_*_all.deb chroot
 #SUSI deb builded by adding susi script
 sudo cp -v SUSI-desktop.deb chroot
 
