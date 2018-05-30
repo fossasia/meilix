@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=SUSI
-Comment= SUSI AI
-GenericName=SUSI DESKTOP
-Exec=electron --app=/opt/susi_desktop/app %F
-Icon=/opt/susi_desktop/app/resources/icon.png
-Type=Application
-StartupNotify=true
-MimeType=text/plain;
