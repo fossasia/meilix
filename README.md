@@ -107,6 +107,16 @@ We have the following branches
 
 Do read the [Open Source Developer Guide and Best Practices at FOSSASIA](https://blog.fossasia.org/open-source-developer-guide-and-best-practices-at-fossasia).
 
+**Merging Pull Requests**
+
+- These MUST apply for your pull request to be merged:
+  - you provide a screenshot of the working ISO image
+  - the build passes
+- Your Pull request can be merged within 24 hours if you get a positive review.
+- Your Pull request can be merged after 24 hours of the last commit and last comment if no maintainer responded.
+
+If the pull request creates a problem, the first person to recognize it should revert the pull requets as soon as possible.
+
 ## License
 
 This project is currently licensed under GNU Lesser General Public License v3.0 (LGPL-3.0). A copy of LICENSE.md should be present along with the source code. To obtain the software under a different license, please contact FOSSASIA.
