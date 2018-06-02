@@ -13,15 +13,22 @@ export LIVE_BOOT_SCRIPTS="casper lupin-casper"
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
+# Installing wget
+apt-get install wget apt-transport-https
+
 # Add key for third party repo
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E1098513
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1EBD81D9
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 91E7EE5E
+wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | apt-key add -
 
 if [ ${arch} == 'x86_64' ];   # 64-bit
 then
   dpkg --add-architecture i386 
 fi
+
+# Create a sources.list.d file with the repository
+sudo sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/jitsi-stable.list"
 
 # Update in-chroot package database
 apt-get -qq update
@@ -39,6 +46,9 @@ apt-get -qq -y install xorg sddm lxqt
 
 # Install ubiquity
 apt-get -qq -y install ubiquity ubiquity-casper ubiquity-slideshow-ubuntu ubiquity-frontend-kde
+
+# Install Jitsi Meet
+apt-get -y install jitsi-meet
 
 # Plymouth theme 
 apt-get -qq -y install plymouth-label #dependency of our theme
@@ -162,6 +172,7 @@ rm meilix-default-settings_1.0_all.deb
 rm meilix-metapackage_1.0-1_all.deb
 rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb skype-ubuntu_4.1.0.20-1_i386.deb
 rm meilix-imclient_*_all.deb
+apt-get remove --purge wget apt-transport-https
 
 # Reverting earlier initctl override. JM 2012-0604
 rm /sbin/initctl

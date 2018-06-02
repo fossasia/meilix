@@ -52,3 +52,4 @@ after_deploy:
   
 after_failure:
   - cd mail-scripts && ./mail-fail.py
+  

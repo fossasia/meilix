@@ -16,7 +16,6 @@ mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Install language with the most popcon
 gnomelanguage=${3:-'{en}'}	
 # Release name, used by debootstrap.  Examples: lucid, maverick, natty.
-#release=${4:-zesty}
 release=${4:-xenial}
 
 # Necessary data files
@@ -48,16 +47,13 @@ sudo apt-get -qq install tree # for debugging
 #./scripts/mew.sh
 # create package of mew and use the package only instead of creating package here
 
-# Adding Susi 
-chmod +x ./scripts/adding-susi.sh
-./scripts/adding-susi.sh
-
 # Debuilding the metapackages
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
 # For debugging, just look what files are there
-tree -a
+#tree -f
+
 # Section end Metapackages debuild 
 # Create and populate the chroot using debootstrap
 echo Section Chroot
@@ -74,11 +70,7 @@ sudo cp -v systemlock_*_all.deb chroot
 sudo cp -v plymouth-meilix-logo_*_all.deb chroot
 sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
-sudo cp -v skype-ubuntu_*_i386.deb chroot
 sudo cp -v meilix-imclient_*_all.deb chroot
-#SUSI deb builded by adding susi script
-sudo cp -v SUSI-desktop.deb chroot
-
 
 # Debug: show us what files are around in chroot
 ls -a chroot
@@ -140,13 +132,17 @@ sudo cp -v /tmp/manifest.$$ image/casper/filesystem.manifest
 sudo cp -v image/casper/filesystem.manifest image/casper/filesystem.manifest-desktop
 rm /tmp/manifest.$$
 
+#This does not work instead. Why?
+#sudo chroot chroot dpkg-query -W --showformat='${Package} ${Version}\n' > image/casper/filesystem.manifest
+#sudo cp -v image/casper/filesystem.manifest image/casper/filesystem.manifest-desktop
+
 # Remove packages from filesystem.manifest-desktop
 #  (language and extra for more hardware support)
 REMOVE='gparted ubiquity ubiquity-frontend-gtk casper live-initramfs user-setup discover1
  xresprobe libdebian-installer4 pptp-linux ndiswrapper-utils-1.9
  ndisgtk linux-wlan-ng libatm1 setserial b43-fwcutter uterm
  linux-headers-generic indicator-session indicator-application
- language-pack-*'
+ language-pack-*' 
 for i in $REMOVE
 do
     sudo sed -i "/${i}/d" image/casper/filesystem.manifest-desktop
