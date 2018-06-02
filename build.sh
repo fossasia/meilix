@@ -70,7 +70,6 @@ sudo cp -v systemlock_*_all.deb chroot
 sudo cp -v plymouth-meilix-logo_*_all.deb chroot
 sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
-sudo cp -v meilix-imclient_*_all.deb chroot
 
 # Debug: show us what files are around in chroot
 ls -a chroot
