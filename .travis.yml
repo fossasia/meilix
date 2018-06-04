@@ -22,6 +22,9 @@ include:
 
 sudo: required
 
+git:
+  depth: 8
+
 script:
   - chmod +x ./build.sh
   - ./build.sh |& tee log.txt
