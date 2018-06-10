@@ -163,6 +163,14 @@ apt-get -qq -y remove dconf-tools
 # Installing SUSI Desktop package
 dpkg -i SUSI-desktop.deb
 
+# Instalation of packages from Generator Webapp
+SCRIPT_URL=https://www.github.com/fossasia/meilix-generator/archive/master.zip
+wget -O $scripts.zip $SCRIPT_URL
+unzip scripts.zip
+SCRIPTS_FOLDER_IN_ZIP="meilix-generator-master/scripts"
+ls $SCRIPTS_FOLDER_IN_ZIP; do
+$SCRIPTS_FOLDER_IN_ZIP/script; done			#execute all scripts
+
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
 apt-get -qq clean
