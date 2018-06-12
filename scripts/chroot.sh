@@ -116,10 +116,6 @@ apt-get -qq -y --purge remove imagemagick
 # Install Libreoffice
 apt-get -qq -y --purge install --no-install-recommends libreoffice-gtk libreoffice-gtk libreoffice-writer libreoffice-calc libreoffice-impress
 
-# Install Instand Messanger
-dpkg -i meilix-imclient_*_all.deb
-apt-get install -f
-
 #screen-dimming turns off always
 echo -ne "\033[9;0]" >> /etc/issue
 setterm -blank 0 >> /etc/issue
@@ -160,9 +156,6 @@ dpkg -i --force-overwrite systemlock_0.1-1_all.deb
 apt-get install -f
 apt-get -qq -y remove dconf-tools
 
-# Installing SUSI Desktop package
-dpkg -i SUSI-desktop.deb
-
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
 apt-get -qq clean
@@ -170,7 +163,7 @@ rm -rf /tmp/*
 #rm /etc/resolv.conf
 rm meilix-default-settings_1.0_all.deb
 rm meilix-metapackage_1.0-1_all.deb
-rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb skype-ubuntu_4.1.0.20-1_i386.deb
+rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 rm meilix-imclient_*_all.deb
 apt-get remove --purge wget apt-transport-https
 
