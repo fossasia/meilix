@@ -7,6 +7,7 @@ include:
   - os: linux
     addons:
       apt:
+        update: true
         sources:
           - ubuntu-toolchain-r-test
         packages:
@@ -33,9 +34,6 @@ before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
 
-after_deploy:
-
-
 notifications:
   slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
 
@@ -43,7 +41,7 @@ deploy:
   - provider: releases
     skip_cleanup: true
     api_key:
-      secure: "tVVKOMh0dZCrHkAfoqIYJYleJwTwXptumugYVcGi/WDaeFi9o1ROTKVdLXUO2CcAUgWUphWjnckF4uVdKBcCB87Af0hgQBXdpDJ4VSb2FFjjY3Lf5dpR1FTYR6Tqsn821mYM17wtwmO1tlg8zFqd1yysr36wZ0EqzFwBtV2FA0jNfxGtFyyJRZnDcCQqwREc2iIENSt8tE787HbwPaWGBEkpC8zYwNYkQXPgFvTi+Z/6Tnobz7gnk9wQFuzFDymr6sDTQF+2ycfGnJnXDOZjqC5haDZbXop6dR/ru6hwO6U4khQIFHEPMZEEHnocB1gOOSiM9Z/yztmY18X4jzx8gZAMIrdKwYlZzEeVAbnlX0WXfjOFmcKIvaMtdNZg9QJil3ePPq/80uNo4TGUy+04ll6jBqqMf4BTs/dxohLyksxN79iuAplRtEl96ZQG+0VI1B0OE3WjwtcuvcuTW7oZ1sOULY4UsNmIdPpJZqIrQpN4AevRJ6DV844uvJ63Sbdzyu0EjMTp+h+2dWiQnnW4aP0mbYsBGWTj0vM2CD/fHtM9W6oVNqLsF7pEe9fg7d2hYJS7Zkuwco33WHqy4JGvLl9uyzSsy0cueJgwg5DYJ8zWDzhlCbKtEk1kG+eKVj+C5rG4shOMK4zf+0iVn5BCNB5d3OgLpAGJwFx1uqqTMrc="
+      secure: "Bzwk661qPFSBm14n3cOpaTR8ELei7Fw9lvKOGHlKyU/VpR3YB2qqF8eIsEmgzB4vpi6v6tpcZv/dpseSFn9NG4un75s5cZ1//yFp0KGaRGDcMM2W4+j3RTmHPrvp46X2z3lXGvwY+kfDTmv5px6+SuDpVDMKUgnk+wp7JvGG3FNItUK9WfF6MTwGCp4A/KIxLtKCCWxQhL3g8Gp8vNWBTXU6ZLrF/PtQyz8yZv3N01b86TfpM7DHYnZD4cCxam4YPyCzlOqE30kKYz9RkXSJCFepcBAni8kGkuGs5j34qf4IEck7E9/qWF2OOTtCa7mwxCnpIPl5uVhrMi+6XRMuRIr8P3+fuTGCrAhEeY1zdVX1wqrw0AgQNCfz288GLVZdbc4iV6MiZAPIwc4nNuP4WJBMCC1WUEsNK6a5GsVPNG1KP5Q2mVIQE1KJj9/Wv0LWglKnG2DA1hQd5Xu/hIUiMkzO0+8aYM0eM54AkHKCR9Drv90kTwcGhFYc7fQWVa4YXXVDzdfaOGn0EUR6ePN7Vg0KRKkDbHQ2yg4rZJsYg1tkRxd1XgGb1HCaeXZA7KVcwXIQXf4bkp/lRDholc81yYViCG5oR5wm1xdFIJVj7dP8Z55aPh081KbHVhUzXoTvEWnS9fOot0fG7DgPBDcVLpeMdmKLjid4no7lbyPB2qw="
     file_glob: true # http://stackoverflow.com/a/28579635/1320237
     file: "/home/travis/${image_name}"
     on:
