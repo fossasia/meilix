@@ -80,6 +80,9 @@ ls /
 # Fix chromium install problem
  mv /etc/chromium-browser/ /etc/chromium-browser_
 
+# Remove screensaver
+apt-get -qq -y remove xscreensaver
+
 # Archive Manager
 apt-get -qq -y --purge install file-roller unrar
 
