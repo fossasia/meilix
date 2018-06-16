@@ -7,6 +7,7 @@ include:
   - os: linux
     addons:
       apt:
+        update: true
         sources:
           - ubuntu-toolchain-r-test
         packages:
@@ -32,9 +33,6 @@ script:
 before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
-
-after_deploy:
-
 
 notifications:
   slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
