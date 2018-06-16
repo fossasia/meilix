@@ -22,11 +22,6 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1EBD81D9
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 91E7EE5E
 wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | apt-key add -
 
-if [ ${arch} == 'x86_64' ];   # 64-bit
-then
-  dpkg --add-architecture i386 
-fi
-
 # Create a sources.list.d file with the repository
 sudo sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/jitsi-stable.list"
 
