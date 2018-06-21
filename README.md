@@ -17,7 +17,7 @@ Beautiful Linux Build Distro
 
 # Starting Development
 
-- Fork the Fossasia Github repository
+- Fork the Git repository
 - After cloning use build.sh to build an ISO.
 - Claim an open issue at https://github.com/fossasia/meilix/issues
 - Sent pull requests to the FOSSASIA repository https://github.com/fossasia/meilix/.
