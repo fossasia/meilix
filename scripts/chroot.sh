@@ -135,6 +135,9 @@ apt-get -qq -y install kate
 apt-get -qq -y purge lxqt-powermanagement
 apt-get -qq -y purge lxqt-powermanagement-l10n
 
+#Remove Kwin
+apt-get remove kwin
+
 #Google custom ad
 apt-get -qq -y --purge install mygoad
 #Install East Asia font
