@@ -24,7 +24,7 @@ include:
 sudo: required
 
 git:
-  depth: 8
+  depth: 22
 
 script:
   - chmod +x ./build.sh
