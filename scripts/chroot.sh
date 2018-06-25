@@ -132,8 +132,9 @@ apt-get -qq -y install oxygen-icon-theme
 apt-get -qq -y install kate
 
 # Remove lxqt-powermanagement
-apt-get -qq -y purge lxqt-powermanagement
-apt-get -qq -y purge lxqt-powermanagement-l10n
+#dependency on lxqt
+#apt-get -qq -y purge lxqt-powermanagement
+#apt-get -qq -y purge lxqt-powermanagement-l10n
 
 #Remove Kwin
 apt-get remove kwin
