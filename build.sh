@@ -72,7 +72,7 @@ sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
 
 # Debug: show us what files are around in chroot
-ls -a chroot
+#ls -a chroot
 
 # Mount needed pseudo-filesystems
 sudo mount --rbind /sys chroot/sys
@@ -98,6 +98,9 @@ echo $0: Preparing image...
 
 [ -d image ] && sudo /bin/rm -r image
 tar xf image-${arch}.tar.lzma
+
+# debug for blackscreen issue
+ls -a chroot/boot
 
 # Copy the kernel from the chroot into the image for the LiveCD
 sudo cp chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
