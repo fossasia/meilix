@@ -136,6 +136,12 @@ apt-get -qq -y install kate
 #apt-get -qq -y purge lxqt-powermanagement
 #apt-get -qq -y purge lxqt-powermanagement-l10n
 
+# temporary for debugging black screen issue
+cat /etc/default/grub
+cat /boot/grub/grub.cfg
+ls /boot/grub
+
+
 #Remove Kwin
 apt-get remove kwin
 
