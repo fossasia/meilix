@@ -37,7 +37,12 @@ dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
-apt-get -qq -y install xorg sddm lxqt
+apt-get -qq -y install xorg sddm
+apt-get -qq -y install lxqt
+
+# or alternative
+apt-get -qq -y install openbox pcmanfm-qt lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin lxqt-runner lxqt-session lxqt-sudo
+
 
 # Install ubiquity
 apt-get -qq -y install ubiquity ubiquity-casper ubiquity-slideshow-ubuntu ubiquity-frontend-kde
