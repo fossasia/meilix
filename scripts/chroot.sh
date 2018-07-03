@@ -186,7 +186,9 @@ rm meilix-default-settings_1.0_all.deb
 rm meilix-metapackage_1.0-1_all.deb
 rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 rm meilix-imclient_*_all.deb
-apt-get remove --purge wget apt-transport-https
+
+# Why was this added?
+# apt-get remove --purge wget apt-transport-https
 
 # Reverting earlier initctl override. JM 2012-0604
 rm /sbin/initctl
