@@ -143,8 +143,7 @@ rm /tmp/manifest.$$
 REMOVE='gparted ubiquity ubiquity-frontend-gtk casper live-initramfs user-setup discover1
  xresprobe libdebian-installer4 pptp-linux ndiswrapper-utils-1.9
  ndisgtk linux-wlan-ng libatm1 setserial b43-fwcutter uterm
- linux-headers-generic indicator-session indicator-application
- language-pack-*' 
+ linux-headers-generic indicator-session indicator-application' 
 for i in $REMOVE
 do
     sudo sed -i "/${i}/d" image/casper/filesystem.manifest-desktop
