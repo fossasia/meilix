@@ -42,6 +42,10 @@ sudo apt-get -qq install dpkg-dev debhelper fakeroot
 sudo apt-get -qq install devscripts
 sudo apt-get -qq install tree # for debugging
 
+# Test out what happens if we don't have the image folder anymore
+mv -R image image2
+
+
 # Adding Mew to the Meilix
 # chmod +x ./scripts/mew.sh
 #./scripts/mew.sh
