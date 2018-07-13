@@ -8,12 +8,14 @@ set -eu				# Be strict
 
 # Script parameters: arch mirror gnomelanguage release
 # Arch to build ISO for, i386 or amd64
-arch=${1:-i386}
+#arch=${1:-i386}
+# let's play 64bit
+arch=${1:-amd64}
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Set of GNOME language packs to install.
 #   Use '\*' for all langs, 'en' for English.
-# Install language with the most popcon
+# Install language with the most popcontt
 gnomelanguage=${3:-'{en}'}	
 # Release name, used by debootstrap.  Examples: lucid, maverick, natty.
 release=${4:-xenial}
