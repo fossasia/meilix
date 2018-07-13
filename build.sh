@@ -97,7 +97,7 @@ sudo umount -lfr chroot/dev
 echo $0: Preparing image...
 
 [ -d image ] && sudo /bin/rm -r image
-tar xf image-${arch}.tar.lzma
+tar xvvf image-${arch}.tar.lzma
 
 # debug for blackscreen issue
 ls -a chroot/boot
