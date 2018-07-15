@@ -2,15 +2,14 @@
 # build.sh -- creates an Meilix LiveCD ISO
 # Author: Team
 # Based on HOWTO information by Julien Lavergne <gilir@ubuntu.com>
-# Version: 2017
 
 set -eu				# Be strict
 
 # Script parameters: arch mirror gnomelanguage release
 # Arch to build ISO for, i386 or amd64
-#arch=${1:-i386}
+arch=${1:-i386}
 # let's play 64bit
-arch=${1:-amd64}
+# arch=${1:-amd64}
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Set of GNOME language packs to install.
@@ -63,7 +62,10 @@ chmod +x ./scripts/debuild.sh
 # Section end Metapackages debuild 
 # Create and populate the chroot using debootstrap
 echo Section Chroot
+
+#TODO: document the line that follows
 [ -d chroot ] && sudo rm -R chroot/
+# Debootstrap installs a Linux in the chroot.
 # Debootstrap outputs a lot of 'Information' lines, which can be ignored
 sudo debootstrap --arch=${arch} ${release} chroot ${mirror} # 2>&1 |grep -v "^I: "
 # Use /etc/resolv.conf from the host machine during the build
@@ -102,6 +104,7 @@ sudo umount -lfr chroot/dev
 
 echo $0: Preparing image...
 
+#TODO: document the line that follows
 [ -d image ] && sudo /bin/rm -r image
 tar xvvf image-${arch}.tar.lzma
 
