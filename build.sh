@@ -45,8 +45,8 @@ sudo apt-get -qq install devscripts
 sudo apt-get -qq install tree # for debugging
 
 # Test out what happens if we don't have the image folder anymore
-mv image image2
-mkdir image
+# mv image image2
+# mkdir image
 
 # Adding Mew to the Meilix
 # chmod +x ./scripts/mew.sh
