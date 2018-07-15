@@ -150,9 +150,6 @@ cat /boot/grub/grub.cfg
 ls /boot/grub
 
 
-#Remove Kwin
-apt-get remove kwin
-
 #Google custom ad
 apt-get -qq -y --purge install mygoad
 #Install East Asia font
