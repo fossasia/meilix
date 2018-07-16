@@ -47,7 +47,7 @@ apt-get -qq -y install lxqt
 apt-get -qq -y install openbox pcmanfm-qt lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin lxqt-runner lxqt-session lxqt-sudo
 
 # temp as fallback
-apt-get install lubuntu-desktop
+apt-get -qq -y install lubuntu-desktop
 
 #  may fix the black screen issue 
 # apt-get -qq -y install xserver-xorg-video-intel
