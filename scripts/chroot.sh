@@ -199,6 +199,10 @@ rm meilix-imclient_*_all.deb
 # Why was this added?
 # apt-get remove --purge wget apt-transport-https
 
+# Just for Test purposes
+ls /usr/share/xsessions/
+ls /root/usr/share/xsessions/ 
+
 # Reverting earlier initctl override. JM 2012-0604
 rm /sbin/initctl
 dpkg-divert --rename --remove /sbin/initctl
