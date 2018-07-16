@@ -42,9 +42,13 @@ dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
-apt-get -qq -y install xorg sddm
+#apt-get -qq -y install xorg sddm
+apt-get -qq -y install xorg lightdm
 apt-get -qq -y install lxqt
 apt-get -qq -y install openbox pcmanfm-qt lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin lxqt-runner lxqt-session lxqt-sudo
+
+# set 
+dpkg-reconfigure lightdm 
 
 # temp as fallback
 apt-get -qq -y install lubuntu-desktop
