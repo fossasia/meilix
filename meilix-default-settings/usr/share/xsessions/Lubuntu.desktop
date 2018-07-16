@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Lubuntu
+Comment=Lubuntu - Lightweight X11 desktop environment based on LXDE
+Exec=/usr/bin/lxsession -s Lubuntu -e LXDE
+Type=Application
