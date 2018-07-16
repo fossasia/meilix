@@ -7,7 +7,7 @@ set -eu				# Be strict
 
 # Script parameters: arch mirror gnomelanguage release
 # Arch to build ISO for, i386 or amd64
-arch=${1:-amd64}
+arch=${1:-i386}
 # let's play 64bit
 # arch=${1:-amd64}
 # Ubuntu mirror to use
