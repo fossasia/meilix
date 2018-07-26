@@ -105,7 +105,7 @@ echo $0: Preparing image...
 tar xvvf image-${arch}.tar.lzma
 
 # debug for blackscreen issue
-ls -a chroot/boot
+#ls -a chroot/boot
 
 # Copy the kernel from the chroot into the image for the LiveCD
 sudo \cp -rf chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
@@ -202,6 +202,12 @@ sudo mkisofs -r -V "$IMAGE_NAME" -cache-inodes -J -l \
   -p "${DEBFULLNAME:-$USER} <${DEBEMAIL:-on host $(hostname --fqdn)}>" \
   -A "$IMAGE_NAME" \
   -o ../$ISOFILE .
+
+# USER debug
+whoami
+id -un
+echo $USER
+
 
 # Fix up ownership and permissions on newly created ISO file
 sudo chown $USER:$USER ../$ISOFILE
