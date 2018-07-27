@@ -123,6 +123,8 @@ else
   dpkg -i skype-ubuntu_4.1.0.20-1_i386.deb
 fi
 
+#Overwrite for decreasing the uid
+sed -i '/UID_MIN/ c\UID_MIN 998' /etc/login.defs
 
 # Install graphic
 apt-get -qq -y --purge install gimp inkscape
