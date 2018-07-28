@@ -27,6 +27,9 @@ git:
   depth: 22
 
 script:
+  - export LC_ALL=en_US.UTF-8
+  - export LANG=en_US.UTF-8
+  - export LANGUAGE=en_US.UTF-8
   - chmod +x ./build.sh
   - ./build.sh |& tee log.txt
 
