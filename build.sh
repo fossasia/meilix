@@ -115,6 +115,10 @@ tar xvvf image-${arch}.tar.lzma
 sudo \cp -rf chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
 sudo \cp -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
 
+
+echo debug, Check the contents
+7z l image/casper/initrd.lz
+
 # Extract initrd and update uuid configuration
 7z e image/casper/initrd.lz && \
   mkdir initrd_FILES/ && \
