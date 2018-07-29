@@ -114,8 +114,8 @@ ls -a chroot/boot
 sudo \cp --verbose -rf chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
 sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
 
-echo debug, Check the contents
-7z l image/casper/initrd.lz
+#echo debug, Check the contents
+#7z l image/casper/initrd.lz#
 file image/casper/initrd.lz 
 
 # Extract initrd for complex for case 2 and update uuid configuration
@@ -124,7 +124,9 @@ file image/casper/initrd.lz
   mkdir initrd_FILES
   cp image/casper/initrd.lz initrd_FILES/initrd.lz
   cd initrd_FILES
+  ls
   (cpio -id; zcat | cpio -id) < initrd.lz 
+  ls
   cd .. && \ 
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
