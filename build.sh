@@ -124,7 +124,7 @@ file image/casper/initrd.lz
   mkdir initrd_FILES
   cd initrd_FILES
   (cpio -id; zcat | cpio -id) < image/casper/initrd.lz 
-  cd .. 
+  cd .. && \ 
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
 
