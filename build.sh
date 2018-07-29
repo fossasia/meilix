@@ -114,13 +114,23 @@ ls -a chroot/boot
 sudo \cp --verbose -rf chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
 sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
 
-
 echo debug, Check the contents
 7z l image/casper/initrd.lz
 file image/casper/initrd.lz 
 
+# Extract initrd for complex for case 2 and update uuid configuration
+# file initrd.lz outputs ASCII cpio archive (SVR4 with no CRC)
+# see also 7z l image/casper/initrd.lz which displays a block on top.
+  mkdir initrd_FILES
+  cd initrd_FILES
+  (cpio -id; zcat | cpio -id) < image/casper/initrd.lz 
+  cd .. 
+  cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
+  rm -R initrd_FILES/
 
-# Extract initrd and update uuid configuration
+# Extract initrd for case 1 (lz archive) and update uuid configuration
+# file initrd.lz outputs gzip compressed data, last modified XYZ, from Unix
+# see also 7z l image/casper/initrd.lz which displays initrd
 7z e image/casper/initrd.lz && \
   mkdir initrd_FILES/ && \
   mv initrd initrd_FILES/ && \
