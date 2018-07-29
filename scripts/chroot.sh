@@ -42,19 +42,19 @@ dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
-#apt-get -qq -y install xorg sddm
+apt-get -qq -y install xorg sddm
 apt-get -qq -y install xorg lightdm
+apt-get -qq -y install xserver-xorg-video-intel
+
 apt-get -qq -y install lxqt
 apt-get -qq -y install openbox pcmanfm-qt lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin lxqt-runner lxqt-session lxqt-sudo
 
+
+sudo apt-get install lightdm-gtk-greeter
 # set 
 dpkg-reconfigure lightdm 
 
-# temp as fallback
-apt-get -qq -y install lubuntu-desktop
-
-#  may fix the black screen issue 
-# apt-get -qq -y install xserver-xorg-video-intel
+#apt-get -qq -y install lubuntu-desktop
 
 # Install ubiquity
 apt-get -qq -y install ubiquity ubiquity-casper ubiquity-slideshow-ubuntu ubiquity-frontend-kde
