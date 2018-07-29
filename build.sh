@@ -122,8 +122,9 @@ file image/casper/initrd.lz
 # file initrd.lz outputs ASCII cpio archive (SVR4 with no CRC)
 # see also 7z l image/casper/initrd.lz which displays a block on top.
   mkdir initrd_FILES
+  cp image/casper/initrd.lz initrd_FILES/initrd.lz
   cd initrd_FILES
-  (cpio -id; zcat | cpio -id) < ../image/casper/initrd.lz 
+  (cpio -id; zcat | cpio -id) < initrd.lz 
   cd .. && \ 
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
