@@ -132,14 +132,14 @@ file image/casper/initrd.lz
 # Extract initrd for case 1 (lz archive) and update uuid configuration
 # file initrd.lz outputs gzip compressed data, last modified XYZ, from Unix
 # see also 7z l image/casper/initrd.lz which displays initrd
-7z e image/casper/initrd.lz && \
-  mkdir initrd_FILES/ && \
-  mv initrd initrd_FILES/ && \
-  cd initrd_FILES/ && \
-  cpio -id < initrd && \
-  cd .. && \
-  cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
-  rm -R initrd_FILES/
+#7z e image/casper/initrd.lz && \
+#  mkdir initrd_FILES/ && \
+#  mv initrd initrd_FILES/ && \
+#  cd initrd_FILES/ && \
+#  cpio -id < initrd && \
+#  cd .. && \
+#  cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
+#  rm -R initrd_FILES/
 
 # Fix old version and date info in .hlp files
 newversion=$(date -u +%y.%m) 		# Should be derived from releasename $4 FIXME
