@@ -123,7 +123,7 @@ file image/casper/initrd.lz
 # see also 7z l image/casper/initrd.lz which displays a block on top.
   mkdir initrd_FILES
   cd initrd_FILES
-  (cpio -id; zcat | cpio -id) < image/casper/initrd.lz 
+  (cpio -id; zcat | cpio -id) < ../image/casper/initrd.lz 
   cd .. && \ 
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
