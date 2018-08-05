@@ -11,9 +11,9 @@ export LANGUAGE=en_US.UTF-8
 
 # Script parameters: arch mirror gnomelanguage release
 # Arch to build ISO for, i386 or amd64
-arch=${1:-i386}
+#arch=${1:-i386}
 # let's play 64bit
-# arch=${1:-amd64}
+arch=${1:-amd64}
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Set of GNOME language packs to install.
@@ -121,12 +121,13 @@ file image/casper/initrd.lz
 # Extract initrd for complex for case 2 and update uuid configuration
 # file initrd.lz outputs ASCII cpio archive (SVR4 with no CRC)
 # see also 7z l image/casper/initrd.lz which displays a block on top.
-  mkdir initrd_FILES
-  cp image/casper/initrd.lz initrd_FILES/initrd.lz
-  cd initrd_FILES
-  ls
-  (cpio -id; zcat | cpio -id) < initrd.lz 
-  ls
+  mkdir initrd_FILES && \
+  cp image/casper/initrd.lz initrd_FILES/initrd.lz && \
+  cd initrd_FILES && \
+  ls && \
+  (cpio -id; uncompress -c | cpio -id) < initrd.lz 
+   #  (cpio -id; zcat | cpio -id) < initrd.lz 
+  ls && \
   cd .. && \ 
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
