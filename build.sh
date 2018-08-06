@@ -47,6 +47,15 @@ sudo apt-get -qq install dpkg-dev debhelper fakeroot
 sudo apt-get -qq install devscripts
 sudo apt-get -qq install tree # for debugging
 
+# Initram extraction, see https://unix.stackexchange.com/questions/163346/why-is-it-that-my-initrd-only-has-one-directory-namely-kernel
+sudo apt-get -qq install binwalk
+initramfs-extract() {
+    local target=$1
+    local offset=$(binwalk -y gzip $1 | awk '$3 ~ /gzip/ { print $1; exit }')
+    shift
+    dd if=$target bs=$offset skip=1 | zcat | cpio -id --no-absolute-filenames $@
+}
+
 # Adding Mew to the Meilix
 # chmod +x ./scripts/mew.sh
 #./scripts/mew.sh
@@ -130,7 +139,8 @@ lzcat -dS .lz image/casper/initrd.lz | cpio -iv
   cp image/casper/initrd.lz initrd_FILES/initrd.lz && \
   cd initrd_FILES && \
   #(cpio -id; uncompress -c | cpio -id) < initrd.lz 
-  (cpio -idvm; zcat | cpio -idvm) < initrd.lz && \
+  #(cpio -idvm; zcat | cpio -idvm) < initrd.lz && \
+  initramfs-extract initrd.lz -v
   ls && \
   cd .. && \ 
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
