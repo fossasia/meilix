@@ -140,7 +140,7 @@ setterm -blank 0 >> /etc/issue
 #Install vlc
 apt-get -qq -y install vlc
 
-#Instal dropbox
+#Install dropbox
 apt-get -qq -y install nautilus-dropbox
 nautilus --quit
 
