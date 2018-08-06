@@ -11,9 +11,9 @@ export LANGUAGE=en_US.UTF-8
 
 # Script parameters: arch mirror gnomelanguage release
 # Arch to build ISO for, i386 or amd64
-#arch=${1:-i386}
+arch=${1:-i386}
 # let's play 64bit
-arch=${1:-amd64}
+#arch=${1:-amd64}
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Set of GNOME language packs to install.
@@ -131,8 +131,7 @@ sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
 #which cpio
 #lzcat -dS .lz image/casper/initrd.lz | cpio -iv
 # ?? unmakeinitramfs??
-echo vorher
-less image/.disk/casper-uuid-generic
+
 # Extract initrd for complex for case 2 and update uuid configuration
 # file initrd.lz outputs ASCII cpio archive (SVR4 with no CRC)
 # see also 7z l image/casper/initrd.lz which displays a block on top.
@@ -145,8 +144,6 @@ less image/.disk/casper-uuid-generic
   cd ..  && \
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
-echo danach
-less image/.disk/casper-uuid-generic
 # Extract initrd for case 1 (lz archive) and update uuid configuration
 # file initrd.lz outputs gzip compressed data, last modified XYZ, from Unix
 # see also 7z l image/casper/initrd.lz which displays initrd
@@ -242,10 +239,9 @@ sudo mkisofs -r -V "$IMAGE_NAME" -cache-inodes -J -l \
   -o ../$ISOFILE .
 
 # USER debug
-whoami
-id -un
-echo $USER
-
+#whoami
+#id -un
+#echo $USER
 
 # Fix up ownership and permissions on newly created ISO file
 sudo chown $USER:$USER ../$ISOFILE
