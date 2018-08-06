@@ -121,6 +121,7 @@ which zcat
 which uncompress
 which cpio
 lzcat -dS .lz image/casper/initrd.lz | cpio -iv
+# ?? unmakeinitramfs??
 
 # Extract initrd for complex for case 2 and update uuid configuration
 # file initrd.lz outputs ASCII cpio archive (SVR4 with no CRC)
@@ -129,7 +130,7 @@ lzcat -dS .lz image/casper/initrd.lz | cpio -iv
   cp image/casper/initrd.lz initrd_FILES/initrd.lz && \
   cd initrd_FILES && \
   #(cpio -id; uncompress -c | cpio -id) < initrd.lz 
-  (cpio -id; zcat | cpio -id) < initrd.lz && \
+  (cpio -idvm; zcat | cpio -idvm) < initrd.lz && \
   ls && \
   cd .. && \ 
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
