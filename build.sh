@@ -140,18 +140,15 @@ which cpio
   cd initrd_FILES && \
   #(cpio -id; uncompress -c | cpio -id) < initrd.lz 
   #(cpio -idvm; zcat | cpio -idvm) < initrd.lz && \
-  echo vor
   initramfs-extract initrd.lz -v && \
-  echo danach
-  ls && \
-  cd .. && \ 
+  cd ..  && \
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
-
+echo fin45
 # Extract initrd for case 1 (lz archive) and update uuid configuration
 # file initrd.lz outputs gzip compressed data, last modified XYZ, from Unix
 # see also 7z l image/casper/initrd.lz which displays initrd
-#7z e image/casper/initrd.lz && \
+# 7z e image/casper/initrd.lz && \
 #  mkdir initrd_FILES/ && \
 #  mv initrd initrd_FILES/ && \
 #  cd initrd_FILES/ && \
