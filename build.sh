@@ -129,7 +129,7 @@ lzcat -dS .lz image/casper/initrd.lz | cpio -iv
   cp image/casper/initrd.lz initrd_FILES/initrd.lz && \
   cd initrd_FILES && \
   #(cpio -id; uncompress -c | cpio -id) < initrd.lz 
-  (cpio -id; zcat | cpio -id) < initrd.lz 
+  (cpio -id; zcat | cpio -id) < initrd.lz && \
   ls && \
   cd .. && \ 
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
