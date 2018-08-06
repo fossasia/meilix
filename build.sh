@@ -115,11 +115,12 @@ sudo \cp --verbose -rf chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
 sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
 
 #echo debug, Check the contents
-#7z l image/casper/initrd.lz#
+7z l image/casper/initrd.lz
 file image/casper/initrd.lz 
 which zcat
 which uncompress
 which cpio
+lzcat -dS .lz image/casper/initrd.lz | cpio -iv
 
 # Extract initrd for complex for case 2 and update uuid configuration
 # file initrd.lz outputs ASCII cpio archive (SVR4 with no CRC)
@@ -127,7 +128,6 @@ which cpio
   mkdir initrd_FILES && \
   cp image/casper/initrd.lz initrd_FILES/initrd.lz && \
   cd initrd_FILES && \
-  ls && \
   #(cpio -id; uncompress -c | cpio -id) < initrd.lz 
   (cpio -id; zcat | cpio -id) < initrd.lz 
   ls && \
