@@ -117,21 +117,22 @@ echo $0: Preparing image...
 [ -d image ] && sudo /bin/rm -r image
 tar xvvf image-${arch}.tar.lzma
 
-ls -a chroot/boot
+#ls -a chroot/boot
 
 # Copy the kernel from the chroot into the image for the LiveCD
 sudo \cp --verbose -rf chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
 sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
 
 #echo debug, Check the contents
-7z l image/casper/initrd.lz
-file image/casper/initrd.lz 
-which zcat
-which uncompress
-which cpio
+#7z l image/casper/initrd.lz
+#file image/casper/initrd.lz 
+#which zcat
+#which uncompress
+#which cpio
 #lzcat -dS .lz image/casper/initrd.lz | cpio -iv
 # ?? unmakeinitramfs??
-
+echo vorher
+less image/.disk/casper-uuid-generic
 # Extract initrd for complex for case 2 and update uuid configuration
 # file initrd.lz outputs ASCII cpio archive (SVR4 with no CRC)
 # see also 7z l image/casper/initrd.lz which displays a block on top.
@@ -144,7 +145,8 @@ which cpio
   cd ..  && \
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
-echo fin45
+echo danach
+less image/.disk/casper-uuid-generic
 # Extract initrd for case 1 (lz archive) and update uuid configuration
 # file initrd.lz outputs gzip compressed data, last modified XYZ, from Unix
 # see also 7z l image/casper/initrd.lz which displays initrd
