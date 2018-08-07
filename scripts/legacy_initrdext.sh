@@ -11,7 +11,7 @@
 # which uncompress
 # which cpio
 
-# Legacy method:
+# Legacy method used by the original lubuntu/meilix script (that fails with current kernels)
 # Extract initrd for case 1 (lz archive) and update uuid configuration
 # file initrd.lz outputs gzip compressed data, last modified XYZ, from Unix
 # see also 7z l image/casper/initrd.lz which displays initrd
