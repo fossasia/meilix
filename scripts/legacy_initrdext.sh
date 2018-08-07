@@ -1,6 +1,7 @@
-# File includes some legacy hints on dealing with the init ramdisk formats
+#!/bin/bash
+# File includes some legacy hints on dealing with the compressed init ramdisk formats
 
-# General:
+# General info.
  
 # 7z l image/casper/initrd.lz
 # file image/casper/initrd.lz 
