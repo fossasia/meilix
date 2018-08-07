@@ -31,3 +31,13 @@
 # (cpio -idvm; zcat | cpio -idvm) < initrd.lz
 # should get you the actual initramdisc
 # in the build.sh we use another method with a bitwalk dependency.
+# this it the current Initram extraction method used as found on stackexchange:
+# https://unix.stackexchange.com/questions/163346/why-is-it-that-my-initrd-only-has-one-directory-namely-kernel
+#sudo apt-get -qq install binwalk
+#initramfs-extract() {
+#    local target=$1
+#    local offset=$(binwalk -y gzip $1 | awk '$3 ~ /gzip/ { print $1; exit }')
+#    shift
+#    dd if=$target bs=$offset skip=1 | zcat | cpio -id --no-absolute-filenames $@
+#}
+
