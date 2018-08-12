@@ -12,8 +12,8 @@ export LANGUAGE=en_US.UTF-8
 # Script parameters: arch mirror gnomelanguage release
 
 # Arch to build ISO for, i386 or amd64
-arch=${1:-i386}
-#arch=${1:-amd64}
+#arch=${1:-i386}
+arch=${1:-amd64}
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Set of GNOME language packs to install.
@@ -63,14 +63,14 @@ chmod +x ./scripts/debuild.sh
 
 # Create and populate the chroot using debootstrap
 
-#Clean chroot
+# Remove existing chroot if exists
 [ -d chroot ] && sudo rm -R chroot/
 # Debootstrap installs a Linux in the chroot. Output can be ignored
 sudo debootstrap --arch=${arch} ${release} chroot ${mirror} # 2>&1 |grep -v "^I: "
 # Use /etc/resolv.conf from the host machine during the build
 sudo cp -vr /etc/resolvconf chroot/etc/resolvconf
 
-# Copy the source.list to enable universe / multiverse in the chroot, and eventually additional repos.
+# Copy the sources.list to enable universe / multiverse in the chroot, and eventually additional repos.
 sudo cp -v sources.list chroot/etc/apt/sources.list
 
 # Copy our custom packages
@@ -103,7 +103,7 @@ sudo umount -lfr chroot/dev
 
 echo $0: Preparing image...
 
-#T Clean leftovers in the image directory
+# Clean leftovers in the image directory
 [ -d image ] && sudo /bin/rm -r image
 
 # Extract a new image folder
@@ -123,7 +123,7 @@ sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
   rm -R initrd_FILES/
 
 # Fix old version and date info in .hlp files
-newversion=$(date -u +%y.%m) 		# Should be derived from releasename $4 FIXME
+newversion=$(date -u +%y.%m) # Should be derived from releasename $4 FIXME
 for oldversion in 17.08
 do
   sed -i -e "s/${oldversion}/${newversion}/g" image/isolinux/*.hlp image/isolinux/f1.txt
