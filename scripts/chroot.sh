@@ -38,7 +38,7 @@ apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
 #see if this works, needs refactoring
-sed -i 's\USERNAME=casper\USERNAME=hotelos\g' /root/usr/share/initramfs-tools/scripts/casper
+sed -i 's\USERNAME=casper\USERNAME=hotelos\g' /usr/share/initramfs-tools/scripts/casper
 
 # Install meilix metapackage
 dpkg -i meilix-metapackage*.deb
