@@ -57,7 +57,7 @@ sudo apt-get install lightdm-gtk-greeter
 # set 
 dpkg-reconfigure lightdm 
 
-#apt-get -qq -y install lubuntu-desktop
+apt-get -qq -y install lubuntu-desktop
 
 # Install ubiquity
 apt-get -qq -y install ubiquity ubiquity-casper ubiquity-slideshow-ubuntu ubiquity-frontend-kde
