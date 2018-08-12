@@ -46,7 +46,7 @@ apt-get -qq -y install xorg sddm
 apt-get -qq -y install xorg lightdm
 apt-get -qq -y install xserver-xorg-video-intel
 
-apt-get -qq -y install lxqt
+apt-get -qq -y install lxqt 
 apt-get -qq -y install openbox pcmanfm-qt lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin lxqt-runner lxqt-session lxqt-sudo
 
 
@@ -160,7 +160,6 @@ cat /etc/default/grub
 cat /boot/grub/grub.cfg
 ls /boot/grub
 
-
 #Remove Kwin
 #apt-get remove kwin
 
@@ -208,6 +207,12 @@ rm meilix-imclient_*_all.deb
 # Just for Test purposes
 ls /usr/share/xsessions/
 ls /root/usr/share/xsessions/ 
+echo passphrase section
+ls /usr/share/initramfs-tools/scripts/casper
+less /usr/share/initramfs-tools/scripts/casper
+less /usr/share/initramfs-tools/scripts/casper-bottom/10adduser
+ls /usr/share/initramfs-tools/scripts/casper-bottom/
+echo passphrase section
 
 # Reverting earlier initctl override. JM 2012-0604
 rm /sbin/initctl
