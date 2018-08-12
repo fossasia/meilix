@@ -208,10 +208,10 @@ rm meilix-imclient_*_all.deb
 ls /usr/share/xsessions/
 ls /root/usr/share/xsessions/ 
 echo passphrase section
-ls /usr/share/initramfs-tools/scripts/casper
-less /usr/share/initramfs-tools/scripts/casper
-less /usr/share/initramfs-tools/scripts/casper-bottom/10adduser
-ls /usr/share/initramfs-tools/scripts/casper-bottom/
+ls /root/usr/share/initramfs-tools/scripts/casper
+less /root/usr/share/initramfs-tools/scripts/casper
+less /root/usr/share/initramfs-tools/scripts/casper-bottom/10adduser
+ls /root/usr/share/initramfs-tools/scripts/casper-bottom/
 echo passphrase section
 
 # Reverting earlier initctl override. JM 2012-0604
