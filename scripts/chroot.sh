@@ -53,7 +53,7 @@ apt-get -qq -y install lxqt openbox
 apt-get -qq -y install openbox pcmanfm-qt lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin lxqt-runner lxqt-session lxqt-sudo
 
 
-sudo apt-get install lightdm-gtk-greeter
+#sudo apt-get install lightdm-gtk-greeter
 # set 
 dpkg-reconfigure lightdm 
 
