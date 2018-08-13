@@ -47,3 +47,4 @@ deb http://security.ubuntu.com/ubuntu xenial-security multiverse
 #Lubuntu Repository
 #deb http://ppa.launchpad.net/lubuntu-dev/lubuntu-daily/ubuntu xenial main 
 #deb-src http://ppa.launchpad.net/lubuntu-dev/lubuntu-daily/ubuntu xenial main 
+deb http://ppa.launchpad.net/lubuntu-desktop/ppa/ubuntu xenial main
