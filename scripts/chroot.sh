@@ -41,8 +41,8 @@ apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
 sed -i 's\USERNAME=casper\USERNAME=hotelos\g' /usr/share/initramfs-tools/scripts/casper
 
 # Install meilix metapackage
-dpkg -i meilix-metapackage*.deb
-apt-get install -f
+#dpkg -i meilix-metapackage*.deb
+#apt-get install -f
 
 # Install base packages
 apt-get -qq -y install xorg sddm
