@@ -45,8 +45,8 @@ dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
-#apt-get -qq -y install xorg sddm
-apt-get -qq -y install xorg lightdm
+apt-get -qq -y install xorg sddm
+#apt-get -qq -y install xorg lightdm
 #apt-get -qq -y install xserver-xorg-video-intel
 
 apt-get -qq -y install lxqt 
@@ -55,7 +55,7 @@ apt-get -qq -y install openbox pcmanfm-qt lxqt-admin lxqt-common lxqt-config lxq
 
 sudo apt-get install lightdm-gtk-greeter
 # set 
-dpkg-reconfigure lightdm 
+# dpkg-reconfigure lightdm 
 
 #apt-get -qq -y install lubuntu-desktop
 
@@ -117,7 +117,7 @@ apt-get -qq -y --purge install lxrandr
 apt-get -qq -y --purge install flashplugin-installer google-talkplugin pidgin qpdfview libqtwebkit4
 
 # Install local Skype 32Bit package
-if [ ${arch} == 'x86_64' ]; then
+if [ ${arch} == 'amd64' ]; then
   # 64-bit
   wget https://go.skype.com/skypeforlinux-64.deb
   dpkg -i skypeforlinux-64.deb
@@ -213,9 +213,12 @@ ls /root/usr/share/xsessions/
 echo passphrase section
 ls /usr/share/initramfs-tools/scripts/casper
 less /usr/share/initramfs-tools/scripts/casper
+echo Skript 10
 less /usr/share/initramfs-tools/scripts/casper-bottom/10adduser
+echo Skript 15
+less /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 ls /usr/share/initramfs-tools/scripts/casper-bottom/
-echo passphrase section
+echo end passphrase section
 
 # Reverting earlier initctl override. JM 2012-0604
 rm /sbin/initctl
