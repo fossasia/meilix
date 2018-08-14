@@ -211,16 +211,14 @@ rm meilix-imclient_*_all.deb
 # apt-get remove --purge wget apt-transport-https
 
 # Just for Test purposes
-ls /usr/share/xsessions/
-ls /root/usr/share/xsessions/ 
+ls /usr/share/xsessions/ 
 echo passphrase section
 ls /usr/share/initramfs-tools/scripts/casper
-less /usr/share/initramfs-tools/scripts/casper
-echo Skript 10
-less /usr/share/initramfs-tools/scripts/casper-bottom/10adduser
-echo Skript 15
-less /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 ls /usr/share/initramfs-tools/scripts/casper-bottom/
+echo Skript 25
+less /usr/share/initramfs-tools/scripts/casper-bottom/25adduser
+echo Skript 15
+cat /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 echo end passphrase section
 
 # Reverting earlier initctl override. JM 2012-0604
