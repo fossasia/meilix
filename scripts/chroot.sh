@@ -46,8 +46,9 @@ dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
-#apt-get -qq -y install xorg sddm
-apt-get -qq -y install xorg lightdm
+apt-get -qq -y install xorg 
+apt-get -qq -y install sddm
+#apt-get -qq -y install xorg lightdm
 #apt-get -qq -y install xserver-xorg-video-intel
 
 apt-get -qq -y --allow-unauthenticated install lxqt openbox
@@ -59,7 +60,7 @@ lxqt-runner lxqt-session lxqt-sudo
 
 #sudo apt-get install lightdm-gtk-greeter
 # set 
-dpkg-reconfigure lightdm 
+#dpkg-reconfigure lightdm 
 
 #apt-get -qq -y install lubuntu-desktop
 
@@ -67,7 +68,7 @@ dpkg-reconfigure lightdm
 apt-get -qq -y install ubiquity ubiquity-casper ubiquity-slideshow-ubuntu ubiquity-frontend-kde
 
 # Install Jitsi Meet
-apt-get -y install jitsi-meet
+#apt-get -y install jitsi-meet
 
 # Plymouth theme 
 apt-get -qq -y install plymouth-label #dependency of our theme
@@ -93,8 +94,6 @@ update-initramfs -u # update initram
 #update-initramfs -u -b /image/casper # update initram
 update-initramfs -c -k all
 #update-initramfs -c -k all -b /image/casper
-ls /
-
 
 # Fix chromium install problem
  mv /etc/chromium-browser/ /etc/chromium-browser_
@@ -183,8 +182,8 @@ apt-get -qq -y --purge install ibus-unikey ibus-anthy ibus-pinyin ibus-m17n
 apt-get -qq -y --purge install im-switch
 
 # Meilix default settings
-#dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
-update-initramfs -u
+dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
+update-initramfs -u -k all
 dpkg -i --force-overwrite systemlock_0.1-1_all.deb
 apt-get install -f
 apt-get -qq -y remove dconf-tools
