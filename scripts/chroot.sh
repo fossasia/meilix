@@ -38,7 +38,7 @@ apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
 #see if this works, needs refactoring
-sed -i 's\USERNAME=casper\USERNAME=hotelos\g' /usr/share/initramfs-tools/scripts/casper
+#sed -i 's\USERNAME=casper\USERNAME=hotelos\g' /usr/share/initramfs-tools/scripts/casper
 
 # Install meilix metapackage
 dpkg -i meilix-metapackage*.deb
@@ -49,8 +49,11 @@ apt-get install -f
 apt-get -qq -y install xorg lightdm
 #apt-get -qq -y install xserver-xorg-video-intel
 
-apt-get -qq -y install lxqt openbox
-apt-get -qq -y install openbox pcmanfm-qt lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin lxqt-runner lxqt-session lxqt-sudo
+apt-get -qq -y --allow-unauthenticated install lxqt openbox
+apt-get -qq -y --allow-unauthenticated install openbox pcmanfm-qt \
+lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd \
+lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin \
+lxqt-runner lxqt-session lxqt-sudo
 
 
 #sudo apt-get install lightdm-gtk-greeter
