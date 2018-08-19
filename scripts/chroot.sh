@@ -47,8 +47,8 @@ apt-get install -f
 
 # Install base packages
 apt-get -qq -y install xorg 
-apt-get -qq -y install sddm
-#apt-get -qq -y install xorg lightdm
+#apt-get -qq -y install sddm
+apt-get -qq -y install xorg lightdm
 #apt-get -qq -y install xserver-xorg-video-intel
 
 apt-get -qq -y --allow-unauthenticated install lxqt openbox
@@ -58,9 +58,11 @@ lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin \
 lxqt-runner lxqt-session lxqt-sudo
 
 
-#sudo apt-get install lightdm-gtk-greeter
+sudo apt-get install lightdm-gtk-greeter
 # set 
-#dpkg-reconfigure lightdm 
+dpkg-reconfigure lightdm 
+
+/usr/lib/lightdm/lightdm-set-defaults --autologin hotelos 
 
 #apt-get -qq -y install lubuntu-desktop
 
