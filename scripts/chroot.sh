@@ -39,7 +39,7 @@ apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
 #see if this works, needs refactoring
-#sed -i 's\USERNAME=casper\USERNAME=hotelos\g' /usr/share/initramfs-tools/scripts/casper
+sed -i 's\USERNAME=casper\USERNAME=hotelos\g' /usr/share/initramfs-tools/scripts/casper
 
 # Install meilix metapackage
 dpkg -i meilix-metapackage*.deb
@@ -183,8 +183,10 @@ apt-get -qq -y --purge install im-switch
 
 # Meilix default settings
 dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
+sed -i 's\USERNAME=casper\USERNAME=hotelos\g' /usr/share/initramfs-tools/scripts/casper
 update-initramfs -u -k all
 dpkg -i --force-overwrite systemlock_0.1-1_all.deb
+sed -i 's\USERNAME=casper\USERNAME=hotelos\g' /usr/share/initramfs-tools/scripts/casper
 apt-get install -f
 apt-get -qq -y remove dconf-tools
 
@@ -202,6 +204,8 @@ perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/li
 apt-get -qq clean
 rm -rf /tmp/*
 #rm /etc/resolv.conf
+
+
 rm meilix-default-settings_1.0_all.deb
 rm meilix-metapackage_1.0-1_all.deb
 rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
