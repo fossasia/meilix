@@ -21,11 +21,6 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E1098513
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1EBD81D9
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 91E7EE5E
 
-#wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | apt-key add -
-
-# Create a sources.list.d file with the repository
-# sudo sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/jitsi-stable.list"
-
 if [ ${arch} == 'amd64' ]; then
 # add support for i386 packages
 dpkg --add-architecture i386
@@ -46,31 +41,29 @@ dpkg -i meilix-metapackage*.deb
 apt-get install -f
 
 # Install base packages
-apt-get -qq -y install xorg 
-#apt-get -qq -y install sddm
-apt-get -qq -y install xorg lightdm
+apt-get -qq -y install xorg  
+apt-get -qq -y install sddm
+# apt-get -qq -y install lightdm
 #apt-get -qq -y install xserver-xorg-video-intel
 
-apt-get -qq -y --allow-unauthenticated install lxqt openbox
-apt-get -qq -y --allow-unauthenticated install openbox pcmanfm-qt \
-lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd \
-lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin \
-lxqt-runner lxqt-session lxqt-sudo
+apt-get -qq -y --allow-unauthenticated install lxqt openbox 
+apt-get -qq -y --allow-unauthenticated install pcmanfm-qt 
+apt-get -qq -y --allow-unauthenticated install lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd 
+apt-get -qq -y --allow-unauthenticated install lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin \
+apt-get -qq -y --allow-unauthenticated install lxqt-runner lxqt-session lxqt-sudo
 
 
-sudo apt-get install lightdm-gtk-greeter
+#sudo apt-get install lightdm-gtk-greeter
 # set 
-dpkg-reconfigure lightdm 
+#dpkg-reconfigure lightdm 
 
-/usr/lib/lightdm/lightdm-set-defaults --autologin hotelos 
+#/usr/lib/lightdm/lightdm-set-defaults --autologin hotelos 
 
 #apt-get -qq -y install lubuntu-desktop
 
 # Install ubiquity
 apt-get -qq -y install ubiquity ubiquity-casper ubiquity-slideshow-ubuntu ubiquity-frontend-kde
 
-# Install Jitsi Meet
-#apt-get -y install jitsi-meet
 
 # Plymouth theme 
 apt-get -qq -y install plymouth-label #dependency of our theme
