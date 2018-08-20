@@ -136,7 +136,7 @@ sed -i '/UID_MIN/ c\UID_MIN 998' /etc/login.defs
 
 # Install graphic
 apt-get -qq -y --purge install gimp inkscape
-apt-get -qq -y --purge remove imagemagick
+#apt-get -qq -y --purge remove imagemagick
 
 # Install Libreoffice
 apt-get -qq -y --purge install --no-install-recommends libreoffice-gtk libreoffice-gtk libreoffice-writer libreoffice-calc libreoffice-impress
@@ -156,7 +156,7 @@ nautilus --quit
 apt-get -qq -y install oxygen-icon-theme
 
 # Install text editor
-# apt-get -qq -y install kate
+apt-get -qq -y install kate
 
 # Remove lxqt-powermanagement
 #dependency on lxqt
@@ -217,6 +217,12 @@ rm meilix-imclient_*_all.deb
 # apt-get remove --purge wget apt-transport-https
 
 # Just for Test purposes
+echo initramfs.con
+cat conf/initramfs.conf
+echo uuid.conf
+cat conf/uuid.conf
+echo conf.d
+cat conf/conf.d
 ls /usr/share/xsessions/ 
 echo passphrase section
 ls /usr/share/initramfs-tools/scripts/casper
