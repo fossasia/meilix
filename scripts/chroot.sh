@@ -48,6 +48,7 @@ apt-get -qq -y install sddm
 
 apt-get -qq -y --allow-unauthenticated install lxqt openbox 
 apt-get -qq -y --allow-unauthenticated install pcmanfm-qt 
+apt-get -qq -y --allow-unauthenticated install lxqt-metapackage
 apt-get -qq -y --allow-unauthenticated install lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd 
 apt-get -qq -y --allow-unauthenticated install lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin \
 apt-get -qq -y --allow-unauthenticated install lxqt-runner lxqt-session lxqt-sudo
