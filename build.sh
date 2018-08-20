@@ -58,6 +58,7 @@ initramfs-extract() {
 }
 
 # Debuilding the metapackages
+rm plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
