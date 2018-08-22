@@ -29,6 +29,8 @@ fi
 # Update in-chroot package database
 apt-get -qq update
 
+apt-get -qq -y install glib2 #may resolve error
+
 # Install core packages
 apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
@@ -45,6 +47,8 @@ apt-get -qq -y install xorg
 apt-get -qq -y install sddm
 # apt-get -qq -y install lightdm
 #apt-get -qq -y install xserver-xorg-video-intel
+
+
 
 apt-get -qq -y --allow-unauthenticated install lxqt openbox 
 apt-get -qq -y --allow-unauthenticated install pcmanfm-qt 
