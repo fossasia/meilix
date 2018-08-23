@@ -108,7 +108,8 @@ echo $0: Preparing image...
 [ -d image ] && sudo /bin/rm -r image
 
 # Extract a new image folder
-tar xvvf image-${arch}.tar.lzma
+#tar image-${arch}.tar.lzma
+tar xvvf ${arch}.tar.lzma
 
 # Copy the kernel from the chroot into the image for the LiveCD
 sudo \cp --verbose -rf chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
