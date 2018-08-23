@@ -41,6 +41,8 @@ do
   fi
 done
 
+sudo rm -R 	db 
+sudo rm -R 	dists/trusty
 # Make sure we have the tools we need installed
 sudo apt-get update
 sudo apt-get -qq install $devtools -y --no-install-recommends
