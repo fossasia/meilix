@@ -17,6 +17,7 @@ ln -s /bin/true /sbin/initctl
 apt-get install wget apt-transport-https
 
 # Add key for third party repo
+apt-key update 
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E1098513
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1EBD81D9
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 91E7EE5E
