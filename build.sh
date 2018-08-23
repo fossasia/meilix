@@ -21,7 +21,7 @@ mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Install language with the most popcontt
 gnomelanguage=${3:-'{en}'}	
 # Release name, used by debootstrap.  Examples: lucid, maverick, natty.
-release=${4:-xenial}
+release=${4:-bionic}
 
 # Necessary data files
 datafiles="image-${arch}.tar.lzma sources.list"
