@@ -44,7 +44,8 @@ done
 sudo rm -R 	db 
 sudo rm -R 	dists/trusty
 # Make sure we have the tools we need installed
-sudo apt-get update
+sudo apt-get updatesudo apt-get clean
+sudo apt-get clean
 sudo apt-get -qq install $devtools -y --no-install-recommends
 sudo apt-get -qq install dpkg-dev debhelper fakeroot
 sudo apt-get -qq install devscripts
