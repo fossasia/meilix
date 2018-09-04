@@ -1,6 +1,6 @@
 [Plymouth Theme]
 Name=Meilix Text
-Description=Text mode theme based on kubuntu-logo theme
+Description=Text mode plymouth theme for Meilix
 ModuleName=meilix-text
 
 [ubuntu-text]
