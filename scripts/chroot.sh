@@ -73,7 +73,8 @@ apt-get -qq -y install ubiquity ubiquity-casper ubiquity-slideshow-ubuntu ubiqui
 
 # Plymouth theme 
 apt-get -qq -y install plymouth-label #dependency of our theme
-dpkg -i plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
+dpkg -i plymouth-meilix-logo_1.0-1_all.deb 
+dpkg -i plymouth-meilix-text_1.0-1_all.deb
 apt-get install -f
 
 ls /usr/share/plymouth/themes # show us which themes we have
