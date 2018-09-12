@@ -8,7 +8,7 @@ Beautiful Linux Build Distro
 * Philosophy: light weight, fast, customized
 * Reasonable preconfigured settings for the use case
 * [system lock](https://github.com/fossasia/meilix-systemlock/)
-* Custom splash screen (code to be moved to https://github.com/fossasia/meilix-artwork/)
+* Custom splash screen, code to be moved to repository [meilix-artwork](https://github.com/fossasia/meilix-artwork/) see [ticket 306](https://github.com/fossasia/meilix/issues/306)
 
 # Feature
 - Meilix uses [build.sh](https://github.com/fossasia/meilix/blob/master/build.sh) to build the Distro. 
