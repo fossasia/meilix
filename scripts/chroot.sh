@@ -57,7 +57,10 @@ apt-get -qq -y --allow-unauthenticated install lxqt-metapackage
 apt-get -qq -y --allow-unauthenticated install lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd 
 apt-get -qq -y --allow-unauthenticated install lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin \
 apt-get -qq -y --allow-unauthenticated install lxqt-runner lxqt-session lxqt-sudo
-
+# minimal kwin
+apt-get -qq -y --allow-unauthenticated --no-install-recommends install kwin-x11 kwin-style-breeze kwin-addons systemsettings
+apt-get -qq -y --allow-unauthenticated install kde-style-breeze kde-style-breeze-qt4
+update-alternatives --verbose --set x-session-manager /usr/bin/lxqt-session
 
 #sudo apt-get install lightdm-gtk-greeter
 # set 
