@@ -49,7 +49,7 @@ apt-get -qq -y install sddm
 # apt-get -qq -y install lightdm
 #apt-get -qq -y install xserver-xorg-video-intel
 
-
+update-alternatives --auto x-session-manager # display the current default xsession
 
 apt-get -qq -y --allow-unauthenticated install lxqt openbox 
 apt-get -qq -y --allow-unauthenticated install pcmanfm-qt 
@@ -215,7 +215,7 @@ rm meilix-default-settings_1.0_all.deb
 rm meilix-metapackage_1.0-1_all.deb
 rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 rm meilix-imclient_*_all.deb
-
+update-alternatives --auto x-session-manager # display the current default xsession
 # Why was this added?
 # apt-get remove --purge wget apt-transport-https
 
