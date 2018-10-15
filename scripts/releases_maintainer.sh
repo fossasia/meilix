@@ -42,7 +42,8 @@ for i in $response; do
                 delete=1
             else
                 echo "Release was made this month, trying to compare date"
-                if [ $((current_day-published_day)) -gt 10 ]; then
+                day_count=`expr $current_day - published_day`
+                if [ $day_count -gt 10 ]; then
                     echo "Release was made before more than 10 days, deleting:"
                     delete=1
                 else
