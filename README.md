@@ -18,10 +18,10 @@ Beautiful Linux Build Distro
 
 # Starting Development
 
-- Fork the Git repository
-- After cloning use build.sh to build an ISO.
+- Fork the Git repository https://github.com/fossasia/meilix/ by using the Fork button in the upper right corner
+- After Git cloning your fork on your machine, use build.sh to build an ISO on your local machine.
 - Claim an open issue at https://github.com/fossasia/meilix/issues
-- Sent pull requests to the FOSSASIA repository https://github.com/fossasia/meilix/.
+- Sent pull requests from your repository fork to the FOSSASIA repository https://github.com/fossasia/meilix/.
 
 ## Building Locally
 - You need to run `./build.sh` in your terminal to get an iso locally in your system.
