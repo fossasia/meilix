@@ -74,11 +74,17 @@ Meilix is a really beautifull, light weight and fast Linux with all the features
 
 ### Architecture
 
-Talk about architecture here
+Meilix is based on Ubuntu/Debian architecture, using LXQT as the standard DE(Desktop Environment).
 
 ### Ecosystem
 
-Talk about ecosystem here
+Following are the other projects/dependency part of Meilix ecosystem.
+
+Project Name | About | 
+-------------|-------|
+[Meilix-generator](https://github.com/fossasia/meilix-generator) | A webapp which generates an ISO Image of Meilix Linux
+[Meilix-systemlock](https://github.com/fossasia/meilix-systemlock/) | A program to freeze the system 
+[Meilix-artwork](https://github.com/fossasia/meilix-artwork/) | Repository to store all assets of Meilix
 
 ## Usage
 
