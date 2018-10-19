@@ -94,8 +94,6 @@ To create your own Linux for an event or just for trying it out, you can use [Me
 
 ## Pre Requisites
 
-`More will be updated soon`
-
 Here are some pre-requisites to develop Meilix. 
 
 - Exposure to the terminal and basic commands. 
@@ -270,10 +268,29 @@ Updating the OS/metapackage to the latest version
 
 ## Contribution
 
+Your contributions are always welcome and appreciated. To keep your experience good, we suggest you read all the guidelines thoroughly, also take some time to understand the workflow for this project. Each contribution is expected to follow best practices and community guidelines. Following are the things you can do to contribute to Meilix
+
+1. Report a bug<br>
+If you think you have encountered a bug, and we should know about it, feel free to report it [here](https://github.com/fossasia/meilix/issues/new) and our community will take care of it.
+
+2. Request a feature<br>
+You can also request for a feature [here](https://github.com/fossasia/meilix/issues/new), and if the community feels it's viable, it will be picked for development.  
+
+3. Create a pull request <br>
+It can't get better then this, your pull request will be really appreciated by the community. You can get started by picking up any open issues from [here](https://github.com/fossasia/meilix/issues) and make a pull request.
+
+> If you are new to open-source, make sure to check read more about it [here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) and learn more about creating a pull request [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github). 
 
 ### Community 
 
-Show people how to join other people in this community and add learn.
+Meilix have contributor around the world,  constantly improving Meilix and helping others as well to do so. To get in touch with the community, you can use the following communications channels. 
+
+**Gitter**: [https://gitter.im/fossasia/meilix](https://gitter.im/fossasia/meilix) <br>
+**Slack**: [http://fossasia-slack.herokuapp.com/](http://fossasia-slack.herokuapp.com/) <br>
+**Mailing List**: [https://groups.google.com/forum/#!forum/meilix](https://groups.google.com/forum/#!forum/meilix)<br>
+**Srum Mail**: meilix@googlegroups.com <br>
+**Twitter**: [https://twitter.com/meilix_](https://twitter.com/meilix_)
+
 
 ### Guideline
 
@@ -289,11 +306,16 @@ Add Best Practice here
 
 ## Resource 
 
-Link to all the resource need for people to learn more about it
+- [Lubuntu Linux Operating System](https://lubuntu.net/about/)
+- [LXDE/LXQT](https://lxde.org/)
+- [Meilix Blogs](https://blog.fossasia.org/tag/meilix/page/5/)
+- [André Rebentisch Talk](https://www.youtube.com/watch?v=PaGtdc1EFRw)
+- [Tarun Kumar Talk](https://www.youtube.com/watch?v=iG4fgZlmdb4)
+
 
 ## Gallery 
 
-Add pictures of this project here
+`To Be Updated`
 
 ## License 
 
