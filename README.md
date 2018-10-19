@@ -8,7 +8,7 @@
 [![Join the chat at https://gitter.im/fossasia/meilix](https://badges.gitter.im/fossasia/meilix.svg)](https://gitter.im/fossasia/meilix?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/fossasia/meilix.svg?branch=master)](https://travis-ci.org/fossasia/meilix)
 
  
-A beautiful and customizable Linux build for out of the box features for any event. You can use the Meilix Generator (Web app) to make a Linux for your own brand/event, also add apps and features you need pre-installed, it will create an ISO Image of your Linux, which you can use for live boot or as you want. 
+A beautiful and customizabsle Linux build for out of the box features for any event. You can use the Meilix Generator (Web app) to make a Linux for your own brand/event, also add apps and features you need pre-installed, it will create an ISO Image of your Linux, which you can use for live boot or as you want. 
 
 # Index
 
@@ -33,11 +33,44 @@ A beautiful and customizable Linux build for out of the box features for any eve
 
 ## Introduction
 
-Write the introduction here
+This project serves as a solution for those who wish to have a pre-configured custom Linux, with all the needed apps/features already installed. An example of its use case is events. Every event organizer needs to have all their systems configured equally, and need some specific apps to run the event. Configuring each system one by one can be a time taking and difficult task, but using Meilix, they can create their own custom Linux ISO and run/live boot on as many systems as they want. It will not just save countless hours, but also make the process more cost-efficient. 
 
 ### Feature
 
-Talk about features here
+Meilix is a really beautifull, light weight and fast Linux with all the features of Ubunte/Debian Distro, following are some more features Meilix have:
+
+- You can brand your Linux as you want, your company name and logo can be your:
+    - Linux name
+    - Linux logo
+    - Wallpaper
+    - Screensaver
+
+- Switch on/off various features of your linux, you can switch: 
+    - 64 Bit support (32 Bit is default)
+    - Notifications
+    - Screensaver
+    - Sleep Modes 
+    - System Sounds
+    - Bookmarks
+    - Screen Dimming
+    - Power Management Saving 
+    - Taskbar Autohide
+
+- Following apps can be pre-installed in your linux: 
+    - Chromium
+	  - Firefox
+	  - Hangout
+	  - VLC
+	  - GIMP
+	  - Inkscape
+	  - LibreOffice
+	  - Git
+	  - NextCloud
+	  - Dropbox
+
+- Add all the documents and files your need in your linux.
+- System Lock: it allows you to freeze all the systems your are hosting using Meilix. 
+
 
 ### Architecture
 
