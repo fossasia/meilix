@@ -229,7 +229,7 @@ $ ./build.sh
 
 **Build Using Travis***
 
-1. Update `.travis.yml` according to your API. [Ream More](https://blog.fossasia.org/setting-environment-variables-up-in-travis-and-heroku-for-meilix-and-meilix-generator/)
+1. Update `.travis.yml` according to your API. [Read More](https://blog.fossasia.org/setting-environment-variables-up-in-travis-and-heroku-for-meilix-and-meilix-generator/)
 2. Push changes to your repo, it will start the build process.
 
 ### Metapackages
@@ -270,13 +270,13 @@ Updating the OS/metapackage to the latest version
 
 Your contributions are always welcome and appreciated. To keep your experience good, we suggest you read all the guidelines thoroughly, also take some time to understand the workflow for this project. Each contribution is expected to follow best practices and community guidelines. Following are the things you can do to contribute to Meilix
 
-1. Report a bug<br>
+1. **Report a bug** <br>
 If you think you have encountered a bug, and we should know about it, feel free to report it [here](https://github.com/fossasia/meilix/issues/new) and our community will take care of it.
 
-2. Request a feature<br>
+2. **Request a feature** <br>
 You can also request for a feature [here](https://github.com/fossasia/meilix/issues/new), and if the community feels it's viable, it will be picked for development.  
 
-3. Create a pull request <br>
+3. **Create a pull request** <br>
 It can't get better then this, your pull request will be really appreciated by the community. You can get started by picking up any open issues from [here](https://github.com/fossasia/meilix/issues) and make a pull request.
 
 > If you are new to open-source, make sure to check read more about it [here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) and learn more about creating a pull request [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github). 
@@ -294,15 +294,59 @@ Meilix have contributor around the world,  constantly improving Meilix and helpi
 
 ### Guideline
 
-Guide line for people who are involved in this project 
+Guidelines can be found [here](https://blog.fossasia.org/open-source-developer-guide-and-best-practices-at-fossasia/)
 
 ### Workflow
 
-Write here how to do the development here, what are the important branches, how to work on them, how the comment message should look like
+Meilix uses the agile methodology, so the version is frequently updated and development is really fast, which makes it little difficult to keep it stable. Which is why somewhat modified Git Flow branching methodology. 
+
+1. **`Master`** is the equivalent to the git-flow `develop` branch. It should be fully ready to be shipped and should be stable.
+
+2. **`Production`** is the equivalent to the git-flow `master` branch. It represents the latest stable version of Meilix available.
+
+3. **`FEATURE/NAME`** is where we work on the new features and other parts of meilix.
+
+**Steps to create a pull request**
+
+1. Make a PR to `master` or any other feature branch only. *`PR to production won't be accepted`* 
+2. Each PR should have a gif showing a full live boot.
+3. Your code must meet all the best practices and guidelines, other wise it won't be accepted. 
+4. It must pass all CI tests.
+
+After this, you changes will be **Squash and Merge** in `master` with a conventional commit message. 
+
+**Production Deployment**
+
+1. Create a PR from `master` to `production`.
+2. Wait for CI tests to pass.
+3. **Merge** the PR.
+
+**Why 'Squash and Merge' against `Master`?**
+
+All commits from the PR will be added as a single new commit to `master`.
+
+- It keeps the `master` clean: only commits that represent a complete feature of bugfix will be part of the history. 
+- Adding `#PR_Number` to the commit message allows to check that PR and dive into all the commit history without bringing all the noise into master.
+
+**Why 'Merge' against `production`?**
+
+- It doesn't create a new commit with a different hash, thus it keeps `master` and `production` with the same commit history.
+- It allows to check exactly what was deployed and when. 
+
+Learn more about it [here](https://blogs.msdn.microsoft.com/devops/2016/03/15/squash-a-whole-new-way-to-merge-pull-requests/)
+
 
 ### Best Practice 
 
-Add Best Practice here
+**Commits**
+
+- Make sure your commit message is crisp and clear, read more about it [here](https://chris.beams.io/posts/git-commit/)
+- When refering to a issue in PR, use [special words](https://help.github.com/articles/closing-issues-using-keywords/) to automatically close the related issue.
+- Keep each PR very short, which will make it easy to review. 
+
+**Code**
+
+- Each commit should have proper documentation and comments in code, which will make it easy for others to understand it.
 
 ## Resource 
 
