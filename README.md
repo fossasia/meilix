@@ -10,6 +10,8 @@
  
 A beautiful and customizabsle Linux build for out of the box features for any event. You can use the Meilix Generator (Web app) to make a Linux for your own brand/event, also add apps and features you need pre-installed, it will create an ISO Image of your Linux, which you can use for live boot or as you want. 
 
+`Meilix is under heavy development`
+
 # Index
 
 1. [Introduction](#introduction)
@@ -80,7 +82,7 @@ Meilix is based on Ubuntu/Debian architecture, using LXQT as the standard DE(Des
 
 Following are the other projects/dependency part of Meilix ecosystem.
 
-Project Name | About | 
+Name | About | 
 -------------|-------|
 [Meilix-generator](https://github.com/fossasia/meilix-generator) | A webapp which generates an ISO Image of Meilix Linux
 [Meilix-systemlock](https://github.com/fossasia/meilix-systemlock/) | A program to freeze the system 
@@ -88,17 +90,128 @@ Project Name | About |
 
 ## Usage
 
-Write the usage here
+To create your own Linux for an event or just for trying it out, you can use [Meilix-generator](https://github.com/fossasia/meilix-generator). A web app, which has all the options to customize and generate an ISO. 
 
 ## Pre Requisites
 
-Write the pre-requisites here
+`More will be updated soon`
+
+Here are some pre-requisites to develop Meilix. 
+
+- Exposure to the terminal and basic commands. 
+- Experience in working with a UNIX or GNU/Linux based system. 
+- Basic understanding of Operating System and Package managers. 
+- Programming/Scripting experience. Python, Shell Scripting etc.
 
 ## Development 
 
-Write how to do development on this project
+Meilix fetch ubuntu source, customize it to add features and then build the distro. It use shell scripts to perform all the tasks, build can be made on local machine, Trvis CI or Circle CI.
 
 ### File Structure
+
+Basic understanding of the file structure is required to do development, here is a level 2 file structure of this project
+
+```console
+.
+├── build.sh
+├── LICENSE.md
+├── logo.png
+├── sources.list
+├── README.md
+├── meilix-metapackage_1.0-1_amd64.changes
+├── plymouth-meilix-logo_1.0-1_all.deb
+├── plymouth-meilix-text_1.0-1_all.deb
+├── meilix-metapackage_1.0-1_all.deb
+├── meilix-metapackages_1.0_all.deb
+├── meilix-metapackage_1.0-1.tar.gz
+├── meilix-metapackage_1.0-1.dsc
+├── systemlock_0.1-1_all.deb
+├── image-amd64.tar.lzma
+├── image-i386.tar.lzma
+├── amd64.tar.lzma
+├── meilix-metapackages_1.0_all
+│   └── control
+├── ubiquity-slideshow
+|   └── slides
+├── metapackage
+│   └── debian
+├── polkit-1
+│   └── actions
+├── dists
+│   └── trusty
+├── conf
+│   └── distributions
+├── pool
+│   └── main
+├── mail-scripts
+│   ├── mail-fail.py
+│   └── mail.py
+├── meilix-artwork
+│   ├── debian
+│   ├── Makefile
+│   └── usr
+├── systemlock-0.1
+│   ├── debian
+│   ├── etc
+│   ├── Makefile
+│   └── usr
+├── meilix-default-settings
+│   ├── debian
+│   ├── etc
+│   ├── Makefile
+│   └── usr
+├── db
+│   ├── checksums.db
+│   ├── contents.cache.db
+│   ├── packages.db
+│   ├── references.db
+│   ├── release.caches.db
+│   └── version
+├── image
+│   ├── boot
+│   ├── casper
+│   ├── dists
+│   ├── EFI
+│   ├── install
+│   ├── isolinux
+│   ├── pics
+│   ├── pool
+│   └── preseed
+├── scripts
+│   ├── aptRepoUpdater.sh
+│   ├── arch.sh
+│   ├── browser_uri.sh
+│   ├── chroot.sh
+│   ├── debuild.sh
+│   ├── legacy_initrdext.sh
+│   ├── mail-fail.py
+│   ├── mail.py
+│   ├── meilix_check.sh
+│   ├── mew.sh
+│   ├── packages
+│   └── releases_maintainer.sh
+└──chroot
+    ├── bin
+    ├── boot
+    ├── dev
+    ├── etc
+    ├── home
+    ├── lib
+    ├── lib64
+    ├── media
+    ├── mnt
+    ├── opt
+    ├── proc
+    ├── root
+    ├── run
+    ├── sbin
+    ├── srv
+    ├── sys
+    ├── tmp
+    ├── usr
+    └── var
+```
+
 
 ### Build
 
