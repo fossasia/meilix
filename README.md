@@ -39,15 +39,15 @@ This project serves as a solution for those who wish to have a pre-configured cu
 
 ### Feature
 
-Meilix is a really beautifull, light weight and fast Linux with all the features of Ubunte/Debian Distro, following are some more features Meilix have:
+Meilix is a light weight, beautiful and fast Linux with all the features of Ubuntu/Debian distro. Following are some of the other features that Meilix offers:
 
-- You can brand your Linux as you want, your company name and logo can be your:
+- You can brand your Linux as you want. Your company name and logo can be your:
     - Linux name
     - Linux logo
     - Wallpaper
     - Screensaver
 
-- Switch on/off various features of your linux, you can switch: 
+- Switch on/off various features of your linux. You can switch: 
     - 64 Bit support (32 Bit is default)
     - Notifications
     - Screensaver
