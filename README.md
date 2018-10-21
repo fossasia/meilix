@@ -110,12 +110,9 @@ Basic understanding of the file structure is required to do development, here is
 .
 ├── build.sh
 ├── LICENSE.md
-├── logo.png
 ├── sources.list
 ├── README.md
 ├── meilix-metapackage_1.0-1_amd64.changes
-├── plymouth-meilix-logo_1.0-1_all.deb
-├── plymouth-meilix-text_1.0-1_all.deb
 ├── meilix-metapackage_1.0-1_all.deb
 ├── meilix-metapackages_1.0_all.deb
 ├── meilix-metapackage_1.0-1.tar.gz
@@ -132,8 +129,6 @@ Basic understanding of the file structure is required to do development, here is
 │   └── debian/...
 ├── polkit-1
 │   └── actions/...
-├── dists
-│   └── trusty/...
 ├── conf
 │   └── distributions/...
 ├── pool
@@ -155,23 +150,6 @@ Basic understanding of the file structure is required to do development, here is
 │   ├── etc/...
 │   ├── Makefile/...
 │   └── usr/...
-├── db
-│   ├── checksums.db
-│   ├── contents.cache.db
-│   ├── packages.db
-│   ├── references.db
-│   ├── release.caches.db
-│   └── version
-├── image
-│   ├── boot/...
-│   ├── casper/...
-│   ├── dists/...
-│   ├── EFI/...
-│   ├── install/...
-│   ├── isolinux/...
-│   ├── pics/...
-│   ├── pool/...
-│   └── preseed/...
 ├── scripts
 │   ├── aptRepoUpdater.sh
 │   ├── arch.sh
@@ -259,15 +237,15 @@ Meilix have contributor around the world,  constantly improving Meilix and helpi
 
 Guidelines can be found [here](https://blog.fossasia.org/open-source-developer-guide-and-best-practices-at-fossasia/)
 
-### Workflow
+### Branches
 
-Meilix uses the agile methodology, so the version is frequently updated and development is really fast, which makes it little difficult to keep it stable. Which is why somewhat modified Git Flow branching methodology. 
+Meilix uses an agile continuous integration methodology, so the version is frequently updated and development is really fast. 
 
-1. **`Master`** is the equivalent to the git-flow `develop` branch. It should be fully ready to be shipped and should be stable.
+1. **`Master`** is the development branch. It should always built.
 
-2. **`Production`** is the equivalent to the git-flow `master` branch. It represents the latest stable version of Meilix available.
+2. **`Generator`** is a legacy branch we keep for reference for the time being.
 
-3. **`FEATURE/NAME`** is where we work on the new features and other parts of meilix.
+3. No further branches should be created in the main repository.
 
 **Steps to create a pull request**
 
@@ -278,33 +256,12 @@ Meilix uses the agile methodology, so the version is frequently updated and deve
 
 After this, you changes will be **Squash and Merge** in `master` with a conventional commit message. 
 
-**Production Deployment**
-
-1. Create a PR from `master` to `production`.
-2. Wait for CI tests to pass.
-3. **Merge** the PR.
-
-**Why 'Squash and Merge' against `Master`?**
-
-All commits from the PR will be added as a single new commit to `master`.
-
-- It keeps the `master` clean: only commits that represent a complete feature of bugfix will be part of the history. 
-- Adding `#PR_Number` to the commit message allows to check that PR and dive into all the commit history without bringing all the noise into master.
-
-**Why 'Merge' against `production`?**
-
-- It doesn't create a new commit with a different hash, thus it keeps `master` and `production` with the same commit history.
-- It allows to check exactly what was deployed and when. 
-
-Learn more about it [here](https://blogs.msdn.microsoft.com/devops/2016/03/15/squash-a-whole-new-way-to-merge-pull-requests/)
-
-
 ### Best Practice 
 
 **Commits**
 
 - Make sure your commit message is crisp and clear, read more about it [here](https://chris.beams.io/posts/git-commit/)
-- When refering to a issue in PR, use [special words](https://help.github.com/articles/closing-issues-using-keywords/) to automatically close the related issue.
+- When refering to a issue in PR, use [special words](https://help.github.com/articles/closing-issues-using-keywords/) to automatically close the related issue like "Fixes #234"
 - Keep each PR very short, which will make it easy to review. 
 
 **Code**
