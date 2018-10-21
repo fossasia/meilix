@@ -41,8 +41,13 @@ do
   fi
 done
 
-sudo rm -R 	db 
-sudo rm -R 	dists/trusty
+# Remove fragments that are not needed during build
+[ -d db ] && sudo rm -R db
+[ -d docs ] && sudo rm -R docs
+[ -d dists ] && sudo rm -R dists/trusty
+# Remove existing chroot if exists
+[ -d chroot ] && sudo rm -R chroot/
+
 # Make sure we have the tools we need installed
 sudo apt-get clean
 sudo apt-get update
@@ -60,31 +65,34 @@ initramfs-extract() {
     dd if=$target bs=$offset skip=1 | zcat | cpio -id --no-absolute-filenames $@
 }
 
-# Debuilding the metapackages
-rm plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
+# remove existing plymouth bootscreen packages and debuilding them again
+# in the future the debuilding is to be done in the meilix-artwork repo
+# and we will fetch the latest releases of the deb files here.
+rm plymouth-meilix-logo_1.0-1_all.deb
+rm plymouth-meilix-text_1.0-1_all.deb
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
 # Create and populate the chroot using debootstrap
-
-# Remove existing chroot if exists
-[ -d chroot ] && sudo rm -R chroot/
-# Debootstrap installs a Linux in the chroot. Output can be ignored
+# Debootstrap installs a Linux in the chroot. The noisy output could be ignored
+# arch,release, mirror see as defined above.
 sudo debootstrap --arch=${arch} ${release} chroot ${mirror} # 2>&1 |grep -v "^I: "
+
 # Use /etc/resolv.conf from the host machine during the build
 sudo cp -vr /etc/resolvconf chroot/etc/resolvconf
 
-# Copy the sources.list to enable universe / multiverse in the chroot, and eventually additional repos.
+# Copy the sources.list in chroot which enables universe / multiverse, and eventually additional repos.
+# The sources.list apt ppa sources should correspons to the ${release} version 
 sudo cp -v sources.list chroot/etc/apt/sources.list
 
-# Copy our custom packages
+# Copy our custom packages into the chroot
 sudo cp -v meilix-default-settings_*_all.deb chroot
 sudo cp -v systemlock_*_all.deb chroot
 sudo cp -v plymouth-meilix-logo_*_all.deb chroot
 sudo cp -v plymouth-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
 
-# Mount needed pseudo-filesystems
+# Mount needed pseudo-filesystems for the chroot
 sudo mount --rbind /sys chroot/sys
 sudo mount --rbind /dev chroot/dev
 sudo mount -t proc none chroot/proc
@@ -97,10 +105,10 @@ chmod +x ./scripts/chroot.sh
 ###############################################################
 #Continue work outside the chroot, preparing image
 
-# ubiquity-slideshow slides, replace the installed ones
+# ubiquity-slideshow slides for the installer, overwrite the chroot ones
 sudo cp -vr ubiquity-slideshow chroot/usr/share/
 
-# Unmount pseudo-filesystems
+# Unmount pseudo-filesystems for the chroot
 sudo umount -lfr chroot/proc
 sudo umount -lfr chroot/sys
 sudo umount -lfr chroot/dev
@@ -111,10 +119,12 @@ echo $0: Preparing image...
 [ -d image ] && sudo /bin/rm -r image
 
 # Extract a new image folder
-#tar image-${arch}.tar.lzma
-tar xvvf amd64.tar.lzma
+# lzma file is a zip compressed live cd image (without squasfs content)
+# it it uncompressed into a folder image
+tar image-${arch}.tar.lzma
+#tar xvvf amd64.tar.lzma
 
-# Copy the kernel from the chroot into the image for the LiveCD
+# Copy the kernel from the chroot into the image folder for the LiveCD
 sudo \cp --verbose -rf chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
 sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
 
@@ -146,7 +156,7 @@ sudo cp -v image/casper/filesystem.manifest image/casper/filesystem.manifest-des
 rm /tmp/manifest.$$
 
 # Remove packages from filesystem.manifest-desktop
-#  (language and extra for more hardware support)
+# (language and extra for more hardware support)
 REMOVE='gparted ubiquity ubiquity-frontend-gtk casper live-initramfs user-setup discover1
  xresprobe libdebian-installer4 pptp-linux ndiswrapper-utils-1.9
  ndisgtk linux-wlan-ng libatm1 setserial b43-fwcutter uterm
@@ -177,7 +187,7 @@ sudo mkisofs -r -V "$IMAGE_NAME" -cache-inodes -J -l \
   -m filesystem.squashfs \
   -o ../$ISOFILE.tmp .
 
-# Mount the temp ISO and copy boot.cat out of it
+# Mount the temporary ISO and copy boot.cat out of it
 tempmount=/tmp/$0.tempmount.$$
 mkdir $tempmount
 loopdev=$(sudo losetup -f)
@@ -191,7 +201,7 @@ rmdir $tempmount
 # Generate md5sum.txt checksum file (now with new improved boot.cat)
 sudo find . -type f -print0 |xargs -0 sudo md5sum |grep -v "\./md5sum.txt" >md5sum.txt
 
-# Remove temp ISO file
+# Remove temprary ISO file
 sudo rm ../$ISOFILE.tmp
 
 # Create an Meilix ISO from the image directory tree
@@ -200,7 +210,7 @@ sudo mkisofs -r -V "$IMAGE_NAME" -cache-inodes -J -l \
   -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table \
   --publisher "Meilix Packaging Team" \
-  --volset "Ubuntu Linux http://www.ubuntu.com" \
+  --volset "Meilix Linux" \
   -p "${DEBFULLNAME:-$USER} <${DEBEMAIL:-on host $(hostname --fqdn)}>" \
   -A "$IMAGE_NAME" \
   -o ../$ISOFILE .
@@ -213,3 +223,5 @@ chmod 0444 ../$ISOFILE
 # Create the associated md5sum file
 cd ..
 md5sum $ISOFILE >${ISOFILE}.md5
+
+# see travis confguration for the deployment that follows in case of a Travis build. 
