@@ -30,7 +30,9 @@ fi
 # Update in-chroot package database
 apt-get -qq update
 
-apt-get -qq -y install glib2 #may resolve error
+#may resolve error
+#apt-get -qq -y install glib2 
+apt-get -qq -y install glib2.0 
 
 # Install core packages
 apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
