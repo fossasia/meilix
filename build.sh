@@ -43,6 +43,7 @@ done
 
 # Remove fragments that are not needed during build
 [ -d db ] && sudo rm -R db
+[ -d pool ] && sudo rm -R pool
 [ -d docs ] && sudo rm -R docs
 [ -d dists ] && sudo rm -R dists/trusty
 # Remove existing chroot if exists
