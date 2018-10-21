@@ -17,11 +17,11 @@ arch=${1:-amd64}
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Ubuntu release used as a base by debootstrap.  Examples: lucid, maverick, natty.
-# If you change the value here also adj́ust the sources.list file accordingly  
+# If you change the value here you also have to adj́ust the sources.list file 
+# accordingly and check if it works with the provided lzma image.
 release=${4:-xenial}
 # Set of GNOME language packs to install.
-# Use '\*' for all langs, 'en' for English.
-# Install language with the most popcontt
+# Use '\*' for all langs, 'en' for English
 gnomelanguage=${3:-'{en}'}	
 
 # Necessary data files
@@ -47,7 +47,7 @@ done
 [ -d pool ] && sudo rm -R pool
 [ -d docs ] && sudo rm -R docs
 [ -d dists ] && sudo rm -R dists/trusty
-# Remove previus chroot if exists
+# Remove previous chroot if exists
 [ -d chroot ] && sudo rm -R chroot/
 
 # Make sure we have the tools we need installed
@@ -122,13 +122,13 @@ echo $0: Preparing image...
 
 # Extract a new image folder
 # lzma file is a zip compressed live cd image (without squasfs content)
-# it it uncompressed into a folder image
+# it it uncompressed into a new folder "image"
 #tar image-${arch}.tar.lzma
 # -> taking the standard image image-${arch}.tar.lzma files does not work
 #    anymore
 tar xvvf amd64.tar.lzma
 
-# Copy the kernel from the chroot into the image folder for the LiveCD
+# Copy the kernel from the "chroot" into the "image" folder for the LiveCD
 sudo \cp --verbose -rf chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
 sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
 
