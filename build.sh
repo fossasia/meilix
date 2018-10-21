@@ -124,6 +124,8 @@ echo $0: Preparing image...
 # lzma file is a zip compressed live cd image (without squasfs content)
 # it it uncompressed into a folder image
 #tar image-${arch}.tar.lzma
+# -> taking the standard image image-${arch}.tar.lzma files does not work
+#    anymore
 tar xvvf amd64.tar.lzma
 
 # Copy the kernel from the chroot into the image folder for the LiveCD
