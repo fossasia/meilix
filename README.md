@@ -57,15 +57,15 @@ Meilix is a light weight, beautiful and fast Linux with all the features of Ubun
 
 - Following apps can be pre-installed in your linux: 
     - Chromium
-	  - Firefox
-	  - Hangout
-	  - VLC
-	  - GIMP
-	  - Inkscape
-	  - LibreOffice
-	  - Git
-	  - NextCloud
-	  - Dropbox
+    - Firefox
+    - Hangout
+    - VLC
+    - GIMP
+    - Inkscape
+    - LibreOffice
+    - Git
+    - NextCloud
+    - Dropbox
 
 - Add all the documents and files your need in your linux.
 - System Lock: it allows you to freeze all the systems your are hosting using Meilix. 
