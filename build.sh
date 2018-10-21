@@ -123,8 +123,8 @@ echo $0: Preparing image...
 # Extract a new image folder
 # lzma file is a zip compressed live cd image (without squasfs content)
 # it it uncompressed into a folder image
-tar image-${arch}.tar.lzma
-#tar xvvf amd64.tar.lzma
+#tar image-${arch}.tar.lzma
+tar xvvf amd64.tar.lzma
 
 # Copy the kernel from the chroot into the image folder for the LiveCD
 sudo \cp --verbose -rf chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
