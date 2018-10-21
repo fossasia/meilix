@@ -41,12 +41,12 @@ do
   fi
 done
 
-# Remove fragments that are not needed during build
+# Remove build fragments that are not needed during build
 [ -d db ] && sudo rm -R db
 [ -d pool ] && sudo rm -R pool
 [ -d docs ] && sudo rm -R docs
 [ -d dists ] && sudo rm -R dists/trusty
-# Remove existing chroot if exists
+# Remove previus chroot if exists
 [ -d chroot ] && sudo rm -R chroot/
 
 # Make sure we have the tools we need installed
@@ -67,8 +67,9 @@ initramfs-extract() {
 }
 
 # remove existing plymouth bootscreen packages and debuilding them again
-# in the future the debuilding is to be done in the meilix-artwork repo
-# and we will fetch the latest releases of the deb files here.
+# in the future the debuilding (=building deb packages) is to be done 
+# in the meilix-artwork repo and we will fetch the latest releases of the 
+# deb files here.
 rm plymouth-meilix-logo_1.0-1_all.deb
 rm plymouth-meilix-text_1.0-1_all.deb
 chmod +x ./scripts/debuild.sh
@@ -98,13 +99,12 @@ sudo mount --rbind /sys chroot/sys
 sudo mount --rbind /dev chroot/dev
 sudo mount -t proc none chroot/proc
 
-#Work *inside* the chroot
+#Section chroot - Work *inside* the chroot
 chmod +x ./scripts/chroot.sh
 ./scripts/chroot.sh
-
-#Section chroot finished
+#Section chroot finished, continue work outside the chroot,
 ###############################################################
-#Continue work outside the chroot, preparing image
+#Preparing image
 
 # ubiquity-slideshow slides for the installer, overwrite the chroot ones
 sudo cp -vr ubiquity-slideshow chroot/usr/share/
