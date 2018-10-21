@@ -16,12 +16,13 @@ export LANGUAGE=en_US.UTF-8
 arch=${1:-amd64}
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
+# Ubuntu release used as a base by debootstrap.  Examples: lucid, maverick, natty.
+# If you change the value here also adj́ust the sources.list file accordingly  
+release=${4:-xenial}
 # Set of GNOME language packs to install.
-#   Use '\*' for all langs, 'en' for English.
+# Use '\*' for all langs, 'en' for English.
 # Install language with the most popcontt
 gnomelanguage=${3:-'{en}'}	
-# Release name, used by debootstrap.  Examples: lucid, maverick, natty.
-release=${4:-xenial}
 
 # Necessary data files
 datafiles="image-${arch}.tar.lzma sources.list"
@@ -77,14 +78,14 @@ chmod +x ./scripts/debuild.sh
 
 # Create and populate the chroot using debootstrap
 # Debootstrap installs a Linux in the chroot. The noisy output could be ignored
-# arch,release, mirror see as defined above.
+# arch, release, mirror see as set above.
 sudo debootstrap --arch=${arch} ${release} chroot ${mirror} # 2>&1 |grep -v "^I: "
 
 # Use /etc/resolv.conf from the host machine during the build
 sudo cp -vr /etc/resolvconf chroot/etc/resolvconf
 
 # Copy the sources.list in chroot which enables universe / multiverse, and eventually additional repos.
-# The sources.list apt ppa sources should correspons to the ${release} version 
+# The sources.list apt ppa sources should correspond to the ${release} version 
 sudo cp -v sources.list chroot/etc/apt/sources.list
 
 # Copy our custom packages into the chroot
