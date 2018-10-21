@@ -24,7 +24,7 @@ A beautiful and customizable Linux build for out of the box features for an Inte
 5. [Contribution](#contribution)
     1. [Community](#community)
     2. [Guideline](#guideline) 
-    3. [Workflow](#workflow)
+    3. [Branches](#branches)
     4. [Best Practice](#best-practice)
 6. [Resource](#resource) 
 7. [Gallery](#gallery)
@@ -96,11 +96,11 @@ Here are some pre-requisites to develop Meilix.
 - Exposure to the terminal and basic commands. 
 - Experience in working with a UNIX or GNU/Linux based system. 
 - Basic understanding of Operating System and Package managers. 
-- Programming/Scripting experience. Python, Shell Scripting etc.
+- Programming/Scripting experience. Shell Scripting etc.
 
 ## Development 
 
-Meilix fetch ubuntu source, customize it to add features and then build the distro. It use shell scripts to perform all the tasks, build can be made on local machine, Trvis CI or Circle CI.
+Meilix fetch ubuntu source, customize it to add features and then build the distro. It use shell scripts to perform all the tasks, build can be made on local machine, Travis CI.
 
 ### File Structure
 
@@ -219,8 +219,6 @@ You can also request for a feature [here](https://github.com/fossasia/meilix/iss
 
 3. **Create a pull request** <br>
 It can't get better then this, your pull request will be really appreciated by the community. You can get started by picking up any open issues from [here](https://github.com/fossasia/meilix/issues) and make a pull request.
-
-> If you are new to open-source, make sure to check read more about it [here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) and learn more about creating a pull request [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github). 
 
 ### Community 
 
