@@ -209,7 +209,7 @@ $ ./build.sh
 
 ## Contribution
 
-Your contributions are always welcome and appreciated. To keep your experience good, we suggest you read all the guidelines thoroughly, also take some time to understand the workflow for this project. Each contribution is expected to follow best practices and community guidelines. Following are the things you can do to contribute to Meilix
+Your code contributions are always appreciated. To keep your experience good, we suggest you read all the guidelines thoroughly, also take some time to understand the workflow for this project. Each contribution is expected to follow best practices and community guidelines. Following are the things you can do to contribute to Meilix
 
 1. **Report a bug** <br>
 If you think you have encountered a bug, and we should know about it, feel free to report it [here](https://github.com/fossasia/meilix/issues/new) and our community will take care of it.
@@ -227,13 +227,13 @@ Meilix have contributor around the world,  constantly improving Meilix and helpi
 **Gitter**: [https://gitter.im/fossasia/meilix](https://gitter.im/fossasia/meilix) <br>
 **Slack**: [http://fossasia-slack.herokuapp.com/](http://fossasia-slack.herokuapp.com/) <br>
 **Mailing List**: [https://groups.google.com/forum/#!forum/meilix](https://groups.google.com/forum/#!forum/meilix)<br>
-**Srum Mail**: meilix@googlegroups.com <br>
+**Scrum Mail**: meilix@googlegroups.com <br>
 **Twitter**: [https://twitter.com/meilix_](https://twitter.com/meilix_)
 
 
 ### Guideline
 
-Guidelines can be found [here](https://blog.fossasia.org/open-source-developer-guide-and-best-practices-at-fossasia/)
+FOSSASIA Open Source Guidelines can be found [here](https://blog.fossasia.org/open-source-developer-guide-and-best-practices-at-fossasia/)
 
 ### Branches
 
@@ -247,12 +247,12 @@ Meilix uses an agile continuous integration methodology, so the version is frequ
 
 **Steps to create a pull request**
 
-1. Make a PR to `master` or any other feature branch only. *`PR to production won't be accepted`* 
-2. Each PR should have a gif showing a full live boot.
-3. Your code must meet all the best practices and guidelines, other wise it won't be accepted. 
-4. It must pass all CI tests.
+1. Make a PR to `master` or any other feature branch only. 
+2. Where the PR concerns visual elements it should have an image showing the effect.
+3. Your code should meet the best practices and guidelines. 
+4. It must pass all CI tests and get positive reviews.
 
-After this, you changes will be **Squash and Merge** in `master` with a conventional commit message. 
+After this, changes will be merged.
 
 ### Best Practice 
 
