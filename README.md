@@ -83,7 +83,7 @@ Name | About |
 -------------|-------|
 [Meilix-generator](https://github.com/fossasia/meilix-generator) | A webapp which generates an ISO Image of Meilix Linux
 [Meilix-systemlock](https://github.com/fossasia/meilix-systemlock/) | A program to freeze the system 
-[Meilix-artwork](https://github.com/fossasia/meilix-artwork/) | Repository to store all assets of Meilix
+[Meilix-artwork](https://github.com/fossasia/meilix-artwork/) | Repository to store the boot screen theme of Meilix
 
 ## Usage
 
