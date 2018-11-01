@@ -71,8 +71,8 @@ initramfs-extract() {
 # in the future the debuilding (=building deb packages) is to be done 
 # in the meilix-artwork repo and we will fetch the latest releases of the 
 # deb files here.
-rm plymouth-meilix-logo_1.0-1_all.deb
-rm plymouth-meilix-text_1.0-1_all.deb
+[ -f plymouth-meilix-logo_1.0-1_all.deb ] && rm plymouth-meilix-logo_1.0-1_all.deb
+[ -f plymouth-meilix-text_1.0-1_all.deb ] && rm plymouth-meilix-text_1.0-1_all.deb
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
