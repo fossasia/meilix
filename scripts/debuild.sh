@@ -2,7 +2,7 @@
 # In which directory is this script started? It is supposed to be in the project folder.
 # on travis in /home/travis/build/fossasia/meilix
 
-rm meilix-default-settings_*                                    #removes the older meilix-default-settings packages if exist
+#rm meilix-default-settings_*                                    #removes the older meilix-default-settings packages if exist
 cd meilix-default-settings                                      #cd into the metapackage directory
 echo y | debuild -uc -us                                                 #debuild the meilix-default-settings metapackage
 cd ..
