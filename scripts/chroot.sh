@@ -48,15 +48,19 @@ apt-get install -f
 # Install base packages
 apt-get -qq -y install xorg  
 apt-get -qq -y install sddm
+apt-get -qq -y install xfwm4 # might be set accidently as default WM
 # apt-get -qq -y install lightdm
 #apt-get -qq -y install xserver-xorg-video-intel
 
 update-alternatives --auto x-session-manager # display the current default xsession
 
+# Install LXQT components
 apt-get -qq -y --allow-unauthenticated install lxqt openbox 
 apt-get -qq -y --allow-unauthenticated install pcmanfm-qt 
 apt-get -qq -y --allow-unauthenticated install lxqt-metapackage
-apt-get -qq -y --allow-unauthenticated install lxqt-admin lxqt-common lxqt-config lxqt-globalkeys lxqt-notificationd 
+apt-get -qq -y --allow-unauthenticated install lxqt-admin 
+# apt-get -qq -y --allow-unauthenticated install lxqt-common 
+apt-get -qq -y --allow-unauthenticated install lxqt-config lxqt-globalkeys lxqt-notificationd 
 apt-get -qq -y --allow-unauthenticated install lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin \
 apt-get -qq -y --allow-unauthenticated install lxqt-runner lxqt-session lxqt-sudo
 # minimal kwin
@@ -217,7 +221,9 @@ rm meilix-default-settings_1.0_all.deb
 rm meilix-metapackage_1.0-1_all.deb
 rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
 rm meilix-imclient_*_all.deb
-update-alternatives --auto x-session-manager # display the current default xsession
+
+# display the current default xsession
+update-alternatives --auto x-session-manager 
 # Why was this added?
 # apt-get remove --purge wget apt-transport-https
 
