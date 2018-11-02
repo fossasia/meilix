@@ -4,6 +4,7 @@ dh_auto_build
 dh_auto_test
 dh_prep
 dh_auto_install
+override_dh_install dh_missing
 override_dh_install dh_install
 dh_install
 dh_installdocs
@@ -13,9 +14,8 @@ dh_link
 dh_strip_nondeterminism
 dh_compress
 dh_fixperms
+dh_missing
 dh_installdeb
 dh_gencontrol
 dh_md5sums
-dh_builddeb
-dh_builddeb
 dh_builddeb

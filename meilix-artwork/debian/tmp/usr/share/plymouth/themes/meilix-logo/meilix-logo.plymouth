@@ -4,5 +4,5 @@ Description=A theme that features a blank background with a logo.
 ModuleName=script
 
 [script]
-ImageDir=/lib/plymouth/themes/meilix-logo
-ScriptFile=/lib/plymouth/themes/meilix-logo/meilix-logo.script
+ImageDir=/usr/share/plymouth/themes/meilix-logo
+ScriptFile=/usr/share/plymouth/themes/meilix-logo/meilix-logo.script

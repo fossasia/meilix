@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Thu, 28 Mar 2013 16:04:48 +0700
+Source: meilix-artwork
+Binary: plymouth-meilix-logo plymouth-meilix-text
+Architecture: source all
+Version: 1.0-1
+Distribution: unstable
+Urgency: low
+Maintainer: Mario Behling <mb@mariobehling.de>
+Changed-By: Meilix <mb@mariobehling.de>
+Description:
+ plymouth-meilix-logo - Plymouth theme meilix.
+ plymouth-meilix-text - Plymouth theme meilix.
+Changes:
+ meilix-artwork (1.0-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ 536f0ab55c1d89b0e0b680fcf781194ea2e721d8 666 meilix-artwork_1.0-1.dsc
+ 51156eeda7a6335facda4074e1d5c3bdac823105 26060 meilix-artwork_1.0-1.tar.xz
+ 2d2af8077a22cb98b7a6a09748282007d65e08b3 5907 meilix-artwork_1.0-1_amd64.buildinfo
+ 36a960ded216772f24289e14be077250cadeffca 25644 plymouth-meilix-logo_1.0-1_all.deb
+ a43ba6370f8af46ba898bcc82565b61680ecfc04 2316 plymouth-meilix-text_1.0-1_all.deb
+Checksums-Sha256:
+ 524ea54c09915396b37c204a53c3141d4fac4011461a62ea19246a2105259b3d 666 meilix-artwork_1.0-1.dsc
+ 65b1b31f3bd9ce6a2d18498b799260f059a284e1cdf7cf7a17e49a0dd2882a1d 26060 meilix-artwork_1.0-1.tar.xz
+ 9db332bd7ef29f5000e998b413224ccd5912b6e8b1ed1fc18e95d82d422e384b 5907 meilix-artwork_1.0-1_amd64.buildinfo
+ 45381596ec695e0dff6a1bf991971947415baf3528ac63a3d470053d9d35d8b2 25644 plymouth-meilix-logo_1.0-1_all.deb
+ 6ee0271ada29241c1a207c395e56cf0aa7b20de3ec6d36f568d3f00ce0613cc6 2316 plymouth-meilix-text_1.0-1_all.deb
+Files:
+ 41511e4673eee545b0f61a9b80cde46a 666 x11 extra meilix-artwork_1.0-1.dsc
+ ffe47cd6e13010ccebb8e7e8893c0465 26060 x11 extra meilix-artwork_1.0-1.tar.xz
+ ceed49fbb6daa823fbf98dc08481b344 5907 x11 extra meilix-artwork_1.0-1_amd64.buildinfo
+ 93e7116ec34babd8ccf2bf01b7d7b876 25644 x11 extra plymouth-meilix-logo_1.0-1_all.deb
+ 04af2f48ab185cbe672eb5238a55e688 2316 x11 extra plymouth-meilix-text_1.0-1_all.deb

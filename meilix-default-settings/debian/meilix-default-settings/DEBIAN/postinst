@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_icons/11.3.2ubuntu1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if which update-icon-caches >/dev/null 2>&1 ; then
+		update-icon-caches /usr/share/icons/meilix
+	fi
+fi
+# End automatically added section

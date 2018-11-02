@@ -46,7 +46,7 @@ done
 [ -d db ] && sudo rm -R db
 [ -d pool ] && sudo rm -R pool
 [ -d docs ] && sudo rm -R docs
-[ -d dists ] && sudo rm -R dists/trusty
+[ -d dists ] && sudo rm -R dists
 # Remove previous chroot if exists
 [ -d chroot ] && sudo rm -R chroot/
 
@@ -69,7 +69,9 @@ initramfs-extract() {
 
 # remove existing plymouth bootscreen packages and debuilding them again
 # in the future the debuilding (=building deb packages) is to be done 
-# in the meilix-artwork repo and we will fetch the latest releases of the 
+# in the meilix-artwork repo and we will Is this problem is coming in the Ubuntu only or are there any windows/mac os users are facing
+
+#fetch the latest releases of the 
 # deb files here.
 rm plymouth-meilix-logo_1.0-1_all.deb
 rm plymouth-meilix-text_1.0-1_all.deb

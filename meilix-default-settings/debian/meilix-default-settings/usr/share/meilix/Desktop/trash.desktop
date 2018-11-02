@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name= Trash
+Exec=pcmanfm trash:///
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=emptytrash
+Categories=GNOME;GTK;Accessories;
+StartupNotify=true
+Actions=NewWindow;

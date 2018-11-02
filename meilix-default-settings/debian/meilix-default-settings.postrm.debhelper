@@ -1,5 +1,5 @@
-# Automatically added by dh_icons
+# Automatically added by dh_icons/11.3.2ubuntu1
 if which update-icon-caches >/dev/null 2>&1 ; then
-	update-icon-caches /usr/share/icons/Meilix
+	update-icon-caches /usr/share/icons/meilix
 fi
 # End automatically added section
