@@ -46,7 +46,7 @@ done
 [ -d db ] && sudo rm -R db
 [ -d pool ] && sudo rm -R pool
 [ -d docs ] && sudo rm -R docs
-[ -d dists ] && sudo rm -R dists/trusty
+[ -d dists ] && sudo rm -R dists
 # Remove previous chroot if exists
 [ -d chroot ] && sudo rm -R chroot/
 
