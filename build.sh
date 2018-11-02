@@ -77,8 +77,8 @@ chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
 #Fetch the packages from meilix-artwork
-wget https://github.com/fossasia/meilix-artwork/blob/deb/plymouth-meilix-logo_1.0-1_all.deb -O plymouth-meilix-logo_1.0-1_all.deb
-wget https://github.com/fossasia/meilix-artwork/blob/deb/plymouth-meilix-text_1.0-1_all.deb -O plymouth-meilix-text_1.0-1_all.deb
+wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-meilix-logo_1.0-1_all.deb -O plymouth-meilix-logo_1.0-1_all.deb
+wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-meilix-text_1.0-1_all.deb -O plymouth-meilix-text_1.0-1_all.deb
 
 # Create and populate the chroot using debootstrap
 # Debootstrap installs a Linux in the chroot. The noisy output could be ignored
