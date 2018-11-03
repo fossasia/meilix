@@ -3,7 +3,9 @@
 # on travis in /home/travis/build/fossasia/meilix
 
 #rm meilix-default-settings_*                                    #removes the older meilix-default-settings packages if exist
-cd meilix-default-settings                                      #cd into the metapackage directory
+cd meilix-default-settings                                 #cd into the metapackage directory 
+cd ..
+sudo rm melix-default-settings                                  #again trying to remove the melix-default settings package if exist from root user
 echo y | debuild -uc -us                                                 #debuild the meilix-default-settings metapackage
 cd ..
 
