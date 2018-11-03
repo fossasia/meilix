@@ -67,8 +67,8 @@ Meilix is a light weight, beautiful and fast Linux with all the features of Ubun
     - NextCloud
     - Dropbox
 
-- Add all the documents and files your need in your linux.
-- System Lock: it allows you to freeze all the systems your are hosting using Meilix. 
+- Add all the documents and files you need in your linux.
+- System Lock: it allows you to freeze all the systems you are hosting using Meilix. 
 
 
 ### Architecture
@@ -101,7 +101,7 @@ Here are some pre-requisites to develop Meilix.
 
 ## Development 
 
-Meilix fetch ubuntu source, customize it to add features and then build the distro. It use shell scripts to perform all the tasks, build can be made on local machine, Travis CI.
+Meilix fetches ubuntu source, customizes it to add features and then builds the distro. It uses shell scripts to perform all the tasks, build can be made on local machine, Travis CI.
 
 ### File Structure
 
@@ -223,7 +223,7 @@ It can't get better then this, your pull request will be really appreciated by t
 
 ### Community 
 
-Meilix have contributor around the world,  constantly improving Meilix and helping others as well to do so. To get in touch with the community, you can use the following communications channels. 
+Meilix has contributors around the world,  constantly improving Meilix and helping others as well to do so. To get in touch with the community, you can use the following communication channels. 
 
 **Gitter**: [https://gitter.im/fossasia/meilix](https://gitter.im/fossasia/meilix) <br>
 **Slack**: [http://fossasia-slack.herokuapp.com/](http://fossasia-slack.herokuapp.com/) <br>
