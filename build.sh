@@ -232,4 +232,8 @@ chmod 0444 ../$ISOFILE
 cd ..
 md5sum $ISOFILE >${ISOFILE}.md5
 
+#Show how much space the build process uses *fun*
+du -hs .
+
+
 # see travis confguration for the deployment that follows in case of a Travis build. 
