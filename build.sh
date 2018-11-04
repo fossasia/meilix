@@ -83,7 +83,7 @@ wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-te
 # Create and populate the chroot using debootstrap
 # Debootstrap installs a Linux in the chroot. The noisy output could be ignored
 # arch, release, mirror see as set above.
-sudo debootstrap --arch=${arch} ${release} chroot ${mirror} 2>&1 |grep -v "^I: "
+sudo debootstrap --arch=${arch} ${release} chroot ${mirror} #2>&1 |grep -v "^I: "
 
 # Use /etc/resolv.conf from the host machine during the build
 sudo cp -vr /etc/resolvconf chroot/etc/resolvconf
@@ -98,7 +98,7 @@ sudo cp -v systemlock_*_all.deb chroot
 sudo cp -v plymouth-theme-meilix-logo_*_all.deb chroot
 sudo cp -v plymouth-theme-meilix-text_*_all.deb chroot
 #sudo cp -v meilix-metapackage_*_all.deb chroot
-sudo cp -v ./scripts/meilix_check.sh chroot
+sudo cp -v ./scripts/meilix_check.sh chroot/meilix_check.sh
 
 # Mount needed pseudo-filesystems for the chroot
 sudo mount --rbind /sys chroot/sys
