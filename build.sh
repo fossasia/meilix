@@ -77,8 +77,8 @@ chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
 #Fetch the packages from meilix-artwork
-wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-meilix-logo_1.0-1_all.deb -O plymouth-meilix-logo_1.0-1_all.deb
-wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-meilix-text_1.0-1_all.deb -O plymouth-meilix-text_1.0-1_all.deb
+wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-logo_1.0-1_all.deb -O plymouth-theme-meilix-logo_1.0-1_all.deb
+wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-text_1.0-1_all.deb -O plymouth-theme-meilix-text_1.0-1_all.deb
 
 # Create and populate the chroot using debootstrap
 # Debootstrap installs a Linux in the chroot. The noisy output could be ignored
@@ -95,8 +95,8 @@ sudo cp -v sources.list chroot/etc/apt/sources.list
 # Copy our custom packages into the chroot
 sudo cp -v meilix-default-settings_*_all.deb chroot
 sudo cp -v systemlock_*_all.deb chroot
-sudo cp -v plymouth-meilix-logo_*_all.deb chroot
-sudo cp -v plymouth-meilix-text_*_all.deb chroot
+sudo cp -v plymouth-theme-meilix-logo_*_all.deb chroot
+sudo cp -v plymouth-theme-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
 
 # Mount needed pseudo-filesystems for the chroot
@@ -189,7 +189,7 @@ sudo mkisofs -r -V "$IMAGE_NAME" -cache-inodes -J -l \
   -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table \
   --publisher "Meilix Packaging Team" \
-  --volset "Ubuntu Linux http://www.ubuntu.com" \
+  --volset "Meilix Linux http://www.meilix.org" \
   -p "${DEBFULLNAME:-$USER} <${DEBEMAIL:-on host $(hostname --fqdn)}>" \
   -A "$IMAGE_NAME" \
   -m filesystem.squashfs \
