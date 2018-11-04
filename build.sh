@@ -97,7 +97,7 @@ sudo cp -v meilix-default-settings_*_all.deb chroot
 sudo cp -v systemlock_*_all.deb chroot
 sudo cp -v plymouth-theme-meilix-logo_*_all.deb chroot
 sudo cp -v plymouth-theme-meilix-text_*_all.deb chroot
-sudo cp -v meilix-metapackage_*_all.deb chroot
+#sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v ./scripts/meilix_check.sh chroot
 
 # Mount needed pseudo-filesystems for the chroot
