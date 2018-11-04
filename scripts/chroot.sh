@@ -66,7 +66,7 @@ apt-get -qq -y --allow-unauthenticated install lxqt-runner lxqt-session lxqt-sud
 # minimal kwin
 apt-get -qq -y --allow-unauthenticated --no-install-recommends install kwin-x11 kwin-style-breeze kwin-addons systemsettings
 apt-get -qq -y --allow-unauthenticated install kde-style-breeze kde-style-breeze-qt4
-update-alternatives --verbose --set x-session-manager /usr/bin/lxqt-session
+#update-alternatives --verbose --set x-session-manager /usr/bin/lxqt-session
 
 #sudo apt-get install lightdm-gtk-greeter
 # set 
@@ -82,8 +82,8 @@ apt-get -qq -y install ubiquity ubiquity-casper ubiquity-slideshow-ubuntu ubiqui
 
 # Plymouth theme 
 apt-get -qq -y install plymouth-label #dependency of our theme
-dpkg -i plymouth-meilix-logo_1.0-1_all.deb 
-dpkg -i plymouth-meilix-text_1.0-1_all.deb
+dpkg -i plymouth-theme-meilix-text_1.0-1_all.deb
+dpkg -i plymouth-theme-meilix-logo_1.0-1_all.deb 
 apt-get install -f
 
 ls /usr/share/plymouth/themes # show us which themes we have
@@ -219,16 +219,18 @@ rm -rf /tmp/*
 
 rm meilix-default-settings_1.0_all.deb
 rm meilix-metapackage_1.0-1_all.deb
-rm systemlock_0.1-1_all.deb plymouth-meilix-logo_1.0-1_all.deb plymouth-meilix-text_1.0-1_all.deb
+rm systemlock_0.1-1_all.deb 
+rm plymouth-theme-meilix-logo_1.0-1_all.deb 
+rm plymouth-theme-meilix-text_1.0-1_all.deb
 rm meilix-imclient_*_all.deb
 
-# display the current default xsession
+#display the current default xsession
 update-alternatives --auto x-session-manager 
 # Why was this added?
 # apt-get remove --purge wget apt-transport-https
 
 # Just for Test purposes
-echo initramfs.con
+echo initramfs.conf
 cat conf/initramfs.conf
 echo uuid.conf
 cat conf/uuid.conf
