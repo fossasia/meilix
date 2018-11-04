@@ -216,7 +216,6 @@ apt-get -qq clean
 rm -rf /tmp/*
 #rm /etc/resolv.conf
 
-
 rm meilix-default-settings_1.0_all.deb
 rm meilix-metapackage_1.0-1_all.deb
 rm systemlock_0.1-1_all.deb 
@@ -244,6 +243,7 @@ cat /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 echo end passphrase section
 
 # Meilix Check Skript
+chmod +x meilix_check.sh
 ./meilix_check.sh
 
 # Reverting earlier initctl override. JM 2012-0604
