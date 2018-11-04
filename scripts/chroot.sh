@@ -222,10 +222,7 @@ rm meilix-metapackage_1.0-1_all.deb
 rm systemlock_0.1-1_all.deb 
 rm plymouth-theme-meilix-logo_1.0-1_all.deb 
 rm plymouth-theme-meilix-text_1.0-1_all.deb
-rm meilix-imclient_*_all.deb
 
-#display the current default xsession
-update-alternatives --auto x-session-manager 
 # Why was this added?
 # apt-get remove --purge wget apt-transport-https
 
@@ -245,6 +242,9 @@ less /usr/share/initramfs-tools/scripts/casper-bottom/25adduser
 echo Skript 15
 cat /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 echo end passphrase section
+
+# Meilix Check Skript
+./meilix_check.sh
 
 # Reverting earlier initctl override. JM 2012-0604
 rm /sbin/initctl
