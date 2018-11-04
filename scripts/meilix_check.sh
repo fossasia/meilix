@@ -31,3 +31,8 @@ ls /usr/share/plymouth/themes # show us which themes we have
 # show us the plymouth meilix-logo folder
 ls /usr/share/plymouth/themes/meilix-logo/
 ls -l |grep .plymouth
+
+
+# startup 
+ls /usr/share/xsessions/  
+cat /usr/share/xsessions/lxqt.desktop
