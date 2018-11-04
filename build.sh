@@ -76,9 +76,6 @@ initramfs-extract() {
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
-cp -v ./scripts/meilix_check.sh chroot
-chmod +x ./chroot/meilix_check.sh
-
 #Fetch the packages from meilix-artwork
 wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-logo_1.0-1_all.deb -O plymouth-theme-meilix-logo_1.0-1_all.deb
 wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-text_1.0-1_all.deb -O plymouth-theme-meilix-text_1.0-1_all.deb
@@ -101,6 +98,8 @@ sudo cp -v systemlock_*_all.deb chroot
 sudo cp -v plymouth-theme-meilix-logo_*_all.deb chroot
 sudo cp -v plymouth-theme-meilix-text_*_all.deb chroot
 sudo cp -v meilix-metapackage_*_all.deb chroot
+sudo cp -v ./scripts/meilix_check.sh chroot
+chmod +x chroot/meilix_check.sh
 
 # Mount needed pseudo-filesystems for the chroot
 sudo mount --rbind /sys chroot/sys
