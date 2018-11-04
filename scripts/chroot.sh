@@ -110,7 +110,7 @@ update-initramfs -c -k all
  mv /etc/chromium-browser/ /etc/chromium-browser_
 
 # Remove screensaver
-apt-get -qq -y remove xscreensaver
+#apt-get -qq -y remove xscreensaver
 
 # Archive Manager
 apt-get -qq -y --purge install file-roller unrar
@@ -151,8 +151,8 @@ apt-get -qq -y --purge install gimp inkscape
 apt-get -qq -y --purge install --no-install-recommends libreoffice-gtk libreoffice-gtk libreoffice-writer libreoffice-calc libreoffice-impress
 
 #screen-dimming turns off always
-echo -ne "\033[9;0]" >> /etc/issue
-setterm -blank 0 >> /etc/issue
+#echo -ne "\033[9;0]" >> /etc/issue
+#setterm -blank 0 >> /etc/issue
 
 #Install vlc
 apt-get -qq -y install vlc
@@ -243,7 +243,7 @@ cat /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 echo end passphrase section
 
 # Meilix Check Skript
-chmod +x meilix_check.sh
+#chmod +x meilix_check.sh
 ./meilix_check.sh
 
 # Reverting earlier initctl override. JM 2012-0604
