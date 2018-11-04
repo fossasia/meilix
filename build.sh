@@ -76,6 +76,9 @@ initramfs-extract() {
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
+cp -v ./scripts/meilix_check.sh chroot
+chmod +x ./chroot/meilix_check.sh
+
 #Fetch the packages from meilix-artwork
 wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-logo_1.0-1_all.deb -O plymouth-theme-meilix-logo_1.0-1_all.deb
 wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-text_1.0-1_all.deb -O plymouth-theme-meilix-text_1.0-1_all.deb
@@ -234,6 +237,5 @@ md5sum $ISOFILE >${ISOFILE}.md5
 
 #Show how much space the build process uses *fun*
 du -hs .
-
 
 # see travis confguration for the deployment that follows in case of a Travis build. 
