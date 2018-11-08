@@ -1,6 +1,6 @@
 # Meilix
 <p align="center">
-    <img src="logo.png" width="160">
+    <img src="./static/logo_readme.png" width="160">
 </p><br><br>
 
 [![Join the chat at https://gitter.im/fossasia/meilix](https://badges.gitter.im/fossasia/meilix.svg)](https://gitter.im/fossasia/meilix?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/fossasia/meilix.svg?branch=master)](https://travis-ci.org/fossasia/meilix)
