@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 # A script to provide some raw info about a running meilix system
 # please expand
 
@@ -43,5 +44,24 @@ ls -l |grep .plymouth
 # startup 
 ls /usr/share/xsessions/  
 cat /usr/share/xsessions/lxqt.desktop
+ls /usr/local/share/xsessions
+
+
+# Just for Test purposes
+echo initramfs.conf
+cat conf/initramfs.conf
+echo uuid.conf
+cat conf/uuid.conf
+echo conf.d
+cat conf/conf.d
+ls /usr/share/xsessions/ 
+echo passphrase section
+ls /usr/share/initramfs-tools/scripts/casper
+ls /usr/share/initramfs-tools/scripts/casper-bottom/
+echo Skript 25
+less /usr/share/initramfs-tools/scripts/casper-bottom/25adduser
+echo Skript 15
+cat /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
+echo end passphrase section
 
 echo end Meilix_check script
