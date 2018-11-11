@@ -52,7 +52,7 @@ apt-get -qq -y install xfwm4 # might be set accidently as default WM
 # apt-get -qq -y install lightdm
 #apt-get -qq -y install xserver-xorg-video-intel
 
-update-alternatives --auto x-session-manager # display the current default xsession
+update-alternatives --display x-session-manager # display the current default xsession
 
 # Install LXQT components
 apt-get -qq -y --allow-unauthenticated install lxqt openbox 
