@@ -2,6 +2,8 @@
 # A script to provide some raw info about a running meilix system
 # please expand
 
+echo Meilix_check - raw info about your configuration
+
 # ----- Version -----
 lsb_release -a
 
@@ -41,3 +43,5 @@ ls -l |grep .plymouth
 # startup 
 ls /usr/share/xsessions/  
 cat /usr/share/xsessions/lxqt.desktop
+
+echo end Meilix_check script
