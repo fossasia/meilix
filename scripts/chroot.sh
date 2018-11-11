@@ -216,11 +216,11 @@ apt-get -qq clean
 rm -rf /tmp/*
 #rm /etc/resolv.conf
 
-rm meilix-default-settings_1.0_all.deb
-rm meilix-metapackage_1.0-1_all.deb
-rm systemlock_0.1-1_all.deb 
-rm plymouth-theme-meilix-logo_1.0-1_all.deb 
-rm plymouth-theme-meilix-text_1.0-1_all.deb
+rm -f meilix-default-settings_1.0_all.deb
+rm -f meilix-metapackage_1.0-1_all.deb
+rm -f systemlock_0.1-1_all.deb 
+rm -f plymouth-theme-meilix-logo_1.0-1_all.deb 
+rm -f plymouth-theme-meilix-text_1.0-1_all.deb
 
 # Why was this added?
 # apt-get remove --purge wget apt-transport-https
