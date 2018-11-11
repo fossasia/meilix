@@ -243,7 +243,7 @@ cat /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 echo end passphrase section
 
 # Meilix Check Skript
-#chmod +x meilix_check.sh
+chmod +x meilix_check.sh
 ./meilix_check.sh
 
 # Reverting earlier initctl override. JM 2012-0604
