@@ -225,22 +225,7 @@ rm -f plymouth-theme-meilix-text_1.0-1_all.deb
 # Why was this added?
 # apt-get remove --purge wget apt-transport-https
 
-# Just for Test purposes
-echo initramfs.conf
-cat conf/initramfs.conf
-echo uuid.conf
-cat conf/uuid.conf
-echo conf.d
-cat conf/conf.d
-ls /usr/share/xsessions/ 
-echo passphrase section
-ls /usr/share/initramfs-tools/scripts/casper
-ls /usr/share/initramfs-tools/scripts/casper-bottom/
-echo Skript 25
-less /usr/share/initramfs-tools/scripts/casper-bottom/25adduser
-echo Skript 15
-cat /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
-echo end passphrase section
+
 
 # Meilix Check Skript
 chmod +x meilix_check.sh
