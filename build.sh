@@ -186,7 +186,8 @@ cd image && sudo find . -type f -print0 |xargs -0 sudo md5sum |grep -v "\./md5su
 # Generate a small temporary ISO so we get an updated boot.cat
 IMAGE_NAME=${IMAGE_NAME:-"Meilix ${release} $(date -u +%Y%m%d) - ${arch}"}
 ISOFILE=meilix-${release}-$(date -u +%Y%m%d)-${arch}.iso
-sudo mkisofs -r -V "$IMAGE_NAME" -cache-inodes -J -l \
+#sudo mkisofs -r -V "$IMAGE_NAME" -cache-inodes -J -l \
+sudo genisoimage -r -V "$IMAGE_NAME" -cache-inodes -J -l \
   -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table \
   --publisher "Meilix Packaging Team" \
@@ -214,7 +215,8 @@ sudo find . -type f -print0 |xargs -0 sudo md5sum |grep -v "\./md5sum.txt" >md5s
 sudo rm ../$ISOFILE.tmp
 
 # Create an Meilix ISO from the image directory tree
-sudo mkisofs -r -V "$IMAGE_NAME" -cache-inodes -J -l \
+# sudo mkisofs -r -V "$IMAGE_NAME" -cache-inodes -J -l \
+sudo genisoimage -r -V "$IMAGE_NAME" -cache-inodes -J -l \
   -allow-limited-size -udf \
   -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table \
