@@ -64,4 +64,10 @@ echo Skript 15
 cat /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 echo end passphrase section
 
+# passwords of user accounts 
+passwd --all -S
+cat /etc/passwd
+id -u
+
+
 echo end Meilix_check script
