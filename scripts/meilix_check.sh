@@ -48,12 +48,14 @@ ls /usr/local/share/xsessions
 
 
 # Just for Test purposes
-echo initramfs.conf
-cat conf/initramfs.conf
-echo uuid.conf
+
+cat conf
+cat conf/arch.conf
 cat conf/uuid.conf
-echo conf.d
+cat conf/initramfs.conf
 cat conf/conf.d
+cat conf/modules
+
 ls /usr/share/xsessions/ 
 echo passphrase section
 ls /usr/share/initramfs-tools/scripts/casper
