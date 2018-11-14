@@ -106,8 +106,11 @@ sudo mount --rbind /dev chroot/dev
 sudo mount -t proc none chroot/proc
 
 #Section chroot - Work *inside* the chroot
-chmod +x ./scripts/chroot.sh
-./scripts/chroot.sh
+#chmod +x ./scripts/chroot.sh
+#./scripts/chroot.sh
+#switch to chroot 'in reconstruction' version
+chmod +x ./scripts/chroot_reconst.sh
+./scripts/chroot_reconst.sh
 #Section chroot finished, continue work outside the chroot,
 ###############################################################
 #Preparing image
