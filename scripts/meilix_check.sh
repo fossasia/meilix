@@ -49,12 +49,11 @@ ls /usr/local/share/xsessions
 
 # Just for Test purposes
 
-cat conf
-cat conf/arch.conf
+#cat conf/arch.conf
 cat conf/uuid.conf
-cat conf/initramfs.conf
-cat conf/conf.d
-cat conf/modules
+#cat conf/initramfs.conf
+#cat conf/conf.d
+#cat conf/modules
 
 ls /usr/share/xsessions/ 
 echo passphrase section
