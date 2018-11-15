@@ -90,7 +90,7 @@ sudo cp -vr /etc/resolvconf chroot/etc/resolvconf
 
 # Copy the sources.list in chroot which enables universe / multiverse, and eventually additional repos.
 # The sources.list apt ppa sources should correspond to the ${release} version 
-sudo cp -v sources.list chroot/etc/apt/sources.list
+sudo cp -v sources.${release}.list chroot/etc/apt/sources.list
 
 # Copy our custom packages into the chroot
 sudo cp -v meilix-default-settings_*_all.deb chroot
