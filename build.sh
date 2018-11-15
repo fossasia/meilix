@@ -16,10 +16,8 @@ export LANGUAGE=en_US.UTF-8
 arch=${1:-amd64}
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
-# Ubuntu release used as a base by debootstrap.  Examples: lucid, maverick, natty.
-# If you change the value here you also have to adj́ust the sources.list file 
-# accordingly and check if it works with the provided lzma image.
-release=${4:-xenial}
+# Ubuntu release used as a base by debootstrap, check if it works with the provided lzma image.
+release=${4:-bionic}
 # Set of GNOME language packs to install.
 # Use '\*' for all langs, 'en' for English
 gnomelanguage=${3:-'{en}'}	
