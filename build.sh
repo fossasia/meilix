@@ -149,12 +149,6 @@ sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
   
-# Temporary SONDE - Nov 2018
-set -x
-cat conf/arch.conf
-cat conf/uuid.conf
-cat conf/initramfs.conf
-cat conf/conf.d
 
 # Fix old version and date info in .hlp files
 newversion=$(date -u +%y.%m) # Should be derived from releasename $4 FIXME
