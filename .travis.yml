@@ -22,7 +22,7 @@ include:
           - devscripts
 
 sudo: required
-
+dist: xenial
 git:
   depth: 22
 
