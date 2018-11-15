@@ -12,7 +12,6 @@ export LANGUAGE=en_US.UTF-8
 # Script parameters: arch mirror gnomelanguage release
 
 # Arch to build ISO for, i386 or amd64
-#arch=${1:-i386}
 arch=${1:-amd64}
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
@@ -80,8 +79,8 @@ wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-te
 
 # Create and populate the chroot using debootstrap
 # Debootstrap installs a Linux in the chroot. The noisy output could be ignored
-# arch, release, mirror see as set above.
-sudo debootstrap --arch=${arch} ${release} chroot ${mirror} 2>&1 |grep -v "^I: "
+# arch, release, mirror as set above.
+sudo debootstrap --arch=${arch} ${release} chroot ${mirror} #2>&1 |grep -v "^I: "
 
 echo now
 
