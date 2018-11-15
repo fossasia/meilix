@@ -1,6 +1,7 @@
 #!/bin/bash
 # Minimimal chroot file for a reconstruction of meilix
 # 14 Nov 18 v.0.1 first minimal try
+# 15 Nov 18 v.0.2 let's exmperiment
 
 sudo chroot chroot <<EOF
 # Set up several useful shell variables
@@ -33,11 +34,13 @@ apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
 # Install base packages
-# apt-get -qq -y install xorg  
-# apt-get -qq -y install sddm
+apt-get -qq -y install xorg lightdm  
+#apt-get -qq -y install sddm
 # Install LXQT components
 apt-get -qq -y install lxqt openbox 
 apt-get -f install
+update-alternatives --display x-session-manager
+update-alternatives --set x-session-manager /usr/bin/lxqt-session
 
 # Meilix Check Skript
 chmod +x meilix_check.sh
