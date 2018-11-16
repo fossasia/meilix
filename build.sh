@@ -16,7 +16,7 @@ arch=${1:-amd64}
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Ubuntu release used as a base by debootstrap, check if it works with the provided lzma image.
-release=${4:-xenial}
+release=${4:-bionic}
 # Set of GNOME language packs to install.
 # Use '\*' for all langs, 'en' for English
 gnomelanguage=${3:-'{en}'}	
