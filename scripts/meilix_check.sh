@@ -37,7 +37,12 @@ xdg-settings --list
 update-alternatives --display x-session-manager
 update-alternatives --get-selections 
 
-cat /usr/share/lxqt/session.conf
+#does not exist
+#cat /usr/share/lxqt/session.conf
+cat /etc/xdg/lxqt/session.conf
+cat /etc/xdg/lxqt/lxqt.conf
+cat /etc/xdg/lxqt/windowmanagers.conf
+
 ls /usr/share/lxqt
 
 # Plymouth themes
