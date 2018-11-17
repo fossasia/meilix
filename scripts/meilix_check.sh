@@ -50,7 +50,7 @@ cat /usr/share/xsessions/lxqt.desktop
 ls /usr/local/share/xsessions
 
 # Do lxsession files exist?
-ls /usr/bin/lxs*
+ls /usr/bin/lx*
 
 
 # Just for Test purposes
