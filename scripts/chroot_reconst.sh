@@ -47,6 +47,12 @@ update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/
 sed -i 's\plasma.desktop\lxqt.desktop\g' /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 update-initramfs -uk all
 
+
+cat /usr/share/xsessions/plasma.desktop
+rm  /usr/share/xsessions/plasma.desktop
+# ugliest hack ever
+cp  /usr/share/xsessions/lxqt.desktop /usr/share/xsessions/plasma.desktop
+
 # Meilix Check Skript
 chmod +x meilix_check.sh
 ./meilix_check.sh
