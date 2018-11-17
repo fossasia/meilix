@@ -40,7 +40,8 @@ apt-get -qq -y install xorg sddm
 apt-get -qq -y install lxqt openbox 
 apt-get -f install
 update-alternatives --display x-session-manager
-update-alternatives --install x-session-manager /usr/bin/startlxqt 100
+
+update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/bin/startlxqt 140
 #update-alternatives --set x-session-manager /usr/bin/lxqt-session
 #ugly hack
 sed -i 's\plasma.desktop\lxqt.desktop\g' /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
