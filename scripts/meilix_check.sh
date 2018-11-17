@@ -49,6 +49,9 @@ ls /usr/share/xsessions/
 cat /usr/share/xsessions/lxqt.desktop
 ls /usr/local/share/xsessions
 
+# Do lxsession files exist?
+ls /usr/bin/lxs*
+
 
 # Just for Test purposes
 
