@@ -34,13 +34,16 @@ apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
 # Install base packages
-apt-get -qq -y install xorg lightdm  
-#apt-get -qq -y install sddm
+#apt-get -qq -y install xorg lightdm  
+apt-get -qq -y install sddm
 # Install LXQT components
 apt-get -qq -y install lxqt openbox 
 apt-get -f install
 update-alternatives --display x-session-manager
 update-alternatives --set x-session-manager /usr/bin/lxqt-session
+#ugly hack
+sed -i 's\plasma.desktop\lxqt.desktop\g' /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
+
 
 # Meilix Check Skript
 chmod +x meilix_check.sh
