@@ -37,6 +37,9 @@ xdg-settings --list
 update-alternatives --display x-session-manager
 update-alternatives --get-selections 
 
+cat /usr/share/lxqt/session.conf
+ls /usr/share/lxqt
+
 # Plymouth themes
 ls /usr/share/plymouth/themes # show us which themes we have
 # show us the plymouth meilix-logo folder
@@ -51,11 +54,6 @@ ls /usr/local/share/xsessions
 
 # Do lxsession files exist?
 ls /usr/bin/lx*
-
-# What files are installed by LXQT?
-apt-get install apt-file
-apt-file update
-apt-file list lxqt
 
 # Just for Test purposes
 
