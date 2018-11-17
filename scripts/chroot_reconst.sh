@@ -45,7 +45,7 @@ update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/
 #update-alternatives --set x-session-manager /usr/bin/lxqt-session
 #ugly hack
 sed -i 's\plasma.desktop\lxqt.desktop\g' /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
-
+update-initramfs -u
 
 # Meilix Check Skript
 chmod +x meilix_check.sh
