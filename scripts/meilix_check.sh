@@ -42,6 +42,7 @@ update-alternatives --get-selections
 cat /etc/xdg/lxqt/session.conf
 cat /etc/xdg/lxqt/lxqt.conf
 cat /etc/xdg/lxqt/windowmanagers.conf
+cat /etc/xdg/pcmanfm-qt/lxqt/settings.conf
 cat /usr/share/xsessions/lxqt.desktop
 ls /usr/share/lxqt
 
