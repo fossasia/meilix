@@ -32,6 +32,9 @@ cat /usr/share/applications/defaults.list | grep video
 
 ## Other
 
+xdg-settings --list
+
+update-alternatives --display x-session-manager
 update-alternatives --get-selections 
 
 # Plymouth themes
