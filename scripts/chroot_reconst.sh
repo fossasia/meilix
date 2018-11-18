@@ -2,11 +2,15 @@
 # Minimimal chroot file for a reconstruction of meilix
 # 14 Nov 18 v.0.1 first minimal try
 # 15 Nov 18 v.0.2 let's exmperiment
+# 17 Nov 18 v.0.3 We have a desktop
+# 18 Nov 18 v.0.4 Let's try to change the default user
+
 
 sudo chroot chroot <<EOF
 # Set up several useful shell variables
 export CASPER_GENERATE_UUID=1
 export HOME=/root
+export USERNAME=meilix
 export TTY=unknown
 export TERM=vt100
 export DEBIAN_FRONTEND=noninteractive
@@ -39,11 +43,8 @@ apt-get -qq -y install xorg xinit
 # Install LXQT components
 apt-get -qq -y install lxqt openbox 
 apt-get -f install
-update-alternatives --display x-session-manager
-
 update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/bin/startlxqt 140
-#update-alternatives --set x-session-manager /usr/bin/lxqt-session
-#ugly hack
+# ugly hack
 sed -i 's\plasma.desktop\lxqt.desktop\g' /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
 update-initramfs -uk all
 
