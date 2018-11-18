@@ -63,6 +63,17 @@ update-alternatives --install /usr/share/plymouth/themes/text.plymouth text.plym
 update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 140
 update-initramfs -c -k all
 
+# Clean up the chroot before
+perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
+apt-get -qq clean
+rm -rf /tmp/*
+#rm /etc/resolv.conf
+rm -f meilix-default-settings_1.0_all.deb
+rm -f meilix-metapackage_1.0-1_all.deb
+rm -f systemlock_0.1-1_all.deb 
+rm -f plymouth-theme-meilix-logo_1.0-1_all.deb 
+rm -f plymouth-theme-meilix-text_1.0-1_all.deb
+
 # Meilix Check Skript
 chmod +x meilix_check.sh
 ./meilix_check.sh
