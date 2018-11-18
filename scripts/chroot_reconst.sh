@@ -32,6 +32,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 91E7EE5E
 
 # Update in-chroot package database
 apt-get -qq update
+apt-get -qq -y upgrade
 
 # Install core packages
 apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
@@ -47,7 +48,7 @@ update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/
 # ugly hack
 sed -i 's\plasma.desktop\lxqt.desktop\g' /usr/share/initramfs-tools/scripts/casper-bottom/15autologin 
 #While this is necessary for the changes to take effect we don't have to do that here. 
-update-initramfs -uk all
+update-initramfs -c -k -v all
 
 cat /usr/share/xsessions/plasma.desktop
 rm  /usr/share/xsessions/plasma.desktop
