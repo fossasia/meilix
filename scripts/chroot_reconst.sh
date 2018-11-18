@@ -45,14 +45,21 @@ apt-get -qq -y install lxqt openbox
 apt-get -f install
 update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/bin/startlxqt 140
 # ugly hack
-sed -i 's\plasma.desktop\lxqt.desktop\g' /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
+sed -i 's\plasma.desktop\lxqt.desktop\g' /usr/share/initramfs-tools/scripts/casper-bottom/15autologin 
+#While this is necessary for the changes to take effect we don't have to do that here. 
 update-initramfs -uk all
-
 
 cat /usr/share/xsessions/plasma.desktop
 rm  /usr/share/xsessions/plasma.desktop
 # ugliest hack ever
 cp  /usr/share/xsessions/lxqt.desktop /usr/share/xsessions/plasma.desktop
+
+# plymouth boot splash
+dpkg -i plymouth-theme-meilix-text_1.0-1_all.deb
+dpkg -i plymouth-theme-meilix-logo_1.0-1_all.deb 
+update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 150
+update-alternatives --install /usr/share/plymouth/themes/text.plymouth text.plymouth /usr/share/plymouth/themes/meilix-text/meilix-text.plymouth 144
+update-initramfs -uk all
 
 # Meilix Check Skript
 chmod +x meilix_check.sh
