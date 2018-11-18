@@ -10,7 +10,7 @@ sudo chroot chroot <<EOF
 # Set up several useful shell variables
 export CASPER_GENERATE_UUID=1
 export HOME=/root
-export USERNAME=meilix
+#export USERNAME=meilix
 export TTY=unknown
 export TERM=vt100
 export DEBIAN_FRONTEND=noninteractive
@@ -40,7 +40,7 @@ apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
 
 # Install base packages
 #apt-get -qq -y install xorg lightdm  
-apt-get -qq -y install xorg xinit 
+apt-get -qq -y install xorg xinit sddm
 # Install LXQT components
 apt-get -qq -y install lxqt openbox 
 apt-get -f install
@@ -58,9 +58,10 @@ cp  /usr/share/xsessions/lxqt.desktop /usr/share/xsessions/plasma.desktop
 # plymouth boot splash
 dpkg -i plymouth-theme-meilix-text_1.0-1_all.deb
 dpkg -i plymouth-theme-meilix-logo_1.0-1_all.deb 
-update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 150
-update-alternatives --install /usr/share/plymouth/themes/text.plymouth text.plymouth /usr/share/plymouth/themes/meilix-text/meilix-text.plymouth 144
-update-initramfs -uk all
+apt-get install -f
+update-alternatives --install /usr/share/plymouth/themes/text.plymouth text.plymouth /usr/share/plymouth/themes/meilix-text/meilix-text.plymouth 130
+update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 140
+update-initramfs -c -k all
 
 # Meilix Check Skript
 chmod +x meilix_check.sh
