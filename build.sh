@@ -8,6 +8,7 @@ set -eux				# Be strict
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
+export USERNAME=meilix #try 18.11.
 
 # Script parameters: arch mirror gnomelanguage release
 
