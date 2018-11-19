@@ -57,12 +57,10 @@ cp  /usr/share/xsessions/lxqt.desktop /usr/share/xsessions/plasma.desktop
 
 # plymouth boot splash
 
-# prior to Xenial
-#dpkg -i plymouth-theme-meilix-text_1.0-1_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-text_1.0-1_all.deb
-#dpkg -i plymouth-theme-meilix-logo_1.0-1_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-logo_1.0-1_all.deb
+# after Xenial one could also use apt install ./package
+dpkg -i plymouth-theme-meilix-text_1.0-1_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-text_1.0-1_all.deb
+dpkg -i plymouth-theme-meilix-logo_1.0-1_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-logo_1.0-1_all.deb
 
-apt install ./plymouth-theme-meilix-text_1.0-1_all.deb # This ought to work with a build environemtn above xenial
-apt install ./plymouth-theme-meilix-logo_1.0-1_all.deb 
 update-alternatives --install /usr/share/plymouth/themes/text.plymouth text.plymouth /usr/share/plymouth/themes/meilix-text/meilix-text.plymouth 130
 update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 140
 update-initramfs -c -k all
