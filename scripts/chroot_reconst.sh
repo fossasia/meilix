@@ -4,7 +4,7 @@
 # 15 Nov 18 v.0.2 let's exmperiment
 # 17 Nov 18 v.0.3 We have a desktop
 # 18 Nov 18 v.0.4 Let's try to change the default user
-
+# 19 Nov 18 v.0.5 Fix Plymouth installation
 
 sudo chroot chroot <<EOF
 # Set up several useful shell variables
@@ -50,7 +50,7 @@ sed -i 's\plasma.desktop\lxqt.desktop\g' /usr/share/initramfs-tools/scripts/casp
 #While this is necessary for the changes to take effect we don't have to do that here. 
 update-initramfs -c -k -v all
 
-cat /usr/share/xsessions/plasma.desktop
+# cat /usr/share/xsessions/plasma.desktop
 rm  /usr/share/xsessions/plasma.desktop
 # ugliest hack ever
 cp  /usr/share/xsessions/lxqt.desktop /usr/share/xsessions/plasma.desktop
@@ -70,6 +70,8 @@ perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/li
 apt-get -qq clean
 rm -rf /tmp/*
 #rm /etc/resolv.conf
+
+# Clean up local packages that are not needed anymore
 rm -f meilix-default-settings_1.0_all.deb
 rm -f meilix-metapackage_1.0-1_all.deb
 rm -f systemlock_0.1-1_all.deb 
