@@ -17,10 +17,11 @@ A beautiful and customizable Linux build for out of the box features for an Inte
     3. [Ecosystem](#ecosystem)
 2. [Usage](#usage)
 3. [Pre Requisites](#pre-requisites)
-4. [Development](#development) 
+4. [Development](#development)
     1. [File Structure](#file-structure)
     2. [Build](#build)
     3. [Metapackages](#metapackages)
+    4. [Testing](#test)
 5. [Contribution](#contribution)
     1. [Community](#community)
     2. [Guideline](#guideline) 
@@ -202,6 +203,8 @@ $ chmod +x ./build.sh
 ```console
 $ ./build.sh
 ```
+### Testing 
+1. [Local Installation with Qemu/KVM](/docs/run_meilix_with_qemu.md)
 
 **Build Using Travis***
 
