@@ -8,8 +8,9 @@ set -eux				# Be strict
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-
-# Script parameters: arch mirror gnomelanguage release
+# just a test
+export USERNAME="meilix"
+# Parameters: arch mirror gnomelanguage release
 
 # Arch to build ISO for, i386 or amd64
 arch=${1:-amd64}
