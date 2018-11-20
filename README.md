@@ -46,7 +46,7 @@ Meilix is a light weight, beautiful and fast Linux with all the features of Ubun
     - Screensaver
 
 - Switch on/off various features of your linux. You can switch: 
-    - 64 Bit support (32 Bit is default)
+    - 64 Bit support (or legacy 32 Bit)
     - Notifications
     - Screensaver
     - Sleep Modes 
@@ -74,7 +74,7 @@ Meilix is a light weight, beautiful and fast Linux with all the features of Ubun
 
 ### Architecture
 
-Meilix is based on Ubuntu/Debian architecture, using LXQT as the standard DE(Desktop Environment).
+Meilix is based on Ubuntu/Debian architecture. Meilix uses LXQT as the standard Desktop Environment.
 
 ### Ecosystem
 
@@ -138,10 +138,6 @@ Basic understanding of the file structure is required to do development, here is
 ├── mail-scripts
 │   ├── mail-fail.py
 │   └── mail.py
-├── meilix-artwork
-│   ├── debian/...
-│   ├── Makefile/...
-│   └── usr/...
 ├── systemlock-0.1
 │   ├── debian/...
 │   ├── etc/...
@@ -205,6 +201,7 @@ $ ./build.sh
 ```
 ### Testing the ISOs
 1. [Local Installation with Qemu/KVM](/docs/run_meilix_with_qemu.md)
+2. Run as a live CD in Virtualbox by Oracle
 
 **Build Using Travis***
 
@@ -252,9 +249,8 @@ Meilix uses an agile continuous integration methodology, so the version is frequ
 **Steps to create a pull request**
 
 1. Make a PR to `master` branch. 
-2. Where the PR concerns visual elements it should have an image showing the effect.
-3. Comply with the best practices and guidelines. 
-4. It must pass all CI tests and get positive reviews.
+2. Comply with the best practices and guidelines e.g. where the PR concerns visual elements it should have an image showing the effect.
+3. It must pass all continuous integration checks and get positive reviews.
 
 After this, changes will be merged.
 
