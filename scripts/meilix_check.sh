@@ -63,6 +63,7 @@ ls /usr/bin/lx*
 
 # Just for Test purposes
 
+ls conf
 #cat conf/arch.conf
 #cat conf/uuid.conf
 #cat conf/initramfs.conf
@@ -73,7 +74,7 @@ ls /usr/share/xsessions/
 echo passphrase section
 cat /usr/share/initramfs-tools/scripts/casper
 ls /usr/share/initramfs-tools/scripts/casper-bottom/
-
+less /etc/casper.conf
 
 less /usr/share/initramfs-tools/scripts/casper-bottom/25adduser
 less /usr/share/initramfs-tools/scripts/casper-bottom/24preseed
