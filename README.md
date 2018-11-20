@@ -203,7 +203,7 @@ $ chmod +x ./build.sh
 ```console
 $ ./build.sh
 ```
-### Testing 
+### Testing the ISOs
 1. [Local Installation with Qemu/KVM](/docs/run_meilix_with_qemu.md)
 
 **Build Using Travis***
@@ -245,15 +245,15 @@ Meilix uses an agile continuous integration methodology, so the version is frequ
 
 1. **`Master`** is the development branch. It should always built.
 
-2. **`Generator`** is a legacy branch we keep for reference for the time being.
+2. **`Generator`** is a legacy branch we keep for reference for the time being. It chrooted a master branch ISO release and made changes as requested by the meilix-generator app and repackaged the customized ISO.
 
 3. No further branches should be created in the main repository.
 
 **Steps to create a pull request**
 
-1. Make a PR to `master` or any other feature branch only. 
+1. Make a PR to `master` branch. 
 2. Where the PR concerns visual elements it should have an image showing the effect.
-3. Your code should meet the best practices and guidelines. 
+3. Comply with the best practices and guidelines. 
 4. It must pass all CI tests and get positive reviews.
 
 After this, changes will be merged.
@@ -264,7 +264,7 @@ After this, changes will be merged.
 
 - Make sure your commit message is crisp and clear, read more about it [here](https://chris.beams.io/posts/git-commit/)
 - When refering to a issue in PR, use [special words](https://help.github.com/articles/closing-issues-using-keywords/) to automatically close the related issue like "Fixes #234"
-- Keep each PR very short, which will make it easy to review. 
+- Keep each PR very short, which will make it easy to review and correct.
 
 **Code**
 
@@ -277,7 +277,6 @@ After this, changes will be merged.
 - [Meilix Blogs](https://blog.fossasia.org/tag/meilix/page/5/)
 - [André Talk](https://www.youtube.com/watch?v=PaGtdc1EFRw)
 - [Tarun Talk](https://www.youtube.com/watch?v=iG4fgZlmdb4)
-
 
 ## Gallery 
 
