@@ -2,11 +2,11 @@
 
 Want to contribute? Great!
 
-# How to run Meilix ISO on locally with Qemu/KVM
+# How to run/tests Meilix ISO locally with Qemu/KVM
 
 ## Installing KVM on Ubuntu 
 
-* **Step 1:** Update your ubuntu repositories by executing ```sudo apt-get update```
+* **Step 1:** Update your ubuntu repositories ```sudo apt-get update```
 * **Step 2:** Install the kvm packages, execute ```sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager```
 * **Step 3:** Add user to the groups, execute ```sudo adduser <your-username> libvirt``` and ```sudo adduser <your-username> libvirt-qemu```
 * **Step 4:** Restart your system
@@ -16,7 +16,7 @@ Want to contribute? Great!
 
 ## Testing the Latest Release on Qemu/KVM
 
-* **Step 1:** Download the Latest Release here https://github.com/fossasia/meilix/releases
+* **Step 1:** Download the "Latest Release" here, search (CTRL-f) for "Latest" https://github.com/fossasia/meilix/releases
 * **Step 2:** Open Virtual Machine Manager
 * **Step 3:** Click on Create A New Virtual Machine
 
