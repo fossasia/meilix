@@ -7,7 +7,7 @@
  
 A beautiful and customizable Linux build for out of the box features for an Internet Kiosk. You can use the Meilix Generator (Web app) to make a Linux for your own brand/event, also add apps and features you need pre-installed, it will create an ISO Image of your Linux, which you can use as a live boot or install on PCs. 
 
-`Meilix is under heavy development`
+`Meilix is under heavy development. It is in alpha`stage and not recommended for productive use.
 
 # Index
 
