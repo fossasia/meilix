@@ -98,7 +98,7 @@ Here are some pre-requisites to develop Meilix.
 - Experience in working with a UNIX or GNU/Linux based system. 
 - Basic understanding of Operating System and Package managers. 
 - Programming/Scripting experience. Shell Scripting etc.
-- LPIC1 is a huge plus
+- [LPIC1](https://en.wikipedia.org/wiki/Linux_Professional_Institute_Certification_Programs#LPIC-1) is a huge plus
 
 ## Development 
 
