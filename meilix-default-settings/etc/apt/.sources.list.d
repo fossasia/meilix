@@ -6,4 +6,4 @@
 #
 # For information about PPA please refer to:
 # http://askubuntu.com/questions/4983/what-are-ppas-and-how-do-i-use-them
-deb http://meilix.fossasia.org main
+#deb http://meilix.fossasia.org main
