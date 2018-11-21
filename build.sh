@@ -1,6 +1,6 @@
 #!/bin/bash
 # build.sh -- creates an Meilix LiveCD ISO
-# Author: Team
+# Author: members of the meilix Team 
 # Based on HOWTO information by Julien Lavergne <gilir@ubuntu.com>
 
 set -eux				# Be strict
