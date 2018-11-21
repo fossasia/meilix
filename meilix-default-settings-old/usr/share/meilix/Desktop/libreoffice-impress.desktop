@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Icon=libreoffice-impress
+Type=Application
+Categories=Office;Presentation;
+Exec=libreoffice --impress %U
+MimeType=application/vnd.oasis.opendocument.presentation;application/vnd.oasis.opendocument.presentation-template;application/vnd.sun.xml.impress;application/vnd.sun.xml.impress.template;application/mspowerpoint;application/vnd.ms-powerpoint;application/vnd.openxmlformats-officedocument.presentationml.presentation;application/vnd.ms-powerpoint.presentation.macroenabled.12;application/vnd.openxmlformats-officedocument.presentationml.template;application/vnd.ms-powerpoint.template.macroenabled.12;application/vnd.openxmlformats-officedocument.presentationml.slide;application/vnd.openxmlformats-officedocument.presentationml.slideshow;application/vnd.ms-powerpoint.slideshow.macroEnabled.12;
+Name=LibreOffice Impress
+GenericName=Presentation
+GenericName[zu]=Ukunikezwa kolwazi
+Comment=Create and edit presentations for slideshows, meeting and Web pages by using Impress.
+Comment[zu]=Yenza futhi ulungise imiboniso amaslaydi, amakhasi emihlangano naweWebhu ngokusebenzisa i-Impress.
+InitialPreference=5
+X-Ayatana-Desktop-Shortcuts=X-New
+[X-New Shortcut Group]
+Name=New Presentation
+Name[zu]=New Presentation
+Exec=libreoffice --impress %U
+TargetEnvironment=Unity

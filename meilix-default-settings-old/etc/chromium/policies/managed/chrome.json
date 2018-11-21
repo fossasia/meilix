@@ -1,0 +1,1119 @@
+// Policy template for Linux.
+// Uncomment the policies you wish to activate and change their values to
+// something useful for your case. The provided values are for reference only
+// and do not provide meaningful defaults!
+{
+  // Cross-origin HTTP Basic Auth prompts
+  //-------------------------------------------------------------------------
+  // Controls whether third-party sub-content on a page is allowed to pop-up an
+  // HTTP Basic Auth dialog box.  Typically this is disabled as a phishing
+  // defense. If this policy is not set, this is disabled and third-party sub-
+  // content will not be allowed to pop up a HTTP Basic Auth dialog box.
+
+  //"AllowCrossOriginAuthPrompt": false,
+
+  // Allow invocation of file selection dialogs.
+  //-------------------------------------------------------------------------
+  // Allows access to local files on the machine by allowing Google Chrome to
+  // display file selection dialogs.  If you enable this setting, users can open
+  // file selection dialogs as normal.  If you disable this setting, whenever
+  // the user performs an action which would provoke a file selection dialog
+  // (like importing bookmarks, uploading files, saving links, etc.) a message
+  // is displayed instead and the user is assumed to have clicked Cancel on the
+  // file selection dialog.  If this setting is not set, users can open file
+  // selection dialogs as normal.
+
+  //"AllowFileSelectionDialogs": true,
+
+  // Allow running plugins that are outdated
+  //-------------------------------------------------------------------------
+  // Allows Google Chrome to run plugins that are outdated.  If you enable this
+  // setting, outdated plugins are used as normal plugins.  If you disable this
+  // setting, outdated plugins will not be used and users will not be asked for
+  // permission to run them.  If this setting is not set, users will be asked
+  // for permission to run outdated plugins.
+
+  //"AllowOutdatedPlugins": true,
+
+  // Enable alternate error pages
+  //-------------------------------------------------------------------------
+  // Enables the use of alternate error pages that are built into Google Chrome
+  // (such as 'page not found') and prevents users from changing this setting.
+  // If you enable this setting, alternate error pages are used.  If you disable
+  // this setting, alternate error pages are never used.  If you enable or
+  // disable this setting, users cannot change or override this setting in
+  // Google Chrome.  If this policy is left not set, this will be enabled but
+  // the user will be able to change it.
+
+  //"AlternateErrorPagesEnabled": true,
+
+  // Always runs plugins that require authorization
+  //-------------------------------------------------------------------------
+  // Allows Google Chrome to run plugins that require authorization.  If you
+  // enable this setting, plugins that are not outdated always run.  If this
+  // setting is disabled or not set, users will be asked for permission to run
+  // plugins that require authorization. These are plugins that can compromise
+  // security.
+
+  //"AlwaysAuthorizePlugins": true,
+
+  // Kerberos delegation server whitelist
+  //-------------------------------------------------------------------------
+  // Servers that Google Chrome may delegate to.  Separate multiple server names
+  // with commas. Wildcards (*) are allowed.  If you leave this policy not set
+  // any server will be accepted for integrated authentication.
+
+  //"AuthNegotiateDelegateWhitelist": "foobar.example.com",
+
+  // Supported authentication schemes
+  //-------------------------------------------------------------------------
+  // Specifies which HTTP Authentication schemes are supported by Google Chrome.
+  // Possible values are 'basic', 'digest', 'ntlm' and 'negotiate'. Separate
+  // multiple values with commas.  If this policy is left not set, all four
+  // schemes will be used.
+
+  //"AuthSchemes": "basic,digest,ntlm,negotiate",
+
+  // Authentication server whitelist
+  //-------------------------------------------------------------------------
+  // Specifies which servers should be whitelisted for integrated
+  // authentication. Integrated authentication is only enabled when Google
+  // Chrome receives an authentication challenge from a proxy or from a server
+  // which is in this permitted list.  Separate multiple server names with
+  // commas. Wildcards (*) are allowed.  If you leave this policy not set any
+  // server will be accepted for integrated authentication.
+
+  //"AuthServerWhitelist": "*example.com,foobar.com,*baz",
+
+  // Enable AutoFill
+  //-------------------------------------------------------------------------
+  // Enables Google Chrome's AutoFill feature and allows users to auto complete
+  // web forms using previously stored information such as address or credit
+  // card information.  If you disable this setting, AutoFill will be
+  // inaccessible to users.  If you enable this setting or do not set a value,
+  // AutoFill will remain under the control of the user. This will allow them to
+  // configure AutoFill profiles and to switch AutoFill on or off at their own
+  // discretion.
+
+  //"AutoFillEnabled": false,
+
+  // Automatically select client certificates for these sites
+  //-------------------------------------------------------------------------
+  // Allows you to specify a list of url patterns that specify sites for which
+  // Google Chrome should automatically select a client certificates, if the
+  // site requests a certificate.  If this policy is left not set no auto-
+  // selection will be done for any site.
+
+  //"AutoSelectCertificateForUrls": ["{\"pattern\":\"https://www.example.com\",\"filter\":{\"ISSUER\":{\"CN\":\"certificate issuer name\"}}}"],
+
+  // Continue running background apps when Google Chrome is closed
+  //-------------------------------------------------------------------------
+  // Determines whether a Google Chrome process is started on OS login and keeps
+  // running when the last browser window is closed, allowing background apps to
+  // remain active. The background process displays an icon in the system tray
+  // and can always be closed from there.  If this policy is set to True,
+  // background mode is enabled and cannot be controlled by the user in the
+  // browser settings.  If this policy is set to False, background mode is
+  // disabled and cannot be controlled by the user in the browser settings.  If
+  // this policy is left unset, background mode is initially disabled and can be
+  // controlled by the user in the browser settings.
+
+  //"BackgroundModeEnabled": true,
+
+  // Block third party cookies
+  //-------------------------------------------------------------------------
+  // Blocks third party cookies.  Enabling this setting prevents cookies from
+  // being set by web page elements that are not from the domain that is in the
+  // browser's address bar.  Disabling this setting allows cookies to be set by
+  // web page elements that are not from the domain that is in the browser's
+  // address bar and prevents users from changing this setting.  If this policy
+  // is left not set, third party cookies will be enabled but the user will be
+  // able to change that.
+
+  //"BlockThirdPartyCookies": false,
+
+  // Enable Bookmark Bar
+  //-------------------------------------------------------------------------
+  // Enables the bookmark bar on Google Chrome.  If you enable this setting,
+  // Google Chrome will show a bookmark bar.  If you disable this setting, users
+  // will never see the bookmark bar.  If you enable or disable this setting,
+  // users cannot change or override it in Google Chrome.  If this setting is
+  // left not set the user can decide to use this function or not.
+
+  "BookmarkBarEnabled": false,
+
+  // Clear site data on browser shutdown
+  //-------------------------------------------------------------------------
+  // This policy is an override for the "Clear cookies and other site data when
+  // I close my browser" content settings option.  When set to enabled Google
+  // Chrome will delete all locally stored data from the browser when it is shut
+  // down.  If set to disabled site data will not be cleared on exit.  If this
+  // policy is left not set Google Chrome will use the default which is to
+  // preserve site data on shut down and the user will be able to change this.
+  // If the "RestoreOnStartup" policy is set to restore URLs from previous
+  // sessions this policy will not clear cookies or other data relevant to
+  // restoring the previous browsing session completely.
+
+  "ClearSiteDataOnExit": true,
+
+  // Enable Google Cloud Print proxy
+  //-------------------------------------------------------------------------
+  // Enables Google Chrome to act as a proxy between Google Cloud Print and
+  // legacy printers connected to the machine.  If this setting is enabled or
+  // not configured, users can enable the cloud print proxy by authentication
+  // with their Google account.  If this setting is disabled, users cannot
+  // enable the proxy, and the machine will not be allowed to share it's
+  // printers with Google Cloud Print.  If this policy is left not set, this
+  // will be enabled but the user will be able to change it.
+
+  //"CloudPrintProxyEnabled": true,
+
+  // Enable submission of documents to Google Cloud Print
+  //-------------------------------------------------------------------------
+  // Enables Google Chrome to submit documents to Google Cloud Print for
+  // printing.  NOTE: This only affects Google Cloud Print support in Google
+  // Chrome.  It does not prevent users from submitting print jobs on web sites.
+  // If this setting is enabled or not configured, users can print to Google
+  // Cloud Print from the Google Chrome print dialog.  If this setting is
+  // disabled, users cannot print to Google Cloud Print from the Google Chrome
+  // print dialog
+
+  //"CloudPrintSubmitEnabled": true,
+
+  // Allow cookies on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are
+  // allowed to set cookies.  If this policy is left not set the global default
+  // value will be used for all sites either from the 'DefaultCookiesSetting'
+  // policy if it is set, or the user's personal configuration otherwise.
+
+  //"CookiesAllowedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Block cookies on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are not
+  // allowed to set cookies.  If this policy is left not set the global default
+  // value will be used for all sites either from the 'DefaultCookiesSetting'
+  // policy if it is set, or the user's personal configuration otherwise.
+
+  //"CookiesBlockedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Allow session only cookies on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are
+  // allowed to set session only cookies.  If this policy is left not set the
+  // global default value will be used for all sites either from the
+  // 'DefaultCookiesSetting' policy if it is set, or the user's personal
+  // configuration otherwise.  If the "RestoreOnStartup" policy is set to
+  // restore URLs from previous sessions this policy will not be respectred and
+  // cookies will be stored permanently for those sites.
+
+  //"CookiesSessionOnlyForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Set Chrome as Default Browser
+  //-------------------------------------------------------------------------
+  // Configures the default browser checks in Google Chrome and prevents users
+  // from changing them.  If you enable this setting, Google Chrome will always
+  // check on startup whether it is the default browser and automatically
+  // register itself if possible.  If this setting is disabled, Google Chrome
+  // will never check if it is the default browser and will disable user
+  // controls for setting this option.  If this setting is not set, Google
+  // controls for setting this option.  If this setting is not set, Google
+  // Chrome will allow the user to control whether it is the default browser and
+  // whether user notifications should be shown when it isn't.
+
+  "DefaultBrowserSettingEnabled": true,
+
+  // Default cookies setting
+  //-------------------------------------------------------------------------
+  // Allows you to set whether websites are allowed to set local data. Setting
+  // local data can be either allowed for all websites or denied for all
+  // websites.  If this policy is left not set, 'AllowCookies' will be used and
+  // the user will be able to change it.
+
+  //"DefaultCookiesSetting": 1,
+
+  // Default geolocation setting
+  //-------------------------------------------------------------------------
+  // Allows you to set whether websites are allowed to track the users' physical
+  // location. Tracking the users' physical location can be allowed by default,
+  // denied by default or the user can be asked every time a website requests
+  // the physical location.  If this policy is left not set, 'AskGeolocation'
+  // will be used and the user will be able to change it.
+
+  //"DefaultGeolocationSetting": 0,
+
+  // Default images setting
+  //-------------------------------------------------------------------------
+  // Allows you to set whether websites are allowed to display images.
+  // Displaying images can be either allowed for all websites or denied for all
+  // websites.  If this policy is left not set, 'AllowImages' will be used and
+  // the user will be able to change it.
+
+  //"DefaultImagesSetting": 1,
+
+  // Default JavaScript setting
+  //-------------------------------------------------------------------------
+  // Allows you to set whether websites are allowed to run JavaScript. Running
+  // JavaScript can be either allowed for all websites or denied for all
+  // websites.  If this policy is left not set, 'AllowJavaScript' will be used
+  // and the user will be able to change it.
+
+  //"DefaultJavaScriptSetting": 1,
+
+  // Default notification setting
+  //-------------------------------------------------------------------------
+  // Allows you to set whether websites are allowed to display desktop
+  // notifications. Displaying desktop notifications can be allowed by default,
+  // denied by default or the user can be asked every time a website wants to
+  // show desktop notifications.  If this policy is left not set,
+  // 'AskNotifications' will be used and the user will be able to change it.
+
+  //"DefaultNotificationsSetting": 2,
+
+  // Default plugins setting
+  //-------------------------------------------------------------------------
+  // Allows you to set whether websites are allowed to automatically run
+  // plugins. Automatically running plugins can be either allowed for all
+  // websites or denied for all websites.  If this policy is left not set,
+  // 'AllowPlugins' will be used and the user will be able to change it.
+
+  //"DefaultPluginsSetting": 1,
+
+  // Default popups setting
+  //-------------------------------------------------------------------------
+  // Allows you to set whether websites are allowed to show pop-ups. Showing
+  // popups can be either allowed for all websites or denied for all websites.
+  // If this policy is left not set, 'BlockPopups' will be used and the user
+  // will be able to change it.
+
+  //"DefaultPopupsSetting": 1,
+
+  // Enable the default search provider
+  //-------------------------------------------------------------------------
+  // Enables the use of a default search provider.  If you enable this setting,
+  // a default search is performed when the user types text in the omnibox that
+  // is not a URL.  You can specify the default search provider to be used by
+  // setting the rest of the default search policies. If these are left empty,
+  // the user can choose the default provider.  If you disable this setting, no
+  // search is performed when the user enters non-URL text in the omnibox.  If
+  // you enable or disable this setting, users cannot change or override this
+  // setting in Google Chrome.  If this policy is left not set, the default
+  // search provider is enabled, and the user will be able to set the search
+  // provider list.
+
+    "DefaultSearchProviderEnabled": true,
+
+  // Default search provider encodings
+  //-------------------------------------------------------------------------
+  // Specifies the character encodings supported by the search provider.
+  // Encodings are code page names like UTF-8, GB2312, and ISO-8859-1. They are
+  // tried in the order provided.  This policy is optional. If not set, the
+  // default will be used which is UTF-8.  This policy is only respected if the
+  // 'DefaultSearchProviderEnabled' policy is enabled.
+
+  //"DefaultSearchProviderEncodings": ["UTF-8", "UTF-16", "GB2312", "ISO-8859-1"],
+
+  // Default search provider icon
+  //-------------------------------------------------------------------------
+  // Specifies the favorite icon URL of the default search provider.  This
+  // policy is optional. If not set, no icon will be present for the search
+  // provider.  This policy is only respected if the
+  // 'DefaultSearchProviderEnabled' policy is enabled.
+
+  //"DefaultSearchProviderIconURL": "http://search.my.company/favicon.ico",
+
+  // Default search provider instant URL
+  //-------------------------------------------------------------------------
+  // Specifies the URL of the search engine used to provide instant results. The
+  // URL should contain the string '{searchTerms}', which will be replaced at
+  // query time by the text the user has entered so far.  This policy is
+  // optional. If not set, no instant search results will be provided.  This
+  // policy is only respected if the 'DefaultSearchProviderEnabled' policy is
+  // enabled.
+
+  //"DefaultSearchProviderInstantURL": "http://search.my.company/suggest?q={searchTerms}",
+
+  // Default search provider keyword
+  //-------------------------------------------------------------------------
+  // Specifies the keyword, which is the shortcut used in the omnibox to trigger
+  // the search for this provider.  This policy is optional. If not set, no
+  // keyword will activate the search provider.  This policy is only considered
+  // if the 'DefaultSearchProviderEnabled' policy is enabled.
+
+  //"DefaultSearchProviderKeyword": "mis",
+
+  // Default search provider name
+  //-------------------------------------------------------------------------
+  // Specifies the name of the default search provider. If left empty or not
+  // set, the host name specified by the search URL will be used.  This policy
+  // is only considered if the 'DefaultSearchProviderEnabled' policy is enabled.
+
+ "DefaultSearchProviderName": "Susper",
+
+  // Default search provider search URL
+  //-------------------------------------------------------------------------
+  // Specifies the URL of the search engine used when doing a default search.
+  // The URL should contain the string '{searchTerms}', which will be replaced
+  // at query time by the terms the user is searching for.  This option must be
+  // set when the 'DefaultSearchProviderEnabled' policy is enabled and will only
+  // be respected if this is the case.
+
+  "DefaultSearchProviderSearchURL": "http://susper.com/search?query={searchTerms}",
+
+  // Default search provider suggest URL
+  //-------------------------------------------------------------------------
+  // Specifies the URL of the search engine used to provide search suggestions.
+  // The URL should contain the string '{searchTerms}', which will be replaced
+  // at query time by the text the user has entered so far.  This policy is
+  // optional. If not set, no suggest URL will be used.  This policy is only
+  // respected if the 'DefaultSearchProviderEnabled' policy is enabled.
+
+  //"DefaultSearchProviderSuggestURL": "http://search.my.company/suggest?q={searchTerms}",
+
+  // Disable Developer Tools
+  //-------------------------------------------------------------------------
+  // Disables the Developer Tools and the JavaScript console.  If you enable
+  // this setting, the Developer Tools can not be accessed and web-site elements
+  // can not be inspected anymore. Any keyboard shortcuts and any menu or
+  // context menu entries to open the Developer Tools or the JavaScript Console
+  // will be disabled.  Setting this option to disabled or leaving it not set
+  // will allow the use to use the Developer Tools and the JavaScript console.
+
+  "DeveloperToolsDisabled": true,
+
+  // Disable support for 3D graphics APIs
+  //-------------------------------------------------------------------------
+  // Disable support for 3D graphics APIs.  Enabling this setting prevents web
+  // pages from accessing the graphics processing unit (GPU). Specifically, web
+  // pages can not access the WebGL API and plugins can not use the Pepper 3D
+  // API.  Disabling this setting or leaving it not set potentially allows web
+  // pages to use the WebGL API and plugins to use the Pepper 3D API. The
+  // default settings of the browser may still require command line arguments to
+  // be passed in order to use these APIs.
+
+  //"Disable3DAPIs": false,
+
+  // Disable CNAME lookup when negotiating Kerberos authentication
+  //-------------------------------------------------------------------------
+  // Specifies whether the generated Kerberos SPN is based on the canonical DNS
+  // name or the original name entered.  If you enable this setting, CNAME
+  // lookup will be skipped and the server name will be used as entered.  If you
+  // disable this setting or leave it not set, the canonical name of the server
+  // will be determined via CNAME lookup.
+
+  //"DisableAuthNegotiateCnameLookup": false,
+
+  // Specify whether the plugin finder should be disabled
+  //-------------------------------------------------------------------------
+  // If you set this setting to enabled the automatic search and installation of
+  // missing plugins will be disabled in Google Chrome.  Setting this option to
+  // disabled or leave it not set the plugin finder will be active.
+
+  //"DisablePluginFinder": true,
+
+  // Disable Print Preview
+  //-------------------------------------------------------------------------
+  // Disable print preview.  This setting is used to force the use of the system
+  // print dialog instead of print preview.
+
+  //"DisablePrintPreview": false,
+
+  // Disable SSL record splitting
+  //-------------------------------------------------------------------------
+  // Specifies whether SSL record splitting should be disabled. Record splitting
+  // is a workaround for a weakness in SSL 3.0 and TLS 1.0 but can cause
+  // compatibility issues with some HTTPS servers and proxies.  If the policy is
+  // not set, or is set to false, then record splitting will be used on SSL/TLS
+  // connections which use CBC ciphersuites.
+
+  //"DisableSSLRecordSplitting": true,
+
+  // Disable SPDY protocol
+  //-------------------------------------------------------------------------
+  // Disables use of the SPDY protocol in Google Chrome.  If this policy is
+  // enabled the SPDY protocol will not be available in Google Chrome.  Setting
+  // this policy to disabled will allow the usage of SPDY.  If this policy is
+  // left not set, SPDY will be available.
+
+  //"DisableSpdy": true,
+
+  // Specify a list of disabled plugins
+  //-------------------------------------------------------------------------
+  // Specifies a list of plugins that are disabled in Google Chrome and prevents
+  // users from changing this setting.  The wildcard characters '*' and '?' can
+  // be used to match sequences of arbitrary characters. '*' matches an
+  // arbitrary number of characters while '?' specifies an optional single
+  // character, i.e. matches zero or one characters. The escape character is
+  // '\', so to match actual '*', '?', or '\' characters, you can put a '\' in
+  // front of them.  If you enable this setting, the specified list of plugins
+  // is never used in Google Chrome. The plugins are marked as disabled in
+  // 'about:plugins' and users cannot enable them.  Note that this policy can be
+  // overriden by EnabledPlugins and DisabledPluginsExceptions.  If this policy
+  // is left not set the user can use any plugin installed on the system except
+  // for hard-coded incompatible, outdated or dangerous plugins.
+
+  //"DisabledPlugins": ["Java", "Shockwave Flash", "Chrome PDF Viewer"],
+
+  // Specify a list of plugins that the user can enable or disable
+  //-------------------------------------------------------------------------
+  // Specifies a list of plugins that user can enable or disable in Google
+  // Chrome.  The wildcard characters '*' and '?' can be used to match sequences
+  // of arbitrary characters. '*' matches an arbitrary number of characters
+  // while '?' specifies an optional single character, i.e. matches zero or one
+  // characters. The escape character is '\', so to match actual '*', '?', or
+  // '\' characters, you can put a '\' in front of them.  If you enable this
+  // setting, the specified list of plugins can be used in Google Chrome. Users
+  // can enable or disable them in 'about:plugins', even if the plugin also
+  // matches a pattern in DisabledPlugins. Users can also enable and disable
+  // plugins that don't match any patterns in DisabledPlugins,
+  // DisabledPluginsExceptions and EnabledPlugins.  This policy is meant to
+  // allow for strict plugin balcklisting where the 'DisabledPlugins' list
+  // contains wildcarded entries like disable all plugins '*' or disable all
+  // Java plugins '*Java*' but the administrator wishes to enable some
+  // particular version like 'IcedTea Java 2.3'. This particular versions can be
+  // specified in this policy.  If this policy is left not set any plugin that
+  // matches the patterns in the 'DisabledPlugins' will be locked disabled and
+  // the user won't be able to enable them.
+
+  //"DisabledPluginsExceptions": ["Java", "Shockwave Flash", "Chrome PDF Viewer"],
+
+  // Disable URL protocol schemes
+  //-------------------------------------------------------------------------
+  // Disables the listed protocol schemes in Google Chrome.  URLs using a scheme
+  // from this list will not load and can not be navigated to.  If this policy
+  // is left not set or the list is empty all schemes will be accessible in
+  // Google Chrome.
+
+  //"DisabledSchemes": ["file", "mailto"],
+
+  // Set disk cache directory
+  //-------------------------------------------------------------------------
+  // Configures the directory that Google Chrome will use for storing cached
+  // files on the disk.  If you set this policy, Google Chrome will use the
+  // provided directory regardless whether the user has specified the '--disk-
+  // cache-dir' flag or not.  If this policy is left not set the default cache
+  // directory will be used and the user will be able to override it with the
+  // '--disk-cache-dir' command line flag.
+
+  //"DiskCacheDir": "${user_home}/Chrome_cache",
+
+  // Set disk cache size in bytes
+  //-------------------------------------------------------------------------
+  // Configures the cache size that Google Chrome will use for storing cached
+  // files on the disk.  If you set this policy, Google Chrome will use the
+  // provided cache size regardless whether the user has specified the '--disk-
+  // cache-size' flag or not.  If the value of this policy is 0, the default
+  // cache size will be used but the user will not be able to change it.  If
+  // this policy is not set the default size will be used and the user will be
+  // able to override it with the --disk-cache-size flag.
+
+  //"DiskCacheSize": 104857600,
+
+  // Enable network prediction.
+  //-------------------------------------------------------------------------
+  // Enables network prediction in Google Chrome and prevents users from
+  // changing this setting.  If you enable or disable this setting, users cannot
+  // change or override this setting in Google Chrome.  If this policy is left
+  // not set, this will be enabled but the user will be able to change it.
+
+  //"DnsPrefetchingEnabled": true,
+
+  // Set download directory
+  //-------------------------------------------------------------------------
+  // Configures the directory that Google Chrome will use for downloading files.
+  // If you set this policy, Google Chrome will use the provided directory
+  // regardless whether the user has specified one or enabled the flag to be
+  // prompted for download location every time.  If this policy is left not set
+  // the default download directory will be used and the user will be able to
+  // change it.
+
+  //"DownloadDirectory": "/home/${user_name}/Downloads",
+
+  // Enables or disables bookmark editing
+  //-------------------------------------------------------------------------
+  // Enables or disables editing bookmarks in Google Chrome.  If you enable this
+  // setting, bookmarks can be added, removed or modified. This is the default
+  // also when this policy is not set.  If you disable this setting, bookmarks
+  // can not be added, removed or modified. Existing bookmarks are still
+  // available.
+
+  "EditBookmarksEnabled": false,
+
+  // Include non-standard port in Kerberos SPN
+  //-------------------------------------------------------------------------
+  // Specifies whether the generated Kerberos SPN should include a non-standard
+  // port.  If you enable this setting, and a non-standard port (i.e., a port
+  // other than 80 or 443) is entered, it will be included in the generated
+  // Kerberos SPN.  If you disable this setting or leave it not set, the
+  // generated Kerberos SPN will not include a port in any case.
+
+  //"EnableAuthNegotiatePort": false,
+
+  // Whether online OCSP/CRL checks are performed
+  //-------------------------------------------------------------------------
+  // In light of the fact that soft-fail, online revocation checks provide no
+  // effective security benefit, they are disabled by default in Google Chrome
+  // version 19 and later. By setting this policy to true, the previous
+  // behaviour is restored and online OCSP/CRL checks will be performed.  If the
+  // policy is not set, or is set to false, then Chrome will not perform online
+  // revocation checks in Chrome 19 and later.
+
+  //"EnableOnlineRevocationChecks": false,
+
+  // Specify a list of enabled plugins
+  //-------------------------------------------------------------------------
+  // Specifies a list of plugins that are enabled in Google Chrome and prevents
+  // users from changing this setting.  The wildcard characters '*' and '?' can
+  // be used to match sequences of arbitrary characters. '*' matches an
+  // arbitrary number of characters while '?' specifies an optional single
+  // character, i.e. matches zero or one characters. The escape character is
+  // '\', so to match actual '*', '?', or '\' characters, you can put a '\' in
+  // front of them.  The specified list of plugins is always used in Google
+  // Chrome if they are installed. The plugins are marked as enabled in
+  // 'about:plugins' and users cannot disable them.  Note that this policy
+  // overrides both DisabledPlugins and DisabledPluginsExceptions.  If this
+  // policy is left not set the user can disable any plugin installed on the
+  // system.
+
+  //"EnabledPlugins": ["Java", "Shockwave Flash", "Chrome PDF Viewer"],
+
+  // Enterprise web store name
+  //-------------------------------------------------------------------------
+  // The name of the enterprise web store, which will appear underneath the app
+  // icon on the new tab page. This setting has no effect if
+  // EnterpriseWebStoreURL is not set.  If this setting is disabled, the
+  // enterprise web store app (if it exists) will be labeled with its URL.
+
+  //"EnterpriseWebStoreName": "WidgCo Chrome Apps",
+
+  // Enterprise web store URL
+  //-------------------------------------------------------------------------
+  // Specifies the URL for the enterprise web store. When this setting is
+  // enabled, an app will appear on the new tab page which, when clicked, will
+  // take the user to the specified URL. Extensions and apps can be installed
+  // from this page without extra warnings being presented to the user. If this
+  // policy is set, the EnterpriseWebStoreName setting should also be set.  If
+  // this setting is disabled, no enterprise web store app will appear on the
+  // new tab page.
+
+  //"EnterpriseWebStoreURL": "http://company-intranet/chromeapps",
+
+  // Configure extension installation blacklist
+  //-------------------------------------------------------------------------
+  // Allows you to specify which extensions the users can NOT install.
+  // Extensions already installed will be removed if blacklisted.  A blacklist
+  // value of '*' means all extensions are blacklisted unless they are
+  // explicitly listed in the whitelist.  If this policy is left not set the
+  // user can install any extension in Google Chrome.
+
+  //"ExtensionInstallBlacklist": ["extension_id1", "extension_id2"],
+
+  // Configure the list of force-installed extensions
+  //-------------------------------------------------------------------------
+  // Allows you to specify a list of extensions that will be installed silently,
+  // without user interaction.  Each item of the list is a string that contains
+  // an extension ID and an update URL delimited by a semicolon (;). The
+  // extension ID is the 32-letter string found e.g. on chrome://extensions when
+  // in developer mode. The update URL should point to an Update Manifest XML
+  // document as described at
+  // http://code.google.com/chrome/extensions/autoupdate.html.  For each item,
+  // Google Chrome will retrieve the extension specified by the extension ID
+  // from the update service at the specified update URL and silently install
+  // it.  For example,
+  // lcncmkcnkcdbbanbjakcencbaoegdjlp;https://clients2.google.com/service/update2/crx
+  // installs the Google SSL Web Search extension from the standard Chrome Web
+  // Store update URL. For more information about hosting extensions, see:
+  // http://code.google.com/chrome/extensions/hosting.html.  Users will be
+  // unable to uninstall extensions that are specified by this policy. If you
+  // remove an extension from this list, then it will be automatically
+  // uninstalled by Google Chrome.  If this policy is left not set the user can
+  // uninstall any extension  in Google Chrome.
+
+  //"ExtensionInstallForcelist": ["lcncmkcnkcdbbanbjakcencbaoegdjlp;https://clients2.google.com/service/update2/crx"],
+
+  // Configure extension installation whitelist
+  //-------------------------------------------------------------------------
+  // Allows you to specify which extensions are not subject to the blacklist.  A
+  // blacklist value of * means all extensions are blacklisted and users can
+  // only install extensions listed in the whitelist.  By default, all
+  // extensions are whitelisted, but if all extensions have been blacklisted by
+  // policy, the whitelist can be used to override that policy.
+
+  //"ExtensionInstallWhitelist": ["extension_id1", "extension_id2"],
+
+  // GSSAPI library name
+  //-------------------------------------------------------------------------
+  // Specifies which GSSAPI library to use for HTTP Authentication. You can set
+  // either just a library name, or a full path.  If no setting is provided,
+  // Google Chrome will fall back to using a default library name.
+
+  //"GSSAPILibraryName": "libgssapi_krb5.so.2",
+
+  // Prevent app promotions from appearing on the new tab page
+  //-------------------------------------------------------------------------
+  // When set to True, promotions for Chrome Web Store apps will not appear on
+  // the new tab page.  Setting this option to False or leaving it not set will
+  // make the promotions for Chrome Web Store apps appear on the new tab page
+
+  //"HideWebStorePromo": false,
+
+  // Use New Tab Page as homepage
+  //-------------------------------------------------------------------------
+  // Configures the type of the default home page in Google Chrome and prevents
+  // users from changing home page preferences. The home page can either be set
+  // to a URL you specify or set to the New Tab Page.  If you enable this
+  // setting, the New Tab Page is always used for the home page, and the home
+  // page URL location is ignored.  If you disable this setting, the user's
+  // homepage will never be the New Tab Page, unless its URL is set to
+  // 'chrome://newtab'.  If you enable or disable this setting, users cannot
+  // change their homepage type in Google Chrome.  Leaving this policy not set
+  // will allow the user to choose whether the new tab page is his home page on
+  // his own.
+
+  "HomepageIsNewTabPage": false,
+
+  // Configure the home page URL
+  //-------------------------------------------------------------------------
+  // Configures the default home page URL in Google Chrome and prevents users
+  // from changing it.  The home page type can either be set to a URL you
+  // specify here or set to the New Tab Page.  If you select the New Tab Page,
+  // then this policy is ignored.  If you enable this setting, users cannot
+  // change their home page URL in Google Chrome, but they can still can choose
+  // the New Tab Page as their home page.  Leaving this policy not set will
+  // allow the user to choose his home page on his own if HomepageIsNewTabPage
+  // is not set too.
+
+  "HomepageLocation": "http://susper.com/",
+
+  // Allow images on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are
+  // allowed to display images.  If this policy is left not set the global
+  // default value will be used for all sites either from the
+  // 'DefaultImagesSetting' policy if it is set, or the user's personal
+  // configuration otherwise.
+
+  //"ImagesAllowedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Block images on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are not
+  // allowed to display images.  If this policy is left not set the global
+  // default value will be used for all sites either from the
+  // 'DefaultImagesSetting' policy if it is set, or the user's personal
+  // configuration otherwise.
+
+  //"ImagesBlockedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Import bookmarks from default browser on first run
+  //-------------------------------------------------------------------------
+  // This policy forces bookmarks to be imported from the current default
+  // browser if enabled. If enabled, this policy also affects the import dialog.
+  // If disabled, no bookmarks are imported.  If it is not set, the user may be
+  // asked whether to import, or importing may happen automatically.
+
+  "ImportBookmarks": false,
+
+  // Import browsing history from default browser on first run
+  //-------------------------------------------------------------------------
+  // This policy forces the browsing history to be imported from the current
+  // default browser if enabled. If enabled, this policy also affects the import
+  // dialog.  If disabled, no browsing history is imported.  If it is not set,
+  // the user may be asked whether to import, or importing may happen
+  // automatically.
+
+  //"ImportHistory": true,
+
+  // Import of homepage from default browser on first run
+  //-------------------------------------------------------------------------
+  // This policy forces the home page to be imported from the current default
+  // browser if enabled.  If disabled, the home page is not imported.  If it is
+  // not set, the user may be asked whether to import, or importing may happen
+  // automatically.
+
+  //"ImportHomepage": true,
+
+  // Import saved passwords from default browser on first run
+  //-------------------------------------------------------------------------
+  // This policy forces the saved passwords to be imported from the previous
+  // default browser if enabled. If enabled, this policy also affects the import
+  // dialog.  If disabled, the saved passwords are not imported.  If it is not
+  // set, the user may be asked whether to import, or importing may happen
+  // automatically.
+
+  //"ImportSavedPasswords": true,
+
+  // Import search engines from default browser on first run
+  //-------------------------------------------------------------------------
+  // This policy forces search engines to be imported from the current default
+  // browser if enabled. If enabled, this policy also affects the import dialog.
+  // If disabled, the default search engine is not imported.  If it is not set,
+  // the user may be asked whether to import, or importing may happen
+  // automatically.
+
+  "ImportSearchEngine": false,
+
+  // Incognito mode availability.
+  //-------------------------------------------------------------------------
+  // Specifies whether the user may open pages in Incognito mode in Google
+  // Chrome.  If 'Enabled' is selected or the policy is left unset, pages may be
+  // opened in Incognito mode.  If 'Disabled' is selected, pages may not be
+  // opened in Incognito mode.  If 'Forced' is selected, pages may be opened
+  // ONLY in Incognito mode.
+
+  //"IncognitoModeAvailability": 1,
+
+  // Enable Instant
+  //-------------------------------------------------------------------------
+  // Enables Google Chrome's Instant feature and prevents users from changing
+  // this setting.  If you enable this setting, Google Chrome Instant is
+  // enabled.  If you disable this setting, Google Chrome Instant is disabled.
+  // If you enable or disable this setting, users cannot change or override this
+  // setting.  If this setting is left not set the user can decide to use this
+  // function or not.
+
+  //"InstantEnabled": true,
+
+  // Allow JavaScript on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are
+  // allowed to run JavaScript.  If this policy is left not set the global
+  // default value will be used for all sites either from the
+  // 'DefaultJavaScriptSetting' policy if it is set, or the user's personal
+  // configuration otherwise.
+
+  //"JavaScriptAllowedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Block JavaScript on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are not
+  // allowed to run JavaScript.  If this policy is left not set the global
+  // default value will be used for all sites either from the
+  // 'DefaultJavaScriptSetting' policy if it is set, or the user's personal
+  // configuration otherwise.
+
+  //"JavaScriptBlockedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Maximal number of concurrent connections to the proxy server
+  //-------------------------------------------------------------------------
+  // Specifies the maximal number of simultanious connections to the proxy
+  // server.  Some proxy servers can not handle high number of concurrent
+  // connections per client and this can be solved by setting this policy to a
+  // lower value.  The value of this policy should be lower than 100 and higher
+  // than 6 and the default value is 32.  Some web apps are known to consume
+  // many connections with hanging GETs, so lowering below 32 may lead to
+  // browser networking hangs if too many such web apps are open. Lower below
+  // the default at your own risk.  If this policy is left not set the default
+  // value will be used which is 32.
+
+  //"MaxConnectionsPerProxy": 32,
+
+  // Set media disk cache size in bytes
+  //-------------------------------------------------------------------------
+  // Configures the chache size that Google Chrome will use for storing cached
+  // media files on the disk.  If you set this policy, Google Chrome will use
+  // the provided cache size regardless whether the user has specified the
+  // '--media-cache-size' flag or not.  If the value of this policy is 0, the
+  // default cache size will be used but the user will not be able to change it.
+  // If this policy is not set the default size will be used and the user will
+  // be able to override it with the --media-cache-size flag.
+
+  //"MediaCacheSize": 104857600,
+
+  // Enable reporting of usage and crash-related data
+  //-------------------------------------------------------------------------
+  // Enables anonymous reporting of usage and crash-related data about Google
+  // Chrome to Google and prevents users from changing this setting.  If you
+  // enable this setting, anonymous reporting of usage and crash-related data is
+  // sent to Google.  If you disable this setting, anonymous reporting of usage
+  // and crash-related data is never sent to Google.  If you enable or disable
+  // this setting, users cannot change or override this setting in Google
+  // Chrome.  If this policy is left not set the setting will be what the user
+  // chose upon installation / first run.
+
+  //"MetricsReportingEnabled": true,
+
+  // Allow notifications on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are
+  // allowed to display notifications.  If this policy is left not set the
+  // global default value will be used for all sites either from the
+  // 'DefaultNotificationsSetting' policy if it is set, or the user's personal
+  // configuration otherwise.
+
+  //"NotificationsAllowedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Block notifications on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are not
+  // allowed to display notifications.  If this policy is left not set the
+  // global default value will be used for all sites either from the
+  // 'DefaultNotificationsSetting' policy if it is set, or the user's personal
+  // configuration otherwise.
+
+  //"NotificationsBlockedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Allow users to show passwords in Password Manager
+  //-------------------------------------------------------------------------
+  // Controls whether the user may show passwords in clear text in the password
+  // manager.  If you disable this setting, the password manager does not allow
+  // showing stored passwords in clear text in the password manager window.  If
+  // you enable or do not set this policy, users can view their passwords in
+  // clear text in the password manager.
+
+  "PasswordManagerAllowShowPasswords": false,
+
+  // Enable the password manager
+  //-------------------------------------------------------------------------
+  // Enables saving passwords and using saved passwords in Google Chrome.  If
+  // you enable this setting, users can have Google Chrome memorize passwords
+  // and provide them automatically the next time they log in to a site.  If you
+  // disable this setting, users are not able to save passwords or use already
+  // saved passwords.  If you enable or disable this setting, users cannot
+  // change or override this setting in Google Chrome.  If this policy is left
+  // not set, this will be enabled but the user will be able to change it.
+
+  "PasswordManagerEnabled": false,
+
+  // Allow plugins on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are
+  // allowed to run plugins.  If this policy is left not set the global default
+  // value will be used for all sites either from the 'DefaultPluginsSetting'
+  // policy if it is set, or the user's personal configuration otherwise.
+
+  //"PluginsAllowedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Block plugins on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are not
+  // allowed to run plugins.  If this policy is left not set the global default
+  // value will be used for all sites either from the 'DefaultPluginsSetting'
+  // policy if it is set, or the user's personal configuration otherwise.
+
+  //"PluginsBlockedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Allow popups on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are
+  // allowed to open popups.  If this policy is left not set the global default
+  // value will be used for all sites either from the 'DefaultPopupsSetting'
+  // policy if it is set, or the user's personal configuration otherwise.
+
+  //"PopupsAllowedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Block popups on these sites
+  //-------------------------------------------------------------------------
+  // Allows you to set a list of url patterns that specify sites which are not
+  // allowed to open popups.  If this policy is left not set the global default
+  // value will be used for all sites either from the 'DefaultPopupsSetting'
+  // policy if it is set, or the user's personal configuration otherwise.
+
+  //"PopupsBlockedForUrls": ["http://www.example.com", "[*.]example.edu"],
+
+  // Enable printing
+  //-------------------------------------------------------------------------
+  // Enables printing in Google Chrome and prevents users from changing this
+  // setting.  If this setting is enabled or not configured, users can print.
+  // If this setting is disabled, users cannot print from Google Chrome.
+  // Printing is disabled in the wrench menu, extensions, JavaScript
+  // applications, etc. It is still possible to print from plugins that bypass
+  // Google Chrome while printing. For example certain Flash applications has
+  // the print option in their context menu, and that will not be disabled.  If
+  // this policy is left not set, this will be enabled but the user will be able
+  // to change it.
+
+  //"PrintingEnabled": true,
+
+  // Proxy bypass rules
+  //-------------------------------------------------------------------------
+  // Google Chrome will bypass any proxy for the list of hosts given here.  This
+  // policy only takes effect if you have selected manual proxy settings at
+  // 'Choose how to specify proxy server settings'.  You should leave this
+  // policy not set if you have selected any other mode for setting proxy
+  // policies.  For more detailed examples, visit:
+  // http://www.chromium.org/developers/design-documents/network-settings#TOC-
+  // Command-line-options-for-proxy-sett
+
+  //"ProxyBypassList": "http://www.example1.com,http://www.example2.com,http://internalsite/",
+
+  // Choose how to specify proxy server settings
+  //-------------------------------------------------------------------------
+  // Allows you to specify the proxy server used by Google Chrome and prevents
+  // users from changing proxy settings.  If you choose to never use a proxy
+  // server and always connect directly, all other options are ignored.  If you
+  // choose to use system proxy settings or auto detect the proxy server, all
+  // other options are ignored.  If you choose fixed server proxy mode, you can
+  // specify further options in 'Address or URL of proxy server' and 'Comma-
+  // separated list of proxy bypass rules'.  If you choose to use a .pac proxy
+  // script, you must specify the URL to the script in 'URL to a proxy .pac
+  // file'.  For detailed examples, visit: http://www.chromium.org/developers
+  // /design-documents/network-settings#TOC-Command-line-options-for-proxy-sett
+  // If you enable this setting, Google Chrome ignores all proxy-related options
+  // specified from the command line.  Leaving this policy not set will allow
+  // the users to choose the proxy settings on their own.
+
+  //"ProxyMode": "direct",
+
+  // URL to a proxy .pac file
+  //-------------------------------------------------------------------------
+  // You can specify a URL to a proxy .pac file here.  This policy only takes
+  // effect if you have selected manual proxy settings at 'Choose how to specify
+  // proxy server settings'.  You should leave this policy not set if you have
+  // selected any other mode for setting proxy policies.  For detailed examples,
+  // visit: http://www.chromium.org/developers/design-documents/network-settings
+  // #TOC-Command-line-options-for-proxy-sett
+
+  //"ProxyPacUrl": "http://internal.site/example.pac",
+
+  // Address or URL of proxy server
+  //-------------------------------------------------------------------------
+  // You can specify the URL of the proxy server here.  This policy only takes
+  // effect if you have selected manual proxy settings at 'Choose how to specify
+  // proxy server settings'.  You should leave this policy not set if you have
+  // selected any other mode for setting proxy policies.  For more options and
+  // detailed examples, visit: http://www.chromium.org/developers/design-
+  // documents/network-settings#TOC-Command-line-options-for-proxy-sett
+
+  //"ProxyServer": "123.123.123.123:8080",
+
+  // Enable firewall traversal from remote access host
+  //-------------------------------------------------------------------------
+  // Enables usage of STUN and relay servers when remote clients are trying to
+  // establish a connection to this machine.  If this setting is enabled, then
+  // remote clients can discover and connect to this machines even if they are
+  // separated by a firewall.  If this setting is disabled and outgoing UDP
+  // connections are filtered by the firewall, then this machine will only allow
+  // connections from client machines within the local network.  If this policy
+  // is left not set the setting will be enabled.
+
+  //"RemoteAccessHostFirewallTraversal": false,
+
+  // Action on startup
+  //-------------------------------------------------------------------------
+  // Allows you to specify the behavior on startup.  If you choose 'Open home
+  // page' the home page will always be opened when you start Google Chrome.  If
+  // you choose 'Restore the last session', the URLs that were open last time
+  // Google Chrome was closed will be reopened and the browsing session will be
+  // restored as it was left. Choosing this option disables some settings that
+  // rely on sessions or that perform actions on exit (such as Clear browsing
+  // data on exit or session-only cookies).  If you choose 'Open a list of
+  // URLs', the list of 'URLs to open on startup' will be opened when a user
+  // starts Google Chrome.  If you enable this setting, users cannot change or
+  // override it in Google Chrome.  Disabling this setting is equvalent to
+  // leaving it not configured. The user will still be able to change it in
+  // Google Chrome. 
+  "RestoreOnStartup": 1,
+
+  // URLs to open on startup
+  //-------------------------------------------------------------------------
+  // If 'Open a list of URLs' is selected as the startup action, this allows you
+  // to specify the list of URLs that are opened. If left not set no URL will be
+  // opened on start up.  This policy only works if the 'RestoreOnStartup'
+  // policy is set to 'RestoreOnStartupIsURLs'.
+
+  "RestoreOnStartupURLs": ["http://susper.com/"],
+
+  // Enable Safe Browsing
+  //-------------------------------------------------------------------------
+  // Enables Google Chrome's Safe Browsing feature and prevents users from
+  // changing this setting.  If you enable this setting, Safe Browsing is always
+  // active.  If you disable this setting, Safe Browsing is never active.  If
+  // you enable or disable this setting, users cannot change or override this
+  // setting in Google Chrome.  If this policy is left not set, this will be
+  // enabled but the user will be able to change it.
+
+  //"SafeBrowsingEnabled": true,
+
+  // Disable saving browser history
+  //-------------------------------------------------------------------------
+  // Disables saving browser history in Google Chrome and prevents users from
+  // changing this setting.  If this setting is enabled, browsing history is not
+  // saved.  If this setting is disabled or not set, browsing history is saved.
+
+  //"SavingBrowserHistoryDisabled": true,
+
+  // Enable search suggestions
+  //-------------------------------------------------------------------------
+  // Enables search suggestions in Google Chrome's Omnibox and prevents users
+  // from changing this setting.  If you enable this setting, search suggestions
+  // are used.  If you disable this setting, search suggestions are never used.
+  // If you enable or disable this setting, users cannot change or override this
+  // setting in Google Chrome.  If this policy is left not set, this will be
+  // enabled but the user will be able to change it.
+
+  //"SearchSuggestEnabled": true,
+
+  // Show Home button on toolbar
+  //-------------------------------------------------------------------------
+  // Shows the Home button on Google Chrome's toolbar.  If you enable this
+  // setting, the Home button is always shown.  If you disable this setting, the
+  // Home button is never shown.  If you enable or disable this setting, users
+  // cannot change or override this setting in Google Chrome.  Leaving this
+  // policy not set will allow the user to choose whether to show the home
+  // button.
+
+  "ShowHomeButton": true,
+
+  // Disable synchronization of data with Google
+  //-------------------------------------------------------------------------
+  // Disables data synchronization in Google Chrome using Google-hosted
+  // synchronization services and prevents users from changing this setting.  If
+  // you enable this setting, users cannot change or override this setting in
+  // Google Chrome.  If this policy is left not set Google Sync will be
+  // available for the user to choose whether to use it or not.
+
+  "SyncDisabled": true,
+
+  // Enable Translate
+  //-------------------------------------------------------------------------
+  // Enables the integrated Google Translate service on Google Chrome.  If you
+  // enable this setting, Google Chrome will show an integrated toolbar offering
+  // to translate the page for the user, when appropriate.  If you disable this
+  // setting, users will never see the translation bar.  If you enable or
+  // disable this setting, users cannot change or override this setting in
+  // Google Chrome.  If this setting is left not set the user can decide to use
+  // this function or not.
+
+  "TranslateEnabled": false,
+
+  // Block access to a list of URLs
+  //-------------------------------------------------------------------------
+  // Blocks access to the listed URLs.  This policy prevents the user from
+  // loading web pages from blacklisted URLs.  A URL has the format
+  // 'scheme://host:port/path'. The optional scheme can be http, https or ftp.
+  // Only this scheme will be blocked; if none is specified, all schemes are
+  // blocked. The host can be a hostname or an IP address. Subdomains of a
+  // hostname will also be blocked. To prevent blocking subdomains, include a
+  // '.' before the hostname. The special hostname '*' will block all domains.
+  // The optional port is a valid port number from 1 to 65535. If none is
+  // specified, all ports are blocked. If the optional path is specified, only
+  // paths with that prefix will be blocked.  Exceptions can be defined in the
+  // URL whitelist policy. These policies are limited to 100 entries; subsequent
+  // entries will be ignored.  If this policy is not set no URL will be
+  // blacklisted in the browser.
+
+  //"URLBlacklist": ["example.com", "https://ssl.server.com", "hosting.com/bad_path", "http://server:8080/path", ".exact.hostname.com", "*"],
+
+  // Allows access to a list of URLs
+  //-------------------------------------------------------------------------
+  // Allows access to the listed URLs, as exceptions to the URL blacklist.  See
+  // the description of the URL blacklist policy for the format of entries of
+  // this list.  This policy can be used to open exceptions to restrictive
+  // blacklists. For example, '*' can be blacklisted to block all requests, and
+  // this policy can be used to allow access to a limited list of URLs. It can
+  // be used to open exceptions to certain schemes, subdomains of other domains,
+  // ports, or specific paths.  The most specific filter will determine if a URL
+  // is blocked or allowed. The whitelist takes precedence over the blacklist.
+  // This policy is limited to 100 entries; subsequent entries will be ignored.
+  // If this policy is not set there will be no exceptions to the blacklist from
+  // the 'URLBlacklist' policy.
+
+  //"URLWhitelist": ["example.com", "https://ssl.server.com", "hosting.com/bad_path", "http://server:8080/path", ".exact.hostname.com"]
+
+}
+
+
+
+

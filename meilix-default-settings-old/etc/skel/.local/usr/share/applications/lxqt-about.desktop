@@ -1,0 +1,30 @@
+[Desktop Entry]
+Type=Application
+Name=About LXQt
+GenericName=About LXQt
+Comment=Learn more about LXQt
+Exec=lxqt-about
+Icon=help-about
+Categories=System;Documentation;
+OnlyShowIn=LXQt;
+NoDisplay=true
+
+Name[ar]=عن لكسكيوت
+GenericName[ar]=عن لكسكيوت
+Comment[ar]=اطلع على المزيد حول لكسكيوت
+Name[ca]=Quant a LXQt
+GenericName[ca]=Quant a LXQt
+Comment[ca]=Conegueu més coses quant a LXQt
+Name[da]=Om LXQt
+GenericName[da]=Om LXQt
+Comment[da]=Lær mere om LXQt
+Name[de]=Über LXQt
+GenericName[de]=Über LXQt
+Comment[de]=Mehr über LXQt erfahren
+Name[el]=Σχετικά με το LXQt
+GenericName[el]=Σχετικά με το LXQt
+Comment[el]=Μάθετε περισσότερα σχετικά με το LXQt
+GenericName[fr]=À propos de LXQt
+Name[fr]=À propos de LXQt
+Name[hu]=Az LXQt
+GenericName[hu]=Az LXQt -ról
