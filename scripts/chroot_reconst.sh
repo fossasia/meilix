@@ -65,6 +65,14 @@ update-alternatives --install /usr/share/plymouth/themes/text.plymouth text.plym
 update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 140
 update-initramfs -c -k all
 
+# Remove the "LXQT about" entry from the menu
+# /usr/share/applications/lxqt-about.desktop
+# or ~/.local/usr/share override (in skel!)
+# set the option NoDisplay=true
+cat /usr/share/applications/lxqt-about.desktop
+sed -i 's,^\(NoDisplay[ ]*=\).*,\1'true',g' /usr/share/applications/lxqt-about.desktop
+cat /usr/share/applications/lxqt-about.desktop
+
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
 apt-get -qq clean
