@@ -49,6 +49,7 @@ Following are the other projects/dependency part of Meilix ecosystem.
 
 Name | About | 
 -------------|-------|
+[Meilix](https://github.com/fossasia/meilix) | This repo for standalone build or as a backend 
 [Meilix-generator](https://github.com/fossasia/meilix-generator) | A webapp which generates an ISO Image of Meilix Linux
 [Meilix-systemlock](https://github.com/fossasia/meilix-systemlock/) | A program to freeze the system 
 [Meilix-artwork](https://github.com/fossasia/meilix-artwork/) | Repository to store the boot screen theme of Meilix
@@ -61,7 +62,7 @@ To create your own Linux for an event kiosk or just for trying it out, you can u
 
 Here are some pre-requisites to develop Meilix. 
 
-- Exposure to the terminal and basic commands and basic comprehension of shell scripting
+- Exposure to the terminal and basic commands and basic comprehension of shell scripts
 - Experience in working with a Debian system. 
 - [LPIC1](https://en.wikipedia.org/wiki/Linux_Professional_Institute_Certification_Programs#LPIC-1) is a huge plus
 
