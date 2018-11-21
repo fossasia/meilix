@@ -61,15 +61,13 @@ To create your own Linux for an event kiosk or just for trying it out, you can u
 
 Here are some pre-requisites to develop Meilix. 
 
-- Exposure to the terminal and basic commands. 
-- Experience in working with a UNIX or GNU/Linux based system. 
-- Basic understanding of Operating System and Package managers. 
-- Programming/Scripting experience. Shell Scripting etc.
+- Exposure to the terminal and basic commands and basic comprehension of shell scripting
+- Experience in working with a Debian system. 
 - [LPIC1](https://en.wikipedia.org/wiki/Linux_Professional_Institute_Certification_Programs#LPIC-1) is a huge plus
 
 ## Development 
 
-Meilix fetches ubuntu source, customizes it to add features and then builds the distro. It uses shell scripts to perform all the tasks, build can be made on local machine, Travis CI.
+Meilix fetches ubuntu source, customizes it to add features and then builds the distro. It uses shell scripts to perform all the tasks, build can be made on local machine or via Travis CI.
 
 ### File Structure
 
@@ -141,7 +139,6 @@ Basic understanding of the file structure is required to do development, here is
     └── var/...
 ```
 
-
 ### Build
 
 **Building Locally**
@@ -163,7 +160,7 @@ $ ./build.sh
 
 **Build Using Travis***
 
-1. Update `.travis.yml` according to your API. [Read More](https://blog.fossasia.org/setting-environment-variables-up-in-travis-and-heroku-for-meilix-and-meilix-generator/)
+1. Update `.travis.yml` according to your API key [as explained here](https://blog.fossasia.org/setting-environment-variables-up-in-travis-and-heroku-for-meilix-and-meilix-generator/)
 2. Push changes to your repo, it will start the build process.
 
 ## Contribution
