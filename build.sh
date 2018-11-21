@@ -8,8 +8,6 @@ set -eux				# Be strict
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-# just a test
-export USERNAME="meilix"
 # Parameters: arch mirror gnomelanguage release
 
 # Arch to build ISO for, i386 or amd64
@@ -148,10 +146,29 @@ sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
   
-ls image/.disk/info
-sed -i 's/Lubuntu/meilix/' image/.disk/info
-ls image/.disk/info  
+# Now we change the LIVE-CDs default user name to meilix!
+# If this one line file exists within the unpacked lzma, Casper will take 
+# the default username and hostname for the live CD from the first word 
+# in this file and then will write it to casper.conf. If your default login
+# of your live cd is livecd just replace livecd by meilix. Below we change 
+# typical values for lzma images.
+# If you want to set username other than hostname this file should 
+# be empty and you set username and hostname via casper.conf. (André R)
+[ -f image/.disk/info ] && \
+sed -i 's/Lubuntu/meilix/' image/.disk/info && \
+sed -i 's/Xubuntu/meilix/' image/.disk/info && \
+sed -i 's/Ubuntu/meilix/' image/.disk/info && \
+sed -i 's/Kubuntu/meilix/' image/.disk/info
 
+# What follows is a hackish patch for an older kernel image. It was updated 
+# in a wrong way to a more current version and should be dead code as it stands.
+# It is also weird that we replace by "newversion", not "release".
+# Check the contents of affected files such as: 
+ls image/isolinux/f1.txt
+# and rectify the lines below (AR).
+# The hack applied when you took a old kernel lzma image for a new version
+# ISSUE in the tracker is 337
+# All the best, André
 # Fix old version and date info in .hlp files
 newversion=$(date -u +%y.%m) # Should be derived from releasename $4 FIXME
 for oldversion in 17.08
