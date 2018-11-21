@@ -83,8 +83,6 @@ wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-te
 # arch, release, mirror as set above.
 sudo debootstrap --arch=${arch} ${release} chroot ${mirror} #2>&1 |grep -v "^I: "
 
-echo now
-
 # Use /etc/resolv.conf from the host machine during the build
 sudo cp -vr /etc/resolvconf chroot/etc/resolvconf
 
@@ -150,6 +148,9 @@ sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
   
+ls image/.disk/info
+sed -i 's/Lubuntu/meilix/' image/.disk/info
+ls image/.disk/info  
 
 # Fix old version and date info in .hlp files
 newversion=$(date -u +%y.%m) # Should be derived from releasename $4 FIXME
