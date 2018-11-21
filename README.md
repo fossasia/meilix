@@ -37,39 +37,7 @@ This project serves as a solution for those who wish to have a pre-configured cu
 
 ### Feature
 
-Meilix is a light weight, beautiful and fast Linux with all the features of Ubuntu/Debian distro. Following are some of the other features that Meilix offers:
-
-- You can brand your Linux as you want. Your company name and logo can be your:
-    - Linux name
-    - Linux logo
-    - Wallpaper
-    - Screensaver
-
-- Switch on/off various features of your linux. You can switch: 
-    - 64 Bit support (or legacy 32 Bit)
-    - Notifications
-    - Screensaver
-    - Sleep Modes 
-    - System Sounds
-    - Bookmarks
-    - Screen Dimming
-    - Power Management Saving 
-    - Taskbar Autohide
-
-- Following apps can be pre-installed in your linux: 
-    - Chromium
-    - Firefox
-    - Hangout
-    - VLC
-    - GIMP
-    - Inkscape
-    - LibreOffice
-    - Git
-    - NextCloud
-    - Dropbox
-
-- Add all the documents and files you need in your linux.
-- System Lock: it allows you to freeze all the systems you are hosting using Meilix. 
+Meilix is a light weight, beautiful and fast Linux with all the features of Ubuntu/Debian distro. Custom Meilix builds are commissioned by the Meilix-generator web app.
 
 
 ### Architecture
