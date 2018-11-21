@@ -7,8 +7,7 @@
 [![Join the chat at https://gitter.im/fossasia/meilix](https://badges.gitter.im/fossasia/meilix.svg)](https://gitter.im/fossasia/meilix?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/fossasia/meilix.svg?branch=master)](https://travis-ci.org/fossasia/meilix)
  
 
-
-`Meilix is under heavy development. It is in alpha`stage and not recommended for productive use.
+`Meilix is under heavy development. It is in alpha stage and not yet recommended for productive use.`
 
 # Index
 
@@ -39,7 +38,6 @@ This project serves as a solution for those who wish to have a pre-configured cu
 ### Feature
 
 Meilix is a light weight, beautiful and fast Linux with all the features of Ubuntu/Debian distro. Custom Meilix builds are commissioned by the Meilix-generator web app.
-
 
 ### Architecture
 
@@ -81,23 +79,14 @@ Basic understanding of the file structure is required to do development, here is
 .
 ├── build.sh
 ├── LICENSE.md
-├── sources.list
+├── sources.xenial.list
 ├── README.md
-├── meilix-metapackage_1.0-1_amd64.changes
-├── meilix-metapackage_1.0-1_all.deb
-├── meilix-metapackages_1.0_all.deb
-├── meilix-metapackage_1.0-1.tar.gz
-├── meilix-metapackage_1.0-1.dsc
 ├── systemlock_0.1-1_all.deb
 ├── image-amd64.tar.lzma
 ├── image-i386.tar.lzma
 ├── amd64.tar.lzma
-├── meilix-metapackages_1.0_all
-│   └── control/...
 ├── ubiquity-slideshow
 |   └── slides/...
-├── metapackage
-│   └── debian/...
 ├── polkit-1
 │   └── actions/...
 ├── conf
