@@ -21,7 +21,7 @@ release=${4:-xenial}
 gnomelanguage=${3:-'{en}'}	
 
 # Necessary data files
-datafiles="image-${arch}.tar.lzma sources.{$release}.list"
+datafiles="image-${arch}.tar.lzma sources.${release}.list"
 
 # Necessary development tool packages to be installed on build host
 devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools"
