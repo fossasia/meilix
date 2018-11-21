@@ -236,7 +236,7 @@ rmdir $tempmount
 # Generate md5sum.txt checksum file (now with new improved boot.cat)
 sudo find . -type f -print0 |xargs -0 sudo md5sum |grep -v "\./md5sum.txt" >md5sum.txt
 
-# Remove temprary ISO file
+# Remove temporary ISO file
 sudo rm ../$ISOFILE.tmp
 
 # Create an Meilix ISO from the image directory tree
