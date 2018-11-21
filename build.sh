@@ -159,10 +159,11 @@ sed -i 's/Lubuntu/meilix/' image/.disk/info && \
 sed -i 's/Xubuntu/meilix/' image/.disk/info && \
 sed -i 's/Ubuntu/meilix/' image/.disk/info && \
 sed -i 's/Kubuntu/meilix/' image/.disk/info
+# Lines above follow KISS to make it easy to grasp for you. Refactor at will.
 
-# What follows is a hackish patch for an older kernel image. It was updated 
+# What follows is a hackish patch for an older lzma image. It was updated 
 # in a wrong way to a more current version and should be dead code as it stands.
-# It is also weird that we replace by "newversion", not "release".
+# We replace by "newversion" that could also be "release".
 # Check the contents of affected files such as: 
 ls image/isolinux/f1.txt
 # and rectify the lines below (AR).
@@ -198,6 +199,7 @@ do
     sudo sed -i "/${i}/d" image/casper/filesystem.manifest-desktop
 done
 
+# What we installed in our chroot file system.
 # Now squash the live filesystem
 echo "$0: Starting mksquashfs at $(date -u) ..."
 sudo mksquashfs chroot image/casper/filesystem.squashfs -noappend -no-progress
@@ -257,8 +259,5 @@ chmod 0444 ../$ISOFILE
 # Create the associated md5sum file
 cd ..
 md5sum $ISOFILE >${ISOFILE}.md5
-
-#Show how much space the build process uses *fun*
-du -hs .
 
 # see travis confguration for the deployment that follows in case of a Travis build. 
