@@ -49,10 +49,10 @@ Following are the other projects/dependency part of Meilix ecosystem.
 
 Name | About | 
 -------------|-------|
-[Meilix](https://github.com/fossasia/meilix) | This repo for standalone build or as a backend 
+[Meilix](https://github.com/fossasia/meilix) | This repo for standalone build or as a backend for the webapp 
 [Meilix-generator](https://github.com/fossasia/meilix-generator) | A webapp which generates an ISO Image of Meilix Linux
 [Meilix-systemlock](https://github.com/fossasia/meilix-systemlock/) | A program to freeze the system 
-[Meilix-artwork](https://github.com/fossasia/meilix-artwork/) | Repository to store the boot screen theme of Meilix
+[Meilix-artwork](https://github.com/fossasia/meilix-artwork/) | Boot screen splash themes for Meilix
 
 ## Usage
 
