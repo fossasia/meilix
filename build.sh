@@ -145,6 +145,7 @@ sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
   cp image/casper/initrd.lz initrd_FILES/initrd.lz && \
   cd initrd_FILES && \
   initramfs-extract initrd.lz -v && \
+  ls && \
   cd ..  && \
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
