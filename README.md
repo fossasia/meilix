@@ -214,13 +214,10 @@ After this, changes will be merged.
 
 **Commits**
 
-- Make sure your commit message is crisp and clear, read more about it [here](https://chris.beams.io/posts/git-commit/)
-- When refering to a issue in PR, use [special words](https://help.github.com/articles/closing-issues-using-keywords/) to automatically close the related issue like "Fixes #234"
-- Keep each PR very short, which will make it easy to review and correct.
-
-**Code**
-
 - Each commit should have proper documentation and comments in code, which will make it easy for others to understand it.
+- Make sure your commit message is crisp and clear, read more about it [here](https://chris.beams.io/posts/git-commit/)
+- When refering to a issue in a Pull Request, use [special words](https://help.github.com/articles/closing-issues-using-keywords/) to automatically close the related issue like "Fixes #234"
+- Keep each PR limited in scope, which will make it easy to review and correct. Squash your commits.
 
 ## Resource 
 
@@ -229,10 +226,6 @@ After this, changes will be merged.
 - [Meilix Blogs](https://blog.fossasia.org/tag/meilix/page/5/)
 - [André Talk](https://www.youtube.com/watch?v=PaGtdc1EFRw)
 - [Tarun Talk](https://www.youtube.com/watch?v=iG4fgZlmdb4)
-
-## Gallery 
-
-`To Be Updated`
 
 ## License 
 
