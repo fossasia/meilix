@@ -52,7 +52,7 @@ deploy:
 
 after_deploy:
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./scripts/releases_maintainer.sh; fi'
-  - cd scripts && ./mail.py
+  - cd scripts/mail-scripts && ./mail.py
   
 after_failure:
-  - cd scripts && ./mail-fail.py
+  - cd scripts/mail-scripts && ./mail-fail.py
