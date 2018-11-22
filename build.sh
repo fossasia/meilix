@@ -162,7 +162,8 @@ sed -i 's/Kubuntu/meilix/' image/.disk/info
 # Lines above follow KISS to make it easy to grasp for you. Refactor at will.
 
 ls image/boot/grub
-[ -f image/boot/grub/loopback.cfg ] && cat image/boot/grub/loopback.cfg
+[ -f image/boot/grub/grub.cfg ] && cat image/boot/grub/grub.cfg
+sed -i 's/Lubuntu/Meilix/' image/boot/grub/loopback.cfg
 
 # What follows is a hackish patch for an older lzma image. It was updated 
 # in a wrong way to a more current version and should be dead code as it stands.
