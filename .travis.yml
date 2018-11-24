@@ -31,11 +31,12 @@ script:
   - export LANG=en_US.UTF-8
   - export LANGUAGE=en_US.UTF-8
   - chmod +x ./build.sh
-  - ./build.sh |& tee home/travis/log.txt
+  - ./build.sh |& tee log.txt
 
 before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
+  - cp log.txt /home/travis/log.txt
 
 notifications:
   slack: fossasia:3pMkQrSogvEMfnu9aJDW2ZYC
