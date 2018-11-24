@@ -31,7 +31,7 @@ script:
   - export LANG=en_US.UTF-8
   - export LANGUAGE=en_US.UTF-8
   - chmod +x ./build.sh
-  - ./build.sh |& tee log.txt
+  - ./build.sh |& tee home/travis/log.txt
 
 before_deploy:
   - export image_name="`echo *.iso`"
