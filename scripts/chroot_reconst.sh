@@ -70,7 +70,7 @@ update-initramfs -c -k all
 # or ~/.local/usr/share override (in skel!)
 # set the option NoDisplay=true
 cat /usr/share/applications/lxqt-about.desktop
-sed -i 's,^\(NoDisplay[ ]*=\).*,\1'true',g' /usr/share/applications/lxqt-about.desktop
+sed -i '$ a NoDisplay=true' /usr/share/applications/lxqt-about.desktop
 cat /usr/share/applications/lxqt-about.desktop
 
 # Clean up the chroot before
