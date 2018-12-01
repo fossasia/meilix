@@ -5,7 +5,7 @@ import datetime
 import base64
 
 #attachment encoding
-with open('../log.txt','rb') as f:
+with open('../../log.txt','rb') as f:
     data = f.read()
     f.close()
 
