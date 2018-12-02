@@ -79,11 +79,11 @@ Basic understanding of the file structure is required to do development, here is
 ├── build.sh
 ├── LICENSE.md
 ├── sources.xenial.list
+├── sources.bionic.list
 ├── README.md
 ├── systemlock_0.1-1_all.deb
 ├── image-amd64.tar.lzma
 ├── image-i386.tar.lzma
-├── amd64.tar.lzma
 ├── ubiquity-slideshow
 |   └── slides/...
 ├── polkit-1
@@ -92,9 +92,6 @@ Basic understanding of the file structure is required to do development, here is
 │   └── distributions/...
 ├── pool
 │   └── main/...
-├── mail-scripts
-│   ├── mail-fail.py
-│   └── mail.py
 ├── systemlock-0.1
 │   ├── debian/...
 │   ├── etc/...
