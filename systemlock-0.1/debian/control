@@ -2,7 +2,7 @@ Source: systemlock
 Section: x11
 Priority: extra
 Maintainer: x-mario <vanhonit@gmail.com>
-Build-Depends: debhelper (>= 8.0.0), python(>=2.6), gksu
+Build-Depends: debhelper (>= 8.0.0), python(>=2.6), nautilus-admin
 Standards-Version: 3.9.2
 Homepage: http://mbm.vn
 
