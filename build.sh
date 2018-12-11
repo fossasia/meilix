@@ -187,10 +187,8 @@ sed -i 's/Lubuntu/Meilix/' image/boot/grub/loopback.cfg
 #done
 
 # Create filesystem manifests
-sudo chroot chroot dpkg-query -W --showformat='${Package} ${Version}\n' >/tmp/manifest.$$
-sudo cp -v /tmp/manifest.$$ image/casper/filesystem.manifest
+sudo chroot chroot dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee image/casper/filesystem.manifest
 sudo cp -v image/casper/filesystem.manifest image/casper/filesystem.manifest-desktop
-rm /tmp/manifest.$$
 
 # Remove packages from filesystem.manifest-desktop
 # (language and extra for more hardware support)
