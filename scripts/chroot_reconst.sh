@@ -57,6 +57,13 @@ cp  /usr/share/xsessions/lxqt.desktop /usr/share/xsessions/plasma.desktop
 
 # plymouth boot splash
 
+# Installing sublime text editor
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
+apt-get -qq update
+apt-get -qq -y install sublime-text
+
+
 # after Xenial one could also use apt install ./package
 dpkg -i plymouth-theme-meilix-text_1.0-1_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-text_1.0-1_all.deb
 dpkg -i plymouth-theme-meilix-logo_1.0-1_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-logo_1.0-1_all.deb
