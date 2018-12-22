@@ -8,6 +8,6 @@ Homepage: http://mbm.vn
 
 Package: meilix-default-settings
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}
 Description: default settings for meilix
  Various system settings tailored for meilix.
