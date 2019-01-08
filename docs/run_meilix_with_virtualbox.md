@@ -4,9 +4,9 @@ Want to contribute? Great!
 
 # How to run/tests Meilix ISO locally with Virtual box
 
-## Testing the Latest Release on Qemu/KVM
+## Testing the Latest Release on Virtual box
 
-* **Step 1:** Download the "Latest Release" here, search (CTRL-f) for "Latest" https://github.com/fossasia/meilix/releases
+* **Step 1:** Download the "Latest Release" here, https://github.com/fossasia/meilix/releases
 * **Step 2:** Open Virtual box
 * **Step 3:** Click on New to Create A New Virtual Machine
 
