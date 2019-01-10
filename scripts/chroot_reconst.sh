@@ -63,6 +63,11 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.
 apt-get -qq update
 apt-get -qq -y install sublime-text
 
+# Installing Chromium 
+apt-get -qq -y install chromium-browser
+
+# Installing Firefox
+apt-get -qq -y install firefox
 
 # after Xenial one could also use apt install ./package
 dpkg -i plymouth-theme-meilix-text_1.0-1_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-text_1.0-1_all.deb
@@ -90,8 +95,8 @@ rm -rf /tmp/*
 rm -f meilix-default-settings_1.0_all.deb
 rm -f meilix-metapackage_1.0-1_all.deb
 rm -f systemlock_0.1-1_all.deb 
-rm -f plymouth-theme-meilix-logo_1.0-1_all.deb 
-rm -f plymouth-theme-meilix-text_1.0-1_all.deb
+rm -f plymouth-theme-meilix-logo_1.0-2_all.deb 
+rm -f plymouth-theme-meilix-text_1.0-2_all.deb
 
 # Meilix Check Skript
 chmod +x meilix_check.sh
