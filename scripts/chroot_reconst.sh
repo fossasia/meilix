@@ -40,7 +40,7 @@ apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
 
 # Install base packages
 #apt-get -qq -y install xorg lightdm  
-apt-get -qq -y install xorg xinit sddm plymouth-label ttf-ubuntu-font-family
+apt-get -qq -y install xorg xinit sddm
 # Install LXQT components
 apt-get -qq -y install lxqt openbox 
 apt-get -f install
@@ -55,6 +55,9 @@ rm  /usr/share/xsessions/plasma.desktop
 # ugliest hack ever
 cp  /usr/share/xsessions/lxqt.desktop /usr/share/xsessions/plasma.desktop
 
+# Remove screensaver
+apt-get -qq -y remove xscreensaver
+
 # plymouth boot splash
 
 # Installing sublime text editor
@@ -62,6 +65,13 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
 apt-get -qq update
 apt-get -qq -y install sublime-text
+
+# Installing VLC media player
+apt-get -qq -y install vlc
+rm /usr/share/applications/mpv.desktop
+rm /usr/share/applications/smplayer.desktop
+rm /usr/share/applications/smtube.desktop
+rm /usr/share/applications/audacious.desktop
 
 
 # after Xenial one could also use apt install ./package
@@ -83,6 +93,8 @@ cat /usr/share/applications/lxqt-about.desktop
 # Switching off screen dimming
 echo -ne "\033[9;0]" >> /etc/issue
 setterm -blank 0 >> /etc/issue
+# Meilix default settings
+dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
 
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
