@@ -94,9 +94,11 @@ cat /usr/share/applications/lxqt-about.desktop
 sed -i '$ a NoDisplay=true' /usr/share/applications/lxqt-about.desktop
 cat /usr/share/applications/lxqt-about.desktop
 
+# Switching off screen dimming
+echo -ne "\033[9;0]" >> /etc/issue
+setterm -blank 0 >> /etc/issue
 # Meilix default settings
 dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
-
 
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
