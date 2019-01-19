@@ -154,7 +154,7 @@ $ ./build.sh
 ```
 ### Testing the ISOs
 1. [Local Installation with Qemu/KVM](/docs/run_meilix_with_qemu.md)
-2. Run as a live CD in Virtualbox by Oracle
+2. [Run as a live CD in Virtualbox by Oracle](/docs/run_meilix_with_virtualbox.md)
 
 **Build Using Travis***
 
