@@ -83,10 +83,6 @@ rm /usr/share/applications/audacious.desktop
 dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb
 dpkg -i plymouth-theme-meilix-logo_1.0-2_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-logo_1.0-2_all.deb
 
-update-alternatives --install /usr/share/plymouth/themes/text.plymouth text.plymouth /usr/share/plymouth/themes/meilix-text/meilix-text.plymouth 130
-update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/meilix-logo/meilix-logo.plymouth 140
-update-initramfs -c -k all
-
 # Remove the "LXQT about" entry from the menu
 # /usr/share/applications/lxqt-about.desktop
 # or ~/.local/usr/share override (in skel!)
