@@ -55,6 +55,9 @@ rm  /usr/share/xsessions/plasma.desktop
 # ugliest hack ever
 cp  /usr/share/xsessions/lxqt.desktop /usr/share/xsessions/plasma.desktop
 
+# Remove screensaver
+apt-get -qq -y remove xscreensaver
+
 # plymouth boot splash
 
 # Installing sublime text editor
