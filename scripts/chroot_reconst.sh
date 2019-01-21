@@ -83,7 +83,10 @@ rm /usr/share/applications/smtube.desktop
 rm /usr/share/applications/audacious.desktop
 
 # Installing gimp
-apt update && apt -qq -y install gimp gimp-mic
+apt-get update && apt-get -qq -y install gimp gimp-gmic
+
+# Installing Inkspace
+apt-get update && apt-get -qq -y install inkspace
 
 # after Xenial one could also use apt install ./package
 dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb
