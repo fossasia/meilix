@@ -82,6 +82,9 @@ rm /usr/share/applications/smplayer.desktop
 rm /usr/share/applications/smtube.desktop
 rm /usr/share/applications/audacious.desktop
 
+# Installing gimp
+apt update && apt -qq -y install gimp gimp-mic
+
 # after Xenial one could also use apt install ./package
 dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb
 dpkg -i plymouth-theme-meilix-logo_1.0-2_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-logo_1.0-2_all.deb
