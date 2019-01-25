@@ -83,8 +83,8 @@ rm /usr/share/applications/smtube.desktop
 rm /usr/share/applications/audacious.desktop
 
 # after Xenial one could also use apt install ./package
-dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb
-dpkg -i plymouth-theme-meilix-logo_1.0-2_all.deb; apt-get -f install; dpkg -i plymouth-theme-meilix-logo_1.0-2_all.deb
+dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb; apt-get -qq -y -f install; dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb
+dpkg -i plymouth-theme-meilix-logo_1.0-2_all.deb
 
 # Remove the "LXQT about" entry from the menu
 # /usr/share/applications/lxqt-about.desktop
