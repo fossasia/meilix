@@ -67,14 +67,14 @@ initramfs-extract() {
 # in the future the debuilding (=building deb packages) is to be done 
 # in the meilix-artwork repo and we will fetch the latest releases of the 
 # deb files here.
-[ -f plymouth-meilix-logo_1.0-1_all.deb ] && rm plymouth-meilix-logo_1.0-1_all.deb
-[ -f plymouth-meilix-text_1.0-1_all.deb ] && rm plymouth-meilix-text_1.0-1_all.deb
+[ -f plymouth-meilix-logo_1.0-2_all.deb ] && rm plymouth-meilix-logo_1.0-2_all.deb
+[ -f plymouth-meilix-text_1.0-2_all.deb ] && rm plymouth-meilix-text_1.0-2_all.deb
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
 #Fetch the packages from meilix-artwork
-wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-logo_1.0-1_all.deb -O plymouth-theme-meilix-logo_1.0-1_all.deb
-wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-text_1.0-1_all.deb -O plymouth-theme-meilix-text_1.0-1_all.deb
+wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-logo_1.0-2_all.deb -O plymouth-theme-meilix-logo_1.0-2_all.deb
+wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-text_1.0-2_all.deb -O plymouth-theme-meilix-text_1.0-2_all.deb
 
 # Create and populate the chroot using debootstrap
 # Debootstrap installs a Linux in the chroot. The noisy output could be ignored
