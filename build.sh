@@ -69,12 +69,14 @@ initramfs-extract() {
 # deb files here.
 [ -f plymouth-meilix-logo_1.0-2_all.deb ] && rm plymouth-meilix-logo_1.0-2_all.deb
 [ -f plymouth-meilix-text_1.0-2_all.deb ] && rm plymouth-meilix-text_1.0-2_all.deb
+[ -f meilix-default-theme_1.0-2_all.deb ] && rm meilix-default-theme_1.0-2_all.deb
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
 #Fetch the packages from meilix-artwork
 wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-logo_1.0-2_all.deb -O plymouth-theme-meilix-logo_1.0-2_all.deb
 wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-text_1.0-2_all.deb -O plymouth-theme-meilix-text_1.0-2_all.deb
+wget https://github.com/fossasia/meilix-artwork/raw/deb/meilix-default-theme_1.0-2_all.deb -O meilix-default-theme_1.0-2_all.deb
 
 # Create and populate the chroot using debootstrap
 # Debootstrap installs a Linux in the chroot. The noisy output could be ignored
@@ -93,6 +95,7 @@ sudo cp -v meilix-default-settings_*_all.deb chroot
 sudo cp -v systemlock_*_all.deb chroot
 sudo cp -v plymouth-theme-meilix-logo_*_all.deb chroot
 sudo cp -v plymouth-theme-meilix-text_*_all.deb chroot
+sudo cp -v meilix-default-theme_*_all.deb chroot
 #sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v ./scripts/meilix_check.sh chroot/meilix_check.sh
 
