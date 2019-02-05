@@ -169,6 +169,10 @@ sed -i 's/Kubuntu/meilix/' image/.disk/info
 [ -f image/isolinux/txt.cfg ] && cat image/isolinux/txt.cfg
 sed -i 's/Lubuntu/Meilix/' image/isolinux/txt.cfg 
 
+[ -f image/boot/grub/loopback.cfg ] && \
+sed -i 's/Try Lubuntu/Try Meilix' image/boot/grub/loopback.cfg && \
+sed -i 's/Install Lubuntu/Install Meilix' image/boot/grub/loopback.cfg
+
 # What follows is a hackish patch for an older lzma image. It was updated 
 # in a wrong way to a more current version and should be dead code as it stands.
 # We replace by "newversion" that could also be "release".
