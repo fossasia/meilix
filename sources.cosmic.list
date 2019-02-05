@@ -1,5 +1,3 @@
-#deb cdrom:[Ubuntu 18.10 _Cosmic Cuttlefish_ - Release amd64 (20181017.3)]/ cosmic main restricted
-
 # See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
 # newer versions of the distribution.
 deb http://in.archive.ubuntu.com/ubuntu/ cosmic main restricted
