@@ -106,15 +106,16 @@ sudo cp -v ./scripts/meilix_check.sh chroot/meilix_check.sh
 if [ "$TRAVIS_TAG" != " " ]
 then
 recipe=`echo $recipe | jq -r '.[]'`
-for PACKAGE in $recipe
+for SOFTWARE in $recipe
 do
-  case "$PACKAGE" 
+  case "$SOFTWARE" in 
     "chromium")
       sudo cp -v ./scripts/packages/chromium-package.sh chroot
       ;;
   esac
 done
 fi
+
 # Mount needed pseudo-filesystems for the chroot
 sudo mount --rbind /sys chroot/sys
 sudo mount --rbind /dev chroot/dev
