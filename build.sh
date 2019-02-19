@@ -101,6 +101,21 @@ sudo cp -v meilix-default-theme_*_all.deb chroot
 #sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v ./scripts/meilix_check.sh chroot/meilix_check.sh
 
+# Storing the related package list from the webapp to software array
+# Copy all the installation scripts into the chroot
+if [ "$TRAVIS_TAG" != " " ]
+then
+recipe=`echo $recipe | jq -r '.[]'`
+for SOFTWARE in $recipe
+do
+  case "$SOFTWARE" in 
+    "chromium")
+      sudo cp -v ./scripts/packages/chromium-package.sh chroot
+      ;;
+  esac
+done
+fi
+
 # Mount needed pseudo-filesystems for the chroot
 sudo mount --rbind /sys chroot/sys
 sudo mount --rbind /dev chroot/dev
