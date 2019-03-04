@@ -12,6 +12,11 @@ export LANGUAGE=en_US.UTF-8
 
 # Arch to build ISO for, i386 or amd64
 arch=${1:-amd64}
+# Adding condition for processor support
+if [ "$TRAVIS_TAG" != "" ];
+then
+  arch=${1:-"$processor"}
+fi
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Ubuntu release used as a base by debootstrap, check if it works with the provided lzma image.
@@ -103,7 +108,7 @@ sudo cp -v ./scripts/meilix_check.sh chroot/meilix_check.sh
 
 # Storing the related package list from the webapp to software array
 # Copy all the installation scripts into the chroot
-if [ "$TRAVIS_TAG" != " " ]
+if [ "$TRAVIS_TAG" != "" ];
 then
 recipe=`echo $recipe | jq -r '.[]'`
 for SOFTWARE in $recipe
