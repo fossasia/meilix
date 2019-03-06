@@ -1,6 +1,6 @@
 #!/bin/bash
 # build.sh -- creates an Meilix LiveCD ISO
-# Author: members of the meilix Team 
+# Author: members of the meilix Team
 # Based on HOWTO information by Julien Lavergne <gilir@ubuntu.com>
 
 set -eux				# Be strict
@@ -23,7 +23,7 @@ mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 release=${4:-xenial}
 # Set of GNOME language packs to install.
 # Use '\*' for all langs, 'en' for English
-gnomelanguage=${3:-'{en}'}	
+gnomelanguage=${3:-'{en}'}
 
 # Necessary data files
 datafiles="image-${arch}.tar.lzma sources.${release}.list"
@@ -69,8 +69,8 @@ initramfs-extract() {
 }
 
 # remove existing plymouth bootscreen packages and debuilding them again
-# in the future the debuilding (=building deb packages) is to be done 
-# in the meilix-artwork repo and we will fetch the latest releases of the 
+# in the future the debuilding (=building deb packages) is to be done
+# in the meilix-artwork repo and we will fetch the latest releases of the
 # deb files here.
 [ -f plymouth-meilix-logo_1.0-2_all.deb ] && rm plymouth-meilix-logo_1.0-2_all.deb
 [ -f plymouth-meilix-text_1.0-2_all.deb ] && rm plymouth-meilix-text_1.0-2_all.deb
@@ -80,10 +80,10 @@ chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
 #Fetch the packages from meilix-artwork
-wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-logo_1.0-2_all.deb -O plymouth-theme-meilix-logo_1.0-2_all.deb
-wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-text_1.0-2_all.deb -O plymouth-theme-meilix-text_1.0-2_all.deb
-wget https://github.com/fossasia/meilix-artwork/raw/deb/meilix-default-theme_1.0-2_all.deb -O meilix-default-theme_1.0-2_all.deb
-wget https://github.com/fossasia/meilix-systemlock/raw/master/systemlock_0.1-1_all.deb -O systemlock_0.1-1_all.deb
+wget -q https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-logo_1.0-2_all.deb -O plymouth-theme-meilix-logo_1.0-2_all.deb
+wget -q https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-text_1.0-2_all.deb -O plymouth-theme-meilix-text_1.0-2_all.deb
+wget -q https://github.com/fossasia/meilix-artwork/raw/deb/meilix-default-theme_1.0-2_all.deb -O meilix-default-theme_1.0-2_all.deb
+wget -q https://github.com/fossasia/meilix-systemlock/raw/master/systemlock_0.1-1_all.deb -O systemlock_0.1-1_all.deb
 
 # Create and populate the chroot using debootstrap
 # Debootstrap installs a Linux in the chroot. The noisy output could be ignored
@@ -113,7 +113,7 @@ then
 recipe=`echo $recipe | jq -r '.[]'`
 for SOFTWARE in $recipe
 do
-  case "$SOFTWARE" in 
+  case "$SOFTWARE" in
     "chromium")
       sudo cp -v ./scripts/packages/chromium-package.sh chroot
       ;;
@@ -170,14 +170,14 @@ sudo \cp --verbose -rf chroot/boot/initrd.img-**-generic image/casper/initrd.lz
   cd ..  && \
   cp initrd_FILES/conf/uuid.conf image/.disk/casper-uuid-generic && \
   rm -R initrd_FILES/
-  
+
 # Now we change the LIVE-CDs default user name to meilix!
-# If this one line file exists within the unpacked lzma, Casper will take 
-# the default username and hostname for the live CD from the first word 
+# If this one line file exists within the unpacked lzma, Casper will take
+# the default username and hostname for the live CD from the first word
 # in this file and then will write it to casper.conf. If your default login
-# of your live cd is livecd just replace livecd by meilix. Below we change 
+# of your live cd is livecd just replace livecd by meilix. Below we change
 # typical values for lzma images.
-# If you want to set username other than hostname this file should 
+# If you want to set username other than hostname this file should
 # be empty and you set username and hostname via casper.conf. (André R)
 [ -f image/.disk/info ] && \
 sed -i 's/Lubuntu/meilix/' image/.disk/info && \
@@ -187,16 +187,16 @@ sed -i 's/Kubuntu/meilix/' image/.disk/info
 # Lines above follow KISS to make it easy to grasp for you. Refactor at will.
 
 [ -f image/isolinux/txt.cfg ] && cat image/isolinux/txt.cfg
-sed -i 's/Lubuntu/Meilix/' image/isolinux/txt.cfg 
+sed -i 's/Lubuntu/Meilix/' image/isolinux/txt.cfg
 
 [ -f image/boot/grub/loopback.cfg ] && \
 sed -i 's/Try Lubuntu/Try Meilix' image/boot/grub/loopback.cfg && \
 sed -i 's/Install Lubuntu/Install Meilix' image/boot/grub/loopback.cfg
 
-# What follows is a hackish patch for an older lzma image. It was updated 
+# What follows is a hackish patch for an older lzma image. It was updated
 # in a wrong way to a more current version and should be dead code as it stands.
 # We replace by "newversion" that could also be "release".
-# Check the contents of affected files such as: 
+# Check the contents of affected files such as:
 #ls image/isolinux/f1.txt
 # and rectify the lines below (AR).
 # The hack applied when you took a old kernel lzma image for a new version
@@ -223,7 +223,7 @@ sudo cp -v image/casper/filesystem.manifest image/casper/filesystem.manifest-des
 REMOVE='gparted ubiquity ubiquity-frontend-gtk casper live-initramfs user-setup discover1
  xresprobe libdebian-installer4 pptp-linux ndiswrapper-utils-1.9
  ndisgtk linux-wlan-ng libatm1 setserial b43-fwcutter uterm
- linux-headers-generic indicator-session indicator-application' 
+ linux-headers-generic indicator-session indicator-application'
 for i in $REMOVE
 do
     sudo sed -i "/${i}/d" image/casper/filesystem.manifest-desktop
@@ -290,4 +290,4 @@ chmod 0444 ../$ISOFILE
 cd ..
 md5sum $ISOFILE >${ISOFILE}.md5
 
-# see travis confguration for the deployment that follows in case of a Travis build. 
+# see travis confguration for the deployment that follows in case of a Travis build.
