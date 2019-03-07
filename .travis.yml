@@ -20,6 +20,7 @@ include:
           - debhelper
           - fakeroot
           - devscripts
+          - jq
 
 sudo: required
 dist: xenial

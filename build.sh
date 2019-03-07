@@ -12,6 +12,11 @@ export LANGUAGE=en_US.UTF-8
 
 # Arch to build ISO for, i386 or amd64
 arch=${1:-amd64}
+# Adding condition for processor support
+if [ "$TRAVIS_TAG" != "" ];
+then
+  arch=${1:-"$processor"}
+fi
 # Ubuntu mirror to use
 mirror=${2:-"http://archive.ubuntu.com/ubuntu/"}
 # Ubuntu release used as a base by debootstrap, check if it works with the provided lzma image.
@@ -69,12 +74,16 @@ initramfs-extract() {
 # deb files here.
 [ -f plymouth-meilix-logo_1.0-2_all.deb ] && rm plymouth-meilix-logo_1.0-2_all.deb
 [ -f plymouth-meilix-text_1.0-2_all.deb ] && rm plymouth-meilix-text_1.0-2_all.deb
+[ -f meilix-default-theme_1.0-2_all.deb ] && rm meilix-default-theme_1.0-2_all.deb
+[ -f systemlock_0.1-1_all.deb ] && rm systemlock_0.1-1_all.deb
 chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
 #Fetch the packages from meilix-artwork
 wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-logo_1.0-2_all.deb -O plymouth-theme-meilix-logo_1.0-2_all.deb
 wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-text_1.0-2_all.deb -O plymouth-theme-meilix-text_1.0-2_all.deb
+wget https://github.com/fossasia/meilix-artwork/raw/deb/meilix-default-theme_1.0-2_all.deb -O meilix-default-theme_1.0-2_all.deb
+wget https://github.com/fossasia/meilix-systemlock/raw/master/systemlock_0.1-1_all.deb -O systemlock_0.1-1_all.deb
 
 # Create and populate the chroot using debootstrap
 # Debootstrap installs a Linux in the chroot. The noisy output could be ignored
@@ -93,8 +102,24 @@ sudo cp -v meilix-default-settings_*_all.deb chroot
 sudo cp -v systemlock_*_all.deb chroot
 sudo cp -v plymouth-theme-meilix-logo_*_all.deb chroot
 sudo cp -v plymouth-theme-meilix-text_*_all.deb chroot
+sudo cp -v meilix-default-theme_*_all.deb chroot
 #sudo cp -v meilix-metapackage_*_all.deb chroot
 sudo cp -v ./scripts/meilix_check.sh chroot/meilix_check.sh
+
+# Storing the related package list from the webapp to software array
+# Copy all the installation scripts into the chroot
+if [ "$TRAVIS_TAG" != "" ];
+then
+recipe=`echo $recipe | jq -r '.[]'`
+for SOFTWARE in $recipe
+do
+  case "$SOFTWARE" in 
+    "chromium")
+      sudo cp -v ./scripts/packages/chromium-package.sh chroot
+      ;;
+  esac
+done
+fi
 
 # Mount needed pseudo-filesystems for the chroot
 sudo mount --rbind /sys chroot/sys
@@ -161,9 +186,12 @@ sed -i 's/Ubuntu/meilix/' image/.disk/info && \
 sed -i 's/Kubuntu/meilix/' image/.disk/info
 # Lines above follow KISS to make it easy to grasp for you. Refactor at will.
 
-ls image/boot/grub
-[ -f image/boot/grub/grub.cfg ] && cat image/boot/grub/grub.cfg
-sed -i 's/Lubuntu/Meilix/' image/boot/grub/loopback.cfg
+[ -f image/isolinux/txt.cfg ] && cat image/isolinux/txt.cfg
+sed -i 's/Lubuntu/Meilix/' image/isolinux/txt.cfg 
+
+[ -f image/boot/grub/loopback.cfg ] && \
+sed -i 's/Try Lubuntu/Try Meilix' image/boot/grub/loopback.cfg && \
+sed -i 's/Install Lubuntu/Install Meilix' image/boot/grub/loopback.cfg
 
 # What follows is a hackish patch for an older lzma image. It was updated 
 # in a wrong way to a more current version and should be dead code as it stands.
