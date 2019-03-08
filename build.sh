@@ -80,10 +80,10 @@ chmod +x ./scripts/debuild.sh
 ./scripts/debuild.sh
 
 #Fetch the packages from meilix-artwork
-wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-logo_1.0-2_all.deb -O plymouth-theme-meilix-logo_1.0-2_all.deb
-wget https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-text_1.0-2_all.deb -O plymouth-theme-meilix-text_1.0-2_all.deb
-wget https://github.com/fossasia/meilix-artwork/raw/deb/meilix-default-theme_1.0-2_all.deb -O meilix-default-theme_1.0-2_all.deb
-wget https://github.com/fossasia/meilix-systemlock/raw/master/systemlock_0.1-1_all.deb -O systemlock_0.1-1_all.deb
+wget -q https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-logo_1.0-2_all.deb -O plymouth-theme-meilix-logo_1.0-2_all.deb
+wget -q https://github.com/fossasia/meilix-artwork/raw/deb/plymouth-theme-meilix-text_1.0-2_all.deb -O plymouth-theme-meilix-text_1.0-2_all.deb
+wget -q https://github.com/fossasia/meilix-artwork/raw/deb/meilix-default-theme_1.0-2_all.deb -O meilix-default-theme_1.0-2_all.deb
+wget -q https://github.com/fossasia/meilix-systemlock/raw/master/systemlock_0.1-1_all.deb -O systemlock_0.1-1_all.deb
 
 # Create and populate the chroot using debootstrap
 # Debootstrap installs a Linux in the chroot. The noisy output could be ignored
