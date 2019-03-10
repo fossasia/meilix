@@ -70,10 +70,6 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.
 apt-get -qq update
 apt-get -qq -y install sublime-text
 
-# Installing related softwares
-chmod +x ./*.sh
-./*.sh
-
 # Installing Firefox
 apt-get -qq -y install firefox
 
@@ -94,15 +90,17 @@ dpkg -i systemlock_0.1-1_all.deb
 # /usr/share/applications/lxqt-about.desktop
 # or ~/.local/usr/share override (in skel!)
 # set the option NoDisplay=true
-cat /usr/share/applications/lxqt-about.desktop
 sed -i '$ a NoDisplay=true' /usr/share/applications/lxqt-about.desktop
-cat /usr/share/applications/lxqt-about.desktop
 
 # Switching off screen dimming
 echo -ne "\033[9;0]" >> /etc/issue
 setterm -blank 0 >> /etc/issue
 # Meilix default settings
 dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
+
+# Executing the copied scripts
+chmod +x meilix_check.sh
+./meilix_check.sh
 
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
@@ -118,10 +116,6 @@ rm -f plymouth-theme-meilix-logo_1.0-2_all.deb
 rm -f plymouth-theme-meilix-text_1.0-2_all.deb
 rm -f meilix-default-theme_1.0-2_all.deb
 rm -f systemlock_0.1-1_all.deb
-
-# Meilix Check Skript
-chmod +x meilix_check.sh
-./meilix_check.sh
 
 # Reverting earlier initctl override. JM 2012-0604
 rm /sbin/initctl
