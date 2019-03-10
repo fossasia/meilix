@@ -25,10 +25,10 @@ dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
 # Installing wget
-apt-get install wget apt-transport-https
+apt-get -qq install wget apt-transport-https
 
 # Add key for third party repo
-apt-key update 
+apt-key update
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E1098513
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1EBD81D9
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 91E7EE5E
@@ -42,15 +42,15 @@ apt-get -qq -y --purge install ubuntu-standard casper lupin-casper \
   laptop-detect os-prober linux-generic
 
 # Install base packages
-#apt-get -qq -y install xorg lightdm  
+#apt-get -qq -y install xorg lightdm
 apt-get -qq -y install xorg xinit sddm
 # Install LXQT components
-apt-get -qq -y install lxqt openbox 
-apt-get -f install
+apt-get -qq -y install lxqt openbox
+apt-get -f -qq install
 update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/bin/startlxqt 140
 # ugly hack
-sed -i 's\plasma.desktop\lxqt.desktop\g' /usr/share/initramfs-tools/scripts/casper-bottom/15autologin 
-#While this is necessary for the changes to take effect we don't have to do that here. 
+sed -i 's\plasma.desktop\lxqt.desktop\g' /usr/share/initramfs-tools/scripts/casper-bottom/15autologin
+#While this is necessary for the changes to take effect we don't have to do that here.
 update-initramfs -c -k -v all
 
 # cat /usr/share/xsessions/plasma.desktop
@@ -65,6 +65,7 @@ apt-get -qq -y remove xscreensaver
 
 # Installing 
 apt-get -qq -y install git
+
 
 # Installing sublime text editor
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
@@ -115,8 +116,8 @@ rm -rf /tmp/*
 # Clean up local packages that are not needed anymore
 rm -f meilix-default-settings_1.0_all.deb
 rm -f meilix-metapackage_1.0-1_all.deb
-rm -f systemlock_0.1-1_all.deb 
-rm -f plymouth-theme-meilix-logo_1.0-2_all.deb 
+rm -f systemlock_0.1-1_all.deb
+rm -f plymouth-theme-meilix-logo_1.0-2_all.deb
 rm -f plymouth-theme-meilix-text_1.0-2_all.deb
 rm -f meilix-default-theme_1.0-2_all.deb
 rm -f systemlock_0.1-1_all.deb
