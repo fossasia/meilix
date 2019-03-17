@@ -102,6 +102,11 @@ dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
 chmod +x meilix_check.sh
 ./meilix_check.sh
 
+# Meilix Check Skript
+# chmod +x meilix_check.sh
+# ./meilix_check.sh
+
+
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
 apt-get -qq clean
