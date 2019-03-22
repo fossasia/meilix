@@ -17,6 +17,9 @@ export DEBIAN_FRONTEND=noninteractive
 export LANG=C
 export LIVE_BOOT_SCRIPTS="casper lupin-casper"
 
+# This solves the setting up of locale problem for chroot
+sudo locale-gen en_US.UTF-8
+
 # To allow a few apps using upstart to install correctly. JM 2011-02-21
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
@@ -98,14 +101,16 @@ setterm -blank 0 >> /etc/issue
 # Meilix default settings
 dpkg -i --force-overwrite meilix-default-settings_1.0_all.deb
 
-# Executing the copied scripts
-chmod +x meilix_check.sh
-./meilix_check.sh
 
 # Meilix Check Skript
 # chmod +x meilix_check.sh
 # ./meilix_check.sh
 
+#applying wallpaper sent by meilix-generator
+if [ "$wallpaper_url" != "" ]
+then
+      wget -q $wallpaper_url -O "/usr/share/lxqt/themes/meilix/wallpaper.jpg"
+fi
 
 # Clean up the chroot before
 perl -i -nle 'print unless /^Package: language-(pack|support)/ .. /^$/;' /var/lib/apt/extended_states
