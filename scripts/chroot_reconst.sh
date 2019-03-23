@@ -79,12 +79,12 @@ apt-get -qq -y install firefox
 # Installing Chrome
 if [[ $(arch) = "x86_64" ]]
 then
-	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
-	sudo dpkg -i google-chrome-stable_current_amd64.deb &&
+	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
+	dpkg -i google-chrome-stable_current_amd64.deb &&
 	rm -f google-chrome-stable_current_amd64.deb
 else
-	wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb &&
-	sudo dpkg -i google-chrome-stable_current_i386.deb &&
+	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb &&
+	dpkg -i google-chrome-stable_current_i386.deb &&
 	rm -f google-chrome-stable_current_i386.deb
 fi
 
