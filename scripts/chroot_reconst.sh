@@ -77,7 +77,7 @@ apt-get -qq -y install sublime-text
 apt-get -qq -y install firefox
 
 # Installing Chrome
-if [[ $(arch) = "x86_64" ]]
+if [[ $(arch) = "amd64" ]]
 then
 	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
 	dpkg -i google-chrome-stable_current_amd64.deb &&
