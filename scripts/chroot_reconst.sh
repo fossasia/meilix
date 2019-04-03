@@ -76,6 +76,18 @@ apt-get -qq -y install sublime-text
 # Installing Firefox
 apt-get -qq -y install firefox
 
+# Installing Chrome
+if [[ $(arch) = "amd64" ]]
+then
+	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
+	dpkg -i google-chrome-stable_current_amd64.deb &&
+	rm -f google-chrome-stable_current_amd64.deb
+else
+	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb &&
+	dpkg -i google-chrome-stable_current_i386.deb &&
+	rm -f google-chrome-stable_current_i386.deb
+fi
+
 # Installing VLC media player
 apt-get -qq -y install vlc
 rm /usr/share/applications/mpv.desktop
