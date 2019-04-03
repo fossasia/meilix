@@ -155,7 +155,12 @@ echo $0: Preparing image...
 #tar image-${arch}.tar.lzma
 # -> taking the standard image image-${arch}.tar.lzma files does not work
 #    anymore
+if [ "$arch" == "amd64" ];
+then
 tar xvvf image-amd64.tar.lzma
+else 
+tar xvvf image-i386.tar.lzma
+fi
 
 # Copy the kernel from the "chroot" into the "image" folder for the LiveCD
 sudo \cp --verbose -rf chroot/boot/vmlinuz-**-generic image/casper/vmlinuz
