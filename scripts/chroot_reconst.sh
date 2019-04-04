@@ -1,4 +1,4 @@
-#!/bin/bash
+	#!/bin/bash
 # Minimimal chroot file for a reconstruction of meilix
 # 14 Nov 18 v.0.1 first minimal try
 # 15 Nov 18 v.0.2 let's exmperiment
@@ -77,16 +77,20 @@ apt-get -qq -y install sublime-text
 apt-get -qq -y install firefox
 
 # Installing Chrome
-if [[ $(arch) = "amd64" ]]
+if [ "$wallpaper_url" != "" ]
 then
-	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
-	dpkg -i google-chrome-stable_current_amd64.deb &&
-	rm -f google-chrome-stable_current_amd64.deb
-else
-	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb &&
-	dpkg -i google-chrome-stable_current_i386.deb &&
-	rm -f google-chrome-stable_current_i386.deb
+	if [[ $(arch) = "amd64" ]]
+	then
+		wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
+		dpkg -i google-chrome-stable_current_amd64.deb &&
+		rm -f google-chrome-stable_current_amd64.deb
+	else
+		wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb &&
+		dpkg -i google-chrome-stable_current_i386.deb &&
+		rm -f google-chrome-stable_current_i386.deb
+	fi
 fi
+
 
 # Installing VLC media player
 apt-get -qq -y install vlc
