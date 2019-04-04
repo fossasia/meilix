@@ -77,19 +77,6 @@ apt-get -qq -y install sublime-text
 apt-get -qq -y install firefox
 
 # Installing Chrome
-if [ "$wallpaper_url" != "" ]
-then
-	if [[ $(arch) = "amd64" ]]
-	then
-		wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
-		dpkg -i google-chrome-stable_current_amd64.deb &&
-		rm -f google-chrome-stable_current_amd64.deb
-	else
-		wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb &&
-		dpkg -i google-chrome-stable_current_i386.deb &&
-		rm -f google-chrome-stable_current_i386.deb
-	fi
-fi
 if [[ $(arch) = "amd64" ]]
 then
 	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
