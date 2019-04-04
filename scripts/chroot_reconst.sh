@@ -77,7 +77,6 @@ apt-get -qq -y install sublime-text
 apt-get -qq -y install firefox
 
 # Installing Chrome
-<<<<<<< HEAD
 if [ "$wallpaper_url" != "" ]
 then
 	if [[ $(arch) = "amd64" ]]
@@ -91,9 +90,6 @@ then
 		rm -f google-chrome-stable_current_i386.deb
 	fi
 fi
-
-
-=======
 if [[ $(arch) = "amd64" ]]
 then
 	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
@@ -105,7 +101,6 @@ else
 	rm -f google-chrome-stable_current_i386.deb
 fi
 
->>>>>>> d7a650051b9264c953bad911094ffabcf5699754
 # Installing VLC media player
 apt-get -qq -y install vlc
 rm /usr/share/applications/mpv.desktop
