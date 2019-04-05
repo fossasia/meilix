@@ -3,7 +3,7 @@
 # Author: members of the meilix Team
 # Based on HOWTO information by Julien Lavergne <gilir@ubuntu.com>
 
-set -eux				# Be strict
+set -eux        # Be strict
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -157,9 +157,9 @@ echo $0: Preparing image...
 #    anymore
 if [ "$arch" == "amd64" ];
 then
-tar xvvf image-amd64.tar.lzma
+tar xf image-amd64.tar.lzma
 else 
-tar xvvf image-i386.tar.lzma
+tar xf image-i386.tar.lzma
 fi
 
 # Copy the kernel from the "chroot" into the "image" folder for the LiveCD
@@ -191,8 +191,7 @@ sed -i 's/Ubuntu/meilix/' image/.disk/info && \
 sed -i 's/Kubuntu/meilix/' image/.disk/info
 # Lines above follow KISS to make it easy to grasp for you. Refactor at will.
 
-[ -f image/isolinux/txt.cfg ] && cat image/isolinux/txt.cfg
-sed -i 's/Lubuntu/Meilix/' image/isolinux/txt.cfg
+[ -f image/isolinux/txt.cfg ] && sed -i 's/Lubuntu/Meilix/' image/isolinux/txt.cfg
 
 [ -f image/boot/grub/loopback.cfg ] && \
 sed -i 's/Try Lubuntu/Try Meilix' image/boot/grub/loopback.cfg && \
@@ -220,7 +219,7 @@ sed -i 's/Install Lubuntu/Install Meilix' image/boot/grub/loopback.cfg
 #done
 
 # Create filesystem manifests
-sudo chroot chroot dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee image/casper/filesystem.manifest
+sudo chroot chroot dpkg-query -W --showformat='${Package} ${Version}\n' | sudo dd of=image/casper/filesystem.manifest
 sudo cp -v image/casper/filesystem.manifest image/casper/filesystem.manifest-desktop
 
 # Remove packages from filesystem.manifest-desktop
