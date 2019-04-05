@@ -1,4 +1,4 @@
-#!/bin/bash
+	#!/bin/bash
 # Minimimal chroot file for a reconstruction of meilix
 # 14 Nov 18 v.0.1 first minimal try
 # 15 Nov 18 v.0.2 let's exmperiment
