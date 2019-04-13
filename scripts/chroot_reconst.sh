@@ -64,6 +64,9 @@ apt-get -qq -y remove xscreensaver
 # This switch offs the sleep mode
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
+# This switch offs system sounds
+sed -i 's\# set bell-style none\set bell-style none\g' /etc/inputrc
+
 # Installing 
 apt-get -qq -y install git
 
