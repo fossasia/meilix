@@ -62,10 +62,12 @@ cp  /usr/share/xsessions/lxqt.desktop /usr/share/xsessions/plasma.desktop
 if ["chromium" in "$INSTALL"]
 then
 	apt-get install -y chromium-browser
-else if ["firefox" in "$INSTALL"]
+fi
+if ["firefox" in "$INSTALL"]
 then
 	apt-get -qq -y install firefox
-else if ["chrome" in "$INSTALL"]
+fi
+if ["chrome" in "$INSTALL"]
 then
 	if [[ $(arch) = "amd64" ]]
 	then
@@ -77,22 +79,28 @@ then
 		dpkg -i google-chrome-stable_current_i386.deb &&
 		rm -f google-chrome-stable_current_i386.deb
 	fi
-else if ["vlc" in "$INSTALL"]
+fi
+if ["vlc" in "$INSTALL"]
 then
 	apt-get -qq -y install vlc
-else if ["git" in "$INSTALL"]
+fi
+if ["git" in "$INSTALL"]
 then
 	apt-get -qq -y install git
-else if ["gimp" in "$INSTALL"]
+fi
+if ["gimp" in "$INSTALL"]
 then
 	apt-get -qq -y --purge install gimp
-else if ["inkscape" in "$INSTALL"]
+fi
+if ["inkscape" in "$INSTALL"]
 then
 	apt-get -qq -y --purge install inkscape
-else if ["office" in "$INSTALL"]
+fi
+if ["office" in "$INSTALL"]
 then
 	apt-get -qq -y --purge install --no-install-recommends libreoffice-gtk libreoffice-gtk libreoffice-writer libreoffice-calc libreoffice-impress
-else if ["dropbox" in "$INSTALL"]
+fi
+if ["dropbox" in "$INSTALL"]
 then
 	apt-get -qq -y install nautilus-dropbox
 	nautilus --quit
