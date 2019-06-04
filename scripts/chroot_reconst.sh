@@ -106,6 +106,12 @@ then
 	nautilus --quit
 fi
 
+# removal of desktop files
+rm /usr/share/applications/mpv.desktop	
+rm /usr/share/applications/smplayer.desktop	
+rm /usr/share/applications/smtube.desktop	
+rm /usr/share/applications/audacious.desktop
+
 # Installing sublime text editor
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
