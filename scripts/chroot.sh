@@ -143,23 +143,9 @@ fi
 #Overwrite for decreasing the uid
 sed -i '/UID_MIN/ c\UID_MIN 998' /etc/login.defs
 
-# Install graphic
-apt-get -qq -y --purge install gimp inkscape
-#apt-get -qq -y --purge remove imagemagick
-
-# Install Libreoffice
-apt-get -qq -y --purge install --no-install-recommends libreoffice-gtk libreoffice-gtk libreoffice-writer libreoffice-calc libreoffice-impress
-
 #screen-dimming turns off always
 #echo -ne "\033[9;0]" >> /etc/issue
 #setterm -blank 0 >> /etc/issue
-
-#Install vlc
-apt-get -qq -y install vlc
-
-#Install dropbox
-apt-get -qq -y install nautilus-dropbox
-nautilus --quit
 
 # Oxygen to be used as a fallback icon theme
 apt-get -qq -y install oxygen-icon-theme

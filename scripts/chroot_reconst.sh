@@ -58,36 +58,65 @@ rm  /usr/share/xsessions/plasma.desktop
 # ugliest hack ever
 cp  /usr/share/xsessions/lxqt.desktop /usr/share/xsessions/plasma.desktop
 
-# Installing 
-apt-get -qq -y install git
+# 3rd party software installation
+if ["chromium" in "$INSTALL"]
+then
+	apt-get install -y chromium-browser
+fi
+if ["firefox" in "$INSTALL"]
+then
+	apt-get -qq -y install firefox
+fi
+if ["chrome" in "$INSTALL"]
+then
+	if [[ $(arch) = "amd64" ]]
+	then
+		wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
+		dpkg -i google-chrome-stable_current_amd64.deb &&
+		rm -f google-chrome-stable_current_amd64.deb
+	else
+		wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb &&
+		dpkg -i google-chrome-stable_current_i386.deb &&
+		rm -f google-chrome-stable_current_i386.deb
+	fi
+fi
+if ["vlc" in "$INSTALL"]
+then
+	apt-get -qq -y install vlc
+fi
+if ["git" in "$INSTALL"]
+then
+	apt-get -qq -y install git
+fi
+if ["gimp" in "$INSTALL"]
+then
+	apt-get -qq -y --purge install gimp
+fi
+if ["inkscape" in "$INSTALL"]
+then
+	apt-get -qq -y --purge install inkscape
+fi
+if ["office" in "$INSTALL"]
+then
+	apt-get -qq -y --purge install --no-install-recommends libreoffice-gtk libreoffice-gtk libreoffice-writer libreoffice-calc libreoffice-impress
+fi
+if ["dropbox" in "$INSTALL"]
+then
+	apt-get -qq -y install nautilus-dropbox
+	nautilus --quit
+fi
+
+# removal of desktop files
+rm /usr/share/applications/mpv.desktop	
+rm /usr/share/applications/smplayer.desktop	
+rm /usr/share/applications/smtube.desktop	
+rm /usr/share/applications/audacious.desktop
 
 # Installing sublime text editor
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
 apt-get -qq update
 apt-get -qq -y install sublime-text
-
-# Installing Firefox
-apt-get -qq -y install firefox
-
-# Installing Chrome
-if [[ $(arch) = "amd64" ]]
-then
-	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
-	dpkg -i google-chrome-stable_current_amd64.deb &&
-	rm -f google-chrome-stable_current_amd64.deb
-else
-	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb &&
-	dpkg -i google-chrome-stable_current_i386.deb &&
-	rm -f google-chrome-stable_current_i386.deb
-fi
-
-# Installing VLC media player
-apt-get -qq -y install vlc
-rm /usr/share/applications/mpv.desktop
-rm /usr/share/applications/smplayer.desktop
-rm /usr/share/applications/smtube.desktop
-rm /usr/share/applications/audacious.desktop
 
 # after Xenial one could also use apt install ./package
 dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb; apt-get -qq -y -f install; dpkg -i plymouth-theme-meilix-text_1.0-2_all.deb
