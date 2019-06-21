@@ -39,5 +39,8 @@ Want to contribute? Great!
 
 ![Meilix-Xenial](/docs/screenshots/Meilix.gif)
 
+## Video link to test meilix ISO locally
+![meilix](https://www.youtube.com/watch?v=UglXvy0TS9I)
+
 
 *If you like the project, don't forget to **star** it.*
