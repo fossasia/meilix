@@ -179,7 +179,6 @@ It can't get better then this, your pull request will be really appreciated by t
 Meilix has contributors around the world,  constantly improving Meilix and helping others as well to do so. To get in touch with the community, you can use the following communication channels. 
 
 **Gitter**: [https://gitter.im/fossasia/meilix](https://gitter.im/fossasia/meilix) <br>
-**Slack**: [http://fossasia-slack.herokuapp.com/](http://fossasia-slack.herokuapp.com/) <br>
 **Mailing List**: [https://groups.google.com/forum/#!forum/meilix](https://groups.google.com/forum/#!forum/meilix)<br>
 **Scrum Mail**: meilix@googlegroups.com <br>
 **Twitter**: [https://twitter.com/meilix_](https://twitter.com/meilix_)
