@@ -1,6 +1,6 @@
 # Meilix
 <p>
-    <img align= "left" src="./docs/logo_readme.png" width="160">
+    <img align= "left" src="./docs/meilix.png" width="160">
     A beautiful and customizable Linux build for out of the box features for an Internet Kiosk. You can use the Meilix Generator (Web app) to make a Linux for your own brand/event, also add apps and features you need pre-installed, it will create an ISO Image of your Linux, which you can use as a live boot or install on PCs. 
 </p><br>
 
